@@ -2,7 +2,7 @@
 // Keeps the Gemini API key private on the server — never sent to the browser.
 // Deployed automatically by Vercel because it lives in /api.
 
-const GEMINI_MODEL = 'gemini-2.5-flash'; // free-tier model — check ai.google.dev for the current recommended free model name, this may change
+const GEMINI_MODEL = 'gemini-3.6-flash'; // free-tier model — check ai.google.dev for the current recommended free model name, this may change
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 const TUTOR_SYSTEM_PROMPT = `You are Merit's AI tutor, helping a student prepare for the HSPT (High School Placement Test).
