@@ -81,25 +81,90 @@ const LOGIC_DOJO = [
 
 const PUNCTUATION_DRILLS = [
   { id:'pd1', instruction:'Combine these into one sentence using a semicolon.', original:'I finished my homework. I went outside to play.',
-    model:'I finished my homework; I went outside to play.', rule:'A semicolon can join two closely related complete sentences without needing a conjunction.' },
+    model:'I finished my homework; I went outside to play.', rule:'A semicolon can join two closely related complete sentences without needing a conjunction.',
+    check(text){
+      const t = text.trim();
+      if (!t.includes(';')) return {correct:false, feedback:'Your rewrite should include a semicolon joining the two ideas.'};
+      const parts = t.split(';');
+      if (parts.length < 2 || parts[0].trim().split(/\s+/).length < 2 || parts[1].trim().split(/\s+/).length < 2)
+        return {correct:false, feedback:'Make sure there\u2019s a complete idea on both sides of the semicolon.'};
+      return {correct:true, feedback:'A semicolon correctly joins these two related, complete sentences.'};
+    } },
   { id:'pd2', instruction:'Rewrite using a colon to introduce the list.', original:'She packed several items for the trip a tent a sleeping bag and a flashlight.',
-    model:'She packed several items for the trip: a tent, a sleeping bag, and a flashlight.', rule:'A colon introduces a list after a complete sentence, with commas separating each item.' },
+    model:'She packed several items for the trip: a tent, a sleeping bag, and a flashlight.', rule:'A colon introduces a list after a complete sentence, with commas separating each item.',
+    check(text){
+      const t = text.trim();
+      if (!t.includes(':')) return {correct:false, feedback:'Your rewrite should use a colon to introduce the list.'};
+      const afterColon = t.split(':')[1] || '';
+      const commaCount = (afterColon.match(/,/g) || []).length;
+      if (commaCount < 2) return {correct:false, feedback:'The list after the colon needs commas separating each item (a tent, a sleeping bag, and a flashlight).'};
+      return {correct:true, feedback:'The colon introduces the list, and commas separate each item.'};
+    } },
   { id:'pd3', instruction:'Fix the comma splice.', original:'The movie was long, I still enjoyed every minute.',
-    model:'The movie was long, but I still enjoyed every minute.', rule:'Two complete sentences need more than a comma alone — add a conjunction or use a semicolon instead.' },
+    model:'The movie was long, but I still enjoyed every minute.', rule:'Two complete sentences need more than a comma alone — add a conjunction or use a semicolon instead.',
+    check(text){
+      const t = text.trim();
+      const conjunctions = ['but','and','so','yet','or','nor','for'];
+      const hasSemicolon = t.includes(';');
+      const commaConjunction = conjunctions.some(c => new RegExp(',\\s*' + c + '\\b','i').test(t));
+      if (hasSemicolon || commaConjunction) return {correct:true, feedback:'This avoids the comma splice by adding a proper connector or a semicolon.'};
+      return {correct:false, feedback:'This still looks like a comma splice — try adding a conjunction (like "but") after the comma, or use a semicolon instead.'};
+    } },
   { id:'pd4', instruction:"Add an apostrophe to show possession.", original:'The dogs leash was tangled around the fence post.',
-    model:"The dog's leash was tangled around the fence post.", rule:"An apostrophe plus s shows singular possession." },
+    model:"The dog's leash was tangled around the fence post.", rule:"An apostrophe plus s shows singular possession.",
+    check(text){
+      const t = text.toLowerCase();
+      if (/dog's\s+leash/.test(t)) return {correct:true, feedback:"The apostrophe correctly shows the dog's ownership of the leash."};
+      return {correct:false, feedback:"Check the apostrophe placement — it should be dog's (apostrophe before the s) to show possession."};
+    } },
   { id:'pd5', instruction:'Combine using a subordinating conjunction (because, although, since, etc.).', original:'It started to rain. We packed up the picnic.',
-    model:'Because it started to rain, we packed up the picnic.', rule:'A subordinating conjunction shows the relationship — cause, contrast, or time — between two ideas.' },
+    model:'Because it started to rain, we packed up the picnic.', rule:'A subordinating conjunction shows the relationship — cause, contrast, or time — between two ideas.',
+    check(text){
+      const t = text.toLowerCase();
+      const subordinators = ['because','although','since','when','while','after','before','if','unless','as'];
+      const hasSubordinator = subordinators.some(w => new RegExp('\\b' + w + '\\b').test(t));
+      const periodCount = (t.match(/\./g) || []).length;
+      if (hasSubordinator && periodCount <= 1) return {correct:true, feedback:'A subordinating conjunction correctly links the two ideas into one sentence.'};
+      if (!hasSubordinator) return {correct:false, feedback:'Try starting with a subordinating conjunction like "because" or "since" to link the two ideas.'};
+      return {correct:false, feedback:'Make sure the two ideas are joined into a single sentence, not left as two separate ones.'};
+    } },
   { id:'pd6', instruction:'Add quotation marks and punctuation correctly.', original:'Be careful she said as I reached for the hot pan.',
-    model:'"Be careful," she said, as I reached for the hot pan.', rule:"Quotation marks surround a person's exact spoken words, with a comma before the closing quotation mark when a tag like \"she said\" follows." },
+    model:'"Be careful," she said, as I reached for the hot pan.', rule:"Quotation marks surround a person's exact spoken words, with a comma before the closing quotation mark when a tag like \"she said\" follows.",
+    check(text){
+      const hasQuotes = /["\u201c\u201d]/.test(text);
+      if (!hasQuotes) return {correct:false, feedback:'Your rewrite should use quotation marks around the exact words she said.'};
+      return {correct:true, feedback:'Quotation marks correctly surround her exact spoken words.'};
+    } },
   { id:'pd7', instruction:'Fix the run-on sentence.', original:"The team practiced all week they were ready for Saturday's game.",
-    model:"The team practiced all week. They were ready for Saturday's game.", rule:'Two complete thoughts need a full stop or proper connector between them, not just a space.' },
+    model:"The team practiced all week. They were ready for Saturday's game.", rule:'Two complete thoughts need a full stop or proper connector between them, not just a space.',
+    check(text){
+      const t = text.trim();
+      if (/\.\s+[A-Z]/.test(t)) return {correct:true, feedback:'Splitting this into two sentences with a period fixes the run-on.'};
+      if (t.includes(';')) return {correct:true, feedback:'A semicolon also correctly separates these two complete ideas.'};
+      return {correct:false, feedback:'This still reads as one run-on sentence — try splitting it into two separate sentences with a period.'};
+    } },
   { id:'pd8', instruction:'Add commas to separate items in the series.', original:'For breakfast I had eggs toast and orange juice.',
-    model:'For breakfast I had eggs, toast, and orange juice.', rule:'Commas separate three or more items listed in a series.' },
+    model:'For breakfast I had eggs, toast, and orange juice.', rule:'Commas separate three or more items listed in a series.',
+    check(text){
+      const commaCount = (text.match(/,/g) || []).length;
+      if (commaCount >= 2) return {correct:true, feedback:'Commas correctly separate each item in the list.'};
+      return {correct:false, feedback:'This list needs commas between each item (eggs, toast, and orange juice).'};
+    } },
   { id:'pd9', instruction:'Combine using a coordinating conjunction (and, but, or, so).', original:'She studied hard for the test. She still felt nervous.',
-    model:'She studied hard for the test, but she still felt nervous.', rule:'A comma plus a coordinating conjunction can join two related complete sentences.' },
+    model:'She studied hard for the test, but she still felt nervous.', rule:'A comma plus a coordinating conjunction can join two related complete sentences.',
+    check(text){
+      const conjunctions = ['but','and','so','yet','or'];
+      const commaConjunction = conjunctions.some(c => new RegExp(',\\s*' + c + '\\b','i').test(text));
+      if (commaConjunction) return {correct:true, feedback:'A comma plus a coordinating conjunction correctly joins the two related sentences.'};
+      return {correct:false, feedback:'Try joining the two sentences with a comma followed by a coordinating conjunction, like ", but".'};
+    } },
   { id:'pd10', instruction:'Fix the word confusion (their/they\u2019re).', original:"The students turned in they're assignments early.",
-    model:'The students turned in their assignments early.', rule:"\u201cTheir\u201d shows possession; \u201cthey're\u201d is a contraction for \u201cthey are.\u201d This sentence needs the possessive form." }
+    model:'The students turned in their assignments early.', rule:"\u201cTheir\u201d shows possession; \u201cthey're\u201d is a contraction for \u201cthey are.\u201d This sentence needs the possessive form.",
+    check(text){
+      const t = text.toLowerCase();
+      if (/\btheir\b/.test(t) && !/\bthey're\b/.test(t)) return {correct:true, feedback:'"Their" correctly shows possession here.'};
+      return {correct:false, feedback:'This needs the possessive "their" (not "they\'re"), since it\u2019s showing that the assignments belong to the students.'};
+    } }
 ];
 
 const QUICKFIRE = {
