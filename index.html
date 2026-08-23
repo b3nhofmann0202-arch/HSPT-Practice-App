@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Merit — HSPT prep</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<style>
+  :root{
+    --paper:#F6F1E4; --card:#FFFFFF; --ink:#1C2B45; --maroon:#7A2331;
+    --gold:#B8912F; --slate:#5C6270; --success:#3F6B4E; --border:#D8D2BF; --tint:#EDE7D6;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Inter',sans-serif;background:var(--paper);color:var(--ink);}
+  .app{display:flex;min-height:100vh}
+  .sidebar{width:216px;flex-shrink:0;background:var(--card);border-right:1px solid var(--border);
+    padding:20px 14px;display:flex;flex-direction:column;gap:4px}
+  .brand{display:flex;align-items:center;gap:10px;margin-bottom:22px;padding:0 6px}
+  .seal{width:32px;height:32px;border-radius:50%;border:2px solid var(--gold);display:flex;
+    align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-weight:600;
+    font-size:14px;color:var(--maroon);flex-shrink:0}
+  .brand-name{font-family:'Source Serif 4',serif;font-weight:600;font-size:18px}
+  .navbtn{display:flex;align-items:center;gap:10px;text-align:left;background:transparent;
+    border:none;border-left:3px solid transparent;padding:10px 10px;border-radius:0 8px 8px 0;
+    font-size:14px;color:var(--ink);cursor:pointer;font-family:'Inter',sans-serif;width:100%}
+  .navbtn:hover{background:var(--tint)}
+  .navbtn.active{border-left-color:var(--maroon);background:var(--tint);font-weight:500}
+  .navdot{width:8px;height:8px;border-radius:50%;background:var(--slate);flex-shrink:0}
+  .navbtn.active .navdot{background:var(--maroon)}
+  .sidebar-footer{margin-top:auto;padding:12px 10px;border-top:1px solid var(--border);font-size:12px;color:var(--slate)}
+  main{flex:1;padding:32px 40px;max-width:760px}
+  h1,h2,h3{font-family:'Source Serif 4',serif;font-weight:600;margin:0}
+  .muted{color:var(--slate)}
+  .card{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:16px 18px}
+  .btn{background:var(--ink);color:var(--paper);border:none;font-size:13px;font-weight:500;
+    padding:9px 16px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif}
+  .btn.ghost{background:transparent;color:var(--ink);border:0.5px solid var(--border)}
+  .btn:hover{opacity:0.9}
+  input,textarea{font-family:'Inter',sans-serif;font-size:13px;border:0.5px solid var(--border);
+    border-radius:8px;padding:8px 10px;background:var(--card);color:var(--ink)}
+  .mono{font-family:'IBM Plex Mono',monospace}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin:14px 0 22px}
+  .tile{border-radius:0 0 10px 10px;border:0.5px solid var(--border);border-top:4px solid var(--slate);
+    padding:12px;background:var(--card)}
+  .tile .pct{font-size:12px;color:var(--slate);margin:2px 0 0}
+  .tile .name{font-size:13px;font-weight:500;margin:0}
+  .bar{height:5px;border-radius:3px;background:var(--tint);overflow:hidden;margin-top:8px}
+  .bar > div{height:100%}
+  .quicklinks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .quick{border-radius:10px;padding:12px;text-align:center;cursor:pointer;font-size:12px;font-weight:500;
+    border:0.5px solid var(--border);background:var(--card)}
+  .quick.primary{background:var(--ink);color:var(--paper);border:none}
+  .placeholder{padding:40px 20px;text-align:center;border:1px dashed var(--border);border-radius:12px}
+  .auth-wrap{max-width:340px;margin:80px auto;padding:0 20px}
+  .warning{background:#FAECE7;border:0.5px solid #E8B9A4;color:#712B13;border-radius:10px;
+    padding:12px 14px;font-size:12px;line-height:1.6;margin-bottom:16px}
+  .chatlog{display:flex;flex-direction:column;gap:10px;margin-bottom:16px;max-height:420px;overflow-y:auto}
+  .bubble{padding:10px 14px;border-radius:12px;font-size:13px;line-height:1.6;max-width:85%}
+  .bubble.tutor{background:var(--card);border:0.5px solid var(--border);border-bottom-left-radius:2px;align-self:flex-start}
+  .bubble.student{background:var(--ink);color:var(--paper);border-bottom-right-radius:2px;align-self:flex-end}
+  .chat-input-row{display:flex;gap:8px}
+  .chat-input-row input{flex:1}
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script>
+// ---- Fill these in after creating your Supabase project (Project Settings > API) ----
+const SUPABASE_URL = 'https://jrfuieglocsxhxyhcjcj.supabase.co ';
+const SUPABASE_ANON_KEY = 'sb_publishable_Ikp0BBxm9ctP8Y3jADOzkA_k5RYiRJs';
+// ---------------------------------------------------------------------------------
+
+const supa = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const SECTIONS = [
+  {key:'verbal', name:'Verbal skills', color:'#7A2331'},
+  {key:'quant', name:'Quantitative', color:'#B8912F'},
+  {key:'reading', name:'Reading', color:'#1C2B45'},
+  {key:'math', name:'Mathematics', color:'#3F6B4E'},
+  {key:'language', name:'Language', color:'#5C6270'}
+];
+const NAV = [
+  {key:'dashboard', label:'Dashboard'},
+  {key:'practice', label:'Practice tests'},
+  {key:'tutor', label:'AI tutor'},
+  {key:'skills', label:'Skill builder'},
+  {key:'lessons', label:'Lessons'}
+];
+
+let session = null;
+let profile = null;
+let activeView = 'dashboard';
+let tutorHistory = []; // {role:'student'|'tutor', text}
+
+function daysUntil(dateStr){
+  const now = new Date();
+  const target = new Date(dateStr + 'T00:00:00');
+  return Math.ceil((target - now) / (1000*60*60*24));
+}
+
+// ---------- Auth screen ----------
+function renderAuth(mode){
+  mode = mode || 'login';
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="auth-wrap">
+      <div class="brand" style="justify-content:center;margin-bottom:24px">
+        <div class="seal">M</div><span class="brand-name">Merit</span>
+      </div>
+      <div class="card">
+        <p style="font-weight:500;font-size:14px;margin:0 0 14px">${mode === 'login' ? 'Log in' : 'Create your account'}</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+          <input id="auth-email" type="email" placeholder="Email">
+          <input id="auth-password" type="password" placeholder="Password">
+        </div>
+        <button class="btn" style="width:100%;margin-bottom:10px" onclick="doAuth('${mode}')">${mode === 'login' ? 'Log in' : 'Sign up'}</button>
+        <p style="font-size:12px;text-align:center;margin:0">
+          ${mode === 'login'
+            ? `New here? <a href="#" onclick="renderAuth('signup');return false" style="color:var(--maroon)">Create an account</a>`
+            : `Already have an account? <a href="#" onclick="renderAuth('login');return false" style="color:var(--maroon)">Log in</a>`}
+        </p>
+        <p id="auth-error" style="font-size:12px;color:var(--maroon);margin:10px 0 0"></p>
+      </div>
+    </div>`;
+}
+
+async function doAuth(mode){
+  const email = document.getElementById('auth-email').value;
+  const password = document.getElementById('auth-password').value;
+  const errEl = document.getElementById('auth-error');
+  errEl.textContent = '';
+  const { data, error } = mode === 'login'
+    ? await supa.auth.signInWithPassword({ email, password })
+    : await supa.auth.signUp({ email, password });
+  if (error) { errEl.textContent = error.message; return; }
+  session = data.session;
+  await afterLogin();
+}
+
+async function afterLogin(){
+  await loadProfile();
+  renderApp();
+}
+
+// ---------- Profile ----------
+async function loadProfile(){
+  const { data: { user } } = await supa.auth.getUser();
+  let { data, error } = await supa.from('profiles').select('*').eq('id', user.id).single();
+  if (error || !data) {
+    // Fallback in case the auto-create trigger hasn't run yet
+    const insert = await supa.from('profiles').insert({ id: user.id }).select().single();
+    data = insert.data;
+  }
+  profile = data;
+}
+
+async function saveProfile(fields){
+  Object.assign(profile, fields);
+  await supa.from('profiles').update(fields).eq('id', profile.id);
+}
+
+// ---------- App shell ----------
+function renderApp(){
+  const root = document.getElementById('root');
+  root.innerHTML = `<div class="app"><nav class="sidebar" id="sidebar"></nav><main id="view-root"></main></div>`;
+  renderNav();
+  renderView();
+}
+
+function renderNav(){
+  const nav = document.getElementById('sidebar');
+  let html = '<div class="brand"><div class="seal">M</div><span class="brand-name">Merit</span></div>';
+  NAV.forEach(item => {
+    html += `<button class="navbtn ${activeView===item.key?'active':''}" onclick="setView('${item.key}')">
+      <span class="navdot"></span>${item.label}</button>`;
+  });
+  html += `<div class="sidebar-footer">${profile.streak}-day streak &middot; ${daysUntil(profile.test_date)} days to test day
+    <div style="margin-top:8px"><a href="#" onclick="logout();return false" style="color:var(--slate)">Log out</a></div></div>`;
+  nav.innerHTML = html;
+}
+
+async function logout(){
+  await supa.auth.signOut();
+  session = null; profile = null;
+  renderAuth('login');
+}
+
+function setView(view){
+  activeView = view;
+  renderNav();
+  renderView();
+}
+
+function renderView(){
+  const root = document.getElementById('view-root');
+  if (activeView === 'dashboard') { root.innerHTML = dashboardHTML(); return; }
+  if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
+  const labels = {practice:'Practice tests', skills:'Skill builder', lessons:'Lessons'};
+  const notes = {
+    practice: 'Next pass: choose a full test or a single section, take it under real timing, then review every miss with an explanation and reasoning path.',
+    skills: 'Next pass: vocabulary in context, a logic and analogy dojo, punctuation rewrite drills, and quick-fire quant and math practice.',
+    lessons: 'Next pass: short lessons for every topic in all five sections, each ending in a quick comprehension check.'
+  };
+  root.innerHTML = `<h1>${labels[activeView]}</h1>
+    <p class="muted" style="margin:6px 0 20px">This module is being built next.</p>
+    <div class="placeholder"><p class="muted" style="margin:0">${notes[activeView]}</p></div>`;
+}
+
+function dashboardHTML(){
+  const days = daysUntil(profile.test_date);
+  let tiles = '';
+  SECTIONS.forEach(s => {
+    const val = (profile.mastery && profile.mastery[s.key]) || 0;
+    tiles += `<div class="tile" style="border-top-color:${s.color}">
+      <p class="name">${s.name}</p>
+      <p class="pct">${val}% mastery</p>
+      <div class="bar"><div style="width:${val}%;background:${s.color}"></div></div>
+    </div>`;
+  });
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:4px">
+      <h1>Good to see you, ${profile.name}</h1>
+      <button class="btn ghost" onclick="openSettings()">Edit profile</button>
+    </div>
+    <p class="muted" style="margin:0 0 20px">${days >= 0 ? days + ' days until test day' : 'Test day has passed — set a new date'}</p>
+    <div class="card" style="margin-bottom:20px">
+      ${profile.resume_section
+        ? `<p class="muted" style="font-size:13px;margin:0 0 8px">Continue where you left off</p>
+           <div style="display:flex;justify-content:space-between;align-items:center">
+             <span style="font-size:13px;font-weight:500">${profile.resume_section}</span>
+             <button class="btn" onclick="setView('practice')">Resume</button>
+           </div>`
+        : `<p style="margin:0 0 4px;font-weight:500;font-size:14px">Start your first practice test</p>
+           <p class="muted" style="font-size:13px;margin:0 0 12px">Full-length or single-section, timed like the real thing.</p>
+           <button class="btn" onclick="setView('practice')">New practice test</button>`
+      }
+    </div>
+    <p class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:0.04em;margin:0 0 4px">Your sections</p>
+    <div class="tiles">${tiles}</div>
+    <div class="quicklinks">
+      <div class="quick primary" onclick="setView('tutor')">Ask AI tutor</div>
+      <div class="quick" onclick="setView('skills')">Skill builder</div>
+      <div class="quick" onclick="setView('lessons')">Lessons</div>
+    </div>
+    <div id="settings-panel"></div>
+  `;
+}
+
+function openSettings(){
+  const panel = document.getElementById('settings-panel');
+  panel.innerHTML = `
+    <div class="card" style="margin-top:16px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 10px">Edit profile</p>
+      <div style="display:flex;gap:10px;margin-bottom:10px;flex-wrap:wrap">
+        <input id="edit-name" value="${profile.name}" placeholder="Name" style="flex:1;min-width:120px">
+        <input id="edit-date" type="date" value="${profile.test_date}">
+      </div>
+      <button class="btn" onclick="saveSettings()">Save</button>
+    </div>`;
+}
+
+async function saveSettings(){
+  const name = document.getElementById('edit-name').value || profile.name;
+  const test_date = document.getElementById('edit-date').value || profile.test_date;
+  await saveProfile({ name, test_date });
+  renderNav(); renderView();
+}
+
+// ---------- AI tutor ----------
+function tutorHTML(){
+  let log = '';
+  tutorHistory.forEach(turn => {
+    log += `<div class="bubble ${turn.role === 'student' ? 'student' : 'tutor'}">${turn.text}</div>`;
+  });
+  if (!tutorHistory.length) {
+    log = `<div class="bubble tutor">Hi ${profile.name}, I'm your Merit tutor. Tell me a topic you'd like help with — or a question you got wrong.</div>`;
+  }
+  return `
+    <h1>AI tutor</h1>
+    <div class="warning">
+      This tutor runs on Google's free-tier Gemini API. Your messages here may be used by Google to help train future models.
+      Don't share anything personal or sensitive — no full name, address, school details beyond what's needed, passwords, or private family information. Keep it to HSPT questions and topics.
+    </div>
+    <div class="chatlog" id="chatlog">${log}</div>
+    <div class="chat-input-row">
+      <input id="tutor-input" type="text" placeholder="Ask about a topic, or paste a question you missed" onkeydown="if(event.key==='Enter') sendTutorMessage()">
+      <button class="btn" onclick="sendTutorMessage()">Send</button>
+    </div>
+  `;
+}
+
+function scrollChatToBottom(){
+  const el = document.getElementById('chatlog');
+  if (el) el.scrollTop = el.scrollHeight;
+}
+
+async function sendTutorMessage(){
+  const input = document.getElementById('tutor-input');
+  const message = input.value.trim();
+  if (!message) return;
+  input.value = '';
+  tutorHistory.push({ role: 'student', text: message });
+  renderView();
+
+  try {
+    const res = await fetch('/api/tutor', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, history: tutorHistory.slice(0, -1) })
+    });
+    const data = await res.json();
+    tutorHistory.push({ role: 'tutor', text: data.reply || data.error || 'Something went wrong.' });
+  } catch (e) {
+    tutorHistory.push({ role: 'tutor', text: 'Could not reach the tutor. Please try again.' });
+  }
+  renderView();
+}
+
+// ---------- Init ----------
+async function init(){
+  const { data } = await supa.auth.getSession();
+  session = data.session;
+  if (session) { await afterLogin(); }
+  else { renderAuth('login'); }
+}
+init();
+</script>
+</body>
+</html>
