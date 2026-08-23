@@ -101,8 +101,8 @@
 
 <script>
 // ---- Fill these in after creating your Supabase project (Project Settings > API) ----
-const SUPABASE_URL = 'https://jrfuieglocsxhxyhcjcj.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_Ikp0BBxm9ctP8Y3jADOzkA_k5RYiRJs';
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 // ---------------------------------------------------------------------------------
 
 const supa = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -768,7 +768,9 @@ function nextDojo(){
 function openPunctuation(){
   skillState.mode = 'punctuation';
   skillState.punctIndex = 0;
-  skillState.punctRevealed = false;
+  skillState.punctChecked = false;
+  skillState.punctResult = null;
+  skillState.punctModelShown = false;
   renderView();
 }
 
@@ -780,6 +782,23 @@ function punctuationHTML(){
       <button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
   }
   const p = PUNCTUATION_DRILLS[skillState.punctIndex];
+  let feedbackHTML = '';
+  if (skillState.punctChecked) {
+    const r = skillState.punctResult;
+    feedbackHTML = `
+      <div class="model-answer" style="border-left:3px solid ${r.correct ? 'var(--success)' : 'var(--maroon)'}">
+        <strong>${r.correct ? 'Correct' : 'Not quite yet'}</strong> \u2014 ${r.feedback}
+      </div>
+      <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+        ${!r.correct ? `<button class="btn ghost" onclick="retryPunctuation()">Try again</button>` : ''}
+        <button class="btn ghost" onclick="revealPunctuationModel()">${skillState.punctModelShown ? 'Hide' : 'Show'} model answer</button>
+        <button class="btn" onclick="nextPunctuation()">Next drill</button>
+      </div>
+      ${skillState.punctModelShown ? `<div class="model-answer" style="margin-top:10px"><strong>Model answer:</strong> ${p.model}<br><br><strong>Rule:</strong> ${p.rule}</div>` : ''}
+    `;
+  } else {
+    feedbackHTML = `<div style="margin-top:10px"><button class="btn" onclick="checkPunctuation()">Check my answer</button></div>`;
+  }
   return `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <h1 style="font-size:18px">Punctuation surgeon</h1>
@@ -787,25 +806,40 @@ function punctuationHTML(){
     </div>
     <p class="muted" style="font-size:13px;margin:0 0 6px">${p.instruction}</p>
     <div class="card" style="margin-bottom:12px"><p style="margin:0;font-size:13px">${p.original}</p></div>
-    <textarea class="rewrite-box" id="rewrite-input" placeholder="Type your rewrite here"></textarea>
-    <div style="margin-top:10px">
-      ${skillState.punctRevealed
-        ? `<div class="model-answer"><strong>Model answer:</strong> ${p.model}<br><br><strong>Rule:</strong> ${p.rule}</div>
-           <div style="margin-top:14px"><button class="btn" onclick="nextPunctuation()">Next drill</button></div>`
-        : `<button class="btn" onclick="revealPunctuation()">Show model answer</button>`}
-    </div>
+    <textarea class="rewrite-box" id="rewrite-input" placeholder="Type your rewrite here" ${skillState.punctChecked ? 'disabled' : ''}>${skillState.punctDraft || ''}</textarea>
+    ${feedbackHTML}
     <div style="margin-top:14px"><button class="btn ghost" onclick="backToSkillMenu()">Exit</button></div>
   `;
 }
 
-function revealPunctuation(){
-  skillState.punctRevealed = true;
+function checkPunctuation(){
+  const p = PUNCTUATION_DRILLS[skillState.punctIndex];
+  const text = document.getElementById('rewrite-input').value;
+  if (!text.trim()) return;
+  skillState.punctDraft = text;
+  skillState.punctResult = p.check(text);
+  skillState.punctChecked = true;
+  renderView();
+}
+
+function retryPunctuation(){
+  skillState.punctChecked = false;
+  skillState.punctResult = null;
+  skillState.punctModelShown = false;
+  renderView();
+}
+
+function revealPunctuationModel(){
+  skillState.punctModelShown = !skillState.punctModelShown;
   renderView();
 }
 
 function nextPunctuation(){
   skillState.punctIndex++;
-  skillState.punctRevealed = false;
+  skillState.punctChecked = false;
+  skillState.punctResult = null;
+  skillState.punctModelShown = false;
+  skillState.punctDraft = '';
   renderView();
 }
 
