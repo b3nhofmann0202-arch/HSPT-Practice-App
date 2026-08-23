@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="questions.js"></script>
 <style>
   :root{
     --paper:#F6F1E4; --card:#FFFFFF; --ink:#1C2B45; --maroon:#7A2331;
@@ -62,6 +63,27 @@
   .bubble.student{background:var(--ink);color:var(--paper);border-bottom-right-radius:2px;align-self:flex-end}
   .chat-input-row{display:flex;gap:8px}
   .chat-input-row input{flex:1}
+  .picker-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:16px 0}
+  .picker-tile{background:var(--card);border:0.5px solid var(--border);border-radius:10px;padding:14px;
+    cursor:pointer;text-align:left}
+  .picker-tile:hover{border-color:var(--maroon)}
+  .picker-tile .name{font-weight:500;font-size:14px;margin:0 0 4px}
+  .picker-tile .count{font-size:12px;color:var(--slate);margin:0}
+  .test-header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--border);
+    padding-bottom:12px;margin-bottom:18px}
+  .timer{font-family:'IBM Plex Mono',monospace;font-size:20px;font-weight:500;color:var(--maroon)}
+  .choice-row{display:flex;align-items:center;gap:10px;background:var(--card);border:0.5px solid var(--border);
+    border-radius:8px;padding:10px 12px;cursor:pointer;margin-bottom:8px}
+  .choice-row.selected{border:1.5px solid var(--maroon)}
+  .choice-dot{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--ink);flex-shrink:0}
+  .choice-row.selected .choice-dot{background:var(--maroon);border-color:var(--maroon)}
+  .bubblegrid{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:10px}
+  .bubblegrid > div{height:5px;border-radius:2px;background:var(--tint)}
+  .passage-box{background:var(--card);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px;
+    margin-bottom:16px;font-size:13px;line-height:1.65;max-height:180px;overflow:auto}
+  .review-item{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+  .tag-missed{font-size:12px;background:#FAECE7;color:#712B13;padding:2px 8px;border-radius:12px;font-weight:500}
+  .tag-correct{font-size:12px;background:#E9F1EC;color:#2B5C3B;padding:2px 8px;border-radius:12px;font-weight:500}
 </style>
 </head>
 <body>
@@ -69,8 +91,8 @@
 
 <script>
 // ---- Fill these in after creating your Supabase project (Project Settings > API) ----
-const SUPABASE_URL = 'https://jrfuieglocsxhxyhcjcj.supabase.co ';
-const SUPABASE_ANON_KEY = 'sb_publishable_Ikp0BBxm9ctP8Y3jADOzkA_k5RYiRJs';
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 // ---------------------------------------------------------------------------------
 
 const supa = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -94,6 +116,20 @@ let session = null;
 let profile = null;
 let activeView = 'dashboard';
 let tutorHistory = []; // {role:'student'|'tutor', text}
+
+// ---------- Practice test state ----------
+const TIME_PER_QUESTION_SEC = 40; // roughly mirrors real HSPT pacing pressure
+let practiceState = {
+  phase: 'picker',       // 'picker' | 'taking' | 'review'
+  sectionKey: null,      // null means full test (all sections mixed)
+  questions: [],         // array of question objects for this attempt
+  index: 0,
+  answers: {},           // questionId -> chosen letter
+  flagged: {},           // questionId -> true
+  secondsLeft: 0,
+  timerHandle: null,
+  reviewIndex: 0
+};
 
 function daysUntil(dateStr){
   const now = new Date();
@@ -198,15 +234,272 @@ function renderView(){
   const root = document.getElementById('view-root');
   if (activeView === 'dashboard') { root.innerHTML = dashboardHTML(); return; }
   if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
-  const labels = {practice:'Practice tests', skills:'Skill builder', lessons:'Lessons'};
+  if (activeView === 'practice') { renderPractice(); return; }
+  const labels = {skills:'Skill builder', lessons:'Lessons'};
   const notes = {
-    practice: 'Next pass: choose a full test or a single section, take it under real timing, then review every miss with an explanation and reasoning path.',
     skills: 'Next pass: vocabulary in context, a logic and analogy dojo, punctuation rewrite drills, and quick-fire quant and math practice.',
     lessons: 'Next pass: short lessons for every topic in all five sections, each ending in a quick comprehension check.'
   };
   root.innerHTML = `<h1>${labels[activeView]}</h1>
     <p class="muted" style="margin:6px 0 20px">This module is being built next.</p>
     <div class="placeholder"><p class="muted" style="margin:0">${notes[activeView]}</p></div>`;
+}
+
+// ---------- Practice tests ----------
+function renderPractice(){
+  const root = document.getElementById('view-root');
+  if (practiceState.phase === 'taking') { root.innerHTML = testTakingHTML(); return; }
+  if (practiceState.phase === 'review') { root.innerHTML = reviewHTML(); return; }
+  root.innerHTML = pickerHTML();
+}
+
+function pickerHTML(){
+  let tiles = `<div class="picker-tile" onclick="startTest(null)">
+      <p class="name">Full practice test</p>
+      <p class="count">All 5 sections &middot; ${Object.values(QUESTIONS).reduce((a,q)=>a+q.length,0)} questions</p>
+    </div>`;
+  SECTIONS.forEach(s => {
+    tiles += `<div class="picker-tile" onclick="startTest('${s.key}')">
+      <p class="name">${s.name}</p>
+      <p class="count">${QUESTIONS[s.key].length} questions</p>
+    </div>`;
+  });
+  return `<h1>Practice tests</h1>
+    <p class="muted" style="margin:6px 0 0">Choose a full test or focus on one section. Each test is timed like the real HSPT.</p>
+    <div class="picker-grid">${tiles}</div>`;
+}
+
+function startTest(sectionKey){
+  let pool = [];
+  if (sectionKey) {
+    pool = QUESTIONS[sectionKey].map(q => ({...q, section: sectionKey}));
+  } else {
+    SECTIONS.forEach(s => { pool = pool.concat(QUESTIONS[s.key].map(q => ({...q, section: s.key}))); });
+  }
+  practiceState = {
+    phase: 'taking',
+    sectionKey,
+    questions: pool,
+    index: 0,
+    answers: {},
+    flagged: {},
+    secondsLeft: pool.length * TIME_PER_QUESTION_SEC,
+    timerHandle: null,
+    reviewIndex: 0
+  };
+  saveProfile({ resume_section: sectionKey ? SECTIONS.find(s=>s.key===sectionKey).name : 'Full practice test' });
+  renderNav();
+  startTimer();
+  renderView();
+}
+
+function startTimer(){
+  if (practiceState.timerHandle) clearInterval(practiceState.timerHandle);
+  practiceState.timerHandle = setInterval(() => {
+    practiceState.secondsLeft--;
+    const el = document.getElementById('test-timer');
+    if (el) el.textContent = formatTime(practiceState.secondsLeft);
+    if (practiceState.secondsLeft <= 0) {
+      clearInterval(practiceState.timerHandle);
+      finishTest();
+    }
+  }, 1000);
+}
+
+function formatTime(totalSec){
+  const s = Math.max(0, totalSec);
+  const m = Math.floor(s / 60);
+  const sec = s % 60;
+  return `${m}:${sec.toString().padStart(2,'0')}`;
+}
+
+function testTakingHTML(){
+  const q = practiceState.questions[practiceState.index];
+  const sectionName = q.section ? SECTIONS.find(s=>s.key===q.section).name : '';
+  let passageHTML = '';
+  if (q.passage) passageHTML = `<div class="passage-box">${PASSAGES[q.passage]}</div>`;
+
+  let choicesHTML = '';
+  Object.entries(q.choices).forEach(([letter, text]) => {
+    const selected = practiceState.answers[q.id] === letter;
+    choicesHTML += `<div class="choice-row ${selected?'selected':''}" onclick="selectAnswer('${q.id}','${letter}')">
+      <span class="choice-dot"></span><span style="font-size:13px">${letter} &nbsp; ${text}</span></div>`;
+  });
+
+  let grid = '';
+  practiceState.questions.forEach((qq, i) => {
+    let color = 'var(--tint)';
+    if (i === practiceState.index) color = 'var(--ink)';
+    else if (practiceState.flagged[qq.id]) color = 'var(--gold)';
+    else if (practiceState.answers[qq.id]) color = 'var(--success)';
+    grid += `<div style="background:${color}"></div>`;
+  });
+
+  const isLast = practiceState.index === practiceState.questions.length - 1;
+
+  return `
+    <div class="test-header">
+      <div>
+        <p class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:0.05em;margin:0">
+          ${sectionName || 'Full practice test'}</p>
+        <h1 style="font-size:18px">Question ${practiceState.index+1} of ${practiceState.questions.length}</h1>
+      </div>
+      <div style="text-align:right">
+        <p class="muted" style="font-size:11px;margin:0">Time remaining</p>
+        <p class="timer" id="test-timer">${formatTime(practiceState.secondsLeft)}</p>
+      </div>
+    </div>
+    ${passageHTML}
+    <p style="font-size:14px;font-weight:500;margin:0 0 14px">${q.prompt}</p>
+    <div style="margin-bottom:18px">${choicesHTML}</div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px">
+      <button class="btn ghost" onclick="toggleFlag('${q.id}')">${practiceState.flagged[q.id] ? 'Unflag' : 'Flag for review'}</button>
+      <div style="display:flex;gap:8px">
+        <button class="btn ghost" onclick="prevQuestion()" ${practiceState.index===0?'disabled':''}>Back</button>
+        ${isLast
+          ? `<button class="btn" onclick="finishTest()">Submit test</button>`
+          : `<button class="btn" onclick="nextQuestion()">Next</button>`}
+      </div>
+    </div>
+    <div class="bubblegrid">${grid}</div>
+    <p class="muted" style="font-size:11px;margin:6px 0 0">Green = answered &middot; gold = flagged &middot; navy = current</p>
+  `;
+}
+
+function selectAnswer(qid, letter){
+  practiceState.answers[qid] = letter;
+  renderView();
+}
+
+function toggleFlag(qid){
+  practiceState.flagged[qid] = !practiceState.flagged[qid];
+  renderView();
+}
+
+function nextQuestion(){
+  if (practiceState.index < practiceState.questions.length - 1) { practiceState.index++; renderView(); }
+}
+function prevQuestion(){
+  if (practiceState.index > 0) { practiceState.index--; renderView(); }
+}
+
+async function finishTest(){
+  if (practiceState.timerHandle) clearInterval(practiceState.timerHandle);
+
+  const missed = [];
+  const scoreBySection = {};
+  practiceState.questions.forEach(q => {
+    const sec = q.section;
+    scoreBySection[sec] = scoreBySection[sec] || { correct: 0, total: 0 };
+    scoreBySection[sec].total++;
+    const chosen = practiceState.answers[q.id];
+    if (chosen === q.correct) {
+      scoreBySection[sec].correct++;
+    } else {
+      missed.push({ ...q, chosen: chosen || null });
+    }
+  });
+
+  // Update mastery per section touched: blend new result with prior mastery (simple rolling average)
+  const newMastery = { ...(profile.mastery || {}) };
+  Object.entries(scoreBySection).forEach(([sec, r]) => {
+    const newPct = Math.round((r.correct / r.total) * 100);
+    const prior = newMastery[sec] || 0;
+    newMastery[sec] = Math.round((prior + newPct) / 2);
+  });
+
+  // Append missed questions to the mistake journal (cap at 200 most recent)
+  const journalEntries = missed.map(m => ({
+    questionId: m.id, section: m.section, skill: m.skill, prompt: m.prompt,
+    chosen: m.chosen, correct: m.correct, date: new Date().toISOString().slice(0,10)
+  }));
+  const newMistakes = [...(profile.mistakes || []), ...journalEntries].slice(-200);
+
+  // Streak: increment once per calendar day
+  const today = new Date().toISOString().slice(0,10);
+  let newStreak = profile.streak || 0;
+  if (profile.last_active !== today) newStreak++;
+
+  await saveProfile({
+    mastery: newMastery,
+    mistakes: newMistakes,
+    streak: newStreak,
+    last_active: today,
+    resume_section: null
+  });
+
+  practiceState.phase = 'review';
+  practiceState.missed = missed;
+  practiceState.reviewIndex = 0;
+  practiceState.correctCount = practiceState.questions.length - missed.length;
+  renderNav();
+  renderView();
+}
+
+function reviewHTML(){
+  const total = practiceState.questions.length;
+  const correct = practiceState.correctCount;
+  const pct = Math.round((correct/total)*100);
+  const missed = practiceState.missed;
+
+  if (missed.length === 0) {
+    return `<h1>Test review</h1>
+      <p class="muted" style="margin:6px 0 20px">${correct} of ${total} correct &middot; ${pct}%</p>
+      <div class="card"><p style="margin:0;font-weight:500">Perfect score on this attempt — nothing to review.</p></div>
+      <div style="margin-top:16px"><button class="btn" onclick="backToDashboardFromReview()">Back to dashboard</button></div>`;
+  }
+
+  const idx = Math.min(practiceState.reviewIndex, missed.length - 1);
+  const m = missed[idx];
+  const isLastMissed = idx === missed.length - 1;
+
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <div>
+        <h1>Test review</h1>
+        <p class="muted" style="margin:2px 0 0">${correct} of ${total} correct</p>
+      </div>
+      <div style="width:46px;height:46px;border-radius:50%;border:2px solid var(--gold);display:flex;
+        align-items:center;justify-content:center;font-family:'Source Serif 4',serif;font-weight:600;font-size:14px;color:var(--maroon)">${pct}%</div>
+    </div>
+    <div class="review-item">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <span class="muted" style="font-size:12px">Missed question ${idx+1} of ${missed.length} &middot; ${m.skill}</span>
+        <span class="tag-missed">Missed</span>
+      </div>
+      <p style="font-size:13px;margin:0 0 12px">${m.prompt}</p>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:13px">
+        <span class="muted">Your answer:</span>
+        <span style="font-weight:500">${m.chosen ? m.chosen + ' — ' + m.choices[m.chosen] : 'No answer given'}</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px">
+        <span class="muted">Correct answer:</span>
+        <span style="font-weight:500">${m.correct} — ${m.choices[m.correct]}</span>
+      </div>
+      <div style="border-top:0.5px solid var(--border);padding-top:12px">
+        <p style="font-size:12px;font-weight:500;color:var(--maroon);margin:0 0 4px">Why that choice is a trap</p>
+        <p style="font-size:13px;margin:0 0 10px">${m.wrongTip}</p>
+        <p style="font-size:12px;font-weight:500;color:var(--success);margin:0 0 4px">Reasoning to reach the right answer</p>
+        <p style="font-size:13px;margin:0">${m.rightReasoning}</p>
+      </div>
+    </div>
+    <div class="card" style="display:flex;justify-content:space-between;align-items:center">
+      <span class="muted" style="font-size:12px">${isLastMissed ? 'Last one' : (missed.length - idx - 1) + ' more to review'}</span>
+      ${isLastMissed
+        ? `<button class="btn" onclick="backToDashboardFromReview()">Back to dashboard</button>`
+        : `<button class="btn" onclick="nextMissed()">Next question &rarr;</button>`}
+    </div>
+  `;
+}
+
+function nextMissed(){
+  practiceState.reviewIndex++;
+  renderView();
+}
+
+function backToDashboardFromReview(){
+  practiceState = { phase:'picker', sectionKey:null, questions:[], index:0, answers:{}, flagged:{}, secondsLeft:0, timerHandle:null, reviewIndex:0 };
+  setView('dashboard');
 }
 
 function dashboardHTML(){
