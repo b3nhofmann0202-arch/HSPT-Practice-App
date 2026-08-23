@@ -91,8 +91,8 @@
 
 <script>
 // ---- Fill these in after creating your Supabase project (Project Settings > API) ----
-const SUPABASE_URL = 'https://jrfuieglocsxhxyhcjcj.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_Ikp0BBxm9ctP8Y3jADOzkA_k5RYiRJs';
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 // ---------------------------------------------------------------------------------
 
 const supa = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -320,10 +320,10 @@ function testTakingHTML(){
   if (q.passage) passageHTML = `<div class="passage-box">${PASSAGES[q.passage]}</div>`;
 
   let choicesHTML = '';
-  Object.entries(q.choices).forEach(([letter, text]) => {
+  Object.entries(q.choices).forEach(([letter, choice]) => {
     const selected = practiceState.answers[q.id] === letter;
     choicesHTML += `<div class="choice-row ${selected?'selected':''}" onclick="selectAnswer('${q.id}','${letter}')">
-      <span class="choice-dot"></span><span style="font-size:13px">${letter} &nbsp; ${text}</span></div>`;
+      <span class="choice-dot"></span><span style="font-size:13px">${letter} &nbsp; ${choice.text}</span></div>`;
   });
 
   let grid = '';
@@ -452,6 +452,8 @@ function reviewHTML(){
   const idx = Math.min(practiceState.reviewIndex, missed.length - 1);
   const m = missed[idx];
   const isLastMissed = idx === missed.length - 1;
+  const chosenExplain = m.chosen ? m.choices[m.chosen].explain : null;
+  const correctExplain = m.choices[m.correct].explain;
 
   return `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
@@ -470,17 +472,20 @@ function reviewHTML(){
       <p style="font-size:13px;margin:0 0 12px">${m.prompt}</p>
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-size:13px">
         <span class="muted">Your answer:</span>
-        <span style="font-weight:500">${m.chosen ? m.chosen + ' — ' + m.choices[m.chosen] : 'No answer given'}</span>
+        <span style="font-weight:500">${m.chosen ? m.chosen + ' \u2014 ' + m.choices[m.chosen].text : 'No answer given'}</span>
       </div>
       <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;font-size:13px">
         <span class="muted">Correct answer:</span>
-        <span style="font-weight:500">${m.correct} — ${m.choices[m.correct]}</span>
+        <span style="font-weight:500">${m.correct} \u2014 ${m.choices[m.correct].text}</span>
       </div>
       <div style="border-top:0.5px solid var(--border);padding-top:12px">
-        <p style="font-size:12px;font-weight:500;color:var(--maroon);margin:0 0 4px">Why that choice is a trap</p>
-        <p style="font-size:13px;margin:0 0 10px">${m.wrongTip}</p>
-        <p style="font-size:12px;font-weight:500;color:var(--success);margin:0 0 4px">Reasoning to reach the right answer</p>
-        <p style="font-size:13px;margin:0">${m.rightReasoning}</p>
+        ${chosenExplain ? `
+        <p style="font-size:12px;font-weight:500;color:var(--maroon);margin:0 0 4px">Why ${m.chosen} doesn't work</p>
+        <p style="font-size:13px;margin:0 0 10px">${chosenExplain}</p>` : `
+        <p style="font-size:12px;font-weight:500;color:var(--maroon);margin:0 0 4px">No answer was selected</p>
+        <p style="font-size:13px;margin:0 0 10px">Running out of time on a question like this is worth noting for pacing next time.</p>`}
+        <p style="font-size:12px;font-weight:500;color:var(--success);margin:0 0 4px">Why ${m.correct} is correct</p>
+        <p style="font-size:13px;margin:0">${correctExplain}</p>
       </div>
     </div>
     <div class="card" style="display:flex;justify-content:space-between;align-items:center">
