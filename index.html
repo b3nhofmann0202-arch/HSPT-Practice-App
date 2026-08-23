@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600&family=Inter:wght@400;500&family=IBM+Plex+Mono:wght@500&display=swap">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="questions.js"></script>
+<script src="skills-content.js"></script>
 <style>
   :root{
     --paper:#F6F1E4; --card:#FFFFFF; --ink:#1C2B45; --maroon:#7A2331;
@@ -84,6 +85,15 @@
   .review-item{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:14px}
   .tag-missed{font-size:12px;background:#FAECE7;color:#712B13;padding:2px 8px;border-radius:12px;font-weight:500}
   .tag-correct{font-size:12px;background:#E9F1EC;color:#2B5C3B;padding:2px 8px;border-radius:12px;font-weight:500}
+  .skill-menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:16px 0}
+  .skill-card{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:16px;cursor:pointer}
+  .skill-card:hover{border-color:var(--maroon)}
+  .skill-card .icon{width:34px;height:34px;border-radius:8px;display:flex;align-items:center;justify-content:center;
+    font-family:'Source Serif 4',serif;font-weight:600;font-size:15px;color:#fff;margin-bottom:10px}
+  .flashcard{background:var(--card);border:0.5px solid var(--border);border-radius:12px;padding:24px 20px;text-align:center;margin-bottom:16px}
+  .streak-pill{font-size:12px;background:var(--tint);color:var(--maroon);padding:3px 10px;border-radius:12px;font-weight:500}
+  textarea.rewrite-box{width:100%;min-height:70px;resize:vertical}
+  .model-answer{background:var(--tint);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px}
 </style>
 </head>
 <body>
@@ -130,6 +140,40 @@ let practiceState = {
   timerHandle: null,
   reviewIndex: 0
 };
+
+// ---------- Skill builder state ----------
+let skillState = {
+  mode: 'menu',       // 'menu' | 'vocab' | 'dojo' | 'punctuation' | 'quickfire'
+  // vocab
+  vocabQueue: [],
+  vocabIndex: 0,
+  vocabAnswered: false,
+  // dojo
+  dojoQueue: [],
+  dojoIndex: 0,
+  dojoStreak: 0,
+  dojoAnswered: false,
+  // punctuation
+  punctIndex: 0,
+  punctRevealed: false,
+  // quickfire
+  qfCategory: null,
+  qfQueue: [],
+  qfIndex: 0,
+  qfScore: 0,
+  qfSecondsLeft: 0,
+  qfTimerHandle: null,
+  qfAnswered: false,
+  qfDone: false
+};
+const QF_TIME_PER_QUESTION = 12;
+
+function ensureSkillsProgress(){
+  if (!profile.skills_progress) profile.skills_progress = {};
+  if (!profile.skills_progress.vocab) profile.skills_progress.vocab = {};
+  if (typeof profile.skills_progress.dojoBestStreak !== 'number') profile.skills_progress.dojoBestStreak = 0;
+  if (!profile.skills_progress.quickfireBest) profile.skills_progress.quickfireBest = {};
+}
 
 function daysUntil(dateStr){
   const now = new Date();
@@ -178,6 +222,7 @@ async function doAuth(mode){
 
 async function afterLogin(){
   await loadProfile();
+  ensureSkillsProgress();
   renderApp();
 }
 
@@ -235,9 +280,9 @@ function renderView(){
   if (activeView === 'dashboard') { root.innerHTML = dashboardHTML(); return; }
   if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
   if (activeView === 'practice') { renderPractice(); return; }
-  const labels = {skills:'Skill builder', lessons:'Lessons'};
+  if (activeView === 'skills') { renderSkillBuilder(); return; }
+  const labels = {lessons:'Lessons'};
   const notes = {
-    skills: 'Next pass: vocabulary in context, a logic and analogy dojo, punctuation rewrite drills, and quick-fire quant and math practice.',
     lessons: 'Next pass: short lessons for every topic in all five sections, each ending in a quick comprehension check.'
   };
   root.innerHTML = `<h1>${labels[activeView]}</h1>
@@ -505,6 +550,385 @@ function nextMissed(){
 function backToDashboardFromReview(){
   practiceState = { phase:'picker', sectionKey:null, questions:[], index:0, answers:{}, flagged:{}, secondsLeft:0, timerHandle:null, reviewIndex:0 };
   setView('dashboard');
+}
+
+// ================= Skill Builder =================
+function renderSkillBuilder(){
+  const root = document.getElementById('view-root');
+  if (skillState.mode === 'vocab') { root.innerHTML = vocabHTML(); return; }
+  if (skillState.mode === 'dojo') { root.innerHTML = dojoHTML(); return; }
+  if (skillState.mode === 'punctuation') { root.innerHTML = punctuationHTML(); return; }
+  if (skillState.mode === 'quickfire') { root.innerHTML = quickfireHTML(); return; }
+  root.innerHTML = skillMenuHTML();
+}
+
+function skillMenuHTML(){
+  const dueVocab = getDueVocab().length;
+  return `
+    <h1>Skill builder</h1>
+    <p class="muted" style="margin:6px 0 0">Short, focused drills for each part of the HSPT \u2014 separate from full timed tests.</p>
+    <div class="skill-menu">
+      <div class="skill-card" onclick="openVocab()">
+        <div class="icon" style="background:var(--maroon)">V</div>
+        <p style="font-weight:500;font-size:14px;margin:0 0 4px">Vocabulary in context</p>
+        <p class="muted" style="font-size:12px;margin:0">${dueVocab > 0 ? dueVocab + ' words due for review' : 'All caught up \u2014 review anyway'}</p>
+      </div>
+      <div class="skill-card" onclick="openDojo()">
+        <div class="icon" style="background:var(--gold)">L</div>
+        <p style="font-weight:500;font-size:14px;margin:0 0 4px">Logic &amp; analogy dojo</p>
+        <p class="muted" style="font-size:12px;margin:0">Best streak: ${profile.skills_progress.dojoBestStreak}</p>
+      </div>
+      <div class="skill-card" onclick="openPunctuation()">
+        <div class="icon" style="background:var(--ink)">P</div>
+        <p style="font-weight:500;font-size:14px;margin:0 0 4px">Punctuation surgeon</p>
+        <p class="muted" style="font-size:12px;margin:0">Rewrite drills, self-checked</p>
+      </div>
+      <div class="skill-card" onclick="openQuickfirePicker()">
+        <div class="icon" style="background:var(--success)">Q</div>
+        <p style="font-weight:500;font-size:14px;margin:0 0 4px">Quick-fire quant &amp; math</p>
+        <p class="muted" style="font-size:12px;margin:0">${QF_TIME_PER_QUESTION}s per question, beat your best score</p>
+      </div>
+    </div>
+  `;
+}
+
+function backToSkillMenu(){
+  skillState.mode = 'menu';
+  if (skillState.qfTimerHandle) clearInterval(skillState.qfTimerHandle);
+  renderView();
+}
+
+// ---------- Vocabulary SRS (simple 5-box Leitner system) ----------
+const LEITNER_INTERVALS_DAYS = [0, 1, 2, 4, 7, 14]; // index = box number (0 unused, boxes 1-5)
+
+function getDueVocab(){
+  const today = new Date().toISOString().slice(0,10);
+  return VOCAB_WORDS.filter(w => {
+    const rec = profile.skills_progress.vocab[w.id];
+    if (!rec) return true; // never studied = due now
+    return rec.due <= today;
+  });
+}
+
+function openVocab(){
+  const due = getDueVocab();
+  const queue = due.length > 0 ? due : [...VOCAB_WORDS]; // if nothing due, allow reviewing anyway
+  skillState.mode = 'vocab';
+  skillState.vocabQueue = shuffleArray(queue);
+  skillState.vocabIndex = 0;
+  skillState.vocabAnswered = false;
+  renderView();
+}
+
+function shuffleArray(arr){
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function vocabHTML(){
+  if (skillState.vocabIndex >= skillState.vocabQueue.length) {
+    return `<h1>Vocabulary in context</h1>
+      <div class="card" style="margin-top:16px"><p style="margin:0;font-weight:500">Nice work \u2014 you've been through all the due words.</p></div>
+      <div style="margin-top:16px"><button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
+  }
+  const w = skillState.vocabQueue[skillState.vocabIndex];
+  let choicesHTML = '';
+  Object.entries(w.choices).forEach(([letter, c]) => {
+    const isSelected = skillState.vocabSelected === letter;
+    let extra = '';
+    if (skillState.vocabAnswered) {
+      if (letter === w.correct) extra = 'border:1.5px solid var(--success)';
+      else if (isSelected) extra = 'border:1.5px solid var(--maroon)';
+    }
+    choicesHTML += `<div class="choice-row ${isSelected?'selected':''}" style="${extra}" onclick="answerVocab('${letter}')">
+      <span class="choice-dot"></span><span style="font-size:13px">${c.text}</span></div>`;
+  });
+  let feedback = '';
+  if (skillState.vocabAnswered) {
+    const chosen = w.choices[skillState.vocabSelected];
+    feedback = `<div class="model-answer">${skillState.vocabSelected === w.correct ? 'Correct. ' : 'Not quite. '}${chosen.explain}</div>
+      <div style="margin-top:14px"><button class="btn" onclick="nextVocab()">Next word</button></div>`;
+  }
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h1 style="font-size:18px">Vocabulary in context</h1>
+      <span class="streak-pill">${skillState.vocabIndex+1} of ${skillState.vocabQueue.length}</span>
+    </div>
+    <div class="flashcard">
+      <p style="font-family:'Source Serif 4',serif;font-size:24px;font-weight:600;margin:0 0 4px">${w.word}</p>
+      <p class="muted" style="font-size:12px;margin:0 0 16px">${w.pos}</p>
+      <p style="font-size:14px;line-height:1.6;margin:0">${w.sentence}</p>
+    </div>
+    <div>${choicesHTML}</div>
+    ${feedback}
+    <div style="margin-top:14px"><button class="btn ghost" onclick="backToSkillMenu()">Exit</button></div>
+  `;
+}
+
+async function answerVocab(letter){
+  if (skillState.vocabAnswered) return;
+  skillState.vocabSelected = letter;
+  skillState.vocabAnswered = true;
+  const w = skillState.vocabQueue[skillState.vocabIndex];
+  const correct = letter === w.correct;
+  const today = new Date().toISOString().slice(0,10);
+  const rec = profile.skills_progress.vocab[w.id] || { box: 1, due: today };
+  let newBox = correct ? Math.min(5, rec.box + 1) : 1;
+  const dueDate = new Date();
+  dueDate.setDate(dueDate.getDate() + LEITNER_INTERVALS_DAYS[newBox]);
+  profile.skills_progress.vocab[w.id] = { box: newBox, due: dueDate.toISOString().slice(0,10) };
+  await saveProfile({ skills_progress: profile.skills_progress });
+  renderView();
+}
+
+function nextVocab(){
+  skillState.vocabIndex++;
+  skillState.vocabAnswered = false;
+  skillState.vocabSelected = null;
+  renderView();
+}
+
+// ---------- Logic & analogy dojo ----------
+function openDojo(){
+  skillState.mode = 'dojo';
+  skillState.dojoQueue = shuffleArray(LOGIC_DOJO);
+  skillState.dojoIndex = 0;
+  skillState.dojoStreak = 0;
+  skillState.dojoAnswered = false;
+  renderView();
+}
+
+function dojoHTML(){
+  if (skillState.dojoIndex >= skillState.dojoQueue.length) {
+    return `<h1>Logic &amp; analogy dojo</h1>
+      <div class="card" style="margin-top:16px"><p style="margin:0;font-weight:500">Round complete \u2014 streak this round: ${skillState.dojoStreak}</p></div>
+      <div style="margin-top:16px;display:flex;gap:8px"><button class="btn" onclick="openDojo()">Go again</button>
+      <button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
+  }
+  const d = skillState.dojoQueue[skillState.dojoIndex];
+  let choicesHTML = '';
+  Object.entries(d.choices).forEach(([letter, c]) => {
+    const isSelected = skillState.dojoSelected === letter;
+    let extra = '';
+    if (skillState.dojoAnswered) {
+      if (letter === d.correct) extra = 'border:1.5px solid var(--success)';
+      else if (isSelected) extra = 'border:1.5px solid var(--maroon)';
+    }
+    choicesHTML += `<div class="choice-row ${isSelected?'selected':''}" style="${extra}" onclick="answerDojo('${letter}')">
+      <span class="choice-dot"></span><span style="font-size:13px">${c.text}</span></div>`;
+  });
+  let feedback = '';
+  if (skillState.dojoAnswered) {
+    const chosen = d.choices[skillState.dojoSelected];
+    feedback = `<div class="model-answer">${chosen.explain}</div>
+      <div style="margin-top:14px"><button class="btn" onclick="nextDojo()">Next</button></div>`;
+  }
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h1 style="font-size:18px">Logic &amp; analogy dojo</h1>
+      <span class="streak-pill">Streak: ${skillState.dojoStreak}</span>
+    </div>
+    <p class="muted" style="font-size:12px;margin:0 0 12px">${d.type} &middot; ${skillState.dojoIndex+1} of ${skillState.dojoQueue.length}</p>
+    <p style="font-size:14px;font-weight:500;margin:0 0 14px">${d.prompt}</p>
+    <div>${choicesHTML}</div>
+    ${feedback}
+    <div style="margin-top:14px"><button class="btn ghost" onclick="backToSkillMenu()">Exit</button></div>
+  `;
+}
+
+async function answerDojo(letter){
+  if (skillState.dojoAnswered) return;
+  skillState.dojoSelected = letter;
+  skillState.dojoAnswered = true;
+  const d = skillState.dojoQueue[skillState.dojoIndex];
+  if (letter === d.correct) {
+    skillState.dojoStreak++;
+    if (skillState.dojoStreak > profile.skills_progress.dojoBestStreak) {
+      profile.skills_progress.dojoBestStreak = skillState.dojoStreak;
+      await saveProfile({ skills_progress: profile.skills_progress });
+    }
+  } else {
+    skillState.dojoStreak = 0;
+  }
+  renderView();
+}
+
+function nextDojo(){
+  skillState.dojoIndex++;
+  skillState.dojoAnswered = false;
+  skillState.dojoSelected = null;
+  renderView();
+}
+
+// ---------- Punctuation surgeon ----------
+function openPunctuation(){
+  skillState.mode = 'punctuation';
+  skillState.punctIndex = 0;
+  skillState.punctRevealed = false;
+  renderView();
+}
+
+function punctuationHTML(){
+  if (skillState.punctIndex >= PUNCTUATION_DRILLS.length) {
+    return `<h1>Punctuation surgeon</h1>
+      <div class="card" style="margin-top:16px"><p style="margin:0;font-weight:500">You've been through every drill in this set.</p></div>
+      <div style="margin-top:16px;display:flex;gap:8px"><button class="btn" onclick="openPunctuation()">Start over</button>
+      <button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
+  }
+  const p = PUNCTUATION_DRILLS[skillState.punctIndex];
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h1 style="font-size:18px">Punctuation surgeon</h1>
+      <span class="streak-pill">${skillState.punctIndex+1} of ${PUNCTUATION_DRILLS.length}</span>
+    </div>
+    <p class="muted" style="font-size:13px;margin:0 0 6px">${p.instruction}</p>
+    <div class="card" style="margin-bottom:12px"><p style="margin:0;font-size:13px">${p.original}</p></div>
+    <textarea class="rewrite-box" id="rewrite-input" placeholder="Type your rewrite here"></textarea>
+    <div style="margin-top:10px">
+      ${skillState.punctRevealed
+        ? `<div class="model-answer"><strong>Model answer:</strong> ${p.model}<br><br><strong>Rule:</strong> ${p.rule}</div>
+           <div style="margin-top:14px"><button class="btn" onclick="nextPunctuation()">Next drill</button></div>`
+        : `<button class="btn" onclick="revealPunctuation()">Show model answer</button>`}
+    </div>
+    <div style="margin-top:14px"><button class="btn ghost" onclick="backToSkillMenu()">Exit</button></div>
+  `;
+}
+
+function revealPunctuation(){
+  skillState.punctRevealed = true;
+  renderView();
+}
+
+function nextPunctuation(){
+  skillState.punctIndex++;
+  skillState.punctRevealed = false;
+  renderView();
+}
+
+// ---------- Quick-fire quant & math ----------
+function openQuickfirePicker(){
+  skillState.mode = 'quickfire';
+  skillState.qfCategory = null;
+  renderView();
+}
+
+function startQuickfire(category){
+  skillState.qfCategory = category;
+  skillState.qfQueue = shuffleArray(QUICKFIRE[category]);
+  skillState.qfIndex = 0;
+  skillState.qfScore = 0;
+  skillState.qfAnswered = false;
+  skillState.qfDone = false;
+  skillState.qfSecondsLeft = QF_TIME_PER_QUESTION;
+  startQfTimer();
+  renderView();
+}
+
+function startQfTimer(){
+  if (skillState.qfTimerHandle) clearInterval(skillState.qfTimerHandle);
+  skillState.qfTimerHandle = setInterval(() => {
+    skillState.qfSecondsLeft--;
+    const el = document.getElementById('qf-timer');
+    if (el) el.textContent = skillState.qfSecondsLeft + 's';
+    if (skillState.qfSecondsLeft <= 0) {
+      clearInterval(skillState.qfTimerHandle);
+      if (!skillState.qfAnswered) { skillState.qfAnswered = true; skillState.qfSelected = null; renderView(); }
+    }
+  }, 1000);
+}
+
+function quickfireHTML(){
+  if (!skillState.qfCategory) {
+    const best = profile.skills_progress.quickfireBest;
+    return `<h1>Quick-fire quant &amp; math</h1>
+      <p class="muted" style="margin:6px 0 16px">${QF_TIME_PER_QUESTION} seconds per question. Choose a category.</p>
+      <div class="skill-menu">
+        <div class="skill-card" onclick="startQuickfire('quant')">
+          <p style="font-weight:500;font-size:14px;margin:0 0 4px">Quantitative</p>
+          <p class="muted" style="font-size:12px;margin:0">Best: ${best.quant !== undefined ? best.quant + '/10' : 'not yet attempted'}</p>
+        </div>
+        <div class="skill-card" onclick="startQuickfire('math')">
+          <p style="font-weight:500;font-size:14px;margin:0 0 4px">Mathematics</p>
+          <p class="muted" style="font-size:12px;margin:0">Best: ${best.math !== undefined ? best.math + '/10' : 'not yet attempted'}</p>
+        </div>
+      </div>
+      <div style="margin-top:8px"><button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
+  }
+
+  if (skillState.qfDone) {
+    const best = profile.skills_progress.quickfireBest[skillState.qfCategory];
+    return `<h1>Quick-fire results</h1>
+      <div class="card" style="margin-top:16px">
+        <p style="margin:0;font-weight:500">Score: ${skillState.qfScore} of ${skillState.qfQueue.length}</p>
+        <p class="muted" style="margin:6px 0 0;font-size:13px">Personal best: ${best}/10</p>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:8px">
+        <button class="btn" onclick="startQuickfire('${skillState.qfCategory}')">Go again</button>
+        <button class="btn ghost" onclick="openQuickfirePicker()">Back to categories</button>
+      </div>`;
+  }
+
+  const q = skillState.qfQueue[skillState.qfIndex];
+  let choicesHTML = '';
+  Object.entries(q.choices).forEach(([letter, c]) => {
+    const isSelected = skillState.qfSelected === letter;
+    let extra = '';
+    if (skillState.qfAnswered) {
+      if (letter === q.correct) extra = 'border:1.5px solid var(--success)';
+      else if (isSelected) extra = 'border:1.5px solid var(--maroon)';
+    }
+    choicesHTML += `<div class="choice-row ${isSelected?'selected':''}" style="${extra}" onclick="answerQuickfire('${letter}')">
+      <span class="choice-dot"></span><span style="font-size:13px">${c.text}</span></div>`;
+  });
+  let feedback = '';
+  if (skillState.qfAnswered) {
+    const chosen = skillState.qfSelected ? q.choices[skillState.qfSelected] : null;
+    feedback = `<div class="model-answer">${chosen ? chosen.explain : 'Time ran out on this one. ' + q.choices[q.correct].explain}</div>
+      <div style="margin-top:14px"><button class="btn" onclick="nextQuickfire()">${skillState.qfIndex === skillState.qfQueue.length-1 ? 'See results' : 'Next'}</button></div>`;
+  }
+  return `
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <h1 style="font-size:18px">Quick-fire &middot; ${skillState.qfCategory}</h1>
+      <span class="timer" id="qf-timer">${skillState.qfSecondsLeft}s</span>
+    </div>
+    <p class="muted" style="font-size:12px;margin:0 0 12px">Question ${skillState.qfIndex+1} of ${skillState.qfQueue.length} &middot; Score: ${skillState.qfScore}</p>
+    <p style="font-size:14px;font-weight:500;margin:0 0 14px">${q.prompt}</p>
+    <div>${choicesHTML}</div>
+    ${feedback}
+  `;
+}
+
+function answerQuickfire(letter){
+  if (skillState.qfAnswered) return;
+  clearInterval(skillState.qfTimerHandle);
+  skillState.qfSelected = letter;
+  skillState.qfAnswered = true;
+  const q = skillState.qfQueue[skillState.qfIndex];
+  if (letter === q.correct) skillState.qfScore++;
+  renderView();
+}
+
+async function nextQuickfire(){
+  skillState.qfIndex++;
+  skillState.qfAnswered = false;
+  skillState.qfSelected = null;
+  if (skillState.qfIndex >= skillState.qfQueue.length) {
+    skillState.qfDone = true;
+    const best = profile.skills_progress.quickfireBest[skillState.qfCategory] || 0;
+    if (skillState.qfScore > best) {
+      profile.skills_progress.quickfireBest[skillState.qfCategory] = skillState.qfScore;
+      await saveProfile({ skills_progress: profile.skills_progress });
+    }
+    renderView();
+    return;
+  }
+  skillState.qfSecondsLeft = QF_TIME_PER_QUESTION;
+  startQfTimer();
+  renderView();
 }
 
 function dashboardHTML(){
