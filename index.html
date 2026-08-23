@@ -9,6 +9,7 @@
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script src="questions.js"></script>
 <script src="skills-content.js"></script>
+<script src="lessons-content.js"></script>
 <style>
   :root{
     --paper:#F6F1E4; --card:#FFFFFF; --ink:#1C2B45; --maroon:#7A2331;
@@ -94,6 +95,17 @@
   .streak-pill{font-size:12px;background:var(--tint);color:var(--maroon);padding:3px 10px;border-radius:12px;font-weight:500}
   textarea.rewrite-box{width:100%;min-height:70px;resize:vertical}
   .model-answer{background:var(--tint);border-radius:8px;padding:12px 14px;margin-top:10px;font-size:13px}
+  .lesson-section-header{font-size:12px;text-transform:uppercase;letter-spacing:0.04em;color:var(--slate);margin:18px 0 8px}
+  .lesson-section-header:first-child{margin-top:0}
+  .lesson-row{display:flex;justify-content:space-between;align-items:center;background:var(--card);
+    border:0.5px solid var(--border);border-radius:8px;padding:10px 14px;margin-bottom:6px;cursor:pointer}
+  .lesson-row:hover{border-color:var(--maroon)}
+  .lesson-check{width:18px;height:18px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px}
+  .lesson-check.done{background:var(--success);color:#fff}
+  .lesson-check.todo{border:1.5px solid var(--border)}
+  .lesson-content{font-size:14px;line-height:1.7}
+  .lesson-content ul,.lesson-content ol{margin:8px 0;padding-left:20px}
+  .lesson-content p{margin:0 0 10px}
 </style>
 </head>
 <body>
@@ -101,8 +113,8 @@
 
 <script>
 // ---- Fill these in after creating your Supabase project (Project Settings > API) ----
-const SUPABASE_URL = 'https://jrfuieglocsxhxyhcjcj.supabase.co';
-const SUPABASE_ANON_KEY = 'sb_publishable_Ikp0BBxm9ctP8Y3jADOzkA_k5RYiRJs';
+const SUPABASE_URL = 'YOUR_SUPABASE_PROJECT_URL';
+const SUPABASE_ANON_KEY = 'YOUR_SUPABASE_ANON_KEY';
 // ---------------------------------------------------------------------------------
 
 const supa = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
@@ -173,7 +185,19 @@ function ensureSkillsProgress(){
   if (!profile.skills_progress.vocab) profile.skills_progress.vocab = {};
   if (typeof profile.skills_progress.dojoBestStreak !== 'number') profile.skills_progress.dojoBestStreak = 0;
   if (!profile.skills_progress.quickfireBest) profile.skills_progress.quickfireBest = {};
+  if (!profile.lessons_completed) profile.lessons_completed = {};
 }
+
+// ---------- Lessons state ----------
+let lessonsState = {
+  view: 'menu',        // 'menu' | 'detail'
+  currentLessonId: null,
+  phase: 'content',     // 'content' | 'quiz' | 'result'
+  quizIndex: 0,
+  quizAnswered: false,
+  quizSelected: null,
+  quizScore: 0
+};
 
 function daysUntil(dateStr){
   const now = new Date();
@@ -281,13 +305,7 @@ function renderView(){
   if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
   if (activeView === 'practice') { renderPractice(); return; }
   if (activeView === 'skills') { renderSkillBuilder(); return; }
-  const labels = {lessons:'Lessons'};
-  const notes = {
-    lessons: 'Next pass: short lessons for every topic in all five sections, each ending in a quick comprehension check.'
-  };
-  root.innerHTML = `<h1>${labels[activeView]}</h1>
-    <p class="muted" style="margin:6px 0 20px">This module is being built next.</p>
-    <div class="placeholder"><p class="muted" style="margin:0">${notes[activeView]}</p></div>`;
+  if (activeView === 'lessons') { renderLessons(); return; }
 }
 
 // ---------- Practice tests ----------
@@ -530,7 +548,8 @@ function reviewHTML(){
         <p style="font-size:12px;font-weight:500;color:var(--maroon);margin:0 0 4px">No answer was selected</p>
         <p style="font-size:13px;margin:0 0 10px">Running out of time on a question like this is worth noting for pacing next time.</p>`}
         <p style="font-size:12px;font-weight:500;color:var(--success);margin:0 0 4px">Why ${m.correct} is correct</p>
-        <p style="font-size:13px;margin:0">${correctExplain}</p>
+        <p style="font-size:13px;margin:0 0 10px">${correctExplain}</p>
+        ${findLessonBySkill(m.skill) ? `<a href="#" onclick="openLessonFromReview('${findLessonBySkill(m.skill).id}');return false" style="font-size:13px;color:var(--maroon);font-weight:500;text-decoration:none">Review this skill: ${findLessonBySkill(m.skill).title} &rarr;</a>` : ''}
       </div>
     </div>
     <div class="card" style="display:flex;justify-content:space-between;align-items:center">
@@ -1076,6 +1095,144 @@ async function sendTutorMessage(){
 }
 
 // ---------- Init ----------
+// ================= Lessons =================
+function findLessonBySkill(skill){
+  return LESSONS.find(l => l.skillTags.includes(skill)) || null;
+}
+
+function openLessonFromReview(lessonId){
+  setView('lessons');
+  openLesson(lessonId);
+}
+
+function renderLessons(){
+  const root = document.getElementById('view-root');
+  if (lessonsState.view === 'detail') { root.innerHTML = lessonDetailHTML(); return; }
+  root.innerHTML = lessonsMenuHTML();
+}
+
+function lessonsMenuHTML(){
+  let html = `<h1>Lessons</h1><p class="muted" style="margin:6px 0 0">Short study guides for every topic tested on the HSPT, each with a quick comprehension check.</p>`;
+  SECTIONS.forEach(s => {
+    const sectionLessons = LESSONS.filter(l => l.section === s.key);
+    if (sectionLessons.length === 0) return;
+    html += `<p class="lesson-section-header">${s.name}</p>`;
+    sectionLessons.forEach(l => {
+      const done = !!profile.lessons_completed[l.id];
+      html += `<div class="lesson-row" onclick="openLesson('${l.id}')">
+        <span style="font-size:13px">${l.title}</span>
+        <span class="lesson-check ${done ? 'done' : 'todo'}">${done ? '\u2713' : ''}</span>
+      </div>`;
+    });
+  });
+  return html;
+}
+
+function openLesson(lessonId){
+  lessonsState.view = 'detail';
+  lessonsState.currentLessonId = lessonId;
+  lessonsState.phase = 'content';
+  lessonsState.quizIndex = 0;
+  lessonsState.quizAnswered = false;
+  lessonsState.quizSelected = null;
+  lessonsState.quizScore = 0;
+  renderView();
+}
+
+function backToLessonsMenu(){
+  lessonsState.view = 'menu';
+  renderView();
+}
+
+function lessonDetailHTML(){
+  const lesson = LESSONS.find(l => l.id === lessonsState.currentLessonId);
+  if (lessonsState.phase === 'content') {
+    return `
+      <p class="muted" style="font-size:12px;margin:0 0 4px">${SECTIONS.find(s=>s.key===lesson.section).name}</p>
+      <h1 style="margin-bottom:14px">${lesson.title}</h1>
+      <div class="lesson-content">${lesson.content}</div>
+      <div style="margin-top:18px;display:flex;gap:8px">
+        <button class="btn" onclick="startLessonQuiz()">Take the quick check</button>
+        <button class="btn ghost" onclick="backToLessonsMenu()">Back to lessons</button>
+      </div>
+    `;
+  }
+  if (lessonsState.phase === 'quiz') {
+    const q = lesson.quiz[lessonsState.quizIndex];
+    let choicesHTML = '';
+    Object.entries(q.choices).forEach(([letter, c]) => {
+      const isSelected = lessonsState.quizSelected === letter;
+      let extra = '';
+      if (lessonsState.quizAnswered) {
+        if (letter === q.correct) extra = 'border:1.5px solid var(--success)';
+        else if (isSelected) extra = 'border:1.5px solid var(--maroon)';
+      }
+      choicesHTML += `<div class="choice-row ${isSelected?'selected':''}" style="${extra}" onclick="answerLessonQuiz('${letter}')">
+        <span class="choice-dot"></span><span style="font-size:13px">${c.text}</span></div>`;
+    });
+    let feedback = '';
+    if (lessonsState.quizAnswered) {
+      const chosen = q.choices[lessonsState.quizSelected];
+      const isLast = lessonsState.quizIndex === lesson.quiz.length - 1;
+      feedback = `<div class="model-answer">${chosen.explain}</div>
+        <div style="margin-top:14px"><button class="btn" onclick="nextLessonQuizQuestion()">${isLast ? 'See results' : 'Next question'}</button></div>`;
+    }
+    return `
+      <p class="muted" style="font-size:12px;margin:0 0 4px">${lesson.title} \u2014 comprehension check</p>
+      <h1 style="font-size:18px;margin-bottom:14px">Question ${lessonsState.quizIndex+1} of ${lesson.quiz.length}</h1>
+      <p style="font-size:14px;font-weight:500;margin:0 0 14px">${q.prompt}</p>
+      <div>${choicesHTML}</div>
+      ${feedback}
+    `;
+  }
+  // result
+  const total = lesson.quiz.length;
+  return `
+    <h1>Nice work</h1>
+    <div class="card" style="margin-top:16px">
+      <p style="margin:0;font-weight:500">You got ${lessonsState.quizScore} of ${total} on the comprehension check for "${lesson.title}."</p>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:8px">
+      <button class="btn" onclick="openLesson('${lesson.id}')">Review again</button>
+      <button class="btn ghost" onclick="backToLessonsMenu()">Back to lessons</button>
+    </div>
+  `;
+}
+
+function startLessonQuiz(){
+  lessonsState.phase = 'quiz';
+  lessonsState.quizIndex = 0;
+  lessonsState.quizAnswered = false;
+  lessonsState.quizSelected = null;
+  lessonsState.quizScore = 0;
+  renderView();
+}
+
+function answerLessonQuiz(letter){
+  if (lessonsState.quizAnswered) return;
+  const lesson = LESSONS.find(l => l.id === lessonsState.currentLessonId);
+  const q = lesson.quiz[lessonsState.quizIndex];
+  lessonsState.quizSelected = letter;
+  lessonsState.quizAnswered = true;
+  if (letter === q.correct) lessonsState.quizScore++;
+  renderView();
+}
+
+async function nextLessonQuizQuestion(){
+  const lesson = LESSONS.find(l => l.id === lessonsState.currentLessonId);
+  lessonsState.quizIndex++;
+  lessonsState.quizAnswered = false;
+  lessonsState.quizSelected = null;
+  if (lessonsState.quizIndex >= lesson.quiz.length) {
+    lessonsState.phase = 'result';
+    profile.lessons_completed[lesson.id] = true;
+    await saveProfile({ lessons_completed: profile.lessons_completed });
+    renderView();
+    return;
+  }
+  renderView();
+}
+
 async function init(){
   const { data } = await supa.auth.getSession();
   session = data.session;
