@@ -1,4 +1,4 @@
--- Run this once in your Supabase project's SQL editor (Project > SQL Editor > New query).
+- Run this once in your Supabase project's SQL editor (Project > SQL Editor > New query).
 
 create table if not exists public.profiles (
   id uuid references auth.users on delete cascade primary key,
@@ -9,6 +9,7 @@ create table if not exists public.profiles (
   mastery jsonb default '{"verbal":0,"quant":0,"reading":0,"math":0,"language":0}',
   resume_section text,
   mistakes jsonb default '[]',
+  skills_progress jsonb default '{"vocab":{},"dojoBestStreak":0,"quickfireBest":{}}',
   created_at timestamptz default now()
 );
 
@@ -39,3 +40,11 @@ $$ language plpgsql security definer;
 create trigger on_auth_user_created
   after insert on auth.users
   for each row execute procedure public.handle_new_user();
+
+-- ============================================================
+-- MIGRATION for databases that already ran the schema above
+-- (i.e. you set Merit up before the Skill Builder module existed).
+-- Safe to run even if the column already exists.
+-- ============================================================
+alter table public.profiles
+  add column if not exists skills_progress jsonb default '{"vocab":{},"dojoBestStreak":0,"quickfireBest":{}}';
