@@ -44,7 +44,7 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         systemInstruction: { parts: [{ text: TUTOR_SYSTEM_PROMPT }] },
         contents,
-        generationConfig: { temperature: 0.6, maxOutputTokens: 1024, thinkingConfig: { thinkingBudget: 0 } }
+        generationConfig: { temperature: 0.6, maxOutputTokens: 1024 }
       })
     });
 
