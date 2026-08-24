@@ -146,6 +146,56 @@ const SECTIONS = [
   {key:'math', name:'Mathematics', color:'#3F6B4E'},
   {key:'language', name:'Language', color:'#5C6270'}
 ];
+// Official HSPT-length spec: exact question counts and time limits per section.
+// Section order here matches the real test order and is used for the full practice test.
+const OFFICIAL_TEST_SPEC = {
+  verbal:   { count: 60, minutes: 16 },
+  quant:    { count: 52, minutes: 30 },
+  reading:  { count: 62, minutes: 25 },
+  math:     { count: 64, minutes: 45 },
+  language: { count: 60, minutes: 25 }
+};
+function formatDuration(totalMinutes){
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  if (h === 0) return `${m} min`;
+  return `${h}h ${m}m`;
+}
+function shuffleArray(arr){
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+// Reading questions are grouped by passage; a random test draws whole passages
+// (keeping each passage's questions together and in order) until the target count
+// is reached, trimming only the final passage down to the exact remainder needed.
+function pickReadingQuestions(count){
+  const groups = {};
+  QUESTIONS.reading.forEach(q => {
+    if (!groups[q.passage]) groups[q.passage] = [];
+    groups[q.passage].push({ ...q, section: 'reading' });
+  });
+  const passageKeys = shuffleArray(Object.keys(groups));
+  let result = [];
+  for (const pk of passageKeys) {
+    if (result.length >= count) break;
+    const groupQs = groups[pk];
+    if (result.length + groupQs.length <= count) {
+      result = result.concat(groupQs);
+    } else {
+      result = result.concat(groupQs.slice(0, count - result.length));
+    }
+  }
+  return result;
+}
+function pickSectionQuestions(key, count){
+  if (key === 'reading') return pickReadingQuestions(count);
+  const pool = QUESTIONS[key].map(q => ({ ...q, section: key }));
+  return shuffleArray(pool).slice(0, Math.min(count, pool.length));
+}
 const NAV = [
   {key:'dashboard', label:'Dashboard'},
   {key:'practice', label:'Practice tests'},
@@ -161,17 +211,22 @@ let activeView = 'dashboard';
 let tutorHistory = []; // {role:'student'|'tutor', text}
 
 // ---------- Practice test state ----------
-const TIME_PER_QUESTION_SEC = 40; // roughly mirrors real HSPT pacing pressure
 let practiceState = {
-  phase: 'picker',       // 'picker' | 'taking' | 'review'
-  sectionKey: null,      // null means full test (all sections mixed)
-  questions: [],         // array of question objects for this attempt
+  phase: 'picker',       // 'picker' | 'sectionIntro' | 'taking' | 'review'
+  sectionKey: null,      // null means full test (all sections, official order)
+  sectionOrder: [],      // ordered list of section keys for this attempt
+  currentSectionIdx: 0,  // index into sectionOrder
+  sectionQuestions: {},  // key -> pre-generated random question array for this attempt
+  questions: [],         // alias for sectionQuestions[sectionOrder[currentSectionIdx]]
   index: 0,
-  answers: {},           // questionId -> chosen letter
+  answers: {},           // questionId -> chosen letter (global across all sections)
   flagged: {},           // questionId -> true
-  secondsLeft: 0,
+  secondsLeft: 0,        // seconds left in the CURRENT section
   timerHandle: null,
-  reviewIndex: 0
+  reviewIndex: 0,
+  missed: [],
+  correctCount: 0,
+  totalQuestions: 0
 };
 
 // ---------- Skill builder state ----------
@@ -347,48 +402,91 @@ function renderView(){
 // ---------- Practice tests ----------
 function renderPractice(){
   const root = document.getElementById('view-root');
+  if (practiceState.phase === 'sectionIntro') { root.innerHTML = sectionIntroHTML(); return; }
   if (practiceState.phase === 'taking') { root.innerHTML = testTakingHTML(); return; }
   if (practiceState.phase === 'review') { root.innerHTML = reviewHTML(); return; }
   root.innerHTML = pickerHTML();
 }
 
 function pickerHTML(){
+  const fullMinutes = Object.values(OFFICIAL_TEST_SPEC).reduce((a,s)=>a+s.minutes,0);
+  const fullCount = Object.values(OFFICIAL_TEST_SPEC).reduce((a,s)=>a+s.count,0);
   let tiles = `<div class="picker-tile" onclick="startTest(null)">
       <p class="name">Full practice test</p>
-      <p class="count">All 5 sections &middot; ${Object.values(QUESTIONS).reduce((a,q)=>a+q.length,0)} questions</p>
+      <p class="count">All 5 sections &middot; ${fullCount} questions &middot; ${formatDuration(fullMinutes)}</p>
     </div>`;
   SECTIONS.forEach(s => {
+    const spec = OFFICIAL_TEST_SPEC[s.key];
     tiles += `<div class="picker-tile" onclick="startTest('${s.key}')">
       <p class="name">${s.name}</p>
-      <p class="count">${QUESTIONS[s.key].length} questions</p>
+      <p class="count">${spec.count} questions &middot; ${formatDuration(spec.minutes)}</p>
     </div>`;
   });
   return `<h1>Practice tests</h1>
-    <p class="muted" style="margin:6px 0 0">Choose a full test or focus on one section. Each test is timed like the real HSPT.</p>
+    <p class="muted" style="margin:6px 0 0">Choose a full test or focus on one section. Each test matches the real HSPT's question count and timing, with a fresh random set of questions drawn every time.</p>
     <div class="picker-grid">${tiles}</div>`;
 }
 
 function startTest(sectionKey){
-  let pool = [];
-  if (sectionKey) {
-    pool = QUESTIONS[sectionKey].map(q => ({...q, section: sectionKey}));
-  } else {
-    SECTIONS.forEach(s => { pool = pool.concat(QUESTIONS[s.key].map(q => ({...q, section: s.key}))); });
-  }
+  const order = sectionKey ? [sectionKey] : SECTIONS.map(s => s.key);
+  const sectionQuestions = {};
+  order.forEach(key => { sectionQuestions[key] = pickSectionQuestions(key, OFFICIAL_TEST_SPEC[key].count); });
   practiceState = {
-    phase: 'taking',
+    phase: 'sectionIntro',
     sectionKey,
-    questions: pool,
+    sectionOrder: order,
+    currentSectionIdx: 0,
+    sectionQuestions,
+    questions: sectionQuestions[order[0]],
     index: 0,
     answers: {},
     flagged: {},
-    secondsLeft: pool.length * TIME_PER_QUESTION_SEC,
+    secondsLeft: OFFICIAL_TEST_SPEC[order[0]].minutes * 60,
     timerHandle: null,
-    reviewIndex: 0
+    reviewIndex: 0,
+    missed: [],
+    correctCount: 0,
+    totalQuestions: 0
   };
   saveProfile({ resume_section: sectionKey ? SECTIONS.find(s=>s.key===sectionKey).name : 'Full practice test' });
   renderNav();
+  renderView();
+}
+
+function sectionIntroHTML(){
+  const key = practiceState.sectionOrder[practiceState.currentSectionIdx];
+  const spec = OFFICIAL_TEST_SPEC[key];
+  const name = SECTIONS.find(s=>s.key===key).name;
+  const multiSection = practiceState.sectionOrder.length > 1;
+  return `
+    <div class="card" style="max-width:480px;margin:60px auto;text-align:center">
+      ${multiSection ? `<p class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:0.05em;margin:0 0 10px">Section ${practiceState.currentSectionIdx+1} of ${practiceState.sectionOrder.length}</p>` : ''}
+      <h1 style="margin:0 0 8px">${name}</h1>
+      <p class="muted" style="margin:0 0 22px">${spec.count} questions &middot; ${spec.minutes} minutes</p>
+      <button class="btn" onclick="beginCurrentSection()">Begin ${multiSection ? 'section' : 'test'}</button>
+    </div>`;
+}
+
+function beginCurrentSection(){
+  practiceState.phase = 'taking';
   startTimer();
+  renderView();
+}
+
+function advanceSection(){
+  if (practiceState.timerHandle) clearInterval(practiceState.timerHandle);
+  const nextIdx = practiceState.currentSectionIdx + 1;
+  if (nextIdx >= practiceState.sectionOrder.length) {
+    finishTest();
+    return;
+  }
+  practiceState.currentSectionIdx = nextIdx;
+  const key = practiceState.sectionOrder[nextIdx];
+  practiceState.questions = practiceState.sectionQuestions[key];
+  practiceState.index = 0;
+  practiceState.secondsLeft = OFFICIAL_TEST_SPEC[key].minutes * 60;
+  practiceState.phase = 'sectionIntro';
+  renderNav();
   renderView();
 }
 
@@ -400,7 +498,7 @@ function startTimer(){
     if (el) el.textContent = formatTime(practiceState.secondsLeft);
     if (practiceState.secondsLeft <= 0) {
       clearInterval(practiceState.timerHandle);
-      finishTest();
+      advanceSection();
     }
   }, 1000);
 }
@@ -434,13 +532,24 @@ function testTakingHTML(){
     grid += `<div class="qnav-btn" style="background:${bg};color:${color}" onclick="jumpToQuestion(${i})" title="Question ${i+1}">${i+1}</div>`;
   });
 
-  const isLast = practiceState.index === practiceState.questions.length - 1;
+  const isLastQuestionInSection = practiceState.index === practiceState.questions.length - 1;
+  const isLastSection = practiceState.currentSectionIdx === practiceState.sectionOrder.length - 1;
+  const multiSection = practiceState.sectionOrder.length > 1;
+
+  let nextButtonHTML;
+  if (!isLastQuestionInSection) {
+    nextButtonHTML = `<button class="btn" onclick="nextQuestion()">Next</button>`;
+  } else if (isLastSection) {
+    nextButtonHTML = `<button class="btn" onclick="finishTest()">Submit test</button>`;
+  } else {
+    nextButtonHTML = `<button class="btn" onclick="advanceSection()">Finish section</button>`;
+  }
 
   return `
     <div class="test-header">
       <div>
         <p class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:0.05em;margin:0">
-          ${sectionName || 'Full practice test'}</p>
+          ${sectionName || 'Full practice test'}${multiSection ? ` &middot; Section ${practiceState.currentSectionIdx+1} of ${practiceState.sectionOrder.length}` : ''}</p>
         <h1 style="font-size:18px">Question ${practiceState.index+1} of ${practiceState.questions.length}</h1>
       </div>
       <div style="text-align:right">
@@ -455,9 +564,7 @@ function testTakingHTML(){
       <button class="btn ghost" onclick="toggleFlag('${q.id}')">${practiceState.flagged[q.id] ? 'Unflag' : 'Flag for review'}</button>
       <div style="display:flex;gap:8px">
         <button class="btn ghost" onclick="prevQuestion()" ${practiceState.index===0?'disabled':''}>Back</button>
-        ${isLast
-          ? `<button class="btn" onclick="finishTest()">Submit test</button>`
-          : `<button class="btn" onclick="nextQuestion()">Next</button>`}
+        ${nextButtonHTML}
       </div>
     </div>
     <div class="bubblegrid">${grid}</div>
@@ -489,9 +596,15 @@ function jumpToQuestion(i){
 async function finishTest(){
   if (practiceState.timerHandle) clearInterval(practiceState.timerHandle);
 
+  // Gather every question across every section in this attempt (not just the current one)
+  let allQuestions = [];
+  practiceState.sectionOrder.forEach(key => {
+    allQuestions = allQuestions.concat(practiceState.sectionQuestions[key]);
+  });
+
   const missed = [];
   const scoreBySection = {};
-  practiceState.questions.forEach(q => {
+  allQuestions.forEach(q => {
     const sec = q.section;
     scoreBySection[sec] = scoreBySection[sec] || { correct: 0, total: 0 };
     scoreBySection[sec].total++;
@@ -535,13 +648,14 @@ async function finishTest(){
   practiceState.phase = 'review';
   practiceState.missed = missed;
   practiceState.reviewIndex = 0;
-  practiceState.correctCount = practiceState.questions.length - missed.length;
+  practiceState.totalQuestions = allQuestions.length;
+  practiceState.correctCount = allQuestions.length - missed.length;
   renderNav();
   renderView();
 }
 
 function reviewHTML(){
-  const total = practiceState.questions.length;
+  const total = practiceState.totalQuestions;
   const correct = practiceState.correctCount;
   const pct = Math.round((correct/total)*100);
   const missed = practiceState.missed;
@@ -608,7 +722,11 @@ function nextMissed(){
 }
 
 function backToDashboardFromReview(){
-  practiceState = { phase:'picker', sectionKey:null, questions:[], index:0, answers:{}, flagged:{}, secondsLeft:0, timerHandle:null, reviewIndex:0 };
+  practiceState = {
+    phase:'picker', sectionKey:null, sectionOrder:[], currentSectionIdx:0, sectionQuestions:{},
+    questions:[], index:0, answers:{}, flagged:{}, secondsLeft:0, timerHandle:null, reviewIndex:0,
+    missed:[], correctCount:0, totalQuestions:0
+  };
   setView('dashboard');
 }
 
