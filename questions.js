@@ -43,7 +43,12 @@ const PASSAGES = {
   p37: `Every game against his older cousin ended the same way — a quick checkmate within the first ten moves, and a demonstration of exactly which move had doomed him from the start. For months, eight-year-old Theo begged to play something else instead. His cousin refused, insisting that losing to the same trap enough times was the only way he'd stop falling into it. The day Theo finally saw the trap coming three moves early and sidestepped it entirely, his cousin didn't offer a single correction. He just reset the board and said, "Again, but harder this time."`,
   p38: `The earliest eyeglasses, developed in Italy during the late 1200s, consisted of two magnifying lenses joined by a rivet and balanced awkwardly on the bridge of the nose, since arms that hooked behind the ears weren't added until centuries later. For hundreds of years, eyeglasses remained a luxury item, often custom-made and expensive, limiting their use mostly to scholars, clergy, and the wealthy. It wasn't until manufacturing techniques improved during the Industrial Revolution that glasses became affordable and widely available, transforming them from a rare luxury into an everyday tool used by millions of people with vision problems.`,
   p39: `Mia's hands had shaken so badly during her audition that she'd fumbled through a piece she'd played perfectly a hundred times at home. The rejection letter that followed felt less like feedback and more like confirmation of everything she'd feared about herself. Her teacher didn't offer comforting words about the judges being wrong. Instead, she asked Mia to play the same piece, right there, in front of just the two of them. When Mia finished without a single shaky note, her teacher simply said, "The piece was never the problem. Let's work on the shaking."`,
-  p40: `A mirage occurs when light bends as it passes through layers of air with different temperatures, most commonly near hot road surfaces or deserts. Near the ground, intensely heated air is less dense than the cooler air above it, and light traveling through this boundary bends upward toward an observer's eyes, creating the illusion of a reflective, water-like surface in the distance. What appears to be a puddle on a hot highway is actually a distorted reflection of the sky, bent into view by the temperature difference rather than any actual liquid present on the road.`
+  p40: `A mirage occurs when light bends as it passes through layers of air with different temperatures, most commonly near hot road surfaces or deserts. Near the ground, intensely heated air is less dense than the cooler air above it, and light traveling through this boundary bends upward toward an observer's eyes, creating the illusion of a reflective, water-like surface in the distance. What appears to be a puddle on a hot highway is actually a distorted reflection of the sky, bent into view by the temperature difference rather than any actual liquid present on the road.`,
+  p41: `Tsunamis are most commonly triggered by sudden movements of the ocean floor, such as those caused by underwater earthquakes, which displace a massive volume of water almost instantly. In the open ocean, a tsunami wave may only be a foot or two tall and can pass beneath ships unnoticed, since its energy is spread across the entire depth of the water rather than concentrated near the surface. As the wave approaches shallow coastal waters, however, the same energy becomes compressed into a much smaller depth, causing the wave to slow down and dramatically increase in height, sometimes reaching tens of feet before crashing onshore.`,
+  p42: `Before every debate, Sofia rehearsed her opening line so many times it lost all meaning, just sounds she could recite without thinking. Her coach never once told her the nervousness would disappear with practice. Instead, she taught Sofia to keep speaking even when her voice wavered, since stopping to recover only drew more attention to the shake. At regionals, Sofia's hands trembled through her entire first argument — and she kept going anyway, delivering every point exactly as planned, trembling hands and all.`,
+  p43: `Before electric traffic lights existed, early versions used gas lanterns and were operated manually by police officers standing at intersections, a job that was both exhausting and dangerous given nearby traffic. The first electric traffic signal, introduced in the early 1900s, used only red and green lights and required an officer to switch between them by hand. It wasn't until several years later that an automatic timer was added, removing the need for constant human operation, and the now-familiar yellow caution light was introduced shortly after to give drivers time to react before the signal changed.`,
+  p44: `Every painting Jun submitted to her art teacher came back with the same quiet note: "Whose style is this — yours, or the artist you're copying?" For months, Jun insisted she was just practicing technique, nothing more. It wasn't until she stopped trying to paint like anyone else and simply painted what she noticed on her actual walk home — a cracked sidewalk, a dog asleep in a doorway — that her teacher wrote something different in the margin: no question this time, just three words. "There you are."`,
+  p45: `Unlike most volcanoes, which form along the edges of tectonic plates, the Hawaiian Islands were created by a stationary hotspot of magma deep beneath the Earth's crust, over which the Pacific tectonic plate has slowly drifted for millions of years. As the plate moves, each island forms directly above the hotspot and is then gradually carried away as a new island begins forming behind it, creating a chain of islands that get progressively older the farther they are from the hotspot's current location. This same process is expected to eventually create a brand-new Hawaiian island, currently forming underwater and still centuries away from breaking the ocean's surface.`
 };
 
 const QUESTIONS = {
@@ -1168,6 +1173,146 @@ const QUESTIONS = {
         B:{text:'Some beetles have a backbone', explain:'Even partial overlap is ruled out by the first statement.'},
         C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
         D:{text:'No beetles have a backbone', explain:'Since no insects have a backbone, and beetles are insects, beetles cannot either.'}
+      } },
+    { id:'v161', skill:'Synonyms', prompt:'Choose the word that means the same as EPHEMERAL.', correct:'B',
+      choices:{
+        A:{text:'Permanent', explain:'This is the opposite of ephemeral.'},
+        B:{text:'Short-lived and fleeting', explain:'Ephemeral means lasting for a very short time.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what ephemeral describes.'},
+        D:{text:'Careful', explain:'Carefulness isn\'t what ephemeral describes.'}
+      } },
+    { id:'v162', skill:'Synonyms', prompt:'Choose the word that means the same as LETHAL.', correct:'C',
+      choices:{
+        A:{text:'Harmless', explain:'This is the opposite of lethal.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what lethal describes.'},
+        C:{text:'Deadly', explain:'Lethal means capable of causing death.'},
+        D:{text:'Careful', explain:'Carefulness isn\'t what lethal describes.'}
+      } },
+    { id:'v163', skill:'Synonyms', prompt:'Choose the word that means the same as INDOMITABLE.', correct:'D',
+      choices:{
+        A:{text:'Easily defeated', explain:'This is the opposite of indomitable.'},
+        B:{text:'Weak', explain:'This is the opposite of indomitable.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what indomitable describes.'},
+        D:{text:'Unable to be defeated or subdued', explain:'Indomitable means impossible to subdue or defeat.'}
+      } },
+    { id:'v164', skill:'Synonyms', prompt:'Choose the word that means the same as VEHEMENT.', correct:'A',
+      choices:{
+        A:{text:'Showing strong, forceful feeling', explain:'Vehement means showing intense and forceful feeling.'},
+        B:{text:'Calm and mild', explain:'This is the opposite of vehement.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what vehement describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what vehement describes.'}
+      } },
+    { id:'v165', skill:'Antonyms', prompt:'Choose the word most nearly opposite to ARDENT.', correct:'B',
+      choices:{
+        A:{text:'Passionate', explain:'Passionate is a synonym of ardent, not its opposite.'},
+        B:{text:'Indifferent', explain:'Ardent means very enthusiastic or passionate, so indifferent is its opposite.'},
+        C:{text:'Devoted', explain:'Devoted is related to ardent, not opposite.'},
+        D:{text:'Intense', explain:'Intense is related to ardent, not opposite.'}
+      } },
+    { id:'v166', skill:'Antonyms', prompt:'Choose the word most nearly opposite to GULLIBLE.', correct:'C',
+      choices:{
+        A:{text:'Trusting', explain:'Trusting is related to gullible, not its opposite.'},
+        B:{text:'Naive', explain:'Naive is a synonym of gullible, not opposite.'},
+        C:{text:'Skeptical and wary', explain:'Gullible means easily deceived, so skeptical is its opposite.'},
+        D:{text:'Innocent', explain:'Innocent is related to gullible, not opposite.'}
+      } },
+    { id:'v167', skill:'Antonyms', prompt:'Choose the word most nearly opposite to HAUGHTY.', correct:'D',
+      choices:{
+        A:{text:'Arrogant', explain:'Arrogant is a synonym of haughty, not its opposite.'},
+        B:{text:'Proud', explain:'Proud is related to haughty, not opposite.'},
+        C:{text:'Confident', explain:'Confident is related to haughty, not opposite.'},
+        D:{text:'Humble', explain:'Haughty means arrogantly proud, so humble is its opposite.'}
+      } },
+    { id:'v168', skill:'Antonyms', prompt:'Choose the word most nearly opposite to SLOTHFUL.', correct:'A',
+      choices:{
+        A:{text:'Industrious', explain:'Slothful means lazy, so industrious, meaning hardworking, is its opposite.'},
+        B:{text:'Lazy', explain:'Lazy is a synonym of slothful, not its opposite.'},
+        C:{text:'Idle', explain:'Idle is related to slothful, not opposite.'},
+        D:{text:'Sluggish', explain:'Sluggish is related to slothful, not opposite.'}
+      } },
+    { id:'v169', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Beagle', explain:'A beagle is a dog breed, fitting the shared category.'},
+        B:{text:'Poodle', explain:'A poodle is also a dog breed.'},
+        C:{text:'Terrier', explain:'A terrier is also a dog breed.'},
+        D:{text:'Iguana', explain:'Unlike the others, an iguana is a reptile, not a dog breed.'}
+      } },
+    { id:'v170', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Guitar', explain:'A guitar is a string instrument, fitting the shared category.'},
+        B:{text:'Banjo', explain:'A banjo is also a string instrument.'},
+        C:{text:'Ukulele', explain:'A ukulele is also a string instrument.'},
+        D:{text:'Clarinet', explain:'Unlike the others, a clarinet is a woodwind instrument, not a string instrument.'}
+      } },
+    { id:'v171', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Hawk', explain:'A hawk is a bird, fitting the shared category.'},
+        B:{text:'Falcon', explain:'A falcon is also a bird.'},
+        C:{text:'Eagle', explain:'An eagle is also a bird.'},
+        D:{text:'Salamander', explain:'Unlike the others, a salamander is an amphibian, not a bird.'}
+      } },
+    { id:'v172', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Novel', explain:'A novel is a written work, fitting the shared category.'},
+        B:{text:'Memoir', explain:'A memoir is also a written work.'},
+        C:{text:'Biography', explain:'A biography is also a written work.'},
+        D:{text:'Statue', explain:'Unlike the others, a statue is a visual art form, not a written work.'}
+      } },
+    { id:'v173', skill:'Analogies', prompt:'Farmer is to field as fisherman is to ___.', correct:'B',
+      choices:{
+        A:{text:'Boat', explain:'A boat is a tool a fisherman uses, not the broader place he works, unlike the parallel to field.'},
+        B:{text:'Sea', explain:'A farmer works in a field; a fisherman works at sea, following the same pattern.'},
+        C:{text:'Net', explain:'A net is a tool a fisherman uses, not the workplace.'},
+        D:{text:'Fish', explain:'Fish are what a fisherman catches, not the workplace.'}
+      } },
+    { id:'v174', skill:'Analogies', prompt:'Signature is to identity as fingerprint is to ___.', correct:'A',
+      choices:{
+        A:{text:'Identification', explain:'A signature confirms identity; a fingerprint confirms identification, following the same pattern.'},
+        B:{text:'Finger', explain:'A finger is the body part, not the concept a fingerprint confirms.'},
+        C:{text:'Ink', explain:'Ink is a material used to record a fingerprint, not the concept it confirms.'},
+        D:{text:'Crime', explain:'Crime is an unrelated context, not the concept a fingerprint confirms.'}
+      } },
+    { id:'v175', skill:'Analogies', prompt:'Candle is to wax as lightbulb is to ___.', correct:'C',
+      choices:{
+        A:{text:'Electricity', explain:'Electricity powers a lightbulb, but it isn\'t the material component parallel to wax.'},
+        B:{text:'Glass', explain:'Glass is the outer casing, not the internal component that produces light, like wax fuels a candle.'},
+        C:{text:'Filament', explain:'A candle is made to burn using wax; a lightbulb produces light using a filament, following the same pattern.'},
+        D:{text:'Switch', explain:'A switch controls a lightbulb, but isn\'t the component parallel to wax.'}
+      } },
+    { id:'v176', skill:'Analogies', prompt:'Tailor is to fabric as potter is to ___.', correct:'D',
+      choices:{
+        A:{text:'Kiln', explain:'A kiln is a tool a potter uses to fire pieces, not the raw material worked with.'},
+        B:{text:'Wheel', explain:'A wheel is a tool a potter uses, not the raw material.'},
+        C:{text:'Glaze', explain:'Glaze is applied after shaping, not the primary raw material.'},
+        D:{text:'Clay', explain:'A tailor works with fabric; a potter works with clay, following the same pattern.'}
+      } },
+    { id:'v177', skill:'Syllogisms', prompt:'All members of the debate club can speak publicly without notes. Priya cannot speak without notes. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Priya is not in the debate club', explain:'Since all debate club members can speak without notes, and Priya cannot, Priya cannot be a member.'},
+        B:{text:'Priya is in the debate club', explain:'This directly contradicts the premise.'},
+        C:{text:'Priya used to be in the debate club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v178', skill:'Syllogisms', prompt:'Some rocks are magnetic. All meteorites are rocks. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All meteorites are magnetic', explain:'This overstates the first statement, which only says "some" rocks are magnetic.'},
+        B:{text:'Cannot be determined whether meteorites are magnetic from these statements alone', explain:'The statements don\'t specify which rocks are the magnetic ones, so meteorites can\'t be confirmed by logic alone.'},
+        C:{text:'No meteorites are magnetic', explain:'This isn\'t supported either — meteorites could be among the magnetic rocks.'},
+        D:{text:'Some meteorites are definitely magnetic', explain:'This assumes meteorites are specifically among the "some" magnetic rocks, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v179', skill:'Syllogisms', prompt:"All triangles have angles summing to 180 degrees. This shape's angles sum to 180 degrees. Therefore:", correct:'C',
+      choices:{
+        A:{text:'This shape is a triangle', explain:'This assumes only triangles can have angles summing to 180 degrees, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a triangle', explain:'This isn\'t supported either — the shape could still be a triangle.'},
+        C:{text:'Cannot be determined whether this shape is a triangle from these statements alone', explain:'The statement only tells us triangles have angles summing to 180 degrees, not that only triangles do.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v180', skill:'Syllogisms', prompt:'No ordinary mammals lay eggs. All dogs are ordinary mammals. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All dogs lay eggs', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some dogs lay eggs', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No dogs lay eggs', explain:'Since no ordinary mammals lay eggs, and dogs are ordinary mammals, dogs cannot either.'}
       } }
   ],
 
@@ -2290,6 +2435,146 @@ const QUESTIONS = {
         A:{text:'Column A is greater', explain:'19/26 is approximately 0.731, which is greater than 0.73.'},
         B:{text:'Column B is greater', explain:'0.73 is less than 19/26 (approximately 0.731).'},
         C:{text:'The two columns are equal', explain:'0.731 and 0.73 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q161', skill:'Number series', prompt:'18, 36, 72, 144, ___', correct:'D',
+      choices:{
+        A:{text:'254',explain:'Doesn\'t match doubling.'},
+        B:{text:'270',explain:'Doesn\'t match the correct product.'},
+        C:{text:'280',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'288',explain:'Each term doubles: 144x2=288.'}
+      } },
+    { id:'q162', skill:'Number series', prompt:'14, 21, 28, 35, ___', correct:'A',
+      choices:{
+        A:{text:'42',explain:'Each term adds 7: 35+7=42.'},
+        B:{text:'40',explain:'Doesn\'t match adding 7.'},
+        C:{text:'45',explain:'Overshoots the correct value.'},
+        D:{text:'41',explain:'Doesn\'t match the +7 pattern.'}
+      } },
+    { id:'q163', skill:'Number series', prompt:'11, 23, 47, 95, ___', correct:'B',
+      choices:{
+        A:{text:'187',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'191',explain:'Each number doubles the previous and adds 1: 95x2+1=191.'},
+        C:{text:'193',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'195',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q164', skill:'Number series', prompt:'6250, 1250, 250, ___', correct:'C',
+      choices:{
+        A:{text:'25',explain:'This skips ahead an extra division step.'},
+        B:{text:'75',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'50',explain:'Each term is divided by 5: 250/5=50.'},
+        D:{text:'62.5',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q165', skill:'Number series', prompt:'85, 77, 66, 52, ___', correct:'D',
+      choices:{
+        A:{text:'30',explain:'Overshoots the correct next gap.'},
+        B:{text:'32',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'40',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'35',explain:'The gap increases by 3 each time (-8,-11,-14), so the next gap is -17: 52-17=35.'}
+      } },
+    { id:'q166', skill:'Number series', prompt:'4, 10, 18, 28, 40, ___', correct:'A',
+      choices:{
+        A:{text:'54',explain:'The gaps increase by 2 each time (+6,+8,+10,+12), so the next gap is +14: 40+14=54.'},
+        B:{text:'50',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'52',explain:'Close, but doesn\'t match adding 14 to 40.'},
+        D:{text:'56',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q167', skill:'Number series', prompt:'10, 19, 37, 73, ___', correct:'B',
+      choices:{
+        A:{text:'141',explain:'Doesn\'t match the x2-1 pattern.'},
+        B:{text:'145',explain:'Each term doubles the previous and subtracts 1: 73x2-1=145.'},
+        C:{text:'147',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'150',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q168', skill:'Number series', prompt:'2916, 972, 324, ___', correct:'C',
+      choices:{
+        A:{text:'36',explain:'This skips ahead an extra division step.'},
+        B:{text:'216',explain:'Doesn\'t match dividing by 3.'},
+        C:{text:'108',explain:'Each term is divided by 3: 324/3=108.'},
+        D:{text:'150',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q169', skill:'Number series', prompt:'10, 11, 13, 16, 20, ___', correct:'A',
+      choices:{
+        A:{text:'25',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 20+5=25.'},
+        B:{text:'23',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'24',explain:'Close, but doesn\'t match adding 5 to 20.'},
+        D:{text:'27',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q170', skill:'Number series', prompt:'7, 21, 63, 189, 567, ___', correct:'B',
+      choices:{
+        A:{text:'1650',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'1701',explain:'Each term triples: 567x3=1701.'},
+        C:{text:'1710',explain:'Doesn\'t match the correct product.'},
+        D:{text:'1750',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q171', skill:'Quantitative comparison', prompt:'Compare: Column A = 7/15   Column B = 0.47', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'7/15 is approximately 0.467, which is less than 0.47.'},
+        B:{text:'Column B is greater', explain:'0.47 is greater than 7/15 (approximately 0.467).'},
+        C:{text:'The two columns are equal', explain:'0.467 and 0.47 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q172', skill:'Quantitative comparison', prompt:'Compare: Column A = 11 squared   Column B = 5 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'11 squared is 121, less than 5 cubed (125).'},
+        B:{text:'Column B is greater', explain:'5 cubed is 125, greater than 11 squared (121).'},
+        C:{text:'The two columns are equal', explain:'121 and 125 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q173', skill:'Quantitative comparison', prompt:'Compare: Column A = 72% of 25   Column B = 25% of 72', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'72% of 25 is 18, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'25% of 72 is also 18, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'72% of 25 is 18, and 25% of 72 is also 18, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q174', skill:'Quantitative comparison', prompt:'Compare: Column A = 16/19   Column B = 0.84', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'16/19 is approximately 0.842, which is greater than 0.84.'},
+        B:{text:'Column B is greater', explain:'0.84 is less than 16/19 (approximately 0.842).'},
+        C:{text:'The two columns are equal', explain:'0.842 and 0.84 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q175', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 14th power   Column B = 4 to the 7th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 14th power is 16384, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 7th power is also 16384, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 14th power = 16384 and 4 to the 7th power = 16384, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q176', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.58   Column B = 7/12', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.58 is less than 7/12 (approximately 0.583).'},
+        B:{text:'Column B is greater', explain:'7/12 is approximately 0.583, which is greater than 0.58.'},
+        C:{text:'The two columns are equal', explain:'0.58 and 0.583 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q177', skill:'Quantitative comparison', prompt:'Compare: Column A = 48% of 175   Column B = 84% of 100', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'48% of 175 is 84, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'84% of 100 is also 84, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'48% of 175 is 84, and 84% of 100 is also 84, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q178', skill:'Quantitative comparison', prompt:'Compare: Column A = 22/25   Column B = 0.87', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'22/25 equals 0.88, which is greater than 0.87.'},
+        B:{text:'Column B is greater', explain:'0.87 is less than 22/25 (0.88).'},
+        C:{text:'The two columns are equal', explain:'0.88 and 0.87 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q179', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 15th power   Column B = 8 to the 5th power', correct:'D',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 15th power is 32768, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'8 to the 5th power is also 32768, not greater than Column A.'},
+        C:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'},
+        D:{text:'The two columns are equal', explain:'2 to the 15th power = 32768 and 8 to the 5th power = 32768, so they are equal.'}
+      } },
+    { id:'q180', skill:'Quantitative comparison', prompt:'Compare: Column A = 23/27   Column B = 0.85', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'23/27 is approximately 0.852, which is greater than 0.85.'},
+        B:{text:'Column B is greater', explain:'0.85 is less than 23/27 (approximately 0.852).'},
+        C:{text:'The two columns are equal', explain:'0.852 and 0.85 are close but not equal.'},
         D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
       } }
   ],
@@ -3414,6 +3699,146 @@ const QUESTIONS = {
         B:{text:'27', explain:'Doesn\'t match the correct subtraction.'},
         C:{text:'36', explain:'This is 6 squared alone, not the full subtraction.'},
         D:{text:'45', explain:'9 squared is 81 and 6 squared is 36, and 81-36=45.'}
+      } },
+    { id:'m161', skill:'Algebra', prompt:'Solve for x: 9x - 7 = 47', correct:'B',
+      choices:{
+        A:{text:'5', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'6', explain:'Add 7 to both sides (9x=54), then divide by 9 (x=6).'},
+        C:{text:'7', explain:'Overshoots the correct value.'},
+        D:{text:'8', explain:'Doesn\'t match dividing 54 by 9.'}
+      } },
+    { id:'m162', skill:'Algebra', prompt:'Solve for x: 4(x + 9) = 52', correct:'A',
+      choices:{
+        A:{text:'4', explain:'Divide both sides by 4 (x+9=13), then subtract 9 (x=4).'},
+        B:{text:'5', explain:'Close, but doesn\'t match subtracting 9 correctly.'},
+        C:{text:'13', explain:'This is the value inside the parentheses before subtracting 9, not x itself.'},
+        D:{text:'8', explain:'Doesn\'t match dividing 52 by 4 first.'}
+      } },
+    { id:'m163', skill:'Algebra', prompt:'Simplify: 8(2x - 3) + 3x', correct:'D',
+      choices:{
+        A:{text:'19x - 3', explain:'This drops part of the distributed constant.'},
+        B:{text:'11x - 24', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'19x + 24', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'19x - 24', explain:'Distribute first: 16x-24+3x, then combine like terms: 19x-24.'}
+      } },
+    { id:'m164', skill:'Algebra', prompt:'If 11x - 6 = 8x + 9, what is x?', correct:'C',
+      choices:{
+        A:{text:'3', explain:'Doesn\'t match solving the equation correctly.'},
+        B:{text:'4', explain:'Doesn\'t match the correct steps.'},
+        C:{text:'5', explain:'Subtract 8x from both sides (3x-6=9), then add 6 (3x=15), then divide by 3 (x=5).'},
+        D:{text:'15', explain:'This is the value of 3x, not x itself.'}
+      } },
+    { id:'m165', skill:'Percentages', prompt:'What is 75% of 280?', correct:'B',
+      choices:{
+        A:{text:'200', explain:'Doesn\'t match 0.75x280.'},
+        B:{text:'210', explain:'0.75 x 280 = 210.'},
+        C:{text:'220', explain:'Overshoots the correct product.'},
+        D:{text:'225', explain:'Doesn\'t match the correct calculation.'}
+      } },
+    { id:'m166', skill:'Fractions', prompt:'What is 5/12 + 1/4?', correct:'A',
+      choices:{
+        A:{text:'2/3', explain:'Using a common denominator of 12: 1/4=3/12, so 5/12+3/12=8/12=2/3.'},
+        B:{text:'6/16', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'1/2', explain:'Doesn\'t match adding 5/12 and 3/12 correctly.'},
+        D:{text:'3/4', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m167', skill:'Percentages', prompt:'A backpack costs $72 after a 25% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$85', explain:'Doesn\'t match dividing 72 by 0.75.'},
+        B:{text:'$90', explain:'Overshoots the correct original price.'},
+        C:{text:'$96', explain:'If $72 is 75% of the original price, the original price is 72 divided by 0.75, which is $96.'},
+        D:{text:'$80', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m168', skill:'Fractions', prompt:'What is 7/8 - 1/3?', correct:'D',
+      choices:{
+        A:{text:'6/24', explain:'Doesn\'t match subtracting with a common denominator.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'11/24', explain:'Doesn\'t match subtracting 8/24 from 21/24.'},
+        D:{text:'13/24', explain:'Using a common denominator of 24: 7/8=21/24 and 1/3=8/24, so 21/24-8/24=13/24.'}
+      } },
+    { id:'m169', skill:'Geometry', prompt:'What is the area of a rectangle with length 20 and width 9?', correct:'D',
+      choices:{
+        A:{text:'29', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'58', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'160', explain:'Doesn\'t match multiplying 20 and 9 correctly.'},
+        D:{text:'180', explain:'Area of a rectangle is length x width, so 20 x 9 = 180.'}
+      } },
+    { id:'m170', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 13 and width 7?', correct:'A',
+      choices:{
+        A:{text:'40', explain:'Perimeter of a rectangle is 2(length+width), so 2(13+7)=40.'},
+        B:{text:'91', explain:'This is the area, not the perimeter.'},
+        C:{text:'20', explain:'This is only half the correct perimeter.'},
+        D:{text:'34', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m171', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 12?', correct:'C',
+      choices:{
+        A:{text:'144', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'48', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'1728', explain:'Volume of a cube is side cubed, so 12x12x12=1728.'},
+        D:{text:'1440', explain:'Doesn\'t match multiplying 12x12x12 correctly.'}
+      } },
+    { id:'m172', skill:'Geometry', prompt:'What is the circumference of a circle with radius 30? (use pi \u2248 3.14)', correct:'A',
+      choices:{
+        A:{text:'188.4', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 30 = 188.4.'},
+        B:{text:'94.2', explain:'This is pi x radius, missing the factor of 2.'},
+        C:{text:'2826', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'60', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m173', skill:'Word problems', prompt:'The sum of three consecutive integers is 210. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'68', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'69', explain:'This is the middle integer, not the largest.'},
+        C:{text:'70', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'71', explain:'Let the integers be n, n+1, n+2: 3n+3=210, so n=69, meaning the largest is 71.'}
+      } },
+    { id:'m174', skill:'Word problems', prompt:'A car travels 720 miles in 8 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 720 / 8 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m175', skill:'Word problems', prompt:'Eight times a number plus 9 is 73. What is the number?', correct:'C',
+      choices:{
+        A:{text:'7', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'7.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'8', explain:'Subtract 9 from both sides (8x=64), then divide by 8 (x=8).'},
+        D:{text:'64', explain:'This is the value of 8x, not x itself.'}
+      } },
+    { id:'m176', skill:'Word problems', prompt:'A recipe calls for 9 cups of flour for 36 cookies. How many cups are needed for 48 cookies?', correct:'B',
+      choices:{
+        A:{text:'11', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'12', explain:'48 cookies is 4/3 times 36, so 9 cups x 4/3 = 12 cups.'},
+        C:{text:'13', explain:'Overshoots the correctly scaled amount.'},
+        D:{text:'10', explain:'Doesn\'t match scaling the ratio correctly.'}
+      } },
+    { id:'m177', skill:'Exponents', prompt:'What is 6 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'24', explain:'This treats the exponent as multiplication (6x4), not repeated multiplication.'},
+        B:{text:'1296', explain:'6 multiplied by itself 4 times equals 1296.'},
+        C:{text:'216', explain:'That\'s 6 cubed, not 6 to the 4th power.'},
+        D:{text:'1000', explain:'Doesn\'t match the correct repeated multiplication.'}
+      } },
+    { id:'m178', skill:'Number properties', prompt:'What is the least common multiple of 14 and 21?', correct:'A',
+      choices:{
+        A:{text:'42', explain:'42 is the smallest number that both 14 and 21 divide into evenly.'},
+        B:{text:'294', explain:'294 is a common multiple, but not the least one.'},
+        C:{text:'7', explain:'7 is a common factor, not a common multiple.'},
+        D:{text:'28', explain:'28 is not evenly divisible by 21.'}
+      } },
+    { id:'m179', skill:'Number properties', prompt:'What is the greatest common factor of 48 and 72?', correct:'C',
+      choices:{
+        A:{text:'8', explain:'8 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'12', explain:'12 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'24', explain:'24 is the largest number that divides both 48 and 72 evenly.'},
+        D:{text:'96', explain:'96 is a common multiple, not a common factor.'}
+      } },
+    { id:'m180', skill:'Exponents', prompt:'What is 10 squared minus 7 squared?', correct:'A',
+      choices:{
+        A:{text:'51', explain:'10 squared is 100 and 7 squared is 49, and 100-49=51.'},
+        B:{text:'30', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        C:{text:'49', explain:'This is 7 squared alone, not the full subtraction.'},
+        D:{text:'45', explain:'Doesn\'t match the correct subtraction.'}
       } }
   ],
 
