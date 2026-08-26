@@ -48,7 +48,62 @@ const PASSAGES = {
   p42: `Before every debate, Sofia rehearsed her opening line so many times it lost all meaning, just sounds she could recite without thinking. Her coach never once told her the nervousness would disappear with practice. Instead, she taught Sofia to keep speaking even when her voice wavered, since stopping to recover only drew more attention to the shake. At regionals, Sofia's hands trembled through her entire first argument — and she kept going anyway, delivering every point exactly as planned, trembling hands and all.`,
   p43: `Before electric traffic lights existed, early versions used gas lanterns and were operated manually by police officers standing at intersections, a job that was both exhausting and dangerous given nearby traffic. The first electric traffic signal, introduced in the early 1900s, used only red and green lights and required an officer to switch between them by hand. It wasn't until several years later that an automatic timer was added, removing the need for constant human operation, and the now-familiar yellow caution light was introduced shortly after to give drivers time to react before the signal changed.`,
   p44: `Every painting Jun submitted to her art teacher came back with the same quiet note: "Whose style is this — yours, or the artist you're copying?" For months, Jun insisted she was just practicing technique, nothing more. It wasn't until she stopped trying to paint like anyone else and simply painted what she noticed on her actual walk home — a cracked sidewalk, a dog asleep in a doorway — that her teacher wrote something different in the margin: no question this time, just three words. "There you are."`,
-  p45: `Unlike most volcanoes, which form along the edges of tectonic plates, the Hawaiian Islands were created by a stationary hotspot of magma deep beneath the Earth's crust, over which the Pacific tectonic plate has slowly drifted for millions of years. As the plate moves, each island forms directly above the hotspot and is then gradually carried away as a new island begins forming behind it, creating a chain of islands that get progressively older the farther they are from the hotspot's current location. This same process is expected to eventually create a brand-new Hawaiian island, currently forming underwater and still centuries away from breaking the ocean's surface.`
+  p45: `Unlike most volcanoes, which form along the edges of tectonic plates, the Hawaiian Islands were created by a stationary hotspot of magma deep beneath the Earth's crust, over which the Pacific tectonic plate has slowly drifted for millions of years. As the plate moves, each island forms directly above the hotspot and is then gradually carried away as a new island begins forming behind it, creating a chain of islands that get progressively older the farther they are from the hotspot's current location. This same process is expected to eventually create a brand-new Hawaiian island, currently forming underwater and still centuries away from breaking the ocean's surface.`,
+  p46: `Noise-canceling headphones work by using tiny microphones to detect incoming sound waves from the environment, then generating a new sound wave that is the exact inverse of that noise. When the two waves meet, the peaks of one align with the dips of the other, causing them to cancel each other out almost completely, a process called destructive interference. This technology works especially well on steady, low-pitched sounds like engine hums or airplane cabin noise, but struggles more with sudden or high-pitched sounds, such as a dog barking or a person talking nearby.`,
+  p47: `Marisol had watched other kids drop into the half-pipe a hundred times, memorizing the exact angle of their knees, the way their arms swung for balance. Standing at the top herself, none of that memorized knowledge stopped her legs from shaking. Her older cousin, waiting at the bottom, didn't shout encouragement or count her down. She just said, "Your body already knows this part. Stop thinking and let it." Marisol dropped in before she could talk herself out of it again, and for three wobbly seconds, her body proved her cousin right.`,
+  p48: `The earliest bicycles, developed in the early 1800s, had no pedals at all; riders pushed themselves along the ground with their feet, similar to walking while seated on a frame with wheels. Pedals attached directly to the front wheel were added decades later, though this design required an enormously oversized front wheel to achieve any real speed, making the bikes dangerously top-heavy and difficult to mount. It wasn't until the introduction of the chain-driven rear wheel in the late 1800s that bicycles took on the safer, more balanced shape still recognizable today, a design appropriately nicknamed the "safety bicycle."`,
+  p49: `The old radio had sat silent in Grandpa's garage for as long as Efrain could remember, its dial cracked and its cord frayed beyond safe use. Rather than simply buying a new one, Grandpa spent three Saturdays teaching Efrain to trace each wire, testing connections one at a time instead of replacing parts at random. When the radio finally crackled to life with a burst of static and then music, Grandpa didn't celebrate the fixed radio nearly as much as he celebrated Efrain's face when he realized he'd understood, for the first time, how the whole thing actually worked.`,
+  p50: `The aurora borealis, or northern lights, occurs when charged particles from the sun collide with gases in Earth's upper atmosphere, causing those gases to emit light much like a fluorescent bulb does when electricity excites the gas inside it. Earth's magnetic field channels most of these particles toward the polar regions, which is why the aurora is typically visible only at high latitudes rather than across the entire planet. Different gases produce different colors: oxygen typically produces green or red light, while nitrogen tends to produce blue or purple, depending on the altitude at which the collisions occur.`,
+  p51: `3D printers create physical objects by building them up one thin layer at a time, following a digital blueprint that has been sliced into hundreds or even thousands of horizontal cross-sections. Most commonly, a nozzle heats plastic filament until it melts, then deposits it precisely along each layer's outline before the printer moves up slightly to begin the next layer. Because each layer bonds to the one below it as it cools, even highly complex shapes with internal cavities can be built without needing separate molds or tools, a process very different from traditional manufacturing, which typically starts with a solid block and removes material rather than adding it.`,
+  p52: `Every seed packet promised results within two weeks, and every one of Aliyah's first three plantings had failed to sprout by then, the soil looking exactly as empty as the day she'd planted them. Her neighbor, an old man who'd kept the same garden for forty years, never once told her to give up or to buy different seeds. He simply said, "Two weeks is what's printed on the packet. The plant hasn't read it." Aliyah kept watering anyway, and on day nineteen, a single green shoot broke through the soil, unconcerned with anyone's schedule but its own.`,
+  p53: `Before matches existed, starting a fire required striking flint against steel to create sparks, then carefully catching those sparks in dry tinder, a process that could take several frustrating minutes even for a skilled person. The first friction matches, developed in the early 1800s, ignited instantly when struck against a rough surface, though early versions were unstable enough to occasionally burst into flame unexpectedly in a person's pocket. It wasn't until safety matches were developed later in the century, requiring a special chemical strip found only on the matchbox itself, that matches became reliably safe enough for widespread household use.`,
+  p54: `Three hours in, Dev's fishing line hadn't so much as trembled, and he was ready to declare the entire afternoon a waste. His father didn't reel in his own line or suggest moving to a new spot. He just said, "Waiting is the whole sport, not the annoying part before the sport." Twenty minutes later, Dev's rod bent sharply downward, and as he fought to reel in his first real catch, he understood, just for a moment, exactly what his father had meant.`,
+  p55: `An echo occurs when sound waves travel outward from their source, strike a distant surface such as a canyon wall or large building, and bounce back toward the listener. Because sound travels at a relatively constant speed through air, the farther away the reflecting surface is, the longer the delay before the echo returns, which is why echoes are most noticeable in large open spaces like canyons or empty auditoriums rather than small rooms. If the reflected sound returns quickly enough, within a fraction of a second, the human ear cannot distinguish it from the original sound at all, which is part of why echoes typically require a fairly large distance to be perceived clearly.`,
+  p56: `Solar panels generate electricity through a process called the photovoltaic effect, in which sunlight striking a specially treated silicon layer knocks electrons loose from their atoms, creating a flow of electrical current. Because a single solar cell produces only a small amount of power, dozens of individual cells are wired together into a single panel, and multiple panels are often connected to produce enough electricity for a home or business. Unlike solar water heaters, which simply use sunlight to warm liquid directly, photovoltaic panels convert light energy into usable electricity that can power anything from a single lamp to an entire electrical grid.`,
+  p57: `Priya had rewritten the opening paragraph of her story eleven times, convinced that the twelfth attempt would finally feel right. Her writing teacher never once told her the paragraph was good enough. Instead, she asked Priya to write the ending first, then come back to the beginning later. Reluctantly, Priya finished the last page that same afternoon, and when she finally returned to the opening the following week, she realized the paragraph she'd been so unhappy with fit the story perfectly all along.`,
+  p58: `Before postage stamps existed, the person receiving a letter, not the sender, was typically expected to pay for its delivery, a system that often led recipients to refuse letters they didn't want to pay for. The first adhesive postage stamp, introduced in Britain in 1840, shifted this cost to the sender instead, who could now prepay for delivery with a small, affordable stamp attached directly to the envelope. This simple change dramatically increased how much people used the mail, since senders no longer had to worry about placing an unwanted financial burden on the person receiving their letter.`,
+  p59: `The treehouse had been rotting in the backyard for three years, ever since their grandmother passed away, and neither Marcus nor his younger sister Talia had touched it since. When Talia finally suggested fixing it up, Marcus expected a single weekend project. Instead, it took most of the summer, replacing boards one at a time, sanding down splinters, repainting the faded walls the same shade of blue their grandmother had chosen years earlier. Neither of them said much about why it mattered so much to finish it exactly right, but neither of them needed to.`,
+  p60: `Camouflage allows animals to blend into their surroundings, either to avoid being seen by predators or to remain hidden while hunting prey undetected. Some animals, like the arctic fox, rely on seasonal camouflage, growing white fur in winter to match snowy surroundings and switching to brown fur in summer to blend with rocks and soil. Other animals, such as the octopus, can change their skin color and texture almost instantly, using specialized cells to react to their immediate environment within seconds rather than waiting for a seasonal change.`,
+  p61: `When muscles are exercised under enough resistance, microscopic tears form within the muscle fibers, triggering the body to repair and rebuild that tissue slightly stronger and larger than before. This repair process, however, doesn't happen during the workout itself; it occurs primarily during rest, particularly sleep, when the body produces the hormones necessary for tissue repair. This is why athletes and trainers often emphasize rest days as being just as important as workout days, since muscles that never get adequate recovery time cannot complete the rebuilding process, regardless of how hard or how often someone trains.`,
+  p62: `The doctor's exact words had been "six weeks, minimum," and Jasmine had spent every one of those forty-two days replaying the injury in her head, certain her ankle would never trust the floor again. Her physical therapist never promised the fear would vanish before she returned to the studio. Instead, she had Jasmine practice landing the same simple jump, over and over, at half height, until her body stopped flinching before it even touched down. The day Jasmine finally attempted the full jump again, her ankle held — but it was the absence of flinching that told her she was truly ready.`,
+  p63: `Before mechanical refrigeration existed, people relied on ice harvested from frozen lakes and rivers during winter, storing large blocks in insulated icehouses to keep food cold through warmer months, sometimes for nearly a year. The first practical mechanical refrigerators, introduced in the early 1900s, used compressors to cycle a refrigerant gas that absorbed heat from inside the unit and released it outside, eliminating the need for natural ice entirely. Early models were large, expensive, and sometimes used mildly toxic refrigerant gases, which is why safer synthetic refrigerants were developed later to make home refrigeration both more affordable and considerably safer for widespread household use.`,
+  p64: `Every lemonade stand Priya and Noah had ever run together lost money by the end of summer, cups and sugar always costing more than the coins customers dropped in the jar. Priya wanted to quit for good after the third failed summer in a row. Noah suggested something different: instead of guessing at prices, they should actually write down every cost and every sale for one single Saturday, then do the math together before deciding anything. That Saturday's numbers finally showed them exactly where their money had been disappearing to all along — and for the first time, the following weekend's stand turned an actual profit.`,
+  p65: `A battery stores energy through a chemical reaction between two different materials, called electrodes, separated by a substance that allows charged particles to move between them. When a battery is connected to a device, this chemical reaction releases electrons that flow through the device as electrical current, powering it until the chemical materials inside are mostly used up. Rechargeable batteries work similarly, but their chemical reactions can run in reverse when connected to a charger, restoring the original materials so the same battery can be used repeatedly rather than being thrown away after a single use.`,
+  p66: `Earthquake magnitude is measured using a logarithmic scale, meaning each whole number increase represents ground motion roughly ten times larger than the previous number, not simply one unit stronger. A magnitude 5 earthquake, for example, produces about ten times more ground shaking than a magnitude 4, and roughly one hundred times more than a magnitude 3. This logarithmic relationship also applies to the energy released: each whole number increase corresponds to roughly thirty-two times more energy, which is why a magnitude 7 earthquake is dramatically more destructive than a magnitude 6, even though the numbers themselves seem only slightly different.`,
+  p67: `Every math test came back the same way for Malia: a grade she'd expected before she'd even opened the test booklet, proof of a story she'd told herself since fourth grade that she simply "wasn't a math person." Her new tutor never once said the subject would suddenly become easy. Instead, she had Malia solve one problem at a time, out loud, explaining each step before moving to the next, until wrong turns became something to notice calmly rather than panic over. Malia's next test score wasn't perfect, but for the first time, she caught her own mistake halfway through a problem — and fixed it without any help at all.`,
+  p68: `Before the zipper existed, clothing typically closed with buttons, hooks, or laces, all of which required time and careful attention to fasten correctly. The earliest zipper-like device, introduced in the late 1800s, was unreliable and prone to popping open unexpectedly, which kept it from gaining widespread use for decades. It wasn't until an improved design in the early 1900s, with interlocking teeth that gripped securely, that the zipper became dependable enough for everyday clothing, eventually replacing buttons on many garments where speed and convenience mattered most.`,
+  p69: `Every attempt Diego made at his grandmother's tamales came out slightly wrong, the masa either too dry or too thick, never quite matching the memory of her kitchen. His grandmother refused to write the recipe down in exact measurements, insisting some things could only be learned by touch and by watching, not by following numbers on a page. After a full year of Sunday afternoons spent standing beside her, Diego finally made a batch that tasted, unmistakably, like home — not because he had memorized a formula, but because his hands had finally learned what hers already knew.`,
+  p70: `Sunscreen protects skin from the sun's ultraviolet, or UV, radiation through one of two main methods, depending on its ingredients. Mineral sunscreens contain particles that sit on top of the skin and physically reflect UV rays away from the body, working almost immediately after application. Chemical sunscreens, by contrast, contain compounds that absorb UV radiation and convert it into a small amount of heat that is then released from the skin, a process that typically takes about twenty minutes to become fully effective after being applied.`,
+  p71: `Unlike most foods, properly stored honey can remain edible almost indefinitely, a quality that comes from its unique chemical makeup rather than any special preservation process. Honey contains very little water and is naturally acidic, two conditions that make it extremely difficult for bacteria or mold to survive and multiply. Bees further reduce the moisture content by fanning their wings over the honey inside the hive, evaporating excess water before sealing each cell with wax. Archaeologists have even discovered pots of honey in ancient tombs thousands of years old that remained perfectly edible, a testament to just how inhospitable an environment honey creates for the organisms that typically cause food to spoil.`,
+  p72: `When the new student, who was deaf, joined Elena's class, most kids simply waved and smiled from a distance, unsure how to do more than that. Elena spent her afternoons that whole month watching sign language videos online, practicing basic phrases in front of her mirror until her hands stopped feeling clumsy. Her first real conversation with Amara was slow, full of restarts and confused looks, nothing like the smooth videos she'd studied. But by the end of that first exchange, they were both laughing at Elena's mistakes together — and for the first time since arriving, Amara didn't look like she was standing entirely alone.`,
+  p73: `Before modern toothbrushes existed, people cleaned their teeth using a variety of tools, including frayed twigs, animal hair bound to bone handles, and simple cloth rubbed with abrasive powders. The first mass-produced toothbrush with nylon bristles appeared in the late 1930s, replacing the animal-hair bristles that had been standard for centuries and that tended to retain bacteria and dry poorly between uses. Nylon bristles dried faster, resisted bacterial growth better, and could be manufactured far more cheaply and consistently, which is largely why toothbrushes became an affordable, universal household item within just a few decades of nylon's introduction.`,
+  p74: `Every book Marcus tried to read with his younger brother ended the same way, with Theo staring blankly at the page and declaring he "just couldn't do it." Their mother suggested Marcus stop correcting every mistake immediately and instead let Theo finish each sentence, even the wrong guesses, before going back to fix anything. It felt unbearably slow at first, biting his tongue through obvious errors. But three weeks later, Theo finished an entire page without a single mistake, then looked up at Marcus with a surprised grin, as if he'd only just realized he could do it all along.`,
+  p75: `Plants can sense both light and gravity, using this information to grow in specific directions even without eyes or a nervous system. A hormone called auxin accumulates on the shaded side of a stem, causing cells there to elongate faster than cells on the sunlit side, which bends the stem toward the light, a process known as phototropism. A similar but separate response, called gravitropism, causes roots to grow downward and stems to grow upward regardless of a seed's orientation when it was planted, ensuring that even a sideways-planted seed will eventually send its roots down and its stem up toward the surface.`,
+  p76: `Submarines control their depth by adjusting the amount of water inside large tanks called ballast tanks, which run along the outer hull. To dive, crew members open valves that let seawater flood into these tanks, adding weight that causes the submarine to sink. To surface, compressed air stored in separate tanks is pumped into the ballast tanks, forcing the water back out and making the submarine lighter until it rises. By carefully balancing the amount of water and air inside these tanks, a submarine can also hover at a chosen depth, neither sinking further nor rising toward the surface.`,
+  p77: `Every summer, Ravi's cousins would race each other across the lake while he stayed on the dock, telling himself he simply preferred watching. His uncle never pushed him toward the water directly. Instead, he handed Ravi a pair of goggles and asked him to just put his face in the shallow end, nothing more, for as long as he wanted. Days of just floating and blowing bubbles turned into a full week before Ravi ever attempted a real stroke, and when he finally paddled a few feet on his own, his uncle didn't cheer loudly or make a scene — he simply nodded, as if he'd expected it all along.`,
+  p78: `Before eyeglasses existed, people with poor eyesight had few options beyond squinting or relying on others to read for them. The earliest eyeglasses, developed in Italy in the late 1200s, consisted of two simple magnifying lenses connected by a rivet, designed to be held up to the eyes or perched carefully on the nose without any arms to hold them in place. It wasn't until the early 1700s that eyeglasses were redesigned with rigid arms extending back over the ears, finally allowing wearers to keep both hands free while their glasses stayed securely in place.`,
+  p79: `Every group project meeting followed the same pattern for Yun: her three teammates debated ideas loudly while she sat quietly, certain her suggestions weren't worth interrupting for. Their teacher noticed and, without singling her out publicly, asked each team to submit one written idea from every member before their next meeting, no exceptions. When Yun's written idea turned out to be the one the group ultimately built their whole presentation around, her teammates started turning to her first in every meeting after that, rather than last.`,
+  p80: `A thermostat regulates temperature by continuously comparing the current room temperature to a target temperature set by the user, then switching heating or cooling systems on or off to close that gap. When the room temperature drops below the target by a small amount, the thermostat signals the heating system to turn on, and once the target is reached, it signals the system to shut off again. Modern programmable thermostats extend this basic function by allowing users to set different target temperatures for different times of day, automatically adjusting heating or cooling before people wake up or return home, rather than requiring someone to manually adjust the setting each time.`,
+  p81: `Glaciers shape the landscape they move across through a slow but powerful combination of erosion and deposition. As a glacier flows downhill under its own immense weight, rocks and debris trapped in the ice scrape against the underlying bedrock, gradually carving out wide, U-shaped valleys that look distinctly different from the narrower V-shaped valleys carved by rivers. When a glacier eventually retreats or melts, it leaves behind the sediment and boulders it once carried, depositing them in distinctive ridges called moraines that mark exactly how far the ice once extended.`,
+  p82: `After his mother's surgery, Devon's kitchen skills consisted of exactly one dish: cereal. His older neighbor, retired for years but still cooking every night for one, started leaving small containers of extra soup on Devon's porch without being asked, along with handwritten instructions taped to the lid explaining exactly how she'd made it. By the third week, Devon wasn't just reheating her soup anymore — he was making his own version, using her instructions as a starting point rather than a rulebook, and leaving an extra container on her porch in return.`,
+  p83: `Before the modern pencil existed, writers and artists relied on tools like metal styluses or chunks of pure graphite wrapped in string or wood, both of which were messy, fragile, or difficult to control precisely. The breakthrough came in the late 1700s, when a method was developed to mix powdered graphite with clay, allowing manufacturers to control the hardness of the resulting pencil core simply by adjusting the ratio of the two materials. This innovation not only made pencils far sturdier and less prone to breaking, but also let manufacturers produce a whole range of pencils, from very hard and light-marking to very soft and dark, all from the same basic process.`,
+  p84: `Every recital before this one, Nadia had frozen the moment she stepped onto the stage, her bow arm suddenly forgetting years of practice the instant an audience was watching. Her teacher's advice this time was different: instead of trying to forget the audience was there, Nadia should pick one friendly face in the crowd and play the entire piece as if performing just for that one person. Nadia's hands still trembled walking onstage, but somewhere around the third measure, she found her aunt's face in the third row — and for the first time, she made it all the way to the final note without a single frozen pause.`,
+  p85: `Noise-canceling headphones work by using tiny microphones to detect incoming sound waves from the surrounding environment, then generating an inverted version of that same sound wave to play back through the speakers. When these two sound waves, the original noise and its inverted copy, meet, they cancel each other out almost completely, a phenomenon known as destructive interference. This technology tends to work best on low, steady sounds like an airplane engine's hum, since higher-pitched or rapidly changing sounds are much harder for the system to predict and cancel out quickly enough.`,
+  p86: `Suspension bridges support their roadway by hanging it from large main cables, which stretch between tall towers and are anchored deep into the ground at each end. Smaller vertical cables, spaced evenly along the main cables, transfer the weight of the roadway upward into the main cables, which then carry that combined load down through the towers and into the ground. Because this design distributes weight across cables rather than concentrating it on rigid supports, suspension bridges can flex slightly in strong winds without breaking, a flexibility that makes them well suited for spanning very long distances where rigid designs would otherwise crack under stress.`,
+  p87: `Every group assignment ended the same way for Marcus: staying up until 2 a.m. redoing his teammates' sections himself, convinced no one else's work would meet his standard. His academic advisor didn't tell him to lower his standards. She asked him instead to try something small — assign one clearly defined task to a teammate and let the result stand exactly as submitted, mistakes and all, just once. It took every ounce of restraint for Marcus not to fix his partner's slightly awkward introduction paragraph before it was turned in, and when the grade came back higher than any of his solo-rewritten projects, he wasn't sure whether to feel relieved or a little embarrassed.`,
+  p88: `Before automated traffic lights existed, intersections were often controlled by police officers who stood in the middle of the road, manually directing traffic with hand signals or a simple sign that read stop on one side and go on the other. The first electric traffic signal, installed in the early 1900s, used only red and green lights and required an officer to switch between them manually from a nearby control box. It wasn't until slightly later that a third light, yellow, was added to warn drivers a change was coming, allowing traffic to slow gradually instead of stopping abruptly and reducing the number of collisions caused by sudden, unexpected signal changes.`,
+  p89: `After losing the ball twice in the same game, Priya stopped passing to her teammate Wren entirely, convinced Wren simply couldn't be trusted with it anymore. Their coach didn't bench either player. Instead, she had them run a single passing drill together after every practice for two weeks straight, just the two of them, no one else watching. By the end of the second week, Priya found herself passing to Wren without even thinking about it during their next game — and when Wren scored off one of those passes, Priya realized she'd stopped keeping count of the mistakes a long time ago.`,
+  p90: `A compass works by using a small magnetized needle that aligns itself with Earth's magnetic field, which runs roughly between the planet's magnetic north and south poles. Because the needle is free to rotate on a low-friction pivot, even the relatively weak pull of Earth's magnetic field is enough to consistently turn it until one end points toward magnetic north. It's worth noting that magnetic north is not exactly the same location as true geographic north, a difference called magnetic declination, which is why some compasses include an adjustment feature to correct for this gap depending on the user's location.`,
+  p91: `A camera's aperture is an adjustable opening inside the lens that controls how much light reaches the camera's sensor, functioning much like the pupil of an eye widening or narrowing in response to brightness. A wider aperture lets in more light, which is useful in dim conditions, but it also produces a shallower depth of field, meaning only a narrow range of distances stays in sharp focus while the background blurs. A narrower aperture lets in less light but keeps a much larger range of distances in focus, which is why photographers often choose a narrow aperture for landscape photos, where they want both nearby and distant details to appear sharp.`,
+  p92: `Every day for three weeks, Simone checked the mailbox the moment she got home, certain that today would finally be the day her acceptance letter arrived. Her older sister, who'd gone through the same wait years earlier, never once told her to stop checking or to relax. Instead, she started showing up at the mailbox with her, standing there in silence some afternoons, or telling a ridiculous story from her own school days on others. The letter came on an ordinary Tuesday, one Simone almost hadn't rushed home for — and when she opened it with her sister standing right beside her, the weeks of waiting suddenly felt like they'd mattered a little less.`,
+  p93: `Before safe passenger elevators existed, freight elevators were considered too dangerous for people to ride, since a single snapped cable could send the entire platform crashing to the ground with no way to stop it. The breakthrough came in the 1850s, when a safety brake was invented that automatically gripped the elevator shaft's guide rails the instant the lifting cable lost tension, stopping the platform almost immediately even if the cable broke completely. This single safety feature, demonstrated publicly by cutting the cable while the inventor stood on the platform himself, convinced the public that elevators could be trusted, paving the way for the tall buildings that would define city skylines afterward.`,
+  p94: `Every match Kenji lost that season ended the same way: stormy walks home alone, replaying every mistake, refusing to speak to anyone including his own doubles partner. His coach never told him losing was fine. Instead, after their next defeat, she asked Kenji to find one specific thing his opponent had done well and say it out loud to that opponent's face before leaving the court. It was the hardest sentence Kenji had ever forced himself to say, and after he said it, his opponent looked almost as surprised as Kenji felt — but somewhere in that short, awkward exchange, Kenji's stormy walk home that day felt just slightly less heavy than all the ones before it.`,
+  p95: `Ocean tides rise and fall primarily because of the moon's gravitational pull, which is strong enough to noticeably tug at Earth's oceans even from roughly two hundred and thirty-nine thousand miles away. This pull creates a bulge of water on the side of Earth facing the moon, and because Earth itself is also being pulled toward the moon slightly more than the water on its far side, a second bulge forms on the opposite side of the planet as well. As Earth rotates through these two bulges roughly once every twenty-four hours, most coastal locations experience two high tides and two low tides each day, though the exact timing shifts slightly because the moon is also slowly moving in its own orbit.`,
+  p96: `Hand sanitizer kills most germs primarily through its alcohol content, which typically makes up at least sixty percent of the formula for it to work effectively. When alcohol comes into contact with bacteria and many viruses, it breaks down the outer protective membrane surrounding the microorganism, causing the proteins inside to lose their structure and stop functioning. Because this process happens almost instantly on contact, hand sanitizer can kill germs within seconds, though it works best on visibly clean hands, since dirt, grease, and heavy soiling can shield germs from direct contact with the alcohol and reduce its effectiveness significantly.`,
+  p97: `Every time Aiden didn't understand something in class, he simply nodded along with everyone else, terrified that raising his hand would reveal he was the only one confused. His new teacher started ending each lesson with an anonymous slip of paper where students could write one question without their name attached, collected in a small box by the door. The first week, half the box's questions were nearly identical to the one Aiden had been too afraid to ask out loud — and somewhere in reading those slips back to the class the next day, Aiden realized his confusion had never actually been unique at all.`,
+  p98: `Before mandatory seatbelts existed, car passengers had little to prevent them from being thrown forward or ejected entirely during a sudden stop or collision, a problem automakers were slow to address since seatbelts were initially viewed as an unnecessary expense rather than a safety necessity. The modern three-point seatbelt, which secures both the shoulder and the lap simultaneously, was developed in the late 1950s and quickly proved far more effective at preventing injury than the simple lap-only belts that had come before it. Because the design's inventor chose not to patent it exclusively, allowing other automakers to use it freely, the three-point seatbelt spread rapidly across the auto industry and is credited with saving an enormous number of lives in the decades since.`,
+  p99: `Every time Omar's jazz combo reached the improvised solo section, he froze completely, unable to play a single note that wasn't already written down in front of him. His bandmate never criticized his playing directly. Instead, she started handing him just three notes before each rehearsal, telling him to build an entire solo out of only those three, nothing more and nothing less. The limitation felt suffocating at first, but within a few weeks, Omar noticed something strange: those three notes, arranged differently each time, had taught his ears to hear possibilities he'd never noticed hiding in his own sheet music all along.`,
+  p100: `Bread rises because of a process called fermentation, in which yeast, a living microorganism mixed into the dough, consumes the sugars naturally present in flour and produces carbon dioxide gas as a byproduct. This gas becomes trapped within the dough's elastic network of gluten, a protein that stretches without breaking, causing the dough to expand and become airy rather than collapsing flat. Because fermentation is a biological process driven by living yeast, it works fastest in warm environments and slows dramatically in cold ones, which is why bakers often let dough rise in a warm spot and why refrigerated dough can be left to rise slowly over many hours instead.`
 };
 
 const QUESTIONS = {
@@ -1313,6 +1368,1546 @@ const QUESTIONS = {
         B:{text:'Some dogs lay eggs', explain:'Even partial overlap is ruled out by the first statement.'},
         C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
         D:{text:'No dogs lay eggs', explain:'Since no ordinary mammals lay eggs, and dogs are ordinary mammals, dogs cannot either.'}
+      } },
+    { id:'v181', skill:'Synonyms', prompt:'Choose the word that means the same as PARSIMONIOUS.', correct:'A',
+      choices:{
+        A:{text:'Stingy, unwilling to spend', explain:'Parsimonious means excessively unwilling to spend money or use resources.'},
+        B:{text:'Generous', explain:'This is the opposite of parsimonious.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what parsimonious describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what parsimonious describes.'}
+      } },
+    { id:'v182', skill:'Synonyms', prompt:'Choose the word that means the same as BELLICOSE.', correct:'C',
+      choices:{
+        A:{text:'Peaceful', explain:'This is the opposite of bellicose.'},
+        B:{text:'Calm', explain:'This is the opposite of bellicose.'},
+        C:{text:'Warlike and aggressive', explain:'Bellicose means eager to fight, aggressive or warlike.'},
+        D:{text:'Confused', explain:'Confusion isn\'t what bellicose describes.'}
+      } },
+    { id:'v183', skill:'Synonyms', prompt:'Choose the word that means the same as DIFFIDENT.', correct:'D',
+      choices:{
+        A:{text:'Confident', explain:'This is the opposite of diffident.'},
+        B:{text:'Bold', explain:'This is the opposite of diffident.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what diffident describes.'},
+        D:{text:'Shy and lacking self-confidence', explain:'Diffident means modest or shy due to lack of self-confidence.'}
+      } },
+    { id:'v184', skill:'Synonyms', prompt:'Choose the word that means the same as RESOLUTE.', correct:'B',
+      choices:{
+        A:{text:'Hesitant', explain:'This is the opposite of resolute.'},
+        B:{text:'Determined and firm', explain:'Resolute means admirably purposeful, determined, and unwavering.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what resolute describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what resolute describes.'}
+      } },
+    { id:'v185', skill:'Antonyms', prompt:'Choose the word most nearly opposite to AUSTERE.', correct:'C',
+      choices:{
+        A:{text:'Stern', explain:'Stern is a synonym of austere, not its opposite.'},
+        B:{text:'Plain', explain:'Plain is a synonym of austere, not its opposite.'},
+        C:{text:'Luxurious', explain:'Austere means severe or plain in style, so luxurious is its opposite.'},
+        D:{text:'Strict', explain:'Strict is related to austere, not opposite.'}
+      } },
+    { id:'v186', skill:'Antonyms', prompt:'Choose the word most nearly opposite to CURT.', correct:'D',
+      choices:{
+        A:{text:'Brief', explain:'Brief is a synonym of curt, not its opposite.'},
+        B:{text:'Blunt', explain:'Blunt is related to curt, not opposite.'},
+        C:{text:'Abrupt', explain:'Abrupt is a synonym of curt, not opposite.'},
+        D:{text:'Expansive and courteous', explain:'Curt means rudely brief, so expansive and courteous is its opposite.'}
+      } },
+    { id:'v187', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PLIANT.', correct:'A',
+      choices:{
+        A:{text:'Rigid', explain:'Pliant means easily bent or influenced, so rigid is its opposite.'},
+        B:{text:'Flexible', explain:'Flexible is a synonym of pliant, not its opposite.'},
+        C:{text:'Bendable', explain:'Bendable is a synonym of pliant, not opposite.'},
+        D:{text:'Adaptable', explain:'Adaptable is related to pliant, not opposite.'}
+      } },
+    { id:'v188', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PEDESTRIAN.', correct:'B',
+      choices:{
+        A:{text:'Ordinary', explain:'Ordinary is a synonym of pedestrian in this sense, not its opposite.'},
+        B:{text:'Extraordinary and remarkable', explain:'Pedestrian means dull or unremarkable, so extraordinary is its opposite.'},
+        C:{text:'Dull', explain:'Dull is a synonym of pedestrian, not opposite.'},
+        D:{text:'Common', explain:'Common is related to pedestrian, not opposite.'}
+      } },
+    { id:'v189', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Wolf', explain:'A wolf is a canine, fitting the shared category.'},
+        B:{text:'Fox', explain:'A fox is also a canine.'},
+        C:{text:'Coyote', explain:'A coyote is also a canine.'},
+        D:{text:'Falcon', explain:'Unlike the others, a falcon is a bird, not a canine.'}
+      } },
+    { id:'v190', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Trumpet', explain:'A trumpet is a brass instrument, fitting the shared category.'},
+        B:{text:'Trombone', explain:'A trombone is also a brass instrument.'},
+        C:{text:'Tuba', explain:'A tuba is also a brass instrument.'},
+        D:{text:'Xylophone', explain:'Unlike the others, a xylophone is a percussion instrument, not a brass instrument.'}
+      } },
+    { id:'v191', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Sparrow', explain:'A sparrow is a bird, fitting the shared category.'},
+        B:{text:'Finch', explain:'A finch is also a bird.'},
+        C:{text:'Canary', explain:'A canary is also a bird.'},
+        D:{text:'Iguana', explain:'Unlike the others, an iguana is a reptile, not a bird.'}
+      } },
+    { id:'v192', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Comedy', explain:'Comedy is a genre of theater, fitting the shared category.'},
+        B:{text:'Tragedy', explain:'Tragedy is also a genre of theater.'},
+        C:{text:'Farce', explain:'Farce is also a genre of theater.'},
+        D:{text:'Mural', explain:'Unlike the others, a mural is a visual art form, not a genre of theater.'}
+      } },
+    { id:'v193', skill:'Analogies', prompt:'Doctor is to stethoscope as electrician is to ___.', correct:'A',
+      choices:{
+        A:{text:'Voltmeter', explain:'A doctor uses a stethoscope as a primary diagnostic tool; an electrician uses a voltmeter as a primary diagnostic tool, following the same pattern.'},
+        B:{text:'Wire', explain:'Wire is a material an electrician works with, not the diagnostic tool.'},
+        C:{text:'Circuit', explain:'A circuit is what an electrician examines, not the tool used.'},
+        D:{text:'Power', explain:'Power is too abstract compared to the specific tool being tested.'}
+      } },
+    { id:'v194', skill:'Analogies', prompt:'Bee is to hive as ant is to ___.', correct:'D',
+      choices:{
+        A:{text:'Honey', explain:'Honey is produced by bees, not the home an ant lives in.'},
+        B:{text:'Queen', explain:'A queen is a role within the colony, not the physical home itself.'},
+        C:{text:'Garden', explain:'A garden is too general, not the specific structure an ant lives in.'},
+        D:{text:'Anthill', explain:'A bee lives in a hive; an ant lives in an anthill, following the same pattern.'}
+      } },
+    { id:'v195', skill:'Analogies', prompt:'Author is to preface as film is to ___.', correct:'B',
+      choices:{
+        A:{text:'Ending', explain:'A preface comes at the beginning, not the end, so this breaks the pattern.'},
+        B:{text:'Trailer', explain:'A preface introduces a book before the main text; a trailer introduces a film before it\'s seen, following the same pattern.'},
+        C:{text:'Actor', explain:'An actor is a person involved in a film, not an introductory element.'},
+        D:{text:'Script', explain:'A script is the entire text of a film, not specifically an introductory element.'}
+      } },
+    { id:'v196', skill:'Analogies', prompt:'Thermostat is to temperature as speedometer is to ___.', correct:'C',
+      choices:{
+        A:{text:'Engine', explain:'An engine produces speed, but it isn\'t the quantity measured, unlike temperature.'},
+        B:{text:'Fuel', explain:'Fuel powers a vehicle but isn\'t what a speedometer measures.'},
+        C:{text:'Speed', explain:'A thermostat measures temperature; a speedometer measures speed, following the same pattern.'},
+        D:{text:'Distance', explain:'Distance is a related but different measurement from what a speedometer directly displays.'}
+      } },
+    { id:'v197', skill:'Syllogisms', prompt:'All members of the chess team must pass a rating threshold. Diego has not passed the rating threshold. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Diego is not on the chess team', explain:'Since all chess team members must pass the rating threshold, and Diego has not, Diego cannot be a member.'},
+        B:{text:'Diego is on the chess team', explain:'This directly contradicts the premise.'},
+        C:{text:'Diego used to be on the chess team', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v198', skill:'Syllogisms', prompt:'Some birds cannot fly. All penguins are birds. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All penguins cannot fly', explain:'This overstates the first statement, which only says "some" birds cannot fly.'},
+        B:{text:'Cannot be determined whether penguins can fly from these statements alone', explain:'The statements don\'t specify which birds are the flightless ones, so penguins can\'t be confirmed by logic alone.'},
+        C:{text:'All penguins can fly', explain:'This isn\'t supported either — penguins could be among the flightless birds.'},
+        D:{text:'Some penguins can definitely fly', explain:'This assumes penguins are specifically excluded from the "some" flightless birds, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v199', skill:'Syllogisms', prompt:'All squares are rectangles. This shape is a rectangle. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a square', explain:'This assumes only squares can be rectangles, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a square', explain:'This isn\'t supported either — the shape could still be a square.'},
+        C:{text:'Cannot be determined whether this shape is a square from these statements alone', explain:'The statement only tells us squares are rectangles, not that only squares are rectangles.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v200', skill:'Syllogisms', prompt:'No reptiles produce their own body heat internally. All turtles are reptiles. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All turtles produce their own body heat internally', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some turtles produce their own body heat internally', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No turtles produce their own body heat internally', explain:'Since no reptiles produce their own body heat internally, and turtles are reptiles, turtles cannot either.'}
+      } },
+    { id:'v201', skill:'Synonyms', prompt:'Choose the word that means the same as TRUCULENT.', correct:'C',
+      choices:{
+        A:{text:'Peaceful', explain:'This is the opposite of truculent.'},
+        B:{text:'Calm', explain:'This is the opposite of truculent.'},
+        C:{text:'Fierce and aggressively defiant', explain:'Truculent means eager to argue or fight, fiercely defiant.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what truculent describes.'}
+      } },
+    { id:'v202', skill:'Synonyms', prompt:'Choose the word that means the same as INEXORABLE.', correct:'A',
+      choices:{
+        A:{text:'Impossible to stop, relentless', explain:'Inexorable means impossible to stop or prevent, relentless.'},
+        B:{text:'Easily stopped', explain:'This is the opposite of inexorable.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what inexorable describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what inexorable describes.'}
+      } },
+    { id:'v203', skill:'Synonyms', prompt:'Choose the word that means the same as EQUABLE.', correct:'D',
+      choices:{
+        A:{text:'Volatile', explain:'This is the opposite of equable.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what equable describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what equable describes.'},
+        D:{text:'Calm and even-tempered', explain:'Equable means calm, steady, and not easily upset.'}
+      } },
+    { id:'v204', skill:'Synonyms', prompt:'Choose the word that means the same as PUNCTILIOUS.', correct:'B',
+      choices:{
+        A:{text:'Careless', explain:'This is the opposite of punctilious.'},
+        B:{text:'Very attentive to detail and formality', explain:'Punctilious means showing great attention to detail or correct behavior.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what punctilious describes.'},
+        D:{text:'Relaxed about rules', explain:'This is nearly the opposite of punctilious.'}
+      } },
+    { id:'v205', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMPASSIVE.', correct:'A',
+      choices:{
+        A:{text:'Emotional and expressive', explain:'Impassive means showing no emotion, so emotional is its opposite.'},
+        B:{text:'Calm', explain:'Calm is related to impassive, not its opposite.'},
+        C:{text:'Unmoved', explain:'Unmoved is a synonym of impassive, not opposite.'},
+        D:{text:'Steady', explain:'Steady is related to impassive, not opposite.'}
+      } },
+    { id:'v206', skill:'Antonyms', prompt:'Choose the word most nearly opposite to FERVID.', correct:'C',
+      choices:{
+        A:{text:'Passionate', explain:'Passionate is a synonym of fervid, not its opposite.'},
+        B:{text:'Intense', explain:'Intense is related to fervid, not opposite.'},
+        C:{text:'Apathetic and indifferent', explain:'Fervid means having or showing intense feeling, so apathetic is its opposite.'},
+        D:{text:'Eager', explain:'Eager is related to fervid, not opposite.'}
+      } },
+    { id:'v207', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TEPID.', correct:'D',
+      choices:{
+        A:{text:'Lukewarm', explain:'Lukewarm is a synonym of tepid, not its opposite.'},
+        B:{text:'Unenthusiastic', explain:'Unenthusiastic is a synonym of tepid, not opposite.'},
+        C:{text:'Mild', explain:'Mild is related to tepid, not opposite.'},
+        D:{text:'Enthusiastic', explain:'Tepid means showing little enthusiasm, so enthusiastic is its opposite.'}
+      } },
+    { id:'v208', skill:'Antonyms', prompt:'Choose the word most nearly opposite to SERENE.', correct:'B',
+      choices:{
+        A:{text:'Peaceful', explain:'Peaceful is a synonym of serene, not its opposite.'},
+        B:{text:'Turbulent and agitated', explain:'Serene means calm and peaceful, so turbulent is its opposite.'},
+        C:{text:'Calm', explain:'Calm is a synonym of serene, not opposite.'},
+        D:{text:'Tranquil', explain:'Tranquil is a synonym of serene, not opposite.'}
+      } },
+    { id:'v209', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Maple', explain:'A maple is a tree, fitting the shared category.'},
+        B:{text:'Birch', explain:'A birch is also a tree.'},
+        C:{text:'Elm', explain:'An elm is also a tree.'},
+        D:{text:'Cardinal', explain:'Unlike the others, a cardinal is a bird, not a tree.'}
+      } },
+    { id:'v210', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Harp', explain:'A harp is a string instrument, fitting the shared category.'},
+        B:{text:'Guitar', explain:'A guitar is also a string instrument.'},
+        C:{text:'Violin', explain:'A violin is also a string instrument.'},
+        D:{text:'Flute', explain:'Unlike the others, a flute is a wind instrument, not a string instrument.'}
+      } },
+    { id:'v211', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Crocodile', explain:'A crocodile is a reptile, fitting the shared category.'},
+        B:{text:'Alligator', explain:'An alligator is also a reptile.'},
+        C:{text:'Lizard', explain:'A lizard is also a reptile.'},
+        D:{text:'Sparrow', explain:'Unlike the others, a sparrow is a bird, not a reptile.'}
+      } },
+    { id:'v212', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Sonnet', explain:'A sonnet is a form of poetry, fitting the shared category.'},
+        B:{text:'Ode', explain:'An ode is also a form of poetry.'},
+        C:{text:'Elegy', explain:'An elegy is also a form of poetry.'},
+        D:{text:'Sketch', explain:'Unlike the others, a sketch is a visual art form, not a poetry form.'}
+      } },
+    { id:'v213', skill:'Analogies', prompt:'Sculptor is to marble as weaver is to ___.', correct:'A',
+      choices:{
+        A:{text:'Thread', explain:'A sculptor shapes marble into a finished work; a weaver shapes thread into a finished work, following the same pattern.'},
+        B:{text:'Loom', explain:'A loom is a tool a weaver uses, not the material being shaped.'},
+        C:{text:'Fabric', explain:'Fabric is the finished product, not the raw material being tested here.'},
+        D:{text:'Pattern', explain:'A pattern is a design, not the raw material a weaver works with.'}
+      } },
+    { id:'v214', skill:'Analogies', prompt:'Compass is to navigation as calculator is to ___.', correct:'C',
+      choices:{
+        A:{text:'Numbers', explain:'Numbers are used by a calculator, but not the broader activity it assists, unlike navigation.'},
+        B:{text:'Battery', explain:'A battery powers a calculator but isn\'t the activity it assists.'},
+        C:{text:'Computation', explain:'A compass assists with navigation; a calculator assists with computation, following the same pattern.'},
+        D:{text:'Screen', explain:'A screen is a part of the calculator, not the activity it assists.'}
+      } },
+    { id:'v215', skill:'Analogies', prompt:'Vaccine is to disease as helmet is to ___.', correct:'B',
+      choices:{
+        A:{text:'Bicycle', explain:'A bicycle is an activity associated with helmets, not what the helmet protects against.'},
+        B:{text:'Injury', explain:'A vaccine protects against disease; a helmet protects against injury, following the same pattern.'},
+        C:{text:'Plastic', explain:'Plastic is a material a helmet might be made from, not what it protects against.'},
+        D:{text:'Strap', explain:'A strap is part of the helmet itself, not what it protects against.'}
+      } },
+    { id:'v216', skill:'Analogies', prompt:'Author is to chapter as composer is to ___.', correct:'D',
+      choices:{
+        A:{text:'Instrument', explain:'An instrument is a tool used to perform music, not a structural section of it.'},
+        B:{text:'Concert', explain:'A concert is an event, not a structural section of a musical work.'},
+        C:{text:'Note', explain:'A note is too small a unit, unlike chapter\'s relationship to a book.'},
+        D:{text:'Movement', explain:'A chapter is a structural section of a book; a movement is a structural section of a musical composition, following the same pattern.'}
+      } },
+    { id:'v217', skill:'Syllogisms', prompt:'All members of the robotics club attend Wednesday workshops. Sam does not attend Wednesday workshops. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Sam is not in the robotics club', explain:'Since all robotics club members attend Wednesday workshops, and Sam does not, Sam cannot be a member.'},
+        B:{text:'Sam is in the robotics club', explain:'This directly contradicts the premise.'},
+        C:{text:'Sam used to be in the robotics club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v218', skill:'Syllogisms', prompt:'Some fruits are citrus. All lemons are fruits. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All lemons are citrus', explain:'This overstates the first statement, which only says "some" fruits are citrus.'},
+        B:{text:'Cannot be determined whether lemons are citrus from these statements alone', explain:'The statements don\'t specify which fruits are the citrus ones, so lemons can\'t be confirmed by logic alone.'},
+        C:{text:'No lemons are citrus', explain:'This isn\'t supported either — lemons could be among the citrus fruits.'},
+        D:{text:'Some lemons are definitely citrus', explain:'This assumes lemons are specifically among the "some" citrus fruits, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v219', skill:'Syllogisms', prompt:'All pentagons have five sides. This shape has five sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a pentagon', explain:'This assumes only pentagons can have five sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a pentagon', explain:'This isn\'t supported either — the shape could still be a pentagon.'},
+        C:{text:'Cannot be determined whether this shape is a pentagon from these statements alone', explain:'The statement only tells us pentagons have five sides, not that only pentagons have five sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v220', skill:'Syllogisms', prompt:'No fish have lungs for breathing air directly. All sharks are fish. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All sharks have lungs for breathing air directly', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some sharks have lungs for breathing air directly', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No sharks have lungs for breathing air directly', explain:'Since no fish have lungs for breathing air directly, and sharks are fish, sharks cannot either.'}
+      } },
+    { id:'v221', skill:'Synonyms', prompt:'Choose the word that means the same as CAPACIOUS.', correct:'B',
+      choices:{
+        A:{text:'Cramped', explain:'This is the opposite of capacious.'},
+        B:{text:'Spacious and roomy', explain:'Capacious means having a lot of space inside, roomy.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what capacious describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what capacious describes.'}
+      } },
+    { id:'v222', skill:'Synonyms', prompt:'Choose the word that means the same as PERFUNCTORY.', correct:'C',
+      choices:{
+        A:{text:'Enthusiastic', explain:'This is the opposite of perfunctory.'},
+        B:{text:'Careful and thorough', explain:'This is the opposite of perfunctory.'},
+        C:{text:'Done without real interest or care, routine', explain:'Perfunctory means carried out with minimal effort or reflection, as a routine.'},
+        D:{text:'Confused', explain:'Confusion isn\'t what perfunctory describes.'}
+      } },
+    { id:'v223', skill:'Synonyms', prompt:'Choose the word that means the same as VOCIFEROUS.', correct:'D',
+      choices:{
+        A:{text:'Silent', explain:'This is the opposite of vociferous.'},
+        B:{text:'Calm', explain:'This is the opposite of vociferous.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what vociferous describes.'},
+        D:{text:'Loud and forceful in expressing opinions', explain:'Vociferous means expressing opinions or feelings in a loud and forceful way.'}
+      } },
+    { id:'v224', skill:'Synonyms', prompt:'Choose the word that means the same as TRACTABLE.', correct:'A',
+      choices:{
+        A:{text:'Easily managed or controlled', explain:'Tractable means easy to control or influence, docile.'},
+        B:{text:'Stubborn and unmanageable', explain:'This is the opposite of tractable.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what tractable describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what tractable describes.'}
+      } },
+    { id:'v225', skill:'Antonyms', prompt:'Choose the word most nearly opposite to AVARICIOUS.', correct:'C',
+      choices:{
+        A:{text:'Greedy', explain:'Greedy is a synonym of avaricious, not its opposite.'},
+        B:{text:'Grasping', explain:'Grasping is related to avaricious, not opposite.'},
+        C:{text:'Generous', explain:'Avaricious means having an extreme desire for wealth, so generous is its opposite.'},
+        D:{text:'Miserly', explain:'Miserly is related to avaricious, not opposite.'}
+      } },
+    { id:'v226', skill:'Antonyms', prompt:'Choose the word most nearly opposite to INSOLVENT.', correct:'B',
+      choices:{
+        A:{text:'Bankrupt', explain:'Bankrupt is a synonym of insolvent, not its opposite.'},
+        B:{text:'Financially sound, solvent', explain:'Insolvent means unable to pay debts, so financially sound is its opposite.'},
+        C:{text:'Broke', explain:'Broke is related to insolvent, not opposite.'},
+        D:{text:'Indebted', explain:'Indebted is related to insolvent, not opposite.'}
+      } },
+    { id:'v227', skill:'Antonyms', prompt:'Choose the word most nearly opposite to GAUCHE.', correct:'D',
+      choices:{
+        A:{text:'Awkward', explain:'Awkward is a synonym of gauche, not its opposite.'},
+        B:{text:'Clumsy', explain:'Clumsy is a synonym of gauche, not opposite.'},
+        C:{text:'Tactless', explain:'Tactless is related to gauche, not opposite.'},
+        D:{text:'Graceful and socially poised', explain:'Gauche means socially awkward or clumsy, so graceful is its opposite.'}
+      } },
+    { id:'v228', skill:'Antonyms', prompt:'Choose the word most nearly opposite to GRANDILOQUENT.', correct:'A',
+      choices:{
+        A:{text:'Plain-spoken and simple', explain:'Grandiloquent means using lofty, pompous language, so plain-spoken is its opposite.'},
+        B:{text:'Pompous', explain:'Pompous is a synonym of grandiloquent, not its opposite.'},
+        C:{text:'Elaborate', explain:'Elaborate is related to grandiloquent, not opposite.'},
+        D:{text:'Ornate', explain:'Ornate is related to grandiloquent, not opposite.'}
+      } },
+    { id:'v229', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Robin', explain:'A robin is a bird, fitting the shared category.'},
+        B:{text:'Sparrow', explain:'A sparrow is also a bird.'},
+        C:{text:'Crow', explain:'A crow is also a bird.'},
+        D:{text:'Trout', explain:'Unlike the others, a trout is a fish, not a bird.'}
+      } },
+    { id:'v230', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Violin', explain:'A violin is a string instrument, fitting the shared category.'},
+        B:{text:'Viola', explain:'A viola is also a string instrument.'},
+        C:{text:'Cello', explain:'A cello is also a string instrument.'},
+        D:{text:'Trumpet', explain:'Unlike the others, a trumpet is a brass instrument, not a string instrument.'}
+      } },
+    { id:'v231', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Snake', explain:'A snake is a reptile, fitting the shared category.'},
+        B:{text:'Lizard', explain:'A lizard is also a reptile.'},
+        C:{text:'Turtle', explain:'A turtle is also a reptile.'},
+        D:{text:'Frog', explain:'Unlike the others, a frog is an amphibian, not a reptile.'}
+      } },
+    { id:'v232', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Essay', explain:'An essay is a written work, fitting the shared category.'},
+        B:{text:'Article', explain:'An article is also a written work.'},
+        C:{text:'Report', explain:'A report is also a written work.'},
+        D:{text:'Painting', explain:'Unlike the others, a painting is a visual art form, not a written work.'}
+      } },
+    { id:'v233', skill:'Analogies', prompt:'Pilot is to cockpit as surgeon is to ___.', correct:'B',
+      choices:{
+        A:{text:'Hospital', explain:'A hospital is a larger location, but the pattern calls for the specific workspace, like cockpit is specific.'},
+        B:{text:'Operating room', explain:'A pilot works specifically in a cockpit; a surgeon works specifically in an operating room, following the same pattern.'},
+        C:{text:'Scalpel', explain:'A scalpel is a tool a surgeon uses, not the workspace.'},
+        D:{text:'Patient', explain:'A patient is who the surgeon treats, not the workspace.'}
+      } },
+    { id:'v234', skill:'Analogies', prompt:'Signature is to authenticity as receipt is to ___.', correct:'C',
+      choices:{
+        A:{text:'Money', explain:'Money is what a receipt might record, not the concept it confirms.'},
+        B:{text:'Store', explain:'A store is a location, not the concept a receipt confirms.'},
+        C:{text:'Proof of purchase', explain:'A signature confirms authenticity; a receipt confirms proof of purchase, following the same pattern.'},
+        D:{text:'Customer', explain:'A customer is a person, not the concept a receipt confirms.'}
+      } },
+    { id:'v235', skill:'Analogies', prompt:'Anchor is to ship as brake is to ___.', correct:'A',
+      choices:{
+        A:{text:'Car', explain:'An anchor stops or holds a ship in place; a brake stops or holds a car, following the same pattern.'},
+        B:{text:'Road', explain:'A road is where a car travels, not the vehicle a brake belongs to.'},
+        C:{text:'Wheel', explain:'A wheel is a part of the car, not the whole vehicle a brake works on.'},
+        D:{text:'Engine', explain:'An engine powers a car, but a brake\'s function is the opposite of the engine\'s, unlike anchor\'s relation to a ship.'}
+      } },
+    { id:'v236', skill:'Analogies', prompt:'Blueprint is to building as recipe is to ___.', correct:'D',
+      choices:{
+        A:{text:'Kitchen', explain:'A kitchen is a workspace, not the finished product being tested here.'},
+        B:{text:'Chef', explain:'A chef is a person, not the finished product a recipe produces.'},
+        C:{text:'Ingredients', explain:'Ingredients are raw materials, not the finished product.'},
+        D:{text:'Dish', explain:'A blueprint guides the creation of a building; a recipe guides the creation of a dish, following the same pattern.'}
+      } },
+    { id:'v237', skill:'Syllogisms', prompt:'All members of the swim team practice at 6am. Elena does not practice at 6am. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Elena is not on the swim team', explain:'Since all swim team members practice at 6am, and Elena does not, Elena cannot be a member.'},
+        B:{text:'Elena is on the swim team', explain:'This directly contradicts the premise.'},
+        C:{text:'Elena used to be on the swim team', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v238', skill:'Syllogisms', prompt:'Some vegetables are green. All broccoli are vegetables. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All broccoli is green', explain:'This overstates the first statement, which only says "some" vegetables are green.'},
+        B:{text:'Cannot be determined whether broccoli is green from these statements alone', explain:'The statements don\'t specify which vegetables are the green ones, so broccoli can\'t be confirmed by logic alone.'},
+        C:{text:'No broccoli is green', explain:'This isn\'t supported either — broccoli could be among the green vegetables.'},
+        D:{text:'Some broccoli is definitely green', explain:'This assumes broccoli is specifically among the "some" green vegetables, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v239', skill:'Syllogisms', prompt:'All heptagons have seven sides. This shape has seven sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a heptagon', explain:'This assumes only heptagons can have seven sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a heptagon', explain:'This isn\'t supported either — the shape could still be a heptagon.'},
+        C:{text:'Cannot be determined whether this shape is a heptagon from these statements alone', explain:'The statement only tells us heptagons have seven sides, not that only heptagons have seven sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v240', skill:'Syllogisms', prompt:'No amphibians have scales. All frogs are amphibians. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All frogs have scales', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some frogs have scales', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No frogs have scales', explain:'Since no amphibians have scales, and frogs are amphibians, frogs cannot either.'}
+      } },
+    { id:'v241', skill:'Synonyms', prompt:'Choose the word that means the same as JOCULAR.', correct:'B',
+      choices:{
+        A:{text:'Serious', explain:'This is the opposite of jocular.'},
+        B:{text:'Joking and playful in manner', explain:'Jocular means fond of joking, humorous and playful.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what jocular describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what jocular describes.'}
+      } },
+    { id:'v242', skill:'Synonyms', prompt:'Choose the word that means the same as ASCETIC.', correct:'D',
+      choices:{
+        A:{text:'Luxurious', explain:'This is the opposite of ascetic.'},
+        B:{text:'Indulgent', explain:'This is the opposite of ascetic.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what ascetic describes.'},
+        D:{text:'Practicing strict self-denial, austere', explain:'Ascetic means practicing severe self-discipline and abstaining from indulgence.'}
+      } },
+    { id:'v243', skill:'Synonyms', prompt:'Choose the word that means the same as HEDONISTIC.', correct:'A',
+      choices:{
+        A:{text:'Devoted to pleasure-seeking', explain:'Hedonistic means devoted to the pursuit of pleasure and self-indulgence.'},
+        B:{text:'Devoted to self-denial', explain:'This is the opposite of hedonistic.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what hedonistic describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t precisely what hedonistic describes.'}
+      } },
+    { id:'v244', skill:'Synonyms', prompt:'Choose the word that means the same as VACILLATING.', correct:'C',
+      choices:{
+        A:{text:'Decisive', explain:'This is the opposite of vacillating.'},
+        B:{text:'Confident', explain:'This is nearly the opposite of vacillating.'},
+        C:{text:'Wavering, indecisive between choices', explain:'Vacillating means wavering between different opinions or actions, indecisive.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what vacillating describes.'}
+      } },
+    { id:'v245', skill:'Antonyms', prompt:'Choose the word most nearly opposite to DENSE.', correct:'A',
+      choices:{
+        A:{text:'Astute and sharp-witted', explain:'Dense, used informally, means slow to understand, so astute is its opposite.'},
+        B:{text:'Slow', explain:'Slow is related to dense in this sense, not its opposite.'},
+        C:{text:'Confused', explain:'Confused is related to dense, not opposite.'},
+        D:{text:'Foolish', explain:'Foolish is a synonym of dense in this sense, not its opposite.'}
+      } },
+    { id:'v246', skill:'Antonyms', prompt:'Choose the word most nearly opposite to VAPID.', correct:'B',
+      choices:{
+        A:{text:'Dull', explain:'Dull is a synonym of vapid, not its opposite.'},
+        B:{text:'Engaging and stimulating', explain:'Vapid means dull or lacking excitement, so engaging is its opposite.'},
+        C:{text:'Insipid', explain:'Insipid is a synonym of vapid, not opposite.'},
+        D:{text:'Flat', explain:'Flat is related to vapid, not opposite.'}
+      } },
+    { id:'v247', skill:'Antonyms', prompt:'Choose the word most nearly opposite to INERT.', correct:'D',
+      choices:{
+        A:{text:'Inactive', explain:'Inactive is a synonym of inert, not its opposite.'},
+        B:{text:'Motionless', explain:'Motionless is related to inert, not opposite.'},
+        C:{text:'Sluggish', explain:'Sluggish is related to inert, not opposite.'},
+        D:{text:'Active and dynamic', explain:'Inert means lacking the power to move or act, so active is its opposite.'}
+      } },
+    { id:'v248', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TORPID.', correct:'C',
+      choices:{
+        A:{text:'Lethargic', explain:'Lethargic is a synonym of torpid, not its opposite.'},
+        B:{text:'Sluggish', explain:'Sluggish is a synonym of torpid, not opposite.'},
+        C:{text:'Energetic and lively', explain:'Torpid means mentally or physically inactive, so energetic is its opposite.'},
+        D:{text:'Dormant', explain:'Dormant is related to torpid, not opposite.'}
+      } },
+    { id:'v249', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Oak', explain:'An oak is a tree, fitting the shared category.'},
+        B:{text:'Maple', explain:'A maple is also a tree.'},
+        C:{text:'Pine', explain:'A pine is also a tree.'},
+        D:{text:'Robin', explain:'Unlike the others, a robin is a bird, not a tree.'}
+      } },
+    { id:'v250', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Clarinet', explain:'A clarinet is a woodwind instrument, fitting the shared category.'},
+        B:{text:'Oboe', explain:'An oboe is also a woodwind instrument.'},
+        C:{text:'Flute', explain:'A flute is also a woodwind instrument.'},
+        D:{text:'Cello', explain:'Unlike the others, a cello is a string instrument, not a woodwind instrument.'}
+      } },
+    { id:'v251', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Shark', explain:'A shark is a fish, fitting the shared category.'},
+        B:{text:'Salmon', explain:'A salmon is also a fish.'},
+        C:{text:'Tuna', explain:'A tuna is also a fish.'},
+        D:{text:'Whale', explain:'Unlike the others, a whale is a mammal, not a fish.'}
+      } },
+    { id:'v252', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Sonnet', explain:'A sonnet is a form of poetry, fitting the shared category.'},
+        B:{text:'Haiku', explain:'A haiku is also a form of poetry.'},
+        C:{text:'Limerick', explain:'A limerick is also a form of poetry.'},
+        D:{text:'Sculpture', explain:'Unlike the others, a sculpture is a visual art form, not a poetry form.'}
+      } },
+    { id:'v253', skill:'Analogies', prompt:'Architect is to blueprint as engineer is to ___.', correct:'B',
+      choices:{
+        A:{text:'Building', explain:'A building is the finished product, not the guiding document being tested here.'},
+        B:{text:'Schematic', explain:'An architect creates a blueprint to guide construction; an engineer creates a schematic to guide construction, following the same pattern.'},
+        C:{text:'Tools', explain:'Tools are physical instruments, not the guiding document.'},
+        D:{text:'Client', explain:'A client is a person, not the guiding document.'}
+      } },
+    { id:'v254', skill:'Analogies', prompt:'Compass is to direction as scale is to ___.', correct:'C',
+      choices:{
+        A:{text:'Numbers', explain:'Numbers appear on a scale but aren\'t the quantity it measures conceptually.'},
+        B:{text:'Balance', explain:'Balance is related to how a scale works, not what it specifically measures.'},
+        C:{text:'Weight', explain:'A compass measures direction; a scale measures weight, following the same pattern.'},
+        D:{text:'Metal', explain:'Metal is a material a scale might be made from, not what it measures.'}
+      } },
+    { id:'v255', skill:'Analogies', prompt:'Key is to lock as password is to ___.', correct:'A',
+      choices:{
+        A:{text:'Account', explain:'A key opens a lock; a password unlocks access to an account, following the same pattern.'},
+        B:{text:'Computer', explain:'A computer is a device, not the specific thing a password grants access to in this parallel.'},
+        C:{text:'Letters', explain:'Letters are components of a password, not what it grants access to.'},
+        D:{text:'Screen', explain:'A screen is a display, not what a password grants access to.'}
+      } },
+    { id:'v256', skill:'Analogies', prompt:'Author is to novel as playwright is to ___.', correct:'D',
+      choices:{
+        A:{text:'Theater', explain:'A theater is a location, not the work a playwright creates.'},
+        B:{text:'Audience', explain:'An audience is who experiences the work, not the work itself.'},
+        C:{text:'Actor', explain:'An actor performs the work, but isn\'t the work itself.'},
+        D:{text:'Play', explain:'An author creates a novel; a playwright creates a play, following the same pattern.'}
+      } },
+    { id:'v257', skill:'Syllogisms', prompt:'All members of the yearbook club submit photos monthly. Kwame does not submit photos monthly. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Kwame is not in the yearbook club', explain:'Since all yearbook club members submit photos monthly, and Kwame does not, Kwame cannot be a member.'},
+        B:{text:'Kwame is in the yearbook club', explain:'This directly contradicts the premise.'},
+        C:{text:'Kwame used to be in the yearbook club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v258', skill:'Syllogisms', prompt:'Some instruments require electricity. All synthesizers are instruments. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All synthesizers require electricity', explain:'This overstates the first statement, which only says "some" instruments require electricity.'},
+        B:{text:'Cannot be determined whether synthesizers require electricity from these statements alone', explain:'The statements don\'t specify which instruments are the ones requiring electricity, so synthesizers can\'t be confirmed by logic alone.'},
+        C:{text:'No synthesizers require electricity', explain:'This isn\'t supported either — synthesizers could be among the instruments that require electricity.'},
+        D:{text:'Some synthesizers definitely require electricity', explain:'This assumes synthesizers are specifically among the "some" instruments requiring electricity, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v259', skill:'Syllogisms', prompt:'All decagons have ten sides. This shape has ten sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a decagon', explain:'This assumes only decagons can have ten sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a decagon', explain:'This isn\'t supported either — the shape could still be a decagon.'},
+        C:{text:'Cannot be determined whether this shape is a decagon from these statements alone', explain:'The statement only tells us decagons have ten sides, not that only decagons have ten sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v260', skill:'Syllogisms', prompt:'No birds have teeth. All eagles are birds. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All eagles have teeth', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some eagles have teeth', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No eagles have teeth', explain:'Since no birds have teeth, and eagles are birds, eagles cannot either.'}
+      } },
+    { id:'v261', skill:'Synonyms', prompt:'Choose the word that means the same as SYCOPHANTIC.', correct:'C',
+      choices:{
+        A:{text:'Honest', explain:'This is the opposite of sycophantic.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what sycophantic describes.'},
+        C:{text:'Flattering excessively to gain favor', explain:'Sycophantic means behaving in an excessively flattering way to gain advantage.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what sycophantic describes.'}
+      } },
+    { id:'v262', skill:'Synonyms', prompt:'Choose the word that means the same as INTRACTABLE.', correct:'A',
+      choices:{
+        A:{text:'Difficult to control or deal with, stubborn', explain:'Intractable means hard to control or deal with, stubborn.'},
+        B:{text:'Easygoing', explain:'This is the opposite of intractable.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what intractable describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what intractable describes.'}
+      } },
+    { id:'v263', skill:'Synonyms', prompt:'Choose the word that means the same as CONGENIAL.', correct:'D',
+      choices:{
+        A:{text:'Hostile', explain:'This is the opposite of congenial.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what congenial describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what congenial describes.'},
+        D:{text:'Pleasant and agreeable', explain:'Congenial means pleasant, friendly, and suited to one\'s needs.'}
+      } },
+    { id:'v264', skill:'Synonyms', prompt:'Choose the word that means the same as LUGUBRIOUS.', correct:'B',
+      choices:{
+        A:{text:'Cheerful', explain:'This is the opposite of lugubrious.'},
+        B:{text:'Mournful and dismal', explain:'Lugubrious means looking or sounding sad and dismal, often exaggeratedly so.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what lugubrious describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what lugubrious describes.'}
+      } },
+    { id:'v265', skill:'Antonyms', prompt:'Choose the word most nearly opposite to FOOLHARDY.', correct:'C',
+      choices:{
+        A:{text:'Reckless', explain:'Reckless is a synonym of foolhardy, not its opposite.'},
+        B:{text:'Bold', explain:'Bold is related to foolhardy, not opposite.'},
+        C:{text:'Cautious and prudent', explain:'Foolhardy means recklessly bold, so cautious is its opposite.'},
+        D:{text:'Daring', explain:'Daring is a synonym of foolhardy, not opposite.'}
+      } },
+    { id:'v266', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PENURIOUS.', correct:'B',
+      choices:{
+        A:{text:'Stingy', explain:'Stingy is a synonym of penurious, not its opposite.'},
+        B:{text:'Wealthy and generous', explain:'Penurious means extremely poor or excessively stingy, so wealthy and generous is its opposite.'},
+        C:{text:'Poor', explain:'Poor is a synonym of penurious, not opposite.'},
+        D:{text:'Frugal', explain:'Frugal is related to penurious, not opposite.'}
+      } },
+    { id:'v267', skill:'Antonyms', prompt:'Choose the word most nearly opposite to ABSTEMIOUS.', correct:'D',
+      choices:{
+        A:{text:'Moderate', explain:'Moderate is a synonym of abstemious, not its opposite.'},
+        B:{text:'Sparing', explain:'Sparing is a synonym of abstemious, not opposite.'},
+        C:{text:'Restrained', explain:'Restrained is related to abstemious, not opposite.'},
+        D:{text:'Gluttonous and self-indulgent', explain:'Abstemious means sparing or moderate in eating and drinking, so gluttonous is its opposite.'}
+      } },
+    { id:'v268', skill:'Antonyms', prompt:'Choose the word most nearly opposite to JUDICIOUS.', correct:'A',
+      choices:{
+        A:{text:'Rash and imprudent', explain:'Judicious means having or showing good judgment, so rash is its opposite.'},
+        B:{text:'Sensible', explain:'Sensible is a synonym of judicious, not its opposite.'},
+        C:{text:'Wise', explain:'Wise is a synonym of judicious, not opposite.'},
+        D:{text:'Prudent', explain:'Prudent is a synonym of judicious, not opposite.'}
+      } },
+    { id:'v269', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Deer', explain:'A deer is a hoofed mammal, fitting the shared category.'},
+        B:{text:'Elk', explain:'An elk is also a hoofed mammal.'},
+        C:{text:'Moose', explain:'A moose is also a hoofed mammal.'},
+        D:{text:'Falcon', explain:'Unlike the others, a falcon is a bird, not a hoofed mammal.'}
+      } },
+    { id:'v270', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Piano', explain:'A piano is a keyboard instrument, fitting the shared category.'},
+        B:{text:'Organ', explain:'An organ is also a keyboard instrument.'},
+        C:{text:'Harpsichord', explain:'A harpsichord is also a keyboard instrument.'},
+        D:{text:'Saxophone', explain:'Unlike the others, a saxophone is a woodwind instrument, not a keyboard instrument.'}
+      } },
+    { id:'v271', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Cobra', explain:'A cobra is a snake, fitting the shared category.'},
+        B:{text:'Viper', explain:'A viper is also a snake.'},
+        C:{text:'Python', explain:'A python is also a snake.'},
+        D:{text:'Newt', explain:'Unlike the others, a newt is an amphibian, not a snake.'}
+      } },
+    { id:'v272', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Memoir', explain:'A memoir is a written work, fitting the shared category.'},
+        B:{text:'Biography', explain:'A biography is also a written work.'},
+        C:{text:'Autobiography', explain:'An autobiography is also a written work.'},
+        D:{text:'Mural', explain:'Unlike the others, a mural is a visual art form, not a written work.'}
+      } },
+    { id:'v273', skill:'Analogies', prompt:'Sculptor is to chisel as painter is to ___.', correct:'A',
+      choices:{
+        A:{text:'Brush', explain:'A sculptor uses a chisel as a primary tool; a painter uses a brush as a primary tool, following the same pattern.'},
+        B:{text:'Canvas', explain:'A canvas is the surface a painter works on, not the tool used.'},
+        C:{text:'Gallery', explain:'A gallery is where finished work might be displayed, not the tool used.'},
+        D:{text:'Paint', explain:'Paint is a material, not the handheld tool being tested here.'}
+      } },
+    { id:'v274', skill:'Analogies', prompt:'Spider is to web as bird is to ___.', correct:'C',
+      choices:{
+        A:{text:'Feather', explain:'A feather is part of a bird, not the structure it builds.'},
+        B:{text:'Sky', explain:'The sky is a general environment, not a specific structure a bird builds.'},
+        C:{text:'Nest', explain:'A spider builds a web; a bird builds a nest, following the same pattern.'},
+        D:{text:'Egg', explain:'An egg is what a bird produces, not the structure it builds to live in.'}
+      } },
+    { id:'v275', skill:'Analogies', prompt:'Anchor is to ship as parachute is to ___.', correct:'B',
+      choices:{
+        A:{text:'Airplane', explain:'An airplane is where a parachute might be stored, not what its function directly relates to, unlike anchor\'s relation to a ship.'},
+        B:{text:'Descent', explain:'An anchor slows or stops a ship\'s drift; a parachute slows a person\'s descent, following the same pattern.'},
+        C:{text:'Sky', explain:'The sky is a general environment, not the specific effect a parachute has.'},
+        D:{text:'Fabric', explain:'Fabric is a material a parachute is made from, not the effect it produces.'}
+      } },
+    { id:'v276', skill:'Analogies', prompt:'Score is to symphony as script is to ___.', correct:'D',
+      choices:{
+        A:{text:'Composer', explain:'A composer is a person, not the finished work a script produces.'},
+        B:{text:'Theater', explain:'A theater is a location, not the work a script produces.'},
+        C:{text:'Actor', explain:'An actor performs from a script, but isn\'t the work itself.'},
+        D:{text:'Play', explain:'A score guides the performance of a symphony; a script guides the performance of a play, following the same pattern.'}
+      } },
+    { id:'v277', skill:'Syllogisms', prompt:'All members of the debate team must complete practice rounds. Yuki has not completed practice rounds. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Yuki is not on the debate team', explain:'Since all debate team members must complete practice rounds, and Yuki has not, Yuki cannot be a member.'},
+        B:{text:'Yuki is on the debate team', explain:'This directly contradicts the premise.'},
+        C:{text:'Yuki used to be on the debate team', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v278', skill:'Syllogisms', prompt:'Some metals are magnetic. All nails are metal. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All nails are magnetic', explain:'This overstates the first statement, which only says "some" metals are magnetic.'},
+        B:{text:'Cannot be determined whether nails are magnetic from these statements alone', explain:'The statements don\'t specify which metals are the magnetic ones, so nails can\'t be confirmed by logic alone.'},
+        C:{text:'No nails are magnetic', explain:'This isn\'t supported either — nails could be among the magnetic metals.'},
+        D:{text:'Some nails are definitely magnetic', explain:'This assumes nails are specifically among the "some" magnetic metals, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v279', skill:'Syllogisms', prompt:'All nonagons have nine sides. This shape has nine sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a nonagon', explain:'This assumes only nonagons can have nine sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a nonagon', explain:'This isn\'t supported either — the shape could still be a nonagon.'},
+        C:{text:'Cannot be determined whether this shape is a nonagon from these statements alone', explain:'The statement only tells us nonagons have nine sides, not that only nonagons have nine sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v280', skill:'Syllogisms', prompt:'No plants can move from place to place on their own. All cacti are plants. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All cacti can move from place to place on their own', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some cacti can move from place to place on their own', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No cacti can move from place to place on their own', explain:'Since no plants can move on their own, and cacti are plants, cacti cannot either.'}
+      } },
+    { id:'v281', skill:'Synonyms', prompt:'Choose the word that means the same as PERTINACIOUS.', correct:'B',
+      choices:{
+        A:{text:'Yielding', explain:'This is the opposite of pertinacious.'},
+        B:{text:'Stubbornly persistent, holding firmly to a purpose', explain:'Pertinacious means holding firmly to an opinion or course of action, stubbornly persistent.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what pertinacious describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what pertinacious describes.'}
+      } },
+    { id:'v282', skill:'Synonyms', prompt:'Choose the word that means the same as EFFICACIOUS.', correct:'D',
+      choices:{
+        A:{text:'Useless', explain:'This is the opposite of efficacious.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what efficacious describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what efficacious describes.'},
+        D:{text:'Effective in producing a desired result', explain:'Efficacious means capable of producing the intended or desired result.'}
+      } },
+    { id:'v283', skill:'Synonyms', prompt:'Choose the word that means the same as NEBULOUS.', correct:'A',
+      choices:{
+        A:{text:'Unclear, vague, hazy', explain:'Nebulous means unclear, vague, or ill-defined.'},
+        B:{text:'Precise', explain:'This is the opposite of nebulous.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what nebulous describes.'},
+        D:{text:'Confident', explain:'Confidence isn\'t what nebulous describes.'}
+      } },
+    { id:'v284', skill:'Synonyms', prompt:'Choose the word that means the same as TRENCHANT.', correct:'C',
+      choices:{
+        A:{text:'Mild', explain:'This is the opposite of trenchant.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what trenchant describes.'},
+        C:{text:'Sharp and incisive in expression', explain:'Trenchant means vigorous, sharp, and incisive in expression or thought.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what trenchant describes.'}
+      } },
+    { id:'v285', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROPITIOUS.', correct:'B',
+      choices:{
+        A:{text:'Favorable', explain:'Favorable is a synonym of propitious, not its opposite.'},
+        B:{text:'Unfavorable', explain:'Propitious means favorable or auspicious, so unfavorable is its opposite.'},
+        C:{text:'Promising', explain:'Promising is a synonym of propitious, not opposite.'},
+        D:{text:'Fortunate', explain:'Fortunate is related to propitious, not opposite.'}
+      } },
+    { id:'v286', skill:'Antonyms', prompt:'Choose the word most nearly opposite to SALUTARY.', correct:'D',
+      choices:{
+        A:{text:'Beneficial', explain:'Beneficial is a synonym of salutary, not its opposite.'},
+        B:{text:'Healthful', explain:'Healthful is a synonym of salutary, not opposite.'},
+        C:{text:'Wholesome', explain:'Wholesome is related to salutary, not opposite.'},
+        D:{text:'Harmful and detrimental', explain:'Salutary means health-giving or beneficial, so harmful is its opposite.'}
+      } },
+    { id:'v287', skill:'Antonyms', prompt:'Choose the word most nearly opposite to CLEMENT.', correct:'A',
+      choices:{
+        A:{text:'Harsh and severe', explain:'Clement means mild or merciful, especially of weather, so harsh is its opposite.'},
+        B:{text:'Mild', explain:'Mild is a synonym of clement, not its opposite.'},
+        C:{text:'Gentle', explain:'Gentle is a synonym of clement, not opposite.'},
+        D:{text:'Merciful', explain:'Merciful is a synonym of clement, not opposite.'}
+      } },
+    { id:'v288', skill:'Antonyms', prompt:'Choose the word most nearly opposite to AUGUST.', correct:'C',
+      choices:{
+        A:{text:'Dignified', explain:'Dignified is a synonym of august, not its opposite.'},
+        B:{text:'Respected', explain:'Respected is a synonym of august, not opposite.'},
+        C:{text:'Lowly and undignified', explain:'August means respected and impressive, so lowly is its opposite.'},
+        D:{text:'Venerable', explain:'Venerable is related to august, not opposite.'}
+      } },
+    { id:'v289', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Trout', explain:'A trout is a fish, fitting the shared category.'},
+        B:{text:'Bass', explain:'A bass is also a fish.'},
+        C:{text:'Perch', explain:'A perch is also a fish.'},
+        D:{text:'Sparrow', explain:'Unlike the others, a sparrow is a bird, not a fish.'}
+      } },
+    { id:'v290', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Trombone', explain:'A trombone is a brass instrument, fitting the shared category.'},
+        B:{text:'Tuba', explain:'A tuba is also a brass instrument.'},
+        C:{text:'Trumpet', explain:'A trumpet is also a brass instrument.'},
+        D:{text:'Cello', explain:'Unlike the others, a cello is a string instrument, not a brass instrument.'}
+      } },
+    { id:'v291', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Iguana', explain:'An iguana is a reptile, fitting the shared category.'},
+        B:{text:'Gecko', explain:'A gecko is also a reptile.'},
+        C:{text:'Chameleon', explain:'A chameleon is also a reptile.'},
+        D:{text:'Salmon', explain:'Unlike the others, a salmon is a fish, not a reptile.'}
+      } },
+    { id:'v292', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Ballad', explain:'A ballad is a form of poetry, fitting the shared category.'},
+        B:{text:'Ode', explain:'An ode is also a form of poetry.'},
+        C:{text:'Sonnet', explain:'A sonnet is also a form of poetry.'},
+        D:{text:'Etching', explain:'Unlike the others, an etching is a visual art form, not a poetry form.'}
+      } },
+    { id:'v293', skill:'Analogies', prompt:'Farmer is to crop as fisherman is to ___.', correct:'B',
+      choices:{
+        A:{text:'Boat', explain:'A boat is a tool a fisherman uses, not what he ultimately produces or gathers.'},
+        B:{text:'Catch', explain:'A farmer produces a crop; a fisherman produces a catch, following the same pattern.'},
+        C:{text:'Net', explain:'A net is a tool used to gather the catch, not the result itself.'},
+        D:{text:'Ocean', explain:'The ocean is the environment, not the product a fisherman gathers.'}
+      } },
+    { id:'v294', skill:'Analogies', prompt:'Teacher is to student as mentor is to ___.', correct:'C',
+      choices:{
+        A:{text:'Classroom', explain:'A classroom is a location, not the person a mentor guides.'},
+        B:{text:'Lesson', explain:'A lesson is content taught, not the person being guided.'},
+        C:{text:'Protege', explain:'A teacher guides a student; a mentor guides a protege, following the same pattern.'},
+        D:{text:'Career', explain:'A career is an outcome, not the person a mentor guides.'}
+      } },
+    { id:'v295', skill:'Analogies', prompt:'Umbrella is to rain as goggles is to ___.', correct:'A',
+      choices:{
+        A:{text:'Debris', explain:'An umbrella protects against rain; safety goggles protect against flying debris, following the same pattern.'},
+        B:{text:'Eyes', explain:'Eyes are what goggles protect, not what they protect against.'},
+        C:{text:'Plastic', explain:'Plastic is a material goggles might be made from, not what they protect against.'},
+        D:{text:'Vision', explain:'Vision is the sense being protected, not the hazard goggles guard against.'}
+      } },
+    { id:'v296', skill:'Analogies', prompt:'Composer is to symphony as poet is to ___.', correct:'D',
+      choices:{
+        A:{text:'Orchestra', explain:'An orchestra performs a symphony, but isn\'t the parallel work a poet creates.'},
+        B:{text:'Stage', explain:'A stage is a location, not the work a poet creates.'},
+        C:{text:'Audience', explain:'An audience experiences the work, not the work itself.'},
+        D:{text:'Poem', explain:'A composer creates a symphony; a poet creates a poem, following the same pattern.'}
+      } },
+    { id:'v297', skill:'Syllogisms', prompt:'All members of the coding club must submit a project monthly. Aisha does not submit a project monthly. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Aisha is not in the coding club', explain:'Since all coding club members must submit a project monthly, and Aisha does not, Aisha cannot be a member.'},
+        B:{text:'Aisha is in the coding club', explain:'This directly contradicts the premise.'},
+        C:{text:'Aisha used to be in the coding club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v298', skill:'Syllogisms', prompt:'Some rocks are sedimentary. All limestone is rock. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All limestone is sedimentary', explain:'This overstates the first statement, which only says "some" rocks are sedimentary.'},
+        B:{text:'Cannot be determined whether limestone is sedimentary from these statements alone', explain:'The statements don\'t specify which rocks are the sedimentary ones, so limestone can\'t be confirmed by logic alone.'},
+        C:{text:'No limestone is sedimentary', explain:'This isn\'t supported either — limestone could be among the sedimentary rocks.'},
+        D:{text:'Some limestone is definitely sedimentary', explain:'This assumes limestone is specifically among the "some" sedimentary rocks, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v299', skill:'Syllogisms', prompt:'All parallelograms have four sides. This shape has four sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a parallelogram', explain:'This assumes only parallelograms can have four sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a parallelogram', explain:'This isn\'t supported either — the shape could still be a parallelogram.'},
+        C:{text:'Cannot be determined whether this shape is a parallelogram from these statements alone', explain:'The statement only tells us parallelograms have four sides, not that only parallelograms have four sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v300', skill:'Syllogisms', prompt:'No spiders have wings. All tarantulas are spiders. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All tarantulas have wings', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some tarantulas have wings', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No tarantulas have wings', explain:'Since no spiders have wings, and tarantulas are spiders, tarantulas cannot either.'}
+      } },
+    { id:'v301', skill:'Synonyms', prompt:'Choose the word that means the same as PUSILLANIMOUS.', correct:'B',
+      choices:{
+        A:{text:'Brave', explain:'This is the opposite of pusillanimous.'},
+        B:{text:'Cowardly, timid', explain:'Pusillanimous means showing a lack of courage, cowardly.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what pusillanimous describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what pusillanimous describes.'}
+      } },
+    { id:'v302', skill:'Synonyms', prompt:'Choose the word that means the same as INDEFATIGABLE.', correct:'D',
+      choices:{
+        A:{text:'Easily exhausted', explain:'This is the opposite of indefatigable.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what indefatigable describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what indefatigable describes.'},
+        D:{text:'Tireless, persistent', explain:'Indefatigable means incapable of being tired out, persistent.'}
+      } },
+    { id:'v303', skill:'Synonyms', prompt:'Choose the word that means the same as IMPETUOUS.', correct:'A',
+      choices:{
+        A:{text:'Acting quickly without thought, rash', explain:'Impetuous means acting or done quickly and without thought or care.'},
+        B:{text:'Cautious and deliberate', explain:'This is the opposite of impetuous.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what impetuous describes.'},
+        D:{text:'Careful', explain:'Carefulness isn\'t what impetuous describes.'}
+      } },
+    { id:'v304', skill:'Synonyms', prompt:'Choose the word that means the same as PHLEGMATIC.', correct:'C',
+      choices:{
+        A:{text:'Excitable', explain:'This is the opposite of phlegmatic.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what phlegmatic describes.'},
+        C:{text:'Calm, unemotional, not easily excited', explain:'Phlegmatic means having a calm, unemotional temperament, not easily excited.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what phlegmatic describes.'}
+      } },
+    { id:'v305', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROSAIC.', correct:'B',
+      choices:{
+        A:{text:'Dull', explain:'Dull is a synonym of prosaic, not its opposite.'},
+        B:{text:'Extraordinary and exciting', explain:'Prosaic means dull or ordinary, lacking imagination, so extraordinary is its opposite.'},
+        C:{text:'Ordinary', explain:'Ordinary is a synonym of prosaic, not opposite.'},
+        D:{text:'Mundane', explain:'Mundane is a synonym of prosaic, not opposite.'}
+      } },
+    { id:'v306', skill:'Antonyms', prompt:'Choose the word most nearly opposite to INARTICULATE.', correct:'D',
+      choices:{
+        A:{text:'Tongue-tied', explain:'Tongue-tied is related to inarticulate, not its opposite.'},
+        B:{text:'Mumbling', explain:'Mumbling is related to inarticulate, not opposite.'},
+        C:{text:'Confused in speech', explain:'This is related to inarticulate, not opposite.'},
+        D:{text:'Eloquent, able to express oneself clearly', explain:'Inarticulate means unable to express oneself clearly, so eloquent is its opposite.'}
+      } },
+    { id:'v307', skill:'Antonyms', prompt:'Choose the word most nearly opposite to EFFUSIVE.', correct:'A',
+      choices:{
+        A:{text:'Reserved and restrained', explain:'Effusive means expressing feelings in an unrestrained way, so reserved is its opposite.'},
+        B:{text:'Gushing', explain:'Gushing is a synonym of effusive, not its opposite.'},
+        C:{text:'Enthusiastic', explain:'Enthusiastic is related to effusive, not opposite.'},
+        D:{text:'Expressive', explain:'Expressive is related to effusive, not opposite.'}
+      } },
+    { id:'v308', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PRECIPITATE.', correct:'C',
+      choices:{
+        A:{text:'Hasty', explain:'Hasty is a synonym of precipitate, not its opposite.'},
+        B:{text:'Sudden', explain:'Sudden is a synonym of precipitate, not opposite.'},
+        C:{text:'Cautious and deliberate', explain:'Precipitate means acting suddenly and without careful thought, so cautious is its opposite.'},
+        D:{text:'Rash', explain:'Rash is a synonym of precipitate, not opposite.'}
+      } },
+    { id:'v309', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Cod', explain:'A cod is a fish, fitting the shared category.'},
+        B:{text:'Halibut', explain:'A halibut is also a fish.'},
+        C:{text:'Herring', explain:'A herring is also a fish.'},
+        D:{text:'Falcon', explain:'Unlike the others, a falcon is a bird, not a fish.'}
+      } },
+    { id:'v310', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Xylophone', explain:'A xylophone is a percussion instrument, fitting the shared category.'},
+        B:{text:'Marimba', explain:'A marimba is also a percussion instrument.'},
+        C:{text:'Glockenspiel', explain:'A glockenspiel is also a percussion instrument.'},
+        D:{text:'Clarinet', explain:'Unlike the others, a clarinet is a woodwind instrument, not a percussion instrument.'}
+      } },
+    { id:'v311', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Anaconda', explain:'An anaconda is a snake, fitting the shared category.'},
+        B:{text:'Boa', explain:'A boa is also a snake.'},
+        C:{text:'Rattlesnake', explain:'A rattlesnake is also a snake.'},
+        D:{text:'Toad', explain:'Unlike the others, a toad is an amphibian, not a snake.'}
+      } },
+    { id:'v312', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Epic', explain:'An epic is a form of poetry, fitting the shared category.'},
+        B:{text:'Ballad', explain:'A ballad is also a form of poetry.'},
+        C:{text:'Ode', explain:'An ode is also a form of poetry.'},
+        D:{text:'Fresco', explain:'Unlike the others, a fresco is a visual art form, not a poetry form.'}
+      } },
+    { id:'v313', skill:'Analogies', prompt:'Carpenter is to saw as barber is to ___.', correct:'A',
+      choices:{
+        A:{text:'Scissors', explain:'A carpenter uses a saw as a primary tool; a barber uses scissors as a primary tool, following the same pattern.'},
+        B:{text:'Chair', explain:'A chair is furniture used in the setting, not the barber\'s primary tool.'},
+        C:{text:'Mirror', explain:'A mirror is used for viewing, not the primary tool for cutting hair.'},
+        D:{text:'Shop', explain:'A shop is a location, not the tool being tested here.'}
+      } },
+    { id:'v314', skill:'Analogies', prompt:'Wolf is to pack as fish is to ___.', correct:'C',
+      choices:{
+        A:{text:'Ocean', explain:'The ocean is a habitat, not the term for a group of fish.'},
+        B:{text:'Fin', explain:'A fin is a body part, not a group term.'},
+        C:{text:'School', explain:'A group of wolves is called a pack; a group of fish is called a school, following the same pattern.'},
+        D:{text:'Scale', explain:'A scale is a body part, not a group term.'}
+      } },
+    { id:'v315', skill:'Analogies', prompt:'Umbrella is to rain as fire extinguisher is to ___.', correct:'D',
+      choices:{
+        A:{text:'Water', explain:'Water is often what a fire extinguisher expels, not what it protects against.'},
+        B:{text:'Smoke', explain:'Smoke is a byproduct of fire, but the extinguisher\'s core purpose targets the fire itself.'},
+        C:{text:'Building', explain:'A building is a location, not what a fire extinguisher protects against.'},
+        D:{text:'Fire', explain:'An umbrella protects against rain; a fire extinguisher protects against fire, following the same pattern.'}
+      } },
+    { id:'v316', skill:'Analogies', prompt:'Novelist is to novel as sculptor is to ___.', correct:'B',
+      choices:{
+        A:{text:'Chisel', explain:'A chisel is a tool a sculptor uses, not the finished work.'},
+        B:{text:'Sculpture', explain:'A novelist creates a novel; a sculptor creates a sculpture, following the same pattern.'},
+        C:{text:'Marble', explain:'Marble is a raw material, not necessarily the finished work.'},
+        D:{text:'Museum', explain:'A museum is where a finished sculpture might be displayed, not the work itself.'}
+      } },
+    { id:'v317', skill:'Syllogisms', prompt:'All members of the chess club must know how to read algebraic notation. Ben cannot read algebraic notation. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Ben is not in the chess club', explain:'Since all chess club members must know how to read algebraic notation, and Ben cannot, Ben cannot be a member.'},
+        B:{text:'Ben is in the chess club', explain:'This directly contradicts the premise.'},
+        C:{text:'Ben used to be in the chess club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v318', skill:'Syllogisms', prompt:'Some employees are managers. All new hires are employees. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All new hires are managers', explain:'This overstates the first statement, which only says "some" employees are managers.'},
+        B:{text:'Cannot be determined whether new hires are managers from these statements alone', explain:'The statements don\'t specify which employees are the managers, so new hires can\'t be confirmed by logic alone.'},
+        C:{text:'No new hires are managers', explain:'This isn\'t supported either — new hires could be among the managers.'},
+        D:{text:'Some new hires are definitely managers', explain:'This assumes new hires are specifically among the "some" managers, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v319', skill:'Syllogisms', prompt:'All octahedrons have eight faces. This shape has eight faces. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is an octahedron', explain:'This assumes only octahedrons can have eight faces, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not an octahedron', explain:'This isn\'t supported either — the shape could still be an octahedron.'},
+        C:{text:'Cannot be determined whether this shape is an octahedron from these statements alone', explain:'The statement only tells us octahedrons have eight faces, not that only octahedrons have eight faces.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v320', skill:'Syllogisms', prompt:'No committee decisions are made without a majority vote. All budget approvals are committee decisions. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All budget approvals are made without a majority vote', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some budget approvals are made without a majority vote', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No budget approvals are made without a majority vote', explain:'Since no committee decisions are made without a majority vote, and budget approvals are committee decisions, budget approvals cannot either.'}
+      } },
+    { id:'v321', skill:'Synonyms', prompt:'Choose the word that means the same as PUGNACIOUS.', correct:'C',
+      choices:{
+        A:{text:'Peaceful', explain:'This is the opposite of pugnacious.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what pugnacious describes.'},
+        C:{text:'Eager to fight or argue, combative', explain:'Pugnacious means eager or quick to fight or argue.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what pugnacious describes.'}
+      } },
+    { id:'v322', skill:'Synonyms', prompt:'Choose the word that means the same as SANCTIMONIOUS.', correct:'A',
+      choices:{
+        A:{text:'Making a show of being morally superior', explain:'Sanctimonious means making a hypocritical show of moral or religious superiority.'},
+        B:{text:'Genuinely humble', explain:'This is the opposite of sanctimonious.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what sanctimonious describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what sanctimonious describes.'}
+      } },
+    { id:'v323', skill:'Synonyms', prompt:'Choose the word that means the same as DILATORY.', correct:'D',
+      choices:{
+        A:{text:'Prompt', explain:'This is the opposite of dilatory.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what dilatory describes.'},
+        C:{text:'Careful', explain:'Carefulness isn\'t what dilatory describes.'},
+        D:{text:'Slow to act, causing delay', explain:'Dilatory means slow to act, tending to delay.'}
+      } },
+    { id:'v324', skill:'Synonyms', prompt:'Choose the word that means the same as IMPLACABLE.', correct:'B',
+      choices:{
+        A:{text:'Easily appeased', explain:'This is the opposite of implacable.'},
+        B:{text:'Unable to be appeased, relentless', explain:'Implacable means unable to be placated or satisfied, relentless.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what implacable describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what implacable describes.'}
+      } },
+    { id:'v325', skill:'Antonyms', prompt:'Choose the word most nearly opposite to HEEDLESS.', correct:'C',
+      choices:{
+        A:{text:'Careless', explain:'Careless is a synonym of heedless, not its opposite.'},
+        B:{text:'Reckless', explain:'Reckless is related to heedless, not opposite.'},
+        C:{text:'Vigilant and attentive', explain:'Heedless means not paying attention, careless, so vigilant is its opposite.'},
+        D:{text:'Thoughtless', explain:'Thoughtless is a synonym of heedless, not opposite.'}
+      } },
+    { id:'v326', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMPERVIOUS.', correct:'D',
+      choices:{
+        A:{text:'Unaffected', explain:'Unaffected is a synonym of impervious, not its opposite.'},
+        B:{text:'Resistant', explain:'Resistant is related to impervious, not opposite.'},
+        C:{text:'Immune', explain:'Immune is related to impervious, not opposite.'},
+        D:{text:'Susceptible and vulnerable', explain:'Impervious means not affected or influenced by something, so susceptible is its opposite.'}
+      } },
+    { id:'v327', skill:'Antonyms', prompt:'Choose the word most nearly opposite to STAID.', correct:'A',
+      choices:{
+        A:{text:'Wild and adventurous', explain:'Staid means sedate, serious, and unadventurous, so wild is its opposite.'},
+        B:{text:'Sedate', explain:'Sedate is a synonym of staid, not its opposite.'},
+        C:{text:'Serious', explain:'Serious is a synonym of staid, not opposite.'},
+        D:{text:'Composed', explain:'Composed is related to staid, not opposite.'}
+      } },
+    { id:'v328', skill:'Antonyms', prompt:'Choose the word most nearly opposite to STALWART.', correct:'C',
+      choices:{
+        A:{text:'Loyal', explain:'Loyal is a synonym of stalwart, not its opposite.'},
+        B:{text:'Reliable', explain:'Reliable is a synonym of stalwart, not opposite.'},
+        C:{text:'Unreliable and weak', explain:'Stalwart means loyal, reliable, and strong, so unreliable and weak is its opposite.'},
+        D:{text:'Strong', explain:'Strong is a synonym of stalwart, not opposite.'}
+      } },
+    { id:'v329', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Tulip', explain:'A tulip is a flower, fitting the shared category.'},
+        B:{text:'Daffodil', explain:'A daffodil is also a flower.'},
+        C:{text:'Rose', explain:'A rose is also a flower.'},
+        D:{text:'Beagle', explain:'Unlike the others, a beagle is a dog, not a flower.'}
+      } },
+    { id:'v330', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Accordion', explain:'An accordion is a reed-based wind instrument, fitting the shared category.'},
+        B:{text:'Harmonica', explain:'A harmonica is also a reed-based wind instrument.'},
+        C:{text:'Bagpipe', explain:'A bagpipe is also a reed-based wind instrument.'},
+        D:{text:'Xylophone', explain:'Unlike the others, a xylophone is a percussion instrument, not a reed-based wind instrument.'}
+      } },
+    { id:'v331', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Python', explain:'A python is a snake, fitting the shared category.'},
+        B:{text:'Cobra', explain:'A cobra is also a snake.'},
+        C:{text:'Rattlesnake', explain:'A rattlesnake is also a snake.'},
+        D:{text:'Salamander', explain:'Unlike the others, a salamander is an amphibian, not a snake.'}
+      } },
+    { id:'v332', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Novella', explain:'A novella is a form of prose fiction, fitting the shared category.'},
+        B:{text:'Novel', explain:'A novel is also a form of prose fiction.'},
+        C:{text:'Short story', explain:'A short story is also a form of prose fiction.'},
+        D:{text:'Etching', explain:'Unlike the others, an etching is a visual art form, not prose fiction.'}
+      } },
+    { id:'v333', skill:'Analogies', prompt:'Tailor is to needle as electrician is to ___.', correct:'B',
+      choices:{
+        A:{text:'Fabric', explain:'Fabric is the material a tailor works with, not the parallel tool being tested here.'},
+        B:{text:'Pliers', explain:'A tailor uses a needle as a primary tool; an electrician uses pliers as a primary tool, following the same pattern.'},
+        C:{text:'Wire', explain:'Wire is the material an electrician works with, not the tool.'},
+        D:{text:'Outlet', explain:'An outlet is a fixture, not the tool an electrician primarily uses.'}
+      } },
+    { id:'v334', skill:'Analogies', prompt:'Pack is to wolves as flock is to ___.', correct:'A',
+      choices:{
+        A:{text:'Sheep', explain:'A group of wolves is called a pack; a group of sheep is called a flock, following the same pattern.'},
+        B:{text:'Wool', explain:'Wool is a product of sheep, not the group term.'},
+        C:{text:'Farm', explain:'A farm is a location, not the group term.'},
+        D:{text:'Shepherd', explain:'A shepherd is a person, not the group term.'}
+      } },
+    { id:'v335', skill:'Analogies', prompt:'Umbrella is to rain as sunscreen is to ___.', correct:'D',
+      choices:{
+        A:{text:'Skin', explain:'Skin is what sunscreen protects, not what it protects against.'},
+        B:{text:'Lotion', explain:'Lotion is a category sunscreen might belong to, not what it protects against.'},
+        C:{text:'Beach', explain:'A beach is a location, not what sunscreen protects against.'},
+        D:{text:'Sun', explain:'An umbrella protects against rain; sunscreen protects against the sun, following the same pattern.'}
+      } },
+    { id:'v336', skill:'Analogies', prompt:'Director is to film as conductor is to ___.', correct:'C',
+      choices:{
+        A:{text:'Orchestra', explain:'An orchestra is the group being led, not the finished performance itself.'},
+        B:{text:'Baton', explain:'A baton is a tool a conductor uses, not the finished work.'},
+        C:{text:'Concert', explain:'A director creates a film; a conductor leads a concert, following the same pattern.'},
+        D:{text:'Composer', explain:'A composer is a separate role, not the finished work a conductor leads.'}
+      } },
+    { id:'v337', skill:'Syllogisms', prompt:'All members of the honor society must maintain a 3.5 GPA. Devon\'s GPA is below 3.5. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Devon is not in the honor society', explain:'Since all honor society members must maintain a 3.5 GPA, and Devon\'s GPA is below that, Devon cannot be a member.'},
+        B:{text:'Devon is in the honor society', explain:'This directly contradicts the premise.'},
+        C:{text:'Devon used to be in the honor society', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v338', skill:'Syllogisms', prompt:'Some paintings are watercolors. All landscapes are paintings. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All landscapes are watercolors', explain:'This overstates the first statement, which only says "some" paintings are watercolors.'},
+        B:{text:'Cannot be determined whether landscapes are watercolors from these statements alone', explain:'The statements don\'t specify which paintings are the watercolors, so landscapes can\'t be confirmed by logic alone.'},
+        C:{text:'No landscapes are watercolors', explain:'This isn\'t supported either — landscapes could be among the watercolor paintings.'},
+        D:{text:'Some landscapes are definitely watercolors', explain:'This assumes landscapes are specifically among the "some" watercolor paintings, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v339', skill:'Syllogisms', prompt:'All rhombuses have four equal sides. This shape has four equal sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a rhombus', explain:'This assumes only rhombuses can have four equal sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a rhombus', explain:'This isn\'t supported either — the shape could still be a rhombus.'},
+        C:{text:'Cannot be determined whether this shape is a rhombus from these statements alone', explain:'The statement only tells us rhombuses have four equal sides, not that only rhombuses have four equal sides.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v340', skill:'Syllogisms', prompt:'No fungi can produce their own food through photosynthesis. All mushrooms are fungi. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All mushrooms can produce their own food through photosynthesis', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some mushrooms can produce their own food through photosynthesis', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No mushrooms can produce their own food through photosynthesis', explain:'Since no fungi can produce their own food through photosynthesis, and mushrooms are fungi, mushrooms cannot either.'}
+      } },
+    { id:'v341', skill:'Synonyms', prompt:'Choose the word that means the same as PIQUANT.', correct:'B',
+      choices:{
+        A:{text:'Bland', explain:'This is the opposite of piquant.'},
+        B:{text:'Pleasantly sharp or stimulating', explain:'Piquant means having a pleasantly sharp taste or agreeably stimulating quality.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what piquant describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what piquant describes.'}
+      } },
+    { id:'v342', skill:'Synonyms', prompt:'Choose the word that means the same as MAUDLIN.', correct:'C',
+      choices:{
+        A:{text:'Composed', explain:'This is the opposite of maudlin.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what maudlin describes.'},
+        C:{text:'Excessively sentimental, self-pitying', explain:'Maudlin means self-pityingly or tearfully sentimental, often excessively so.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what maudlin describes.'}
+      } },
+    { id:'v343', skill:'Synonyms', prompt:'Choose the word that means the same as VITUPERATIVE.', correct:'A',
+      choices:{
+        A:{text:'Bitterly abusive or scolding in language', explain:'Vituperative means using or containing harsh, bitter criticism or abuse.'},
+        B:{text:'Gentle and kind in language', explain:'This is the opposite of vituperative.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what vituperative describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what vituperative describes.'}
+      } },
+    { id:'v344', skill:'Synonyms', prompt:'Choose the word that means the same as EBULLIENT.', correct:'D',
+      choices:{
+        A:{text:'Gloomy', explain:'This is the opposite of ebullient.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what ebullient describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what ebullient describes.'},
+        D:{text:'Cheerful and overflowing with enthusiasm', explain:'Ebullient means cheerful and full of energy, overflowing with enthusiasm.'}
+      } },
+    { id:'v345', skill:'Antonyms', prompt:'Choose the word most nearly opposite to VORACIOUS.', correct:'B',
+      choices:{
+        A:{text:'Insatiable', explain:'Insatiable is a synonym of voracious, not its opposite.'},
+        B:{text:'Moderate in appetite', explain:'Voracious means having a huge appetite, so moderate in appetite is its opposite.'},
+        C:{text:'Ravenous', explain:'Ravenous is a synonym of voracious, not opposite.'},
+        D:{text:'Greedy', explain:'Greedy is related to voracious, not opposite.'}
+      } },
+    { id:'v346', skill:'Antonyms', prompt:'Choose the word most nearly opposite to SQUALID.', correct:'D',
+      choices:{
+        A:{text:'Filthy', explain:'Filthy is a synonym of squalid, not its opposite.'},
+        B:{text:'Unpleasant', explain:'Unpleasant is related to squalid, not opposite.'},
+        C:{text:'Dirty', explain:'Dirty is a synonym of squalid, not opposite.'},
+        D:{text:'Pristine and clean', explain:'Squalid means extremely dirty and unpleasant, so pristine is its opposite.'}
+      } },
+    { id:'v347', skill:'Antonyms', prompt:'Choose the word most nearly opposite to DIAPHANOUS.', correct:'A',
+      choices:{
+        A:{text:'Opaque and thick', explain:'Diaphanous means light, delicate, and translucent, so opaque is its opposite.'},
+        B:{text:'Sheer', explain:'Sheer is a synonym of diaphanous, not its opposite.'},
+        C:{text:'Delicate', explain:'Delicate is a synonym of diaphanous, not opposite.'},
+        D:{text:'Translucent', explain:'Translucent is a synonym of diaphanous, not opposite.'}
+      } },
+    { id:'v348', skill:'Antonyms', prompt:'Choose the word most nearly opposite to HALE.', correct:'C',
+      choices:{
+        A:{text:'Healthy', explain:'Healthy is a synonym of hale, not its opposite.'},
+        B:{text:'Strong', explain:'Strong is a synonym of hale, not opposite.'},
+        C:{text:'Frail and sickly', explain:'Hale means healthy and strong, especially of an elderly person, so frail is its opposite.'},
+        D:{text:'Robust', explain:'Robust is a synonym of hale, not opposite.'}
+      } },
+    { id:'v349', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Daisy', explain:'A daisy is a flower, fitting the shared category.'},
+        B:{text:'Sunflower', explain:'A sunflower is also a flower.'},
+        C:{text:'Marigold', explain:'A marigold is also a flower.'},
+        D:{text:'Poodle', explain:'Unlike the others, a poodle is a dog, not a flower.'}
+      } },
+    { id:'v350', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Cymbal', explain:'A cymbal is a percussion instrument, fitting the shared category.'},
+        B:{text:'Snare drum', explain:'A snare drum is also a percussion instrument.'},
+        C:{text:'Tambourine', explain:'A tambourine is also a percussion instrument.'},
+        D:{text:'Bassoon', explain:'Unlike the others, a bassoon is a woodwind instrument, not a percussion instrument.'}
+      } },
+    { id:'v351', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Copperhead', explain:'A copperhead is a snake, fitting the shared category.'},
+        B:{text:'Mamba', explain:'A mamba is also a snake.'},
+        C:{text:'Adder', explain:'An adder is also a snake.'},
+        D:{text:'Iguana', explain:'Unlike the others, an iguana is a lizard, not a snake.'}
+      } },
+    { id:'v352', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Memoir', explain:'A memoir is a written personal narrative, fitting the shared category.'},
+        B:{text:'Diary', explain:'A diary is also a written personal narrative.'},
+        C:{text:'Journal', explain:'A journal is also a written personal narrative.'},
+        D:{text:'Sketch', explain:'Unlike the others, a sketch is a visual art form, not a written personal narrative.'}
+      } },
+    { id:'v353', skill:'Analogies', prompt:'Blacksmith is to anvil as potter is to ___.', correct:'C',
+      choices:{
+        A:{text:'Kiln', explain:'A kiln fires the finished piece, but isn\'t the primary working surface a potter shapes clay on.'},
+        B:{text:'Clay', explain:'Clay is the material being worked, not the tool or surface a potter works on.'},
+        C:{text:'Wheel', explain:'A blacksmith shapes metal on an anvil; a potter shapes clay on a wheel, following the same pattern.'},
+        D:{text:'Glaze', explain:'Glaze is a finishing material, not the working surface.'}
+      } },
+    { id:'v354', skill:'Analogies', prompt:'Herd is to cattle as swarm is to ___.', correct:'A',
+      choices:{
+        A:{text:'Bees', explain:'A group of cattle is called a herd; a group of bees is called a swarm, following the same pattern.'},
+        B:{text:'Honey', explain:'Honey is a product of bees, not the group term.'},
+        C:{text:'Hive', explain:'A hive is a structure bees live in, not the group term itself.'},
+        D:{text:'Field', explain:'A field is a location, not the group term.'}
+      } },
+    { id:'v355', skill:'Analogies', prompt:'Umbrella is to rain as life jacket is to ___.', correct:'B',
+      choices:{
+        A:{text:'Boat', explain:'A boat is a location or vehicle, not the specific hazard a life jacket protects against.'},
+        B:{text:'Drowning', explain:'An umbrella protects against rain; a life jacket protects against drowning, following the same pattern.'},
+        C:{text:'Water', explain:'Water is the general environment, but the specific hazard being tested is drowning, matching the pattern of rain as a specific hazard.'},
+        D:{text:'Swimmer', explain:'A swimmer is a person, not the hazard a life jacket protects against.'}
+      } },
+    { id:'v356', skill:'Analogies', prompt:'Screenwriter is to script as choreographer is to ___.', correct:'D',
+      choices:{
+        A:{text:'Stage', explain:'A stage is a location, not the work a choreographer creates.'},
+        B:{text:'Dancer', explain:'A dancer performs the work, but isn\'t the work itself.'},
+        C:{text:'Music', explain:'Music often accompanies the work, but isn\'t the work a choreographer creates.'},
+        D:{text:'Dance', explain:'A screenwriter creates a script; a choreographer creates a dance, following the same pattern.'}
+      } },
+    { id:'v357', skill:'Syllogisms', prompt:'All members of the robotics team must attend Saturday builds. Priya missed every Saturday build. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Priya is not on the robotics team', explain:'Since all robotics team members must attend Saturday builds, and Priya missed every one, Priya cannot be a member.'},
+        B:{text:'Priya is on the robotics team', explain:'This directly contradicts the premise.'},
+        C:{text:'Priya used to be on the robotics team', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v358', skill:'Syllogisms', prompt:'Some documents are classified. All treaties are documents. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All treaties are classified', explain:'This overstates the first statement, which only says "some" documents are classified.'},
+        B:{text:'Cannot be determined whether treaties are classified from these statements alone', explain:'The statements don\'t specify which documents are the classified ones, so treaties can\'t be confirmed by logic alone.'},
+        C:{text:'No treaties are classified', explain:'This isn\'t supported either — treaties could be among the classified documents.'},
+        D:{text:'Some treaties are definitely classified', explain:'This assumes treaties are specifically among the "some" classified documents, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v359', skill:'Syllogisms', prompt:'All trapezoids have exactly one pair of parallel sides. This shape has exactly one pair of parallel sides. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a trapezoid', explain:'This assumes only trapezoids can have exactly one pair of parallel sides, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a trapezoid', explain:'This isn\'t supported either — the shape could still be a trapezoid.'},
+        C:{text:'Cannot be determined whether this shape is a trapezoid from these statements alone', explain:'The statement only tells us trapezoids have exactly one pair of parallel sides, not that only trapezoids have this property.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v360', skill:'Syllogisms', prompt:'No crustaceans have a backbone. All lobsters are crustaceans. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All lobsters have a backbone', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some lobsters have a backbone', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No lobsters have a backbone', explain:'Since no crustaceans have a backbone, and lobsters are crustaceans, lobsters cannot either.'}
+      } },
+    { id:'v361', skill:'Synonyms', prompt:'Choose the word that means the same as PERSPICUOUS.', correct:'A',
+      choices:{
+        A:{text:'Clearly expressed, easy to understand', explain:'Perspicuous means clearly expressed and easily understood.'},
+        B:{text:'Confusing and vague', explain:'This is the opposite of perspicuous.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what perspicuous describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what perspicuous describes.'}
+      } },
+    { id:'v362', skill:'Synonyms', prompt:'Choose the word that means the same as RECONDITE.', correct:'C',
+      choices:{
+        A:{text:'Well-known', explain:'This is the opposite of recondite.'},
+        B:{text:'Simple', explain:'This is the opposite of recondite.'},
+        C:{text:'Little known, difficult to understand', explain:'Recondite means little known, abstruse, or difficult to understand.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what recondite describes.'}
+      } },
+    { id:'v363', skill:'Synonyms', prompt:'Choose the word that means the same as GARISH.', correct:'D',
+      choices:{
+        A:{text:'Understated', explain:'This is the opposite of garish.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what garish describes.'},
+        C:{text:'Careful', explain:'Carefulness isn\'t what garish describes.'},
+        D:{text:'Obtrusively bright or showy, tasteless', explain:'Garish means obtrusively bright, showy, or gaudy, often in a tasteless way.'}
+      } },
+    { id:'v364', skill:'Synonyms', prompt:'Choose the word that means the same as INSOUCIANT.', correct:'B',
+      choices:{
+        A:{text:'Anxious', explain:'This is the opposite of insouciant.'},
+        B:{text:'Carefree, nonchalant, unconcerned', explain:'Insouciant means showing a casual lack of concern, carefree.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what insouciant describes.'},
+        D:{text:'Careless in a harmful way', explain:'This overstates insouciant, which describes ease rather than harm.'}
+      } },
+    { id:'v365', skill:'Antonyms', prompt:'Choose the word most nearly opposite to OPULENT.', correct:'C',
+      choices:{
+        A:{text:'Lavish', explain:'Lavish is a synonym of opulent, not its opposite.'},
+        B:{text:'Luxurious', explain:'Luxurious is a synonym of opulent, not opposite.'},
+        C:{text:'Austere and spartan', explain:'Opulent means rich and luxurious, so austere is its opposite.'},
+        D:{text:'Rich', explain:'Rich is a synonym of opulent, not opposite.'}
+      } },
+    { id:'v366', skill:'Antonyms', prompt:'Choose the word most nearly opposite to EXPLICIT.', correct:'A',
+      choices:{
+        A:{text:'Implicit and vague', explain:'Explicit means stated clearly and in detail, so implicit is its opposite.'},
+        B:{text:'Clear', explain:'Clear is a synonym of explicit, not its opposite.'},
+        C:{text:'Detailed', explain:'Detailed is a synonym of explicit, not opposite.'},
+        D:{text:'Direct', explain:'Direct is a synonym of explicit, not opposite.'}
+      } },
+    { id:'v367', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PERENNIAL.', correct:'D',
+      choices:{
+        A:{text:'Recurring', explain:'Recurring is a synonym of perennial, not its opposite.'},
+        B:{text:'Lasting', explain:'Lasting is a synonym of perennial, not opposite.'},
+        C:{text:'Enduring', explain:'Enduring is a synonym of perennial, not opposite.'},
+        D:{text:'Fleeting and momentary', explain:'Perennial means lasting for a long time or recurring, so fleeting is its opposite.'}
+      } },
+    { id:'v368', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TENUOUS.', correct:'B',
+      choices:{
+        A:{text:'Flimsy', explain:'Flimsy is a synonym of tenuous, not its opposite.'},
+        B:{text:'Strong and substantial', explain:'Tenuous means thin, weak, or flimsy, so strong is its opposite.'},
+        C:{text:'Weak', explain:'Weak is a synonym of tenuous, not opposite.'},
+        D:{text:'Fragile', explain:'Fragile is related to tenuous, not opposite.'}
+      } },
+    { id:'v369', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Carnation', explain:'A carnation is a flower, fitting the shared category.'},
+        B:{text:'Orchid', explain:'An orchid is also a flower.'},
+        C:{text:'Lily', explain:'A lily is also a flower.'},
+        D:{text:'Terrier', explain:'Unlike the others, a terrier is a dog, not a flower.'}
+      } },
+    { id:'v370', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Timpani', explain:'Timpani are percussion instruments, fitting the shared category.'},
+        B:{text:'Congas', explain:'Congas are also percussion instruments.'},
+        C:{text:'Bongos', explain:'Bongos are also percussion instruments.'},
+        D:{text:'Piccolo', explain:'Unlike the others, a piccolo is a woodwind instrument, not a percussion instrument.'}
+      } },
+    { id:'v371', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Garter snake', explain:'A garter snake is a snake, fitting the shared category.'},
+        B:{text:'King snake', explain:'A king snake is also a snake.'},
+        C:{text:'Corn snake', explain:'A corn snake is also a snake.'},
+        D:{text:'Chameleon', explain:'Unlike the others, a chameleon is a lizard, not a snake.'}
+      } },
+    { id:'v372', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Elegy', explain:'An elegy is a written tribute, fitting the shared category.'},
+        B:{text:'Requiem', explain:'A requiem, in its written or spoken form, is also a tribute honoring the dead.'},
+        C:{text:'Eulogy', explain:'A eulogy is also a written tribute.'},
+        D:{text:'Collage', explain:'Unlike the others, a collage is a visual art form, not a written tribute.'}
+      } },
+    { id:'v373', skill:'Analogies', prompt:'Jeweler is to gem as vintner is to ___.', correct:'A',
+      choices:{
+        A:{text:'Grape', explain:'A jeweler works primarily with gems; a vintner works primarily with grapes, following the same pattern.'},
+        B:{text:'Bottle', explain:'A bottle is a container used later in the process, not the primary raw material.'},
+        C:{text:'Vineyard', explain:'A vineyard is a location, not the material a vintner works with directly.'},
+        D:{text:'Barrel', explain:'A barrel is equipment used in the process, not the primary raw material.'}
+      } },
+    { id:'v374', skill:'Analogies', prompt:'Litter is to puppies as clutch is to ___.', correct:'C',
+      choices:{
+        A:{text:'Nest', explain:'A nest is a structure, not the group term being tested here.'},
+        B:{text:'Feathers', explain:'Feathers are body parts, not a group term.'},
+        C:{text:'Eggs', explain:'A group of puppies born together is called a litter; a group of eggs laid together is called a clutch, following the same pattern.'},
+        D:{text:'Hen', explain:'A hen is a single animal, not the group term.'}
+      } },
+    { id:'v375', skill:'Analogies', prompt:'Umbrella is to rain as mask is to ___.', correct:'B',
+      choices:{
+        A:{text:'Face', explain:'A face is what a mask covers, not what it protects against.'},
+        B:{text:'Germs', explain:'An umbrella protects against rain; a mask protects against germs, following the same pattern.'},
+        C:{text:'Fabric', explain:'Fabric is a material a mask might be made from, not what it protects against.'},
+        D:{text:'Breathing', explain:'Breathing is the function affected, not the specific hazard being protected against.'}
+      } },
+    { id:'v376', skill:'Analogies', prompt:'Architect is to blueprint as cartographer is to ___.', correct:'D',
+      choices:{
+        A:{text:'Compass', explain:'A compass is a tool a cartographer might use, not the finished work.'},
+        B:{text:'Territory', explain:'Territory is what is being represented, not the finished work itself.'},
+        C:{text:'Globe', explain:'A globe is one possible format, but not the general term for the finished work.'},
+        D:{text:'Map', explain:'An architect creates a blueprint; a cartographer creates a map, following the same pattern.'}
+      } },
+    { id:'v377', skill:'Syllogisms', prompt:'All members of the debate club must complete a persuasive speech each semester. Malik has never completed one. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Malik is not in the debate club', explain:'Since all debate club members must complete a persuasive speech each semester, and Malik never has, Malik cannot be a member.'},
+        B:{text:'Malik is in the debate club', explain:'This directly contradicts the premise.'},
+        C:{text:'Malik used to be in the debate club', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v378', skill:'Syllogisms', prompt:'Some sculptures are made of bronze. All statues are sculptures. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All statues are made of bronze', explain:'This overstates the first statement, which only says "some" sculptures are made of bronze.'},
+        B:{text:'Cannot be determined whether statues are bronze from these statements alone', explain:'The statements don\'t specify which sculptures are the bronze ones, so statues can\'t be confirmed by logic alone.'},
+        C:{text:'No statues are made of bronze', explain:'This isn\'t supported either — statues could be among the bronze sculptures.'},
+        D:{text:'Some statues are definitely made of bronze', explain:'This assumes statues are specifically among the "some" bronze sculptures, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v379', skill:'Syllogisms', prompt:'All icosahedrons have twenty faces. This shape has twenty faces. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is an icosahedron', explain:'This assumes only icosahedrons can have twenty faces, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not an icosahedron', explain:'This isn\'t supported either — the shape could still be an icosahedron.'},
+        C:{text:'Cannot be determined whether this shape is an icosahedron from these statements alone', explain:'The statement only tells us icosahedrons have twenty faces, not that only icosahedrons have twenty faces.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v380', skill:'Syllogisms', prompt:'No mollusks have a segmented exoskeleton. All snails are mollusks. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All snails have a segmented exoskeleton', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some snails have a segmented exoskeleton', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No snails have a segmented exoskeleton', explain:'Since no mollusks have a segmented exoskeleton, and snails are mollusks, snails cannot either.'}
+      } },
+    { id:'v381', skill:'Synonyms', prompt:'Choose the word that means the same as PELLUCID.', correct:'B',
+      choices:{
+        A:{text:'Muddled', explain:'This is the opposite of pellucid.'},
+        B:{text:'Transparently clear, easy to understand', explain:'Pellucid means translucently clear in style or meaning, easy to understand.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what pellucid describes.'},
+        D:{text:'Careless', explain:'Carelessness isn\'t what pellucid describes.'}
+      } },
+    { id:'v382', skill:'Synonyms', prompt:'Choose the word that means the same as MENDACIOUS.', correct:'D',
+      choices:{
+        A:{text:'Honest', explain:'This is the opposite of mendacious.'},
+        B:{text:'Confused', explain:'Confusion isn\'t what mendacious describes.'},
+        C:{text:'Careless', explain:'Carelessness isn\'t what mendacious describes.'},
+        D:{text:'Lying, untruthful, dishonest', explain:'Mendacious means not telling the truth, lying.'}
+      } },
+    { id:'v383', skill:'Synonyms', prompt:'Choose the word that means the same as SCRUPULOUS.', correct:'A',
+      choices:{
+        A:{text:'Extremely thorough and morally careful', explain:'Scrupulous means extremely thorough and careful, having strong moral principles.'},
+        B:{text:'Careless and sloppy', explain:'This is the opposite of scrupulous.'},
+        C:{text:'Confused', explain:'Confusion isn\'t what scrupulous describes.'},
+        D:{text:'Dishonest', explain:'This is nearly the opposite of scrupulous.'}
+      } },
+    { id:'v384', skill:'Synonyms', prompt:'Choose the word that means the same as RAUCOUS.', correct:'C',
+      choices:{
+        A:{text:'Quiet', explain:'This is the opposite of raucous.'},
+        B:{text:'Orderly', explain:'This is the opposite of raucous.'},
+        C:{text:'Loud and disorderly', explain:'Raucous means making or constituting a disturbingly harsh and loud noise, disorderly.'},
+        D:{text:'Careful', explain:'Carefulness isn\'t what raucous describes.'}
+      } },
+    { id:'v385', skill:'Antonyms', prompt:'Choose the word most nearly opposite to FORLORN.', correct:'B',
+      choices:{
+        A:{text:'Abandoned', explain:'Abandoned is related to forlorn, not its opposite.'},
+        B:{text:'Hopeful and cheerful', explain:'Forlorn means sad and abandoned, so hopeful is its opposite.'},
+        C:{text:'Sad', explain:'Sad is a synonym of forlorn, not opposite.'},
+        D:{text:'Lonely', explain:'Lonely is related to forlorn, not opposite.'}
+      } },
+    { id:'v386', skill:'Antonyms', prompt:'Choose the word most nearly opposite to ENERVATE.', correct:'C',
+      choices:{
+        A:{text:'Weaken', explain:'Weaken is a synonym of enervate, not its opposite.'},
+        B:{text:'Drain', explain:'Drain is related to enervate, not opposite.'},
+        C:{text:'Invigorate and energize', explain:'Enervate means to weaken or drain of energy, so invigorate is its opposite.'},
+        D:{text:'Exhaust', explain:'Exhaust is a synonym of enervate, not opposite.'}
+      } },
+    { id:'v387', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROFLIGATE.', correct:'D',
+      choices:{
+        A:{text:'Wasteful', explain:'Wasteful is a synonym of profligate, not its opposite.'},
+        B:{text:'Extravagant', explain:'Extravagant is a synonym of profligate, not opposite.'},
+        C:{text:'Reckless', explain:'Reckless is related to profligate, not opposite.'},
+        D:{text:'Frugal and thrifty', explain:'Profligate means recklessly extravagant and wasteful, so frugal is its opposite.'}
+      } },
+    { id:'v388', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMMUTABLE.', correct:'A',
+      choices:{
+        A:{text:'Changeable and mutable', explain:'Immutable means unchanging over time, unable to be changed, so changeable is its opposite.'},
+        B:{text:'Permanent', explain:'Permanent is a synonym of immutable, not its opposite.'},
+        C:{text:'Fixed', explain:'Fixed is a synonym of immutable, not opposite.'},
+        D:{text:'Stable', explain:'Stable is related to immutable, not opposite.'}
+      } },
+    { id:'v389', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Petunia', explain:'A petunia is a flower, fitting the shared category.'},
+        B:{text:'Begonia', explain:'A begonia is also a flower.'},
+        C:{text:'Zinnia', explain:'A zinnia is also a flower.'},
+        D:{text:'Spaniel', explain:'Unlike the others, a spaniel is a dog, not a flower.'}
+      } },
+    { id:'v390', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Kettledrum', explain:'A kettledrum is a percussion instrument, fitting the shared category.'},
+        B:{text:'Maracas', explain:'Maracas are also percussion instruments.'},
+        C:{text:'Triangle', explain:'A triangle is also a percussion instrument.'},
+        D:{text:'Recorder', explain:'Unlike the others, a recorder is a woodwind instrument, not a percussion instrument.'}
+      } },
+    { id:'v391', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Milk snake', explain:'A milk snake is a snake, fitting the shared category.'},
+        B:{text:'Water snake', explain:'A water snake is also a snake.'},
+        C:{text:'Rat snake', explain:'A rat snake is also a snake.'},
+        D:{text:'Skink', explain:'Unlike the others, a skink is a lizard, not a snake.'}
+      } },
+    { id:'v392', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
+      choices:{
+        A:{text:'Tribute', explain:'A tribute is a written expression of praise, fitting the shared category.'},
+        B:{text:'Panegyric', explain:'A panegyric is also a written expression of praise.'},
+        C:{text:'Encomium', explain:'An encomium is also a written expression of praise.'},
+        D:{text:'Etching', explain:'Unlike the others, an etching is a visual art form, not a written expression of praise.'}
+      } },
+    { id:'v393', skill:'Analogies', prompt:'Author is to manuscript as sculptor is to ___.', correct:'C',
+      choices:{
+        A:{text:'Chisel', explain:'A chisel is a tool a sculptor uses, not the finished work.'},
+        B:{text:'Marble', explain:'Marble is a raw material, not necessarily the finished work.'},
+        C:{text:'Statue', explain:'An author creates a manuscript; a sculptor creates a statue, following the same pattern.'},
+        D:{text:'Museum', explain:'A museum is where a finished statue might be displayed, not the work itself.'}
+      } },
+    { id:'v394', skill:'Analogies', prompt:'Colony is to ants as pod is to ___.', correct:'A',
+      choices:{
+        A:{text:'Whales', explain:'A group of ants is called a colony; a group of whales is called a pod, following the same pattern.'},
+        B:{text:'Ocean', explain:'The ocean is a habitat, not the group term.'},
+        C:{text:'Fins', explain:'Fins are body parts, not a group term.'},
+        D:{text:'Water', explain:'Water is a general environment, not the group term.'}
+      } },
+    { id:'v395', skill:'Analogies', prompt:'Umbrella is to rain as bandage is to ___.', correct:'B',
+      choices:{
+        A:{text:'Skin', explain:'Skin is what a bandage covers, not what it protects against.'},
+        B:{text:'Wound', explain:'An umbrella protects against rain; a bandage protects a wound, following the same pattern.'},
+        C:{text:'Fabric', explain:'Fabric is a material a bandage might be made from, not what it protects.'},
+        D:{text:'Doctor', explain:'A doctor is a person, not what a bandage protects against.'}
+      } },
+    { id:'v396', skill:'Analogies', prompt:'Editor is to manuscript as director is to ___.', correct:'D',
+      choices:{
+        A:{text:'Script', explain:'A script is the raw material a director works from, similar to a manuscript before editing, but the parallel role here is the finished work a director shapes.'},
+        B:{text:'Actor', explain:'An actor performs in the work, but isn\'t the finished work itself.'},
+        C:{text:'Camera', explain:'A camera is a tool, not the finished work a director shapes.'},
+        D:{text:'Film', explain:'An editor shapes a manuscript; a director shapes a film, following the same pattern.'}
+      } },
+    { id:'v397', skill:'Syllogisms', prompt:'All members of the orchestra must audition annually. Sofia has never auditioned. Therefore:', correct:'A',
+      choices:{
+        A:{text:'Sofia is not in the orchestra', explain:'Since all orchestra members must audition annually, and Sofia has never auditioned, Sofia cannot be a member.'},
+        B:{text:'Sofia is in the orchestra', explain:'This directly contradicts the premise.'},
+        C:{text:'Sofia used to be in the orchestra', explain:'This adds information not supported by the statements.'},
+        D:{text:'Cannot be determined', explain:'This can be determined directly from the premises.'}
+      } },
+    { id:'v398', skill:'Syllogisms', prompt:'Some contracts are binding. All leases are contracts. Therefore:', correct:'B',
+      choices:{
+        A:{text:'All leases are binding', explain:'This overstates the first statement, which only says "some" contracts are binding.'},
+        B:{text:'Cannot be determined whether leases are binding from these statements alone', explain:'The statements don\'t specify which contracts are the binding ones, so leases can\'t be confirmed by logic alone.'},
+        C:{text:'No leases are binding', explain:'This isn\'t supported either — leases could be among the binding contracts.'},
+        D:{text:'Some leases are definitely binding', explain:'This assumes leases are specifically among the "some" binding contracts, which isn\'t guaranteed by the statements.'}
+      } },
+    { id:'v399', skill:'Syllogisms', prompt:'All dodecahedrons have twelve faces. This shape has twelve faces. Therefore:', correct:'C',
+      choices:{
+        A:{text:'This shape is a dodecahedron', explain:'This assumes only dodecahedrons can have twelve faces, which the statement doesn\'t guarantee.'},
+        B:{text:'This shape is not a dodecahedron', explain:'This isn\'t supported either — the shape could still be a dodecahedron.'},
+        C:{text:'Cannot be determined whether this shape is a dodecahedron from these statements alone', explain:'The statement only tells us dodecahedrons have twelve faces, not that only dodecahedrons have twelve faces.'},
+        D:{text:'No conclusion is possible under any circumstances', explain:'This overstates the uncertainty — the given premises simply don\'t settle this particular question.'}
+      } },
+    { id:'v400', skill:'Syllogisms', prompt:'No arachnids have exactly six legs. All spiders are arachnids. Therefore:', correct:'D',
+      choices:{
+        A:{text:'All spiders have exactly six legs', explain:'This directly contradicts the first statement.'},
+        B:{text:'Some spiders have exactly six legs', explain:'Even partial overlap is ruled out by the first statement.'},
+        C:{text:'Cannot be determined', explain:'A conclusion can actually be drawn here.'},
+        D:{text:'No spiders have exactly six legs', explain:'Since no arachnids have exactly six legs, and spiders are arachnids, spiders cannot either.'}
       } }
   ],
 
@@ -2575,6 +4170,1546 @@ const QUESTIONS = {
         A:{text:'Column A is greater', explain:'23/27 is approximately 0.852, which is greater than 0.85.'},
         B:{text:'Column B is greater', explain:'0.85 is less than 23/27 (approximately 0.852).'},
         C:{text:'The two columns are equal', explain:'0.852 and 0.85 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q181', skill:'Number series', prompt:'20, 40, 80, 160, ___', correct:'D',
+      choices:{
+        A:{text:'280',explain:'Doesn\'t match doubling.'},
+        B:{text:'300',explain:'Doesn\'t match the correct product.'},
+        C:{text:'310',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'320',explain:'Each term doubles: 160x2=320.'}
+      } },
+    { id:'q182', skill:'Number series', prompt:'16, 24, 32, 40, ___', correct:'A',
+      choices:{
+        A:{text:'48',explain:'Each term adds 8: 40+8=48.'},
+        B:{text:'46',explain:'Doesn\'t match adding 8.'},
+        C:{text:'50',explain:'Overshoots the correct value.'},
+        D:{text:'44',explain:'Doesn\'t match the +8 pattern.'}
+      } },
+    { id:'q183', skill:'Number series', prompt:'12, 25, 51, 103, ___', correct:'B',
+      choices:{
+        A:{text:'203',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'207',explain:'Each number doubles the previous and adds 1: 103x2+1=207.'},
+        C:{text:'210',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'215',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q184', skill:'Number series', prompt:'7776, 1296, 216, ___', correct:'C',
+      choices:{
+        A:{text:'6',explain:'This skips ahead an extra division step.'},
+        B:{text:'48',explain:'Doesn\'t match dividing by 6.'},
+        C:{text:'36',explain:'Each term is divided by 6: 216/6=36.'},
+        D:{text:'42',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q185', skill:'Number series', prompt:'100, 90, 77, 61, ___', correct:'D',
+      choices:{
+        A:{text:'38',explain:'Overshoots the correct next gap.'},
+        B:{text:'40',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'45',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'42',explain:'The gap increases by 3 each time (-10,-13,-16), so the next gap is -19: 61-19=42.'}
+      } },
+    { id:'q186', skill:'Number series', prompt:'3, 8, 15, 24, 35, ___', correct:'A',
+      choices:{
+        A:{text:'48',explain:'The gaps increase by 2 each time (+5,+7,+9,+11), so the next gap is +13: 35+13=48.'},
+        B:{text:'46',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'47',explain:'Close, but doesn\'t match adding 13 to 35.'},
+        D:{text:'50',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q187', skill:'Number series', prompt:'12, 23, 45, 89, ___', correct:'B',
+      choices:{
+        A:{text:'175',explain:'Doesn\'t match the x2-1 pattern.'},
+        B:{text:'177',explain:'Each term doubles the previous and subtracts 1: 89x2-1=177.'},
+        C:{text:'179',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'180',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q188', skill:'Number series', prompt:'4374, 1458, 486, ___', correct:'C',
+      choices:{
+        A:{text:'54',explain:'This skips ahead an extra division step.'},
+        B:{text:'243',explain:'Doesn\'t match dividing by 3.'},
+        C:{text:'162',explain:'Each term is divided by 3: 486/3=162.'},
+        D:{text:'170',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q189', skill:'Number series', prompt:'9, 10, 12, 15, 19, ___', correct:'A',
+      choices:{
+        A:{text:'24',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 19+5=24.'},
+        B:{text:'22',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'23',explain:'Close, but doesn\'t match adding 5 to 19.'},
+        D:{text:'26',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q190', skill:'Number series', prompt:'8, 24, 72, 216, 648, ___', correct:'B',
+      choices:{
+        A:{text:'1900',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'1944',explain:'Each term triples: 648x3=1944.'},
+        C:{text:'1950',explain:'Doesn\'t match the correct product.'},
+        D:{text:'2000',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q191', skill:'Quantitative comparison', prompt:'Compare: Column A = 10/21   Column B = 0.48', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'10/21 is approximately 0.476, which is less than 0.48.'},
+        B:{text:'Column B is greater', explain:'0.48 is greater than 10/21 (approximately 0.476).'},
+        C:{text:'The two columns are equal', explain:'0.476 and 0.48 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q192', skill:'Quantitative comparison', prompt:'Compare: Column A = 12 squared   Column B = 6 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'12 squared is 144, which is less than 6 cubed (216).'},
+        B:{text:'Column B is greater', explain:'6 cubed is 216, greater than 12 squared (144).'},
+        C:{text:'The two columns are equal', explain:'144 and 216 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q193', skill:'Quantitative comparison', prompt:'Compare: Column A = 64% of 75   Column B = 75% of 64', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'64% of 75 is 48, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'75% of 64 is also 48, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'64% of 75 is 48, and 75% of 64 is also 48, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q194', skill:'Quantitative comparison', prompt:'Compare: Column A = 18/21   Column B = 0.85', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'18/21 is approximately 0.857, which is greater than 0.85.'},
+        B:{text:'Column B is greater', explain:'0.85 is less than 18/21 (approximately 0.857).'},
+        C:{text:'The two columns are equal', explain:'0.857 and 0.85 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q195', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 16th power   Column B = 4 to the 8th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 16th power is 65536, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 8th power is also 65536, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 16th power = 65536 and 4 to the 8th power = 65536, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q196', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.64   Column B = 16/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.64 equals 16/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'16/25 equals 0.64, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'16/25 equals exactly 0.64, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q197', skill:'Quantitative comparison', prompt:'Compare: Column A = 38% of 200   Column B = 76% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'38% of 200 is 76, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'38% of 200 is 76, and 76% of 100 is also 76, so they are equal.'},
+        C:{text:'Column B is greater', explain:'76% of 100 is also 76, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q198', skill:'Quantitative comparison', prompt:'Compare: Column A = 27/29   Column B = 0.93', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'27/29 is approximately 0.931, which is greater than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is less than 27/29 (approximately 0.931).'},
+        C:{text:'The two columns are equal', explain:'0.931 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q199', skill:'Quantitative comparison', prompt:'Compare: Column A = 6 to the 6th power   Column B = 36 cubed', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'6 to the 6th power is 46656, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'36 cubed is also 46656, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'6 to the 6th power = 46656 and 36 cubed = 46656, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q200', skill:'Quantitative comparison', prompt:'Compare: Column A = 21/28   Column B = 0.75', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'21/28 equals 0.75, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'0.75 equals 21/28, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'21/28 equals exactly 0.75, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q201', skill:'Number series', prompt:'24, 48, 96, 192, ___', correct:'D',
+      choices:{
+        A:{text:'320',explain:'Doesn\'t match doubling.'},
+        B:{text:'350',explain:'Doesn\'t match the correct product.'},
+        C:{text:'360',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'384',explain:'Each term doubles: 192x2=384.'}
+      } },
+    { id:'q202', skill:'Number series', prompt:'18, 27, 36, 45, ___', correct:'A',
+      choices:{
+        A:{text:'54',explain:'Each term adds 9: 45+9=54.'},
+        B:{text:'52',explain:'Doesn\'t match adding 9.'},
+        C:{text:'56',explain:'Overshoots the correct value.'},
+        D:{text:'50',explain:'Doesn\'t match the +9 pattern.'}
+      } },
+    { id:'q203', skill:'Number series', prompt:'10, 21, 43, 87, ___', correct:'B',
+      choices:{
+        A:{text:'170',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'175',explain:'Each number doubles the previous and adds 1: 87x2+1=175.'},
+        C:{text:'178',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'180',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q204', skill:'Number series', prompt:'15625, 3125, 625, ___', correct:'C',
+      choices:{
+        A:{text:'50',explain:'This skips ahead an extra division step.'},
+        B:{text:'100',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'125',explain:'Each term is divided by 5: 625/5=125.'},
+        D:{text:'150',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q205', skill:'Number series', prompt:'92, 80, 65, 47, ___', correct:'D',
+      choices:{
+        A:{text:'30',explain:'Overshoots the correct next gap.'},
+        B:{text:'32',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'20',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'26',explain:'The gap increases by 3 each time (-12,-15,-18), so the next gap is -21: 47-21=26.'}
+      } },
+    { id:'q206', skill:'Number series', prompt:'4, 11, 22, 37, 56, ___', correct:'A',
+      choices:{
+        A:{text:'79',explain:'The gaps increase by 4 each time (+7,+11,+15,+19), so the next gap is +23: 56+23=79.'},
+        B:{text:'75',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'77',explain:'Close, but doesn\'t match adding 23 to 56.'},
+        D:{text:'82',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q207', skill:'Number series', prompt:'14, 29, 59, 119, ___', correct:'B',
+      choices:{
+        A:{text:'235',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'239',explain:'Each number doubles the previous and adds 1: 119x2+1=239.'},
+        C:{text:'242',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'245',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q208', skill:'Number series', prompt:'3125, 625, 125, ___', correct:'C',
+      choices:{
+        A:{text:'5',explain:'This skips ahead an extra division step.'},
+        B:{text:'50',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'25',explain:'Each term is divided by 5: 125/5=25.'},
+        D:{text:'30',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q209', skill:'Number series', prompt:'11, 12, 14, 17, 21, ___', correct:'A',
+      choices:{
+        A:{text:'26',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 21+5=26.'},
+        B:{text:'24',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'25',explain:'Close, but doesn\'t match adding 5 to 21.'},
+        D:{text:'28',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q210', skill:'Number series', prompt:'4, 16, 64, 256, ___', correct:'B',
+      choices:{
+        A:{text:'900',explain:'Doesn\'t match multiplying by 4 correctly.'},
+        B:{text:'1024',explain:'Each term is multiplied by 4: 256x4=1024.'},
+        C:{text:'1050',explain:'Doesn\'t match the correct product.'},
+        D:{text:'1100',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q211', skill:'Quantitative comparison', prompt:'Compare: Column A = 11/24   Column B = 0.46', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'11/24 is approximately 0.458, which is less than 0.46.'},
+        B:{text:'Column B is greater', explain:'0.46 is greater than 11/24 (approximately 0.458).'},
+        C:{text:'The two columns are equal', explain:'0.458 and 0.46 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q212', skill:'Quantitative comparison', prompt:'Compare: Column A = 13 squared   Column B = 6 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'13 squared is 169, less than 6 cubed (216).'},
+        B:{text:'Column B is greater', explain:'6 cubed is 216, greater than 13 squared (169).'},
+        C:{text:'The two columns are equal', explain:'169 and 216 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q213', skill:'Quantitative comparison', prompt:'Compare: Column A = 68% of 75   Column B = 75% of 68', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'68% of 75 is 51, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'75% of 68 is also 51, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'68% of 75 is 51, and 75% of 68 is also 51, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q214', skill:'Quantitative comparison', prompt:'Compare: Column A = 19/24   Column B = 0.79', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'19/24 is approximately 0.792, which is greater than 0.79.'},
+        B:{text:'Column B is greater', explain:'0.79 is less than 19/24 (approximately 0.792).'},
+        C:{text:'The two columns are equal', explain:'0.792 and 0.79 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q215', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 22nd power   Column B = 4 to the 11th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 22nd power is 4194304, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 11th power is also 4194304, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 22nd power = 4194304 and 4 to the 11th power = 4194304, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q216', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.72   Column B = 18/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.72 equals 18/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'18/25 equals 0.72, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'18/25 equals exactly 0.72, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q217', skill:'Quantitative comparison', prompt:'Compare: Column A = 44% of 175   Column B = 77% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'44% of 175 is 77, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'44% of 175 is 77, and 77% of 100 is also 77, so they are equal.'},
+        C:{text:'Column B is greater', explain:'77% of 100 is also 77, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q218', skill:'Quantitative comparison', prompt:'Compare: Column A = 29/31   Column B = 0.93', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'29/31 is approximately 0.935, which is greater than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is less than 29/31 (approximately 0.935).'},
+        C:{text:'The two columns are equal', explain:'0.935 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q219', skill:'Quantitative comparison', prompt:'Compare: Column A = 7 to the 6th power   Column B = 49 cubed', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'7 to the 6th power is 117649, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'49 cubed is also 117649, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'7 to the 6th power = 117649 and 49 cubed = 117649, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q220', skill:'Quantitative comparison', prompt:'Compare: Column A = 23/29   Column B = 0.79', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'23/29 is approximately 0.793, which is greater than 0.79.'},
+        B:{text:'Column B is greater', explain:'0.79 is less than 23/29 (approximately 0.793).'},
+        C:{text:'The two columns are equal', explain:'0.793 and 0.79 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q221', skill:'Number series', prompt:'28, 56, 112, 224, ___', correct:'D',
+      choices:{
+        A:{text:'380',explain:'Doesn\'t match doubling.'},
+        B:{text:'400',explain:'Doesn\'t match the correct product.'},
+        C:{text:'420',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'448',explain:'Each term doubles: 224x2=448.'}
+      } },
+    { id:'q222', skill:'Number series', prompt:'20, 30, 40, 50, ___', correct:'A',
+      choices:{
+        A:{text:'60',explain:'Each term adds 10: 50+10=60.'},
+        B:{text:'55',explain:'Doesn\'t match adding 10.'},
+        C:{text:'65',explain:'Overshoots the correct value.'},
+        D:{text:'58',explain:'Doesn\'t match the +10 pattern.'}
+      } },
+    { id:'q223', skill:'Number series', prompt:'15, 31, 63, 127, ___', correct:'B',
+      choices:{
+        A:{text:'250',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'255',explain:'Each number doubles the previous and adds 1: 127x2+1=255.'},
+        C:{text:'258',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'260',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q224', skill:'Number series', prompt:'46656, 7776, 1296, ___', correct:'C',
+      choices:{
+        A:{text:'36',explain:'This skips ahead an extra division step.'},
+        B:{text:'160',explain:'Doesn\'t match dividing by 6.'},
+        C:{text:'216',explain:'Each term is divided by 6: 1296/6=216.'},
+        D:{text:'250',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q225', skill:'Number series', prompt:'96, 84, 69, 51, ___', correct:'D',
+      choices:{
+        A:{text:'34',explain:'Overshoots the correct next gap.'},
+        B:{text:'36',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'40',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'30',explain:'The gap increases by 3 each time (-12,-15,-18), so the next gap is -21: 51-21=30.'}
+      } },
+    { id:'q226', skill:'Number series', prompt:'5, 12, 21, 32, 45, ___', correct:'A',
+      choices:{
+        A:{text:'60',explain:'The gaps increase by 2 each time (+7,+9,+11,+13), so the next gap is +15: 45+15=60.'},
+        B:{text:'56',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'58',explain:'Close, but doesn\'t match adding 15 to 45.'},
+        D:{text:'62',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q227', skill:'Number series', prompt:'16, 33, 67, 135, ___', correct:'B',
+      choices:{
+        A:{text:'267',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'271',explain:'Each number doubles the previous and adds 1: 135x2+1=271.'},
+        C:{text:'274',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'280',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q228', skill:'Number series', prompt:'16807, 2401, 343, ___', correct:'C',
+      choices:{
+        A:{text:'7',explain:'This skips ahead an extra division step.'},
+        B:{text:'56',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'49',explain:'Each term is divided by 7: 343/7=49.'},
+        D:{text:'60',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q229', skill:'Number series', prompt:'13, 14, 16, 19, 23, ___', correct:'A',
+      choices:{
+        A:{text:'28',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 23+5=28.'},
+        B:{text:'26',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'27',explain:'Close, but doesn\'t match adding 5 to 23.'},
+        D:{text:'30',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q230', skill:'Number series', prompt:'5, 20, 80, 320, ___', correct:'B',
+      choices:{
+        A:{text:'1200',explain:'Doesn\'t match multiplying by 4 correctly.'},
+        B:{text:'1280',explain:'Each term is multiplied by 4: 320x4=1280.'},
+        C:{text:'1300',explain:'Doesn\'t match the correct product.'},
+        D:{text:'1350',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q231', skill:'Quantitative comparison', prompt:'Compare: Column A = 12/25   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'12/25 equals 0.48, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 12/25 (0.48).'},
+        C:{text:'The two columns are equal', explain:'0.48 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q232', skill:'Quantitative comparison', prompt:'Compare: Column A = 14 squared   Column B = 7 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'14 squared is 196, less than 7 cubed (343).'},
+        B:{text:'Column B is greater', explain:'7 cubed is 343, greater than 14 squared (196).'},
+        C:{text:'The two columns are equal', explain:'196 and 343 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q233', skill:'Quantitative comparison', prompt:'Compare: Column A = 72% of 60   Column B = 60% of 72', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'72% of 60 is 43.2, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'60% of 72 is also 43.2, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'72% of 60 is 43.2, and 60% of 72 is also 43.2, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q234', skill:'Quantitative comparison', prompt:'Compare: Column A = 26/29   Column B = 0.9', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'26/29 is approximately 0.897, which is less than 0.9.'},
+        B:{text:'Column B is greater', explain:'0.9 is greater than 26/29 (approximately 0.897).'},
+        C:{text:'The two columns are equal', explain:'0.897 and 0.9 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q235', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 25th power   Column B = 32 to the 5th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 25th power is 33554432, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'32 to the 5th power is also 33554432, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 25th power = 33554432 and 32 to the 5th power = 33554432, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q236', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.88   Column B = 22/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.88 equals 22/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'22/25 equals 0.88, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'22/25 equals exactly 0.88, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q237', skill:'Quantitative comparison', prompt:'Compare: Column A = 52% of 225   Column B = 117% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'52% of 225 is 117, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'52% of 225 is 117, and 117% of 100 is also 117, so they are equal.'},
+        C:{text:'Column B is greater', explain:'117% of 100 is also 117, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q238', skill:'Quantitative comparison', prompt:'Compare: Column A = 31/33   Column B = 0.94', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'31/33 is approximately 0.939, which is less than 0.94.'},
+        B:{text:'Column B is greater', explain:'0.94 is greater than 31/33 (approximately 0.939).'},
+        C:{text:'The two columns are equal', explain:'0.939 and 0.94 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q239', skill:'Quantitative comparison', prompt:'Compare: Column A = 8 to the 6th power   Column B = 64 cubed', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'8 to the 6th power is 262144, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'64 cubed is also 262144, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'8 to the 6th power = 262144 and 64 cubed = 262144, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q240', skill:'Quantitative comparison', prompt:'Compare: Column A = 27/32   Column B = 0.84', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'27/32 equals 0.84375, which is greater than 0.84.'},
+        B:{text:'Column B is greater', explain:'0.84 is less than 27/32 (0.84375).'},
+        C:{text:'The two columns are equal', explain:'0.84375 and 0.84 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q241', skill:'Number series', prompt:'32, 64, 128, 256, ___', correct:'D',
+      choices:{
+        A:{text:'380',explain:'Doesn\'t match doubling.'},
+        B:{text:'400',explain:'Doesn\'t match the correct product.'},
+        C:{text:'450',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'512',explain:'Each term doubles: 256x2=512.'}
+      } },
+    { id:'q242', skill:'Number series', prompt:'24, 36, 48, 60, ___', correct:'A',
+      choices:{
+        A:{text:'72',explain:'Each term adds 12: 60+12=72.'},
+        B:{text:'70',explain:'Doesn\'t match adding 12.'},
+        C:{text:'75',explain:'Overshoots the correct value.'},
+        D:{text:'68',explain:'Doesn\'t match the +12 pattern.'}
+      } },
+    { id:'q243', skill:'Number series', prompt:'18, 37, 75, 151, ___', correct:'B',
+      choices:{
+        A:{text:'298',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'303',explain:'Each number doubles the previous and adds 1: 151x2+1=303.'},
+        C:{text:'306',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'310',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q244', skill:'Number series', prompt:'59049, 6561, 729, ___', correct:'C',
+      choices:{
+        A:{text:'9',explain:'This skips ahead an extra division step.'},
+        B:{text:'63',explain:'Doesn\'t match dividing by 9.'},
+        C:{text:'81',explain:'Each term is divided by 9: 729/9=81.'},
+        D:{text:'90',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q245', skill:'Number series', prompt:'88, 75, 60, 43, ___', correct:'D',
+      choices:{
+        A:{text:'28',explain:'Overshoots the correct next gap.'},
+        B:{text:'30',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'34',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'24',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 43-19=24.'}
+      } },
+    { id:'q246', skill:'Number series', prompt:'6, 13, 22, 33, 46, ___', correct:'A',
+      choices:{
+        A:{text:'61',explain:'The gaps increase by 2 each time (+7,+9,+11,+13), so the next gap is +15: 46+15=61.'},
+        B:{text:'58',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'59',explain:'Close, but doesn\'t match adding 15 to 46.'},
+        D:{text:'63',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q247', skill:'Number series', prompt:'22, 45, 91, 183, ___', correct:'B',
+      choices:{
+        A:{text:'363',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'367',explain:'Each number doubles the previous and adds 1: 183x2+1=367.'},
+        C:{text:'370',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'375',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q248', skill:'Number series', prompt:'78125, 15625, 3125, ___', correct:'C',
+      choices:{
+        A:{text:'125',explain:'This skips ahead an extra division step.'},
+        B:{text:'500',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'625',explain:'Each term is divided by 5: 3125/5=625.'},
+        D:{text:'700',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q249', skill:'Number series', prompt:'15, 16, 18, 21, 25, ___', correct:'A',
+      choices:{
+        A:{text:'30',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 25+5=30.'},
+        B:{text:'28',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'29',explain:'Close, but doesn\'t match adding 5 to 25.'},
+        D:{text:'32',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q250', skill:'Number series', prompt:'9, 27, 81, 243, 729, ___', correct:'B',
+      choices:{
+        A:{text:'2100',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'2187',explain:'Each term triples: 729x3=2187.'},
+        C:{text:'2200',explain:'Doesn\'t match the correct product.'},
+        D:{text:'2250',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q251', skill:'Quantitative comparison', prompt:'Compare: Column A = 14/29   Column B = 0.48', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'14/29 is approximately 0.483, which is greater than 0.48.'},
+        B:{text:'Column B is greater', explain:'0.48 is less than 14/29 (approximately 0.483).'},
+        C:{text:'The two columns are equal', explain:'0.483 and 0.48 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q252', skill:'Quantitative comparison', prompt:'Compare: Column A = 15 squared   Column B = 8 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'15 squared is 225, less than 8 cubed (512).'},
+        B:{text:'Column B is greater', explain:'8 cubed is 512, greater than 15 squared (225).'},
+        C:{text:'The two columns are equal', explain:'225 and 512 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q253', skill:'Quantitative comparison', prompt:'Compare: Column A = 76% of 50   Column B = 50% of 76', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'76% of 50 is 38, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'50% of 76 is also 38, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'76% of 50 is 38, and 50% of 76 is also 38, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q254', skill:'Quantitative comparison', prompt:'Compare: Column A = 28/31   Column B = 0.9', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'28/31 is approximately 0.903, which is greater than 0.9.'},
+        B:{text:'Column B is greater', explain:'0.9 is less than 28/31 (approximately 0.903).'},
+        C:{text:'The two columns are equal', explain:'0.903 and 0.9 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q255', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 28th power   Column B = 16 to the 7th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 28th power is 268435456, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'16 to the 7th power is also 268435456, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 28th power = 268435456 and 16 to the 7th power = 268435456, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q256', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.92   Column B = 23/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.92 equals 23/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'23/25 equals 0.92, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'23/25 equals exactly 0.92, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q257', skill:'Quantitative comparison', prompt:'Compare: Column A = 63% of 200   Column B = 126% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'63% of 200 is 126, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'63% of 200 is 126, and 126% of 100 is also 126, so they are equal.'},
+        C:{text:'Column B is greater', explain:'126% of 100 is also 126, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q258', skill:'Quantitative comparison', prompt:'Compare: Column A = 33/35   Column B = 0.94', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'33/35 is approximately 0.943, which is greater than 0.94.'},
+        B:{text:'Column B is greater', explain:'0.94 is less than 33/35 (approximately 0.943).'},
+        C:{text:'The two columns are equal', explain:'0.943 and 0.94 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q259', skill:'Quantitative comparison', prompt:'Compare: Column A = 9 to the 6th power   Column B = 81 cubed', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'9 to the 6th power is 531441, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'81 cubed is also 531441, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'9 to the 6th power = 531441 and 81 cubed = 531441, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q260', skill:'Quantitative comparison', prompt:'Compare: Column A = 29/34   Column B = 0.85', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'29/34 is approximately 0.853, which is greater than 0.85.'},
+        B:{text:'Column B is greater', explain:'0.85 is less than 29/34 (approximately 0.853).'},
+        C:{text:'The two columns are equal', explain:'0.853 and 0.85 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q261', skill:'Number series', prompt:'36, 72, 144, 288, ___', correct:'D',
+      choices:{
+        A:{text:'450',explain:'Doesn\'t match doubling.'},
+        B:{text:'500',explain:'Doesn\'t match the correct product.'},
+        C:{text:'550',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'576',explain:'Each term doubles: 288x2=576.'}
+      } },
+    { id:'q262', skill:'Number series', prompt:'27, 40, 53, 66, ___', correct:'A',
+      choices:{
+        A:{text:'79',explain:'Each term adds 13: 66+13=79.'},
+        B:{text:'76',explain:'Doesn\'t match adding 13.'},
+        C:{text:'82',explain:'Overshoots the correct value.'},
+        D:{text:'74',explain:'Doesn\'t match the +13 pattern.'}
+      } },
+    { id:'q263', skill:'Number series', prompt:'20, 41, 83, 167, ___', correct:'B',
+      choices:{
+        A:{text:'330',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'335',explain:'Each number doubles the previous and adds 1: 167x2+1=335.'},
+        C:{text:'338',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'340',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q264', skill:'Number series', prompt:'390625, 78125, 15625, ___', correct:'C',
+      choices:{
+        A:{text:'625',explain:'This skips ahead an extra division step.'},
+        B:{text:'2500',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'3125',explain:'Each term is divided by 5: 15625/5=3125.'},
+        D:{text:'3500',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q265', skill:'Number series', prompt:'84, 71, 56, 39, ___', correct:'D',
+      choices:{
+        A:{text:'26',explain:'Overshoots the correct next gap.'},
+        B:{text:'28',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'22',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'20',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 39-19=20.'}
+      } },
+    { id:'q266', skill:'Number series', prompt:'7, 15, 25, 37, 51, ___', correct:'A',
+      choices:{
+        A:{text:'67',explain:'The gaps increase by 2 each time (+8,+10,+12,+14), so the next gap is +16: 51+16=67.'},
+        B:{text:'63',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'65',explain:'Close, but doesn\'t match adding 16 to 51.'},
+        D:{text:'70',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q267', skill:'Number series', prompt:'25, 51, 103, 207, ___', correct:'B',
+      choices:{
+        A:{text:'410',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'415',explain:'Each number doubles the previous and adds 1: 207x2+1=415.'},
+        C:{text:'418',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'420',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q268', skill:'Number series', prompt:'823543, 117649, 16807, ___', correct:'C',
+      choices:{
+        A:{text:'343',explain:'This skips ahead an extra division step.'},
+        B:{text:'2000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'2401',explain:'Each term is divided by 7: 16807/7=2401.'},
+        D:{text:'2500',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q269', skill:'Number series', prompt:'17, 18, 20, 23, 27, ___', correct:'A',
+      choices:{
+        A:{text:'32',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 27+5=32.'},
+        B:{text:'30',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'31',explain:'Close, but doesn\'t match adding 5 to 27.'},
+        D:{text:'34',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q270', skill:'Number series', prompt:'11, 33, 99, 297, 891, ___', correct:'B',
+      choices:{
+        A:{text:'2600',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'2673',explain:'Each term triples: 891x3=2673.'},
+        C:{text:'2700',explain:'Doesn\'t match the correct product.'},
+        D:{text:'2750',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q271', skill:'Quantitative comparison', prompt:'Compare: Column A = 16/33   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'16/33 is approximately 0.485, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 16/33 (approximately 0.485).'},
+        C:{text:'The two columns are equal', explain:'0.485 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q272', skill:'Quantitative comparison', prompt:'Compare: Column A = 16 squared   Column B = 9 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'16 squared is 256, less than 9 cubed (729).'},
+        B:{text:'Column B is greater', explain:'9 cubed is 729, greater than 16 squared (256).'},
+        C:{text:'The two columns are equal', explain:'256 and 729 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q273', skill:'Quantitative comparison', prompt:'Compare: Column A = 84% of 25   Column B = 25% of 84', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'84% of 25 is 21, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'25% of 84 is also 21, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'84% of 25 is 21, and 25% of 84 is also 21, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q274', skill:'Quantitative comparison', prompt:'Compare: Column A = 31/34   Column B = 0.91', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'31/34 is approximately 0.912, which is greater than 0.91.'},
+        B:{text:'Column B is greater', explain:'0.91 is less than 31/34 (approximately 0.912).'},
+        C:{text:'The two columns are equal', explain:'0.912 and 0.91 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q275', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 30th power   Column B = 4 to the 15th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 30th power is 1073741824, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 15th power is also 1073741824, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 30th power = 1073741824 and 4 to the 15th power = 1073741824, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q276', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.96   Column B = 24/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.96 equals 24/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'24/25 equals 0.96, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'24/25 equals exactly 0.96, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q277', skill:'Quantitative comparison', prompt:'Compare: Column A = 68% of 175   Column B = 119% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'68% of 175 is 119, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'68% of 175 is 119, and 119% of 100 is also 119, so they are equal.'},
+        C:{text:'Column B is greater', explain:'119% of 100 is also 119, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q278', skill:'Quantitative comparison', prompt:'Compare: Column A = 37/39   Column B = 0.95', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'37/39 is approximately 0.949, which is less than 0.95.'},
+        B:{text:'Column B is greater', explain:'0.95 is greater than 37/39 (approximately 0.949).'},
+        C:{text:'The two columns are equal', explain:'0.949 and 0.95 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q279', skill:'Quantitative comparison', prompt:'Compare: Column A = 10 to the 6th power   Column B = 100 cubed', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'10 to the 6th power is 1000000, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'100 cubed is also 1000000, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'10 to the 6th power = 1000000 and 100 cubed = 1000000, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q280', skill:'Quantitative comparison', prompt:'Compare: Column A = 32/37   Column B = 0.86', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'32/37 is approximately 0.865, which is greater than 0.86.'},
+        B:{text:'Column B is greater', explain:'0.86 is less than 32/37 (approximately 0.865).'},
+        C:{text:'The two columns are equal', explain:'0.865 and 0.86 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q281', skill:'Number series', prompt:'40, 80, 160, 320, ___', correct:'D',
+      choices:{
+        A:{text:'480',explain:'Doesn\'t match doubling.'},
+        B:{text:'560',explain:'Doesn\'t match the correct product.'},
+        C:{text:'600',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'640',explain:'Each term doubles: 320x2=640.'}
+      } },
+    { id:'q282', skill:'Number series', prompt:'30, 44, 58, 72, ___', correct:'A',
+      choices:{
+        A:{text:'86',explain:'Each term adds 14: 72+14=86.'},
+        B:{text:'84',explain:'Doesn\'t match adding 14.'},
+        C:{text:'90',explain:'Overshoots the correct value.'},
+        D:{text:'82',explain:'Doesn\'t match the +14 pattern.'}
+      } },
+    { id:'q283', skill:'Number series', prompt:'23, 47, 95, 191, ___', correct:'B',
+      choices:{
+        A:{text:'378',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'383',explain:'Each number doubles the previous and adds 1: 191x2+1=383.'},
+        C:{text:'386',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'390',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q284', skill:'Number series', prompt:'1953125, 390625, 78125, ___', correct:'C',
+      choices:{
+        A:{text:'3125',explain:'This skips ahead an extra division step.'},
+        B:{text:'12500',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'15625',explain:'Each term is divided by 5: 78125/5=15625.'},
+        D:{text:'17500',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q285', skill:'Number series', prompt:'80, 67, 52, 35, ___', correct:'D',
+      choices:{
+        A:{text:'22',explain:'Overshoots the correct next gap.'},
+        B:{text:'24',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'18',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'16',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 35-19=16.'}
+      } },
+    { id:'q286', skill:'Number series', prompt:'8, 17, 28, 41, 56, ___', correct:'A',
+      choices:{
+        A:{text:'73',explain:'The gaps increase by 2 each time (+9,+11,+13,+15), so the next gap is +17: 56+17=73.'},
+        B:{text:'70',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'71',explain:'Close, but doesn\'t match adding 17 to 56.'},
+        D:{text:'76',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q287', skill:'Number series', prompt:'29, 59, 119, 239, ___', correct:'B',
+      choices:{
+        A:{text:'474',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'479',explain:'Each number doubles the previous and adds 1: 239x2+1=479.'},
+        C:{text:'482',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'485',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q288', skill:'Number series', prompt:'5764801, 823543, 117649, ___', correct:'C',
+      choices:{
+        A:{text:'2401',explain:'This skips ahead an extra division step.'},
+        B:{text:'14000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'16807',explain:'Each term is divided by 7: 117649/7=16807.'},
+        D:{text:'18000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q289', skill:'Number series', prompt:'19, 20, 22, 25, 29, ___', correct:'A',
+      choices:{
+        A:{text:'34',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 29+5=34.'},
+        B:{text:'32',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'33',explain:'Close, but doesn\'t match adding 5 to 29.'},
+        D:{text:'36',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q290', skill:'Number series', prompt:'13, 39, 117, 351, 1053, ___', correct:'B',
+      choices:{
+        A:{text:'3100',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'3159',explain:'Each term triples: 1053x3=3159.'},
+        C:{text:'3200',explain:'Doesn\'t match the correct product.'},
+        D:{text:'3250',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q291', skill:'Quantitative comparison', prompt:'Compare: Column A = 17/35   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'17/35 is approximately 0.486, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 17/35 (approximately 0.486).'},
+        C:{text:'The two columns are equal', explain:'0.486 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q292', skill:'Quantitative comparison', prompt:'Compare: Column A = 17 squared   Column B = 10 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'17 squared is 289, less than 10 cubed (1000).'},
+        B:{text:'Column B is greater', explain:'10 cubed is 1000, greater than 17 squared (289).'},
+        C:{text:'The two columns are equal', explain:'289 and 1000 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q293', skill:'Quantitative comparison', prompt:'Compare: Column A = 92% of 25   Column B = 25% of 92', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'92% of 25 is 23, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'25% of 92 is also 23, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'92% of 25 is 23, and 25% of 92 is also 23, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q294', skill:'Quantitative comparison', prompt:'Compare: Column A = 34/37   Column B = 0.92', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'34/37 is approximately 0.919, which is less than 0.92.'},
+        B:{text:'Column B is greater', explain:'0.92 is greater than 34/37 (approximately 0.919).'},
+        C:{text:'The two columns are equal', explain:'0.919 and 0.92 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q295', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 32nd power   Column B = 4 to the 16th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 32nd power is 4294967296, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 16th power is also 4294967296, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 32nd power = 4294967296 and 4 to the 16th power = 4294967296, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q296', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.98   Column B = 49/50', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.98 equals 49/50, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'49/50 equals 0.98, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'49/50 equals exactly 0.98, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q297', skill:'Quantitative comparison', prompt:'Compare: Column A = 72% of 225   Column B = 162% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'72% of 225 is 162, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'72% of 225 is 162, and 162% of 100 is also 162, so they are equal.'},
+        C:{text:'Column B is greater', explain:'162% of 100 is also 162, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q298', skill:'Quantitative comparison', prompt:'Compare: Column A = 41/43   Column B = 0.95', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'41/43 is approximately 0.953, which is greater than 0.95.'},
+        B:{text:'Column B is greater', explain:'0.95 is less than 41/43 (approximately 0.953).'},
+        C:{text:'The two columns are equal', explain:'0.953 and 0.95 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q299', skill:'Quantitative comparison', prompt:'Compare: Column A = 11 to the 4th power   Column B = 121 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'11 to the 4th power is 14641, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'121 squared is also 14641, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'11 to the 4th power = 14641 and 121 squared = 14641, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q300', skill:'Quantitative comparison', prompt:'Compare: Column A = 36/41   Column B = 0.87', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'36/41 is approximately 0.878, which is greater than 0.87.'},
+        B:{text:'Column B is greater', explain:'0.87 is less than 36/41 (approximately 0.878).'},
+        C:{text:'The two columns are equal', explain:'0.878 and 0.87 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q301', skill:'Number series', prompt:'44, 88, 176, 352, ___', correct:'D',
+      choices:{
+        A:{text:'500',explain:'Doesn\'t match doubling.'},
+        B:{text:'600',explain:'Doesn\'t match the correct product.'},
+        C:{text:'650',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'704',explain:'Each term doubles: 352x2=704.'}
+      } },
+    { id:'q302', skill:'Number series', prompt:'33, 48, 63, 78, ___', correct:'A',
+      choices:{
+        A:{text:'93',explain:'Each term adds 15: 78+15=93.'},
+        B:{text:'90',explain:'Doesn\'t match adding 15.'},
+        C:{text:'96',explain:'Overshoots the correct value.'},
+        D:{text:'88',explain:'Doesn\'t match the +15 pattern.'}
+      } },
+    { id:'q303', skill:'Number series', prompt:'26, 53, 107, 215, ___', correct:'B',
+      choices:{
+        A:{text:'426',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'431',explain:'Each number doubles the previous and adds 1: 215x2+1=431.'},
+        C:{text:'434',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'438',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q304', skill:'Number series', prompt:'9765625, 1953125, 390625, ___', correct:'C',
+      choices:{
+        A:{text:'15625',explain:'This skips ahead an extra division step.'},
+        B:{text:'62500',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'78125',explain:'Each term is divided by 5: 390625/5=78125.'},
+        D:{text:'87500',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q305', skill:'Number series', prompt:'76, 63, 48, 31, ___', correct:'D',
+      choices:{
+        A:{text:'18',explain:'Overshoots the correct next gap.'},
+        B:{text:'20',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'14',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'12',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 31-19=12.'}
+      } },
+    { id:'q306', skill:'Number series', prompt:'9, 19, 31, 45, 61, ___', correct:'A',
+      choices:{
+        A:{text:'79',explain:'The gaps increase by 2 each time (+10,+12,+14,+16), so the next gap is +18: 61+18=79.'},
+        B:{text:'75',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'77',explain:'Close, but doesn\'t match adding 18 to 61.'},
+        D:{text:'82',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q307', skill:'Number series', prompt:'33, 67, 135, 271, ___', correct:'B',
+      choices:{
+        A:{text:'538',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'543',explain:'Each number doubles the previous and adds 1: 271x2+1=543.'},
+        C:{text:'546',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'550',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q308', skill:'Number series', prompt:'40353607, 5764801, 823543, ___', correct:'C',
+      choices:{
+        A:{text:'16807',explain:'This skips ahead an extra division step.'},
+        B:{text:'100000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'117649',explain:'Each term is divided by 7: 823543/7=117649.'},
+        D:{text:'130000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q309', skill:'Number series', prompt:'21, 22, 24, 27, 31, ___', correct:'A',
+      choices:{
+        A:{text:'36',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 31+5=36.'},
+        B:{text:'34',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'35',explain:'Close, but doesn\'t match adding 5 to 31.'},
+        D:{text:'38',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q310', skill:'Number series', prompt:'14, 42, 126, 378, 1134, ___', correct:'B',
+      choices:{
+        A:{text:'3350',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'3402',explain:'Each term triples: 1134x3=3402.'},
+        C:{text:'3450',explain:'Doesn\'t match the correct product.'},
+        D:{text:'3500',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q311', skill:'Quantitative comparison', prompt:'Compare: Column A = 18/37   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'18/37 is approximately 0.486, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 18/37 (approximately 0.486).'},
+        C:{text:'The two columns are equal', explain:'0.486 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q312', skill:'Quantitative comparison', prompt:'Compare: Column A = 18 squared   Column B = 11 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'18 squared is 324, less than 11 cubed (1331).'},
+        B:{text:'Column B is greater', explain:'11 cubed is 1331, greater than 18 squared (324).'},
+        C:{text:'The two columns are equal', explain:'324 and 1331 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q313', skill:'Quantitative comparison', prompt:'Compare: Column A = 96% of 25   Column B = 25% of 96', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'96% of 25 is 24, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'25% of 96 is also 24, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'96% of 25 is 24, and 25% of 96 is also 24, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q314', skill:'Quantitative comparison', prompt:'Compare: Column A = 37/40   Column B = 0.93', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'37/40 equals 0.925, which is less than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is greater than 37/40 (0.925).'},
+        C:{text:'The two columns are equal', explain:'0.925 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q315', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 34th power   Column B = 4 to the 17th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 34th power is 17179869184, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 17th power is also 17179869184, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 34th power = 17179869184 and 4 to the 17th power = 17179869184, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q316', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.94   Column B = 47/50', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.94 equals 47/50, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'47/50 equals 0.94, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'47/50 equals exactly 0.94, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q317', skill:'Quantitative comparison', prompt:'Compare: Column A = 76% of 250   Column B = 190% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'76% of 250 is 190, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'76% of 250 is 190, and 190% of 100 is also 190, so they are equal.'},
+        C:{text:'Column B is greater', explain:'190% of 100 is also 190, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q318', skill:'Quantitative comparison', prompt:'Compare: Column A = 43/45   Column B = 0.96', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'43/45 is approximately 0.956, which is less than 0.96.'},
+        B:{text:'Column B is greater', explain:'0.96 is greater than 43/45 (approximately 0.956).'},
+        C:{text:'The two columns are equal', explain:'0.956 and 0.96 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q319', skill:'Quantitative comparison', prompt:'Compare: Column A = 12 to the 4th power   Column B = 144 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'12 to the 4th power is 20736, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'144 squared is also 20736, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'12 to the 4th power = 20736 and 144 squared = 20736, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q320', skill:'Quantitative comparison', prompt:'Compare: Column A = 38/43   Column B = 0.89', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'38/43 is approximately 0.884, which is less than 0.89.'},
+        B:{text:'Column B is greater', explain:'0.89 is greater than 38/43 (approximately 0.884).'},
+        C:{text:'The two columns are equal', explain:'0.884 and 0.89 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q321', skill:'Number series', prompt:'48, 96, 192, 384, ___', correct:'D',
+      choices:{
+        A:{text:'560',explain:'Doesn\'t match doubling.'},
+        B:{text:'650',explain:'Doesn\'t match the correct product.'},
+        C:{text:'700',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'768',explain:'Each term doubles: 384x2=768.'}
+      } },
+    { id:'q322', skill:'Number series', prompt:'36, 52, 68, 84, ___', correct:'A',
+      choices:{
+        A:{text:'100',explain:'Each term adds 16: 84+16=100.'},
+        B:{text:'96',explain:'Doesn\'t match adding 16.'},
+        C:{text:'104',explain:'Overshoots the correct value.'},
+        D:{text:'92',explain:'Doesn\'t match the +16 pattern.'}
+      } },
+    { id:'q323', skill:'Number series', prompt:'30, 61, 123, 247, ___', correct:'B',
+      choices:{
+        A:{text:'490',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'495',explain:'Each number doubles the previous and adds 1: 247x2+1=495.'},
+        C:{text:'498',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'500',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q324', skill:'Number series', prompt:'48828125, 9765625, 1953125, ___', correct:'C',
+      choices:{
+        A:{text:'78125',explain:'This skips ahead an extra division step.'},
+        B:{text:'320000',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'390625',explain:'Each term is divided by 5: 1953125/5=390625.'},
+        D:{text:'420000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q325', skill:'Number series', prompt:'72, 59, 44, 27, ___', correct:'D',
+      choices:{
+        A:{text:'14',explain:'Overshoots the correct next gap.'},
+        B:{text:'16',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'10',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'8',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 27-19=8.'}
+      } },
+    { id:'q326', skill:'Number series', prompt:'10, 21, 34, 49, 66, ___', correct:'A',
+      choices:{
+        A:{text:'85',explain:'The gaps increase by 2 each time (+11,+13,+15,+17), so the next gap is +19: 66+19=85.'},
+        B:{text:'81',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'83',explain:'Close, but doesn\'t match adding 19 to 66.'},
+        D:{text:'88',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q327', skill:'Number series', prompt:'37, 75, 151, 303, ___', correct:'B',
+      choices:{
+        A:{text:'602',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'607',explain:'Each number doubles the previous and adds 1: 303x2+1=607.'},
+        C:{text:'610',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'615',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q328', skill:'Number series', prompt:'282475249, 40353607, 5764801, ___', correct:'C',
+      choices:{
+        A:{text:'117649',explain:'This skips ahead an extra division step.'},
+        B:{text:'700000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'823543',explain:'Each term is divided by 7: 5764801/7=823543.'},
+        D:{text:'900000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q329', skill:'Number series', prompt:'23, 24, 26, 29, 33, ___', correct:'A',
+      choices:{
+        A:{text:'38',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 33+5=38.'},
+        B:{text:'36',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'37',explain:'Close, but doesn\'t match adding 5 to 33.'},
+        D:{text:'40',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q330', skill:'Number series', prompt:'15, 45, 135, 405, 1215, ___', correct:'B',
+      choices:{
+        A:{text:'3600',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'3645',explain:'Each term triples: 1215x3=3645.'},
+        C:{text:'3700',explain:'Doesn\'t match the correct product.'},
+        D:{text:'3750',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q331', skill:'Quantitative comparison', prompt:'Compare: Column A = 19/39   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'19/39 is approximately 0.487, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 19/39 (approximately 0.487).'},
+        C:{text:'The two columns are equal', explain:'0.487 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q332', skill:'Quantitative comparison', prompt:'Compare: Column A = 19 squared   Column B = 12 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'19 squared is 361, less than 12 cubed (1728).'},
+        B:{text:'Column B is greater', explain:'12 cubed is 1728, greater than 19 squared (361).'},
+        C:{text:'The two columns are equal', explain:'361 and 1728 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q333', skill:'Quantitative comparison', prompt:'Compare: Column A = 88% of 25   Column B = 25% of 88', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'88% of 25 is 22, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'25% of 88 is also 22, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'88% of 25 is 22, and 25% of 88 is also 22, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q334', skill:'Quantitative comparison', prompt:'Compare: Column A = 39/42   Column B = 0.93', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'39/42 is approximately 0.929, which is less than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is greater than 39/42 (approximately 0.929).'},
+        C:{text:'The two columns are equal', explain:'0.929 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q335', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 36th power   Column B = 4 to the 18th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 36th power is 68719476736, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 18th power is also 68719476736, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 36th power = 68719476736 and 4 to the 18th power = 68719476736, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q336', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.95   Column B = 19/20', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.95 equals 19/20, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'19/20 equals 0.95, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'19/20 equals exactly 0.95, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q337', skill:'Quantitative comparison', prompt:'Compare: Column A = 84% of 275   Column B = 231% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'84% of 275 is 231, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'84% of 275 is 231, and 231% of 100 is also 231, so they are equal.'},
+        C:{text:'Column B is greater', explain:'231% of 100 is also 231, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q338', skill:'Quantitative comparison', prompt:'Compare: Column A = 44/46   Column B = 0.96', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'44/46 is approximately 0.957, which is less than 0.96.'},
+        B:{text:'Column B is greater', explain:'0.96 is greater than 44/46 (approximately 0.957).'},
+        C:{text:'The two columns are equal', explain:'0.957 and 0.96 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q339', skill:'Quantitative comparison', prompt:'Compare: Column A = 13 to the 4th power   Column B = 169 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'13 to the 4th power is 28561, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'169 squared is also 28561, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'13 to the 4th power = 28561 and 169 squared = 28561, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q340', skill:'Quantitative comparison', prompt:'Compare: Column A = 40/45   Column B = 0.89', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'40/45 is approximately 0.889, which is less than 0.89.'},
+        B:{text:'Column B is greater', explain:'0.89 is greater than 40/45 (approximately 0.889).'},
+        C:{text:'The two columns are equal', explain:'0.889 and 0.89 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q341', skill:'Number series', prompt:'52, 104, 208, 416, ___', correct:'D',
+      choices:{
+        A:{text:'600',explain:'Doesn\'t match doubling.'},
+        B:{text:'700',explain:'Doesn\'t match the correct product.'},
+        C:{text:'750',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'832',explain:'Each term doubles: 416x2=832.'}
+      } },
+    { id:'q342', skill:'Number series', prompt:'39, 56, 73, 90, ___', correct:'A',
+      choices:{
+        A:{text:'107',explain:'Each term adds 17: 90+17=107.'},
+        B:{text:'104',explain:'Doesn\'t match adding 17.'},
+        C:{text:'110',explain:'Overshoots the correct value.'},
+        D:{text:'100',explain:'Doesn\'t match the +17 pattern.'}
+      } },
+    { id:'q343', skill:'Number series', prompt:'34, 69, 139, 279, ___', correct:'B',
+      choices:{
+        A:{text:'554',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'559',explain:'Each number doubles the previous and adds 1: 279x2+1=559.'},
+        C:{text:'562',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'565',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q344', skill:'Number series', prompt:'244140625, 48828125, 9765625, ___', correct:'C',
+      choices:{
+        A:{text:'390625',explain:'This skips ahead an extra division step.'},
+        B:{text:'1600000',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'1953125',explain:'Each term is divided by 5: 9765625/5=1953125.'},
+        D:{text:'2100000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q345', skill:'Number series', prompt:'68, 55, 40, 23, ___', correct:'D',
+      choices:{
+        A:{text:'10',explain:'Overshoots the correct next gap.'},
+        B:{text:'12',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'6',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'4',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 23-19=4.'}
+      } },
+    { id:'q346', skill:'Number series', prompt:'11, 23, 37, 53, 71, ___', correct:'A',
+      choices:{
+        A:{text:'91',explain:'The gaps increase by 2 each time (+12,+14,+16,+18), so the next gap is +20: 71+20=91.'},
+        B:{text:'87',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'89',explain:'Close, but doesn\'t match adding 20 to 71.'},
+        D:{text:'94',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q347', skill:'Number series', prompt:'41, 83, 167, 335, ___', correct:'B',
+      choices:{
+        A:{text:'666',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'671',explain:'Each number doubles the previous and adds 1: 335x2+1=671.'},
+        C:{text:'674',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'680',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q348', skill:'Number series', prompt:'1977326743, 282475249, 40353607, ___', correct:'C',
+      choices:{
+        A:{text:'823543',explain:'This skips ahead an extra division step.'},
+        B:{text:'5000000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'5764801',explain:'Each term is divided by 7: 40353607/7=5764801.'},
+        D:{text:'6200000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q349', skill:'Number series', prompt:'25, 26, 28, 31, 35, ___', correct:'A',
+      choices:{
+        A:{text:'40',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 35+5=40.'},
+        B:{text:'38',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'39',explain:'Close, but doesn\'t match adding 5 to 35.'},
+        D:{text:'42',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q350', skill:'Number series', prompt:'16, 48, 144, 432, 1296, ___', correct:'B',
+      choices:{
+        A:{text:'3800',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'3888',explain:'Each term triples: 1296x3=3888.'},
+        C:{text:'3900',explain:'Doesn\'t match the correct product.'},
+        D:{text:'4000',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q351', skill:'Quantitative comparison', prompt:'Compare: Column A = 21/43   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'21/43 is approximately 0.488, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 21/43 (approximately 0.488).'},
+        C:{text:'The two columns are equal', explain:'0.488 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q352', skill:'Quantitative comparison', prompt:'Compare: Column A = 20 squared   Column B = 13 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'20 squared is 400, less than 13 cubed (2197).'},
+        B:{text:'Column B is greater', explain:'13 cubed is 2197, greater than 20 squared (400).'},
+        C:{text:'The two columns are equal', explain:'400 and 2197 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q353', skill:'Quantitative comparison', prompt:'Compare: Column A = 68% of 50   Column B = 50% of 68', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'68% of 50 is 34, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'50% of 68 is also 34, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'68% of 50 is 34, and 50% of 68 is also 34, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q354', skill:'Quantitative comparison', prompt:'Compare: Column A = 41/44   Column B = 0.93', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'41/44 is approximately 0.932, which is greater than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is less than 41/44 (approximately 0.932).'},
+        C:{text:'The two columns are equal', explain:'0.932 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q355', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 38th power   Column B = 4 to the 19th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 38th power is 274877906944, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 19th power is also 274877906944, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 38th power = 274877906944 and 4 to the 19th power = 274877906944, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q356', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.99   Column B = 99/100', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.99 equals 99/100, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'99/100 equals 0.99, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'99/100 equals exactly 0.99, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q357', skill:'Quantitative comparison', prompt:'Compare: Column A = 92% of 325   Column B = 299% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'92% of 325 is 299, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'92% of 325 is 299, and 299% of 100 is also 299, so they are equal.'},
+        C:{text:'Column B is greater', explain:'299% of 100 is also 299, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q358', skill:'Quantitative comparison', prompt:'Compare: Column A = 46/48   Column B = 0.96', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'46/48 is approximately 0.958, which is less than 0.96.'},
+        B:{text:'Column B is greater', explain:'0.96 is greater than 46/48 (approximately 0.958).'},
+        C:{text:'The two columns are equal', explain:'0.958 and 0.96 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q359', skill:'Quantitative comparison', prompt:'Compare: Column A = 14 to the 4th power   Column B = 196 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'14 to the 4th power is 38416, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'196 squared is also 38416, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'14 to the 4th power = 38416 and 196 squared = 38416, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q360', skill:'Quantitative comparison', prompt:'Compare: Column A = 42/47   Column B = 0.89', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'42/47 is approximately 0.894, which is greater than 0.89.'},
+        B:{text:'Column B is greater', explain:'0.89 is less than 42/47 (approximately 0.894).'},
+        C:{text:'The two columns are equal', explain:'0.894 and 0.89 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q361', skill:'Number series', prompt:'56, 112, 224, 448, ___', correct:'D',
+      choices:{
+        A:{text:'650',explain:'Doesn\'t match doubling.'},
+        B:{text:'750',explain:'Doesn\'t match the correct product.'},
+        C:{text:'800',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'896',explain:'Each term doubles: 448x2=896.'}
+      } },
+    { id:'q362', skill:'Number series', prompt:'42, 60, 78, 96, ___', correct:'A',
+      choices:{
+        A:{text:'114',explain:'Each term adds 18: 96+18=114.'},
+        B:{text:'110',explain:'Doesn\'t match adding 18.'},
+        C:{text:'118',explain:'Overshoots the correct value.'},
+        D:{text:'106',explain:'Doesn\'t match the +18 pattern.'}
+      } },
+    { id:'q363', skill:'Number series', prompt:'38, 77, 155, 311, ___', correct:'B',
+      choices:{
+        A:{text:'618',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'623',explain:'Each number doubles the previous and adds 1: 311x2+1=623.'},
+        C:{text:'626',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'630',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q364', skill:'Number series', prompt:'1220703125, 244140625, 48828125, ___', correct:'C',
+      choices:{
+        A:{text:'1953125',explain:'This skips ahead an extra division step.'},
+        B:{text:'8500000',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'9765625',explain:'Each term is divided by 5: 48828125/5=9765625.'},
+        D:{text:'10500000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q365', skill:'Number series', prompt:'64, 51, 36, 19, ___', correct:'D',
+      choices:{
+        A:{text:'6',explain:'Overshoots the correct next gap.'},
+        B:{text:'2',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'-4',explain:'Overshoots the correct -19 step.'},
+        D:{text:'0',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 19-19=0.'}
+      } },
+    { id:'q366', skill:'Number series', prompt:'12, 25, 40, 57, 76, ___', correct:'A',
+      choices:{
+        A:{text:'97',explain:'The gaps increase by 2 each time (+13,+15,+17,+19), so the next gap is +21: 76+21=97.'},
+        B:{text:'93',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'95',explain:'Close, but doesn\'t match adding 21 to 76.'},
+        D:{text:'100',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q367', skill:'Number series', prompt:'45, 91, 183, 367, ___', correct:'B',
+      choices:{
+        A:{text:'730',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'735',explain:'Each number doubles the previous and adds 1: 367x2+1=735.'},
+        C:{text:'738',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'742',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q368', skill:'Number series', prompt:'13841287201, 1977326743, 282475249, ___', correct:'C',
+      choices:{
+        A:{text:'5764801',explain:'This skips ahead an extra division step.'},
+        B:{text:'35000000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'40353607',explain:'Each term is divided by 7: 282475249/7=40353607.'},
+        D:{text:'44000000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q369', skill:'Number series', prompt:'27, 28, 30, 33, 37, ___', correct:'A',
+      choices:{
+        A:{text:'42',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 37+5=42.'},
+        B:{text:'40',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'41',explain:'Close, but doesn\'t match adding 5 to 37.'},
+        D:{text:'44',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q370', skill:'Number series', prompt:'17, 51, 153, 459, 1377, ___', correct:'B',
+      choices:{
+        A:{text:'4100',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'4131',explain:'Each term triples: 1377x3=4131.'},
+        C:{text:'4200',explain:'Doesn\'t match the correct product.'},
+        D:{text:'4250',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q371', skill:'Quantitative comparison', prompt:'Compare: Column A = 22/45   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'22/45 is approximately 0.489, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 22/45 (approximately 0.489).'},
+        C:{text:'The two columns are equal', explain:'0.489 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q372', skill:'Quantitative comparison', prompt:'Compare: Column A = 21 squared   Column B = 14 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'21 squared is 441, less than 14 cubed (2744).'},
+        B:{text:'Column B is greater', explain:'14 cubed is 2744, greater than 21 squared (441).'},
+        C:{text:'The two columns are equal', explain:'441 and 2744 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q373', skill:'Quantitative comparison', prompt:'Compare: Column A = 94% of 50   Column B = 50% of 94', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'94% of 50 is 47, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'50% of 94 is also 47, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'94% of 50 is 47, and 50% of 94 is also 47, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q374', skill:'Quantitative comparison', prompt:'Compare: Column A = 43/46   Column B = 0.93', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'43/46 is approximately 0.935, which is greater than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is less than 43/46 (approximately 0.935).'},
+        C:{text:'The two columns are equal', explain:'0.935 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q375', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 40th power   Column B = 4 to the 20th power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 40th power is 1099511627776, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 20th power is also 1099511627776, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 40th power = 1099511627776 and 4 to the 20th power = 1099511627776, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q376', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.97   Column B = 97/100', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.97 equals 97/100, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'97/100 equals 0.97, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'97/100 equals exactly 0.97, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q377', skill:'Quantitative comparison', prompt:'Compare: Column A = 88% of 350   Column B = 308% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'88% of 350 is 308, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'88% of 350 is 308, and 308% of 100 is also 308, so they are equal.'},
+        C:{text:'Column B is greater', explain:'308% of 100 is also 308, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q378', skill:'Quantitative comparison', prompt:'Compare: Column A = 48/50   Column B = 0.96', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'48/50 equals 0.96, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'0.96 equals 48/50, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'48/50 equals exactly 0.96, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q379', skill:'Quantitative comparison', prompt:'Compare: Column A = 15 to the 4th power   Column B = 225 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'15 to the 4th power is 50625, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'225 squared is also 50625, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'15 to the 4th power = 50625 and 225 squared = 50625, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q380', skill:'Quantitative comparison', prompt:'Compare: Column A = 44/49   Column B = 0.89', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'44/49 is approximately 0.898, which is greater than 0.89.'},
+        B:{text:'Column B is greater', explain:'0.89 is less than 44/49 (approximately 0.898).'},
+        C:{text:'The two columns are equal', explain:'0.898 and 0.89 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q381', skill:'Number series', prompt:'60, 120, 240, 480, ___', correct:'D',
+      choices:{
+        A:{text:'700',explain:'Doesn\'t match doubling.'},
+        B:{text:'800',explain:'Doesn\'t match the correct product.'},
+        C:{text:'900',explain:'Doesn\'t match doubling correctly.'},
+        D:{text:'960',explain:'Each term doubles: 480x2=960.'}
+      } },
+    { id:'q382', skill:'Number series', prompt:'45, 64, 83, 102, ___', correct:'A',
+      choices:{
+        A:{text:'121',explain:'Each term adds 19: 102+19=121.'},
+        B:{text:'118',explain:'Doesn\'t match adding 19.'},
+        C:{text:'124',explain:'Overshoots the correct value.'},
+        D:{text:'115',explain:'Doesn\'t match the +19 pattern.'}
+      } },
+    { id:'q383', skill:'Number series', prompt:'42, 85, 171, 343, ___', correct:'B',
+      choices:{
+        A:{text:'682',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'687',explain:'Each number doubles the previous and adds 1: 343x2+1=687.'},
+        C:{text:'690',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'695',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q384', skill:'Number series', prompt:'6103515625, 1220703125, 244140625, ___', correct:'C',
+      choices:{
+        A:{text:'9765625',explain:'This skips ahead an extra division step.'},
+        B:{text:'42000000',explain:'Doesn\'t match dividing by 5.'},
+        C:{text:'48828125',explain:'Each term is divided by 5: 244140625/5=48828125.'},
+        D:{text:'53000000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q385', skill:'Number series', prompt:'95, 82, 67, 50, ___', correct:'D',
+      choices:{
+        A:{text:'25',explain:'Overshoots the correct next gap.'},
+        B:{text:'28',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'34',explain:'Doesn\'t match the decreasing-gap pattern.'},
+        D:{text:'31',explain:'The gap increases by 2 each time (-13,-15,-17), so the next gap is -19: 50-19=31.'}
+      } },
+    { id:'q386', skill:'Number series', prompt:'13, 27, 43, 61, 81, ___', correct:'A',
+      choices:{
+        A:{text:'103',explain:'The gaps increase by 2 each time (+14,+16,+18,+20), so the next gap is +22: 81+22=103.'},
+        B:{text:'99',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'101',explain:'Close, but doesn\'t match adding 22 to 81.'},
+        D:{text:'106',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q387', skill:'Number series', prompt:'49, 99, 199, 399, ___', correct:'B',
+      choices:{
+        A:{text:'794',explain:'Doesn\'t match the doubling-plus-one pattern.'},
+        B:{text:'799',explain:'Each number doubles the previous and adds 1: 399x2+1=799.'},
+        C:{text:'802',explain:'Doesn\'t match the correct calculation.'},
+        D:{text:'810',explain:'Overshoots the correct value.'}
+      } },
+    { id:'q388', skill:'Number series', prompt:'96889010407, 13841287201, 1977326743, ___', correct:'C',
+      choices:{
+        A:{text:'40353607',explain:'This skips ahead an extra division step.'},
+        B:{text:'250000000',explain:'Doesn\'t match dividing by 7.'},
+        C:{text:'282475249',explain:'Each term is divided by 7: 1977326743/7=282475249.'},
+        D:{text:'310000000',explain:'Doesn\'t match the correct division.'}
+      } },
+    { id:'q389', skill:'Number series', prompt:'29, 30, 32, 35, 39, ___', correct:'A',
+      choices:{
+        A:{text:'44',explain:'The gaps increase by 1 each time (+1,+2,+3,+4), so the next gap is +5: 39+5=44.'},
+        B:{text:'42',explain:'Doesn\'t match the correct next gap.'},
+        C:{text:'43',explain:'Close, but doesn\'t match adding 5 to 39.'},
+        D:{text:'46',explain:'Overshoots the correct next gap.'}
+      } },
+    { id:'q390', skill:'Number series', prompt:'18, 54, 162, 486, 1458, ___', correct:'B',
+      choices:{
+        A:{text:'4300',explain:'Doesn\'t match tripling correctly.'},
+        B:{text:'4374',explain:'Each term triples: 1458x3=4374.'},
+        C:{text:'4400',explain:'Doesn\'t match the correct product.'},
+        D:{text:'4450',explain:'Overshoots the correct product.'}
+      } },
+    { id:'q391', skill:'Quantitative comparison', prompt:'Compare: Column A = 23/47   Column B = 0.49', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'23/47 is approximately 0.489, which is less than 0.49.'},
+        B:{text:'Column B is greater', explain:'0.49 is greater than 23/47 (approximately 0.489).'},
+        C:{text:'The two columns are equal', explain:'0.489 and 0.49 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q392', skill:'Quantitative comparison', prompt:'Compare: Column A = 22 squared   Column B = 15 cubed', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'22 squared is 484, less than 15 cubed (3375).'},
+        B:{text:'Column B is greater', explain:'15 cubed is 3375, greater than 22 squared (484).'},
+        C:{text:'The two columns are equal', explain:'484 and 3375 are not equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q393', skill:'Quantitative comparison', prompt:'Compare: Column A = 96% of 75   Column B = 75% of 96', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'96% of 75 is 72, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'75% of 96 is also 72, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'96% of 75 is 72, and 75% of 96 is also 72, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q394', skill:'Quantitative comparison', prompt:'Compare: Column A = 45/48   Column B = 0.93', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'45/48 equals 0.9375, which is greater than 0.93.'},
+        B:{text:'Column B is greater', explain:'0.93 is less than 45/48 (0.9375).'},
+        C:{text:'The two columns are equal', explain:'0.9375 and 0.93 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q395', skill:'Quantitative comparison', prompt:'Compare: Column A = 2 to the 42nd power   Column B = 4 to the 21st power', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'2 to the 42nd power is 4398046511104, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'4 to the 21st power is also 4398046511104, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'2 to the 42nd power = 4398046511104 and 4 to the 21st power = 4398046511104, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q396', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.68   Column B = 17/25', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'0.68 equals 17/25, so it isn\'t greater.'},
+        B:{text:'Column B is greater', explain:'17/25 equals 0.68, so it isn\'t greater.'},
+        C:{text:'The two columns are equal', explain:'17/25 equals exactly 0.68, so the columns are equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q397', skill:'Quantitative comparison', prompt:'Compare: Column A = 96% of 375   Column B = 360% of 100', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'96% of 375 is 360, not greater than Column B.'},
+        B:{text:'The two columns are equal', explain:'96% of 375 is 360, and 360% of 100 is also 360, so they are equal.'},
+        C:{text:'Column B is greater', explain:'360% of 100 is also 360, not greater than Column A.'},
+        D:{text:'Cannot be determined', explain:'Both percentages can be calculated directly.'}
+      } },
+    { id:'q398', skill:'Quantitative comparison', prompt:'Compare: Column A = 47/49   Column B = 0.96', correct:'B',
+      choices:{
+        A:{text:'Column A is greater', explain:'47/49 is approximately 0.959, which is less than 0.96.'},
+        B:{text:'Column B is greater', explain:'0.96 is greater than 47/49 (approximately 0.959).'},
+        C:{text:'The two columns are equal', explain:'0.959 and 0.96 are close but not equal.'},
+        D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
+      } },
+    { id:'q399', skill:'Quantitative comparison', prompt:'Compare: Column A = 16 to the 4th power   Column B = 256 squared', correct:'C',
+      choices:{
+        A:{text:'Column A is greater', explain:'16 to the 4th power is 65536, not greater than Column B.'},
+        B:{text:'Column B is greater', explain:'256 squared is also 65536, not greater than Column A.'},
+        C:{text:'The two columns are equal', explain:'16 to the 4th power = 65536 and 256 squared = 65536, so they are equal.'},
+        D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
+      } },
+    { id:'q400', skill:'Quantitative comparison', prompt:'Compare: Column A = 46/51   Column B = 0.9', correct:'A',
+      choices:{
+        A:{text:'Column A is greater', explain:'46/51 is approximately 0.902, which is greater than 0.9.'},
+        B:{text:'Column B is greater', explain:'0.9 is less than 46/51 (approximately 0.902).'},
+        C:{text:'The two columns are equal', explain:'0.902 and 0.9 are close but not equal.'},
         D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
       } }
   ],
@@ -3839,6 +6974,1546 @@ const QUESTIONS = {
         B:{text:'30', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
         C:{text:'49', explain:'This is 7 squared alone, not the full subtraction.'},
         D:{text:'45', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m181', skill:'Algebra', prompt:'Solve for x: 6x - 9 = 27', correct:'C',
+      choices:{
+        A:{text:'5', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'7', explain:'Overshoots the correct value.'},
+        C:{text:'6', explain:'Add 9 to both sides (6x=36), then divide by 6 (x=6).'},
+        D:{text:'4', explain:'Doesn\'t match dividing 36 by 6.'}
+      } },
+    { id:'m182', skill:'Algebra', prompt:'Solve for x: 5(x + 4) = 45', correct:'A',
+      choices:{
+        A:{text:'5', explain:'Divide both sides by 5 (x+4=9), then subtract 4 (x=5).'},
+        B:{text:'6', explain:'Close, but doesn\'t match subtracting 4 correctly.'},
+        C:{text:'9', explain:'This is the value inside the parentheses before subtracting 4, not x itself.'},
+        D:{text:'8', explain:'Doesn\'t match dividing 45 by 5 first.'}
+      } },
+    { id:'m183', skill:'Algebra', prompt:'Simplify: 9(2x - 4) + 5x', correct:'D',
+      choices:{
+        A:{text:'23x - 4', explain:'This drops part of the distributed constant.'},
+        B:{text:'14x - 36', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'23x + 36', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'23x - 36', explain:'Distribute first: 18x-36+5x, then combine like terms: 23x-36.'}
+      } },
+    { id:'m184', skill:'Algebra', prompt:'If 12x - 8 = 7x + 17, what is x?', correct:'B',
+      choices:{
+        A:{text:'4', explain:'Doesn\'t match solving the equation correctly.'},
+        B:{text:'5', explain:'Subtract 7x from both sides (5x-8=17), then add 8 (5x=25), then divide by 5 (x=5).'},
+        C:{text:'6', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'25', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m185', skill:'Percentages', prompt:'What is 80% of 260?', correct:'C',
+      choices:{
+        A:{text:'195', explain:'Doesn\'t match 0.8x260.'},
+        B:{text:'200', explain:'Doesn\'t match the correct product.'},
+        C:{text:'208', explain:'0.8 x 260 = 208.'},
+        D:{text:'215', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m186', skill:'Fractions', prompt:'What is 3/10 + 2/5?', correct:'A',
+      choices:{
+        A:{text:'7/10', explain:'Using a common denominator of 10: 2/5=4/10, so 3/10+4/10=7/10.'},
+        B:{text:'5/15', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'1/2', explain:'Doesn\'t match adding 3/10 and 4/10 correctly.'},
+        D:{text:'9/10', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m187', skill:'Percentages', prompt:'A jacket costs $84 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$105', explain:'Doesn\'t match dividing 84 by 0.7.'},
+        B:{text:'$110', explain:'Overshoots the correct original price.'},
+        C:{text:'$120', explain:'If $84 is 70% of the original price, the original price is 84 divided by 0.7, which is $120.'},
+        D:{text:'$100', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m188', skill:'Fractions', prompt:'What is 5/6 - 1/9?', correct:'D',
+      choices:{
+        A:{text:'4/3', explain:'Doesn\'t match subtracting with a common denominator.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'11/18', explain:'Doesn\'t match subtracting 2/18 from 15/18.'},
+        D:{text:'13/18', explain:'Using a common denominator of 18: 5/6=15/18 and 1/9=2/18, so 15/18-2/18=13/18.'}
+      } },
+    { id:'m189', skill:'Geometry', prompt:'What is the area of a rectangle with length 22 and width 8?', correct:'D',
+      choices:{
+        A:{text:'30', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'60', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'160', explain:'Doesn\'t match multiplying 22 and 8 correctly.'},
+        D:{text:'176', explain:'Area of a rectangle is length x width, so 22 x 8 = 176.'}
+      } },
+    { id:'m190', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 14 and width 9?', correct:'A',
+      choices:{
+        A:{text:'46', explain:'Perimeter of a rectangle is 2(length+width), so 2(23)=46.'},
+        B:{text:'126', explain:'This is the area, not the perimeter.'},
+        C:{text:'23', explain:'This is only half the correct perimeter.'},
+        D:{text:'40', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m191', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 13?', correct:'C',
+      choices:{
+        A:{text:'169', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'52', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'2197', explain:'Volume of a cube is side cubed, so 13x13x13=2197.'},
+        D:{text:'2000', explain:'Doesn\'t match multiplying 13x13x13 correctly.'}
+      } },
+    { id:'m192', skill:'Geometry', prompt:'What is the circumference of a circle with radius 50? (use pi \u2248 3.14)', correct:'A',
+      choices:{
+        A:{text:'314', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 50 = 314.'},
+        B:{text:'157', explain:'This is pi x radius, missing the factor of 2.'},
+        C:{text:'7850', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'100', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m193', skill:'Word problems', prompt:'The sum of three consecutive integers is 234. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'76', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'77', explain:'This is the middle integer, not the largest.'},
+        C:{text:'78', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'79', explain:'Let the integers be n, n+1, n+2: 3n+3=234, so n=77, meaning the largest is 79.'}
+      } },
+    { id:'m194', skill:'Word problems', prompt:'A car travels 810 miles in 9 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 810 / 9 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m195', skill:'Word problems', prompt:'Nine times a number plus 6 is 87. What is the number?', correct:'C',
+      choices:{
+        A:{text:'8', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'8.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'9', explain:'Subtract 6 from both sides (9x=81), then divide by 9 (x=9).'},
+        D:{text:'81', explain:'This is the value of 9x, not x itself.'}
+      } },
+    { id:'m196', skill:'Word problems', prompt:'A recipe calls for 14 cups of flour for 56 cookies. How many cups are needed for 84 cookies?', correct:'B',
+      choices:{
+        A:{text:'19', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'21', explain:'84 cookies is 1.5 times 56, so 14 cups x 1.5 = 21 cups.'},
+        C:{text:'18', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'24', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m197', skill:'Exponents', prompt:'What is 2 to the 8th power?', correct:'B',
+      choices:{
+        A:{text:'16', explain:'This treats the exponent as multiplication (2x8), not repeated multiplication.'},
+        B:{text:'256', explain:'2 multiplied by itself 8 times equals 256.'},
+        C:{text:'128', explain:'That\'s 2 to the 7th power, not the 8th.'},
+        D:{text:'512', explain:'That\'s 2 to the 9th power, not the 8th.'}
+      } },
+    { id:'m198', skill:'Number properties', prompt:'What is the least common multiple of 16 and 24?', correct:'A',
+      choices:{
+        A:{text:'48', explain:'48 is the smallest number that both 16 and 24 divide into evenly.'},
+        B:{text:'384', explain:'384 is a common multiple, but not the least one.'},
+        C:{text:'8', explain:'8 is a common factor, not a common multiple.'},
+        D:{text:'32', explain:'32 is not evenly divisible by 24.'}
+      } },
+    { id:'m199', skill:'Number properties', prompt:'What is the greatest common factor of 84 and 126?', correct:'C',
+      choices:{
+        A:{text:'14', explain:'14 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'21', explain:'21 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'42', explain:'42 is the largest number that divides both 84 and 126 evenly.'},
+        D:{text:'252', explain:'252 is a common multiple, not a common factor.'}
+      } },
+    { id:'m200', skill:'Exponents', prompt:'What is 11 squared minus 8 squared?', correct:'B',
+      choices:{
+        A:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        B:{text:'57', explain:'11 squared is 121 and 8 squared is 64, and 121-64=57.'},
+        C:{text:'64', explain:'This is 8 squared alone, not the full subtraction.'},
+        D:{text:'45', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m201', skill:'Algebra', prompt:'Solve for x: 7x - 11 = 31', correct:'C',
+      choices:{
+        A:{text:'5', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'7', explain:'Overshoots the correct value.'},
+        C:{text:'6', explain:'Add 11 to both sides (7x=42), then divide by 7 (x=6).'},
+        D:{text:'4', explain:'Doesn\'t match dividing 42 by 7.'}
+      } },
+    { id:'m202', skill:'Algebra', prompt:'Solve for x: 6(x + 5) = 54', correct:'A',
+      choices:{
+        A:{text:'4', explain:'Divide both sides by 6 (x+5=9), then subtract 5 (x=4).'},
+        B:{text:'5', explain:'Close, but doesn\'t match subtracting 5 correctly.'},
+        C:{text:'9', explain:'This is the value inside the parentheses before subtracting 5, not x itself.'},
+        D:{text:'8', explain:'Doesn\'t match dividing 54 by 6 first.'}
+      } },
+    { id:'m203', skill:'Algebra', prompt:'Simplify: 10(2x - 5) + 7x', correct:'D',
+      choices:{
+        A:{text:'27x - 5', explain:'This drops part of the distributed constant.'},
+        B:{text:'17x - 50', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'27x + 50', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'27x - 50', explain:'Distribute first: 20x-50+7x, then combine like terms: 27x-50.'}
+      } },
+    { id:'m204', skill:'Algebra', prompt:'If 13x - 9 = 8x + 16, what is x?', correct:'B',
+      choices:{
+        A:{text:'4', explain:'Doesn\'t match solving the equation correctly.'},
+        B:{text:'5', explain:'Subtract 8x from both sides (5x-9=16), then add 9 (5x=25), then divide by 5 (x=5).'},
+        C:{text:'6', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'25', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m205', skill:'Percentages', prompt:'What is 85% of 320?', correct:'C',
+      choices:{
+        A:{text:'260', explain:'Doesn\'t match 0.85x320.'},
+        B:{text:'265', explain:'Doesn\'t match the correct product.'},
+        C:{text:'272', explain:'0.85 x 320 = 272.'},
+        D:{text:'280', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m206', skill:'Fractions', prompt:'What is 4/9 + 1/3?', correct:'A',
+      choices:{
+        A:{text:'7/9', explain:'Using a common denominator of 9: 1/3=3/9, so 4/9+3/9=7/9.'},
+        B:{text:'5/12', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'1/2', explain:'Doesn\'t match adding 4/9 and 3/9 correctly.'},
+        D:{text:'8/9', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m207', skill:'Percentages', prompt:'A backpack costs $96 after a 40% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$130', explain:'Doesn\'t match dividing 96 by 0.6.'},
+        B:{text:'$150', explain:'Overshoots the correct original price.'},
+        C:{text:'$160', explain:'If $96 is 60% of the original price, the original price is 96 divided by 0.6, which is $160.'},
+        D:{text:'$140', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m208', skill:'Fractions', prompt:'What is 11/12 - 2/3?', correct:'D',
+      choices:{
+        A:{text:'9/9', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'2/12', explain:'Doesn\'t match subtracting 8/12 from 11/12.'},
+        D:{text:'1/4', explain:'Using a common denominator of 12: 2/3=8/12, so 11/12-8/12=3/12=1/4.'}
+      } },
+    { id:'m209', skill:'Geometry', prompt:'What is the area of a rectangle with length 24 and width 10?', correct:'D',
+      choices:{
+        A:{text:'34', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'68', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'220', explain:'Doesn\'t match multiplying 24 and 10 correctly.'},
+        D:{text:'240', explain:'Area of a rectangle is length x width, so 24 x 10 = 240.'}
+      } },
+    { id:'m210', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 16 and width 11?', correct:'A',
+      choices:{
+        A:{text:'54', explain:'Perimeter of a rectangle is 2(length+width), so 2(27)=54.'},
+        B:{text:'176', explain:'This is the area, not the perimeter.'},
+        C:{text:'27', explain:'This is only half the correct perimeter.'},
+        D:{text:'48', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m211', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 14?', correct:'C',
+      choices:{
+        A:{text:'196', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'56', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'2744', explain:'Volume of a cube is side cubed, so 14x14x14=2744.'},
+        D:{text:'2500', explain:'Doesn\'t match multiplying 14x14x14 correctly.'}
+      } },
+    { id:'m212', skill:'Geometry', prompt:'What is the circumference of a circle with radius 40? (use pi \u2248 3.14)', correct:'A',
+      choices:{
+        A:{text:'251.2', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 40 = 251.2.'},
+        B:{text:'125.6', explain:'This is pi x radius, missing the factor of 2.'},
+        C:{text:'5024', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'80', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m213', skill:'Word problems', prompt:'The sum of three consecutive integers is 270. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'88', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'89', explain:'This is the middle integer, not the largest.'},
+        C:{text:'90', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'91', explain:'Let the integers be n, n+1, n+2: 3n+3=270, so n=89, meaning the largest is 91.'}
+      } },
+    { id:'m214', skill:'Word problems', prompt:'A car travels 900 miles in 10 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 900 / 10 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m215', skill:'Word problems', prompt:'Ten times a number plus 7 is 97. What is the number?', correct:'C',
+      choices:{
+        A:{text:'8', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'8.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'9', explain:'Subtract 7 from both sides (10x=90), then divide by 10 (x=9).'},
+        D:{text:'90', explain:'This is the value of 10x, not x itself.'}
+      } },
+    { id:'m216', skill:'Word problems', prompt:'A recipe calls for 16 cups of flour for 64 cookies. How many cups are needed for 80 cookies?', correct:'B',
+      choices:{
+        A:{text:'18', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'20', explain:'80 cookies is 1.25 times 64, so 16 cups x 1.25 = 20 cups.'},
+        C:{text:'19', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'22', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m217', skill:'Exponents', prompt:'What is 3 to the 6th power?', correct:'B',
+      choices:{
+        A:{text:'18', explain:'This treats the exponent as multiplication (3x6), not repeated multiplication.'},
+        B:{text:'729', explain:'3 multiplied by itself 6 times equals 729.'},
+        C:{text:'243', explain:'That\'s 3 to the 5th power, not the 6th.'},
+        D:{text:'2187', explain:'That\'s 3 to the 7th power, not the 6th.'}
+      } },
+    { id:'m218', skill:'Number properties', prompt:'What is the least common multiple of 20 and 25?', correct:'A',
+      choices:{
+        A:{text:'100', explain:'100 is the smallest number that both 20 and 25 divide into evenly.'},
+        B:{text:'500', explain:'500 is a common multiple, but not the least one.'},
+        C:{text:'5', explain:'5 is a common factor, not a common multiple.'},
+        D:{text:'50', explain:'50 is not evenly divisible by 20.'}
+      } },
+    { id:'m219', skill:'Number properties', prompt:'What is the greatest common factor of 90 and 120?', correct:'C',
+      choices:{
+        A:{text:'10', explain:'10 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'15', explain:'15 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'30', explain:'30 is the largest number that divides both 90 and 120 evenly.'},
+        D:{text:'360', explain:'360 is a common multiple, not a common factor.'}
+      } },
+    { id:'m220', skill:'Exponents', prompt:'What is 12 squared minus 9 squared?', correct:'B',
+      choices:{
+        A:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        B:{text:'63', explain:'12 squared is 144 and 9 squared is 81, and 144-81=63.'},
+        C:{text:'81', explain:'This is 9 squared alone, not the full subtraction.'},
+        D:{text:'45', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m221', skill:'Algebra', prompt:'Solve for x: 8x - 13 = 43', correct:'B',
+      choices:{
+        A:{text:'6', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'7', explain:'Add 13 to both sides (8x=56), then divide by 8 (x=7).'},
+        C:{text:'8', explain:'Overshoots the correct value.'},
+        D:{text:'56', explain:'This is the value of 8x, not x itself.'}
+      } },
+    { id:'m222', skill:'Algebra', prompt:'Solve for x: 7(x + 3) = 63', correct:'C',
+      choices:{
+        A:{text:'5', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'7', explain:'Close, but doesn\'t match subtracting 3 correctly.'},
+        C:{text:'6', explain:'Divide both sides by 7 (x+3=9), then subtract 3 (x=6).'},
+        D:{text:'9', explain:'This is the value inside the parentheses before subtracting 3, not x itself.'}
+      } },
+    { id:'m223', skill:'Algebra', prompt:'Simplify: 11(2x - 4) + 6x', correct:'D',
+      choices:{
+        A:{text:'28x - 4', explain:'This drops part of the distributed constant.'},
+        B:{text:'17x - 44', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'28x + 44', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'28x - 44', explain:'Distribute first: 22x-44+6x, then combine like terms: 28x-44.'}
+      } },
+    { id:'m224', skill:'Algebra', prompt:'If 14x - 10 = 9x + 15, what is x?', correct:'A',
+      choices:{
+        A:{text:'5', explain:'Subtract 9x from both sides (5x-10=15), then add 10 (5x=25), then divide by 5 (x=5).'},
+        B:{text:'6', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'7', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'25', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m225', skill:'Percentages', prompt:'What is 90% of 340?', correct:'C',
+      choices:{
+        A:{text:'290', explain:'Doesn\'t match 0.9x340.'},
+        B:{text:'300', explain:'Doesn\'t match the correct product.'},
+        C:{text:'306', explain:'0.9 x 340 = 306.'},
+        D:{text:'315', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m226', skill:'Fractions', prompt:'What is 5/8 + 1/6?', correct:'A',
+      choices:{
+        A:{text:'19/24', explain:'Using a common denominator of 24: 5/8=15/24 and 1/6=4/24, so 15/24+4/24=19/24.'},
+        B:{text:'6/14', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'3/4', explain:'Doesn\'t match adding 15/24 and 4/24 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m227', skill:'Percentages', prompt:'A jacket costs $108 after a 25% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$130', explain:'Doesn\'t match dividing 108 by 0.75.'},
+        B:{text:'$135', explain:'Overshoots the correct original price.'},
+        C:{text:'$144', explain:'If $108 is 75% of the original price, the original price is 108 divided by 0.75, which is $144.'},
+        D:{text:'$120', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m228', skill:'Fractions', prompt:'What is 9/10 - 2/5?', correct:'D',
+      choices:{
+        A:{text:'7/5', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'3/10', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'2/5', explain:'Doesn\'t match subtracting 4/10 from 9/10.'},
+        D:{text:'1/2', explain:'Using a common denominator of 10: 2/5=4/10, so 9/10-4/10=5/10=1/2.'}
+      } },
+    { id:'m229', skill:'Geometry', prompt:'What is the area of a rectangle with length 28 and width 11?', correct:'D',
+      choices:{
+        A:{text:'39', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'78', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'280', explain:'Doesn\'t match multiplying 28 and 11 correctly.'},
+        D:{text:'308', explain:'Area of a rectangle is length x width, so 28 x 11 = 308.'}
+      } },
+    { id:'m230', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 18 and width 12?', correct:'A',
+      choices:{
+        A:{text:'60', explain:'Perimeter of a rectangle is 2(length+width), so 2(30)=60.'},
+        B:{text:'216', explain:'This is the area, not the perimeter.'},
+        C:{text:'30', explain:'This is only half the correct perimeter.'},
+        D:{text:'54', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m231', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 15?', correct:'C',
+      choices:{
+        A:{text:'225', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'60', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'3375', explain:'Volume of a cube is side cubed, so 15x15x15=3375.'},
+        D:{text:'3000', explain:'Doesn\'t match multiplying 15x15x15 correctly.'}
+      } },
+    { id:'m232', skill:'Geometry', prompt:'What is the circumference of a circle with radius 60? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'188.4', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'376.8', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 60 = 376.8.'},
+        C:{text:'11304', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'120', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m233', skill:'Word problems', prompt:'The sum of three consecutive integers is 300. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'98', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'99', explain:'This is the middle integer, not the largest.'},
+        C:{text:'100', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'101', explain:'Let the integers be n, n+1, n+2: 3n+3=300, so n=99, meaning the largest is 101.'}
+      } },
+    { id:'m234', skill:'Word problems', prompt:'A car travels 960 miles in 12 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'80 mph', explain:'Speed = distance divided by time, so 960 / 12 = 80 mph.'},
+        B:{text:'75 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'85 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'90 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m235', skill:'Word problems', prompt:'Eleven times a number plus 8 is 118. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 8 from both sides (11x=110), then divide by 11 (x=10).'},
+        D:{text:'110', explain:'This is the value of 11x, not x itself.'}
+      } },
+    { id:'m236', skill:'Word problems', prompt:'A recipe calls for 18 cups of flour for 72 cookies. How many cups are needed for 96 cookies?', correct:'B',
+      choices:{
+        A:{text:'22', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'24', explain:'96 cookies is 4/3 times 72, so 18 cups x 4/3 = 24 cups.'},
+        C:{text:'21', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'26', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m237', skill:'Exponents', prompt:'What is 4 to the 5th power?', correct:'B',
+      choices:{
+        A:{text:'20', explain:'This treats the exponent as multiplication (4x5), not repeated multiplication.'},
+        B:{text:'1024', explain:'4 multiplied by itself 5 times equals 1024.'},
+        C:{text:'256', explain:'That\'s 4 to the 4th power, not the 5th.'},
+        D:{text:'512', explain:'Doesn\'t match the correct repeated multiplication.'}
+      } },
+    { id:'m238', skill:'Number properties', prompt:'What is the least common multiple of 24 and 32?', correct:'A',
+      choices:{
+        A:{text:'96', explain:'96 is the smallest number that both 24 and 32 divide into evenly.'},
+        B:{text:'768', explain:'768 is a common multiple, but not the least one.'},
+        C:{text:'8', explain:'8 is a common factor, not a common multiple.'},
+        D:{text:'64', explain:'64 is not evenly divisible by 24.'}
+      } },
+    { id:'m239', skill:'Number properties', prompt:'What is the greatest common factor of 96 and 144?', correct:'C',
+      choices:{
+        A:{text:'16', explain:'16 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'24', explain:'24 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'48', explain:'48 is the largest number that divides both 96 and 144 evenly.'},
+        D:{text:'576', explain:'576 is a common multiple, not a common factor.'}
+      } },
+    { id:'m240', skill:'Exponents', prompt:'What is 13 squared minus 10 squared?', correct:'A',
+      choices:{
+        A:{text:'69', explain:'13 squared is 169 and 10 squared is 100, and 169-100=69.'},
+        B:{text:'100', explain:'This is 10 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'45', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m241', skill:'Algebra', prompt:'Solve for x: 9x - 14 = 58', correct:'B',
+      choices:{
+        A:{text:'7', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'8', explain:'Add 14 to both sides (9x=72), then divide by 9 (x=8).'},
+        C:{text:'9', explain:'Overshoots the correct value.'},
+        D:{text:'72', explain:'This is the value of 9x, not x itself.'}
+      } },
+    { id:'m242', skill:'Algebra', prompt:'Solve for x: 8(x + 6) = 88', correct:'C',
+      choices:{
+        A:{text:'3', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'6', explain:'Close, but doesn\'t match subtracting 6 correctly.'},
+        C:{text:'5', explain:'Divide both sides by 8 (x+6=11), then subtract 6 (x=5).'},
+        D:{text:'11', explain:'This is the value inside the parentheses before subtracting 6, not x itself.'}
+      } },
+    { id:'m243', skill:'Algebra', prompt:'Simplify: 12(2x - 5) + 7x', correct:'D',
+      choices:{
+        A:{text:'31x - 5', explain:'This drops part of the distributed constant.'},
+        B:{text:'19x - 60', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'31x + 60', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'31x - 60', explain:'Distribute first: 24x-60+7x, then combine like terms: 31x-60.'}
+      } },
+    { id:'m244', skill:'Algebra', prompt:'If 15x - 11 = 10x + 19, what is x?', correct:'A',
+      choices:{
+        A:{text:'6', explain:'Subtract 10x from both sides (5x-11=19), then add 11 (5x=30), then divide by 5 (x=6).'},
+        B:{text:'7', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'8', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'30', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m245', skill:'Percentages', prompt:'What is 95% of 380?', correct:'C',
+      choices:{
+        A:{text:'340', explain:'Doesn\'t match 0.95x380.'},
+        B:{text:'350', explain:'Doesn\'t match the correct product.'},
+        C:{text:'361', explain:'0.95 x 380 = 361.'},
+        D:{text:'370', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m246', skill:'Fractions', prompt:'What is 7/9 + 1/6?', correct:'A',
+      choices:{
+        A:{text:'17/18', explain:'Using a common denominator of 18: 7/9=14/18 and 1/6=3/18, so 14/18+3/18=17/18.'},
+        B:{text:'8/15', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'5/6', explain:'Doesn\'t match adding 14/18 and 3/18 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m247', skill:'Percentages', prompt:'A jacket costs $126 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$150', explain:'Doesn\'t match dividing 126 by 0.7.'},
+        B:{text:'$165', explain:'Overshoots the correct original price.'},
+        C:{text:'$180', explain:'If $126 is 70% of the original price, the original price is 126 divided by 0.7, which is $180.'},
+        D:{text:'$156', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m248', skill:'Fractions', prompt:'What is 11/12 - 1/4?', correct:'D',
+      choices:{
+        A:{text:'10/8', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'3/4', explain:'Doesn\'t match subtracting 3/12 from 11/12.'},
+        D:{text:'2/3', explain:'Using a common denominator of 12: 1/4=3/12, so 11/12-3/12=8/12=2/3.'}
+      } },
+    { id:'m249', skill:'Geometry', prompt:'What is the area of a rectangle with length 32 and width 14?', correct:'D',
+      choices:{
+        A:{text:'46', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'92', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'420', explain:'Doesn\'t match multiplying 32 and 14 correctly.'},
+        D:{text:'448', explain:'Area of a rectangle is length x width, so 32 x 14 = 448.'}
+      } },
+    { id:'m250', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 21 and width 15?', correct:'A',
+      choices:{
+        A:{text:'72', explain:'Perimeter of a rectangle is 2(length+width), so 2(36)=72.'},
+        B:{text:'315', explain:'This is the area, not the perimeter.'},
+        C:{text:'36', explain:'This is only half the correct perimeter.'},
+        D:{text:'66', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m251', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 16?', correct:'C',
+      choices:{
+        A:{text:'256', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'64', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'4096', explain:'Volume of a cube is side cubed, so 16x16x16=4096.'},
+        D:{text:'3600', explain:'Doesn\'t match multiplying 16x16x16 correctly.'}
+      } },
+    { id:'m252', skill:'Geometry', prompt:'What is the circumference of a circle with radius 70? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'219.8', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'439.6', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 70 = 439.6.'},
+        C:{text:'15386', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'140', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m253', skill:'Word problems', prompt:'The sum of three consecutive integers is 333. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'109', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'110', explain:'This is the middle integer, not the largest.'},
+        C:{text:'111', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'112', explain:'Let the integers be n, n+1, n+2: 3n+3=333, so n=110, meaning the largest is 112.'}
+      } },
+    { id:'m254', skill:'Word problems', prompt:'A car travels 1080 miles in 12 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1080 / 12 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m255', skill:'Word problems', prompt:'Twelve times a number plus 9 is 141. What is the number?', correct:'C',
+      choices:{
+        A:{text:'10', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'11', explain:'Subtract 9 from both sides (12x=132), then divide by 12 (x=11).'},
+        D:{text:'132', explain:'This is the value of 12x, not x itself.'}
+      } },
+    { id:'m256', skill:'Word problems', prompt:'A recipe calls for 20 cups of flour for 80 cookies. How many cups are needed for 100 cookies?', correct:'B',
+      choices:{
+        A:{text:'22', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'25', explain:'100 cookies is 1.25 times 80, so 20 cups x 1.25 = 25 cups.'},
+        C:{text:'23', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'28', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m257', skill:'Exponents', prompt:'What is 5 to the 5th power?', correct:'B',
+      choices:{
+        A:{text:'25', explain:'This treats the exponent as multiplication (5x5), not repeated multiplication.'},
+        B:{text:'3125', explain:'5 multiplied by itself 5 times equals 3125.'},
+        C:{text:'625', explain:'That\'s 5 to the 4th power, not the 5th.'},
+        D:{text:'15625', explain:'That\'s 5 to the 6th power, not the 5th.'}
+      } },
+    { id:'m258', skill:'Number properties', prompt:'What is the least common multiple of 28 and 42?', correct:'A',
+      choices:{
+        A:{text:'84', explain:'84 is the smallest number that both 28 and 42 divide into evenly.'},
+        B:{text:'1176', explain:'1176 is a common multiple, but not the least one.'},
+        C:{text:'14', explain:'14 is a common factor, not a common multiple.'},
+        D:{text:'56', explain:'56 is not evenly divisible by 42.'}
+      } },
+    { id:'m259', skill:'Number properties', prompt:'What is the greatest common factor of 112 and 168?', correct:'C',
+      choices:{
+        A:{text:'14', explain:'14 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'28', explain:'28 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'56', explain:'56 is the largest number that divides both 112 and 168 evenly.'},
+        D:{text:'336', explain:'336 is a common multiple, not a common factor.'}
+      } },
+    { id:'m260', skill:'Exponents', prompt:'What is 14 squared minus 11 squared?', correct:'A',
+      choices:{
+        A:{text:'75', explain:'14 squared is 196 and 11 squared is 121, and 196-121=75.'},
+        B:{text:'121', explain:'This is 11 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'49', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m261', skill:'Algebra', prompt:'Solve for x: 10x - 17 = 63', correct:'B',
+      choices:{
+        A:{text:'7', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'8', explain:'Add 17 to both sides (10x=80), then divide by 10 (x=8).'},
+        C:{text:'9', explain:'Overshoots the correct value.'},
+        D:{text:'80', explain:'This is the value of 10x, not x itself.'}
+      } },
+    { id:'m262', skill:'Algebra', prompt:'Solve for x: 9(x + 7) = 99', correct:'C',
+      choices:{
+        A:{text:'2', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'5', explain:'Close, but doesn\'t match subtracting 7 correctly.'},
+        C:{text:'4', explain:'Divide both sides by 9 (x+7=11), then subtract 7 (x=4).'},
+        D:{text:'11', explain:'This is the value inside the parentheses before subtracting 7, not x itself.'}
+      } },
+    { id:'m263', skill:'Algebra', prompt:'Simplify: 13(2x - 6) + 8x', correct:'D',
+      choices:{
+        A:{text:'34x - 6', explain:'This drops part of the distributed constant.'},
+        B:{text:'21x - 78', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'34x + 78', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'34x - 78', explain:'Distribute first: 26x-78+8x, then combine like terms: 34x-78.'}
+      } },
+    { id:'m264', skill:'Algebra', prompt:'If 16x - 13 = 11x + 22, what is x?', correct:'A',
+      choices:{
+        A:{text:'7', explain:'Subtract 11x from both sides (5x-13=22), then add 13 (5x=35), then divide by 5 (x=7).'},
+        B:{text:'8', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'35', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m265', skill:'Percentages', prompt:'What is 65% of 420?', correct:'C',
+      choices:{
+        A:{text:'250', explain:'Doesn\'t match 0.65x420.'},
+        B:{text:'260', explain:'Doesn\'t match the correct product.'},
+        C:{text:'273', explain:'0.65 x 420 = 273.'},
+        D:{text:'285', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m266', skill:'Fractions', prompt:'What is 5/9 + 1/4?', correct:'A',
+      choices:{
+        A:{text:'29/36', explain:'Using a common denominator of 36: 5/9=20/36 and 1/4=9/36, so 20/36+9/36=29/36.'},
+        B:{text:'6/13', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'3/4', explain:'Doesn\'t match adding 20/36 and 9/36 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m267', skill:'Percentages', prompt:'A jacket costs $147 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$180', explain:'Doesn\'t match dividing 147 by 0.7.'},
+        B:{text:'$195', explain:'Overshoots the correct original price.'},
+        C:{text:'$210', explain:'If $147 is 70% of the original price, the original price is 147 divided by 0.7, which is $210.'},
+        D:{text:'$177', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m268', skill:'Fractions', prompt:'What is 13/14 - 3/7?', correct:'D',
+      choices:{
+        A:{text:'10/7', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'2/3', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'5/14', explain:'Doesn\'t match subtracting 6/14 from 13/14.'},
+        D:{text:'1/2', explain:'Using a common denominator of 14: 3/7=6/14, so 13/14-6/14=7/14=1/2.'}
+      } },
+    { id:'m269', skill:'Geometry', prompt:'What is the area of a rectangle with length 36 and width 15?', correct:'D',
+      choices:{
+        A:{text:'51', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'102', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'500', explain:'Doesn\'t match multiplying 36 and 15 correctly.'},
+        D:{text:'540', explain:'Area of a rectangle is length x width, so 36 x 15 = 540.'}
+      } },
+    { id:'m270', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 24 and width 17?', correct:'A',
+      choices:{
+        A:{text:'82', explain:'Perimeter of a rectangle is 2(length+width), so 2(41)=82.'},
+        B:{text:'408', explain:'This is the area, not the perimeter.'},
+        C:{text:'41', explain:'This is only half the correct perimeter.'},
+        D:{text:'75', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m271', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 17?', correct:'C',
+      choices:{
+        A:{text:'289', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'68', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'4913', explain:'Volume of a cube is side cubed, so 17x17x17=4913.'},
+        D:{text:'4600', explain:'Doesn\'t match multiplying 17x17x17 correctly.'}
+      } },
+    { id:'m272', skill:'Geometry', prompt:'What is the circumference of a circle with radius 80? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'251.2', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'502.4', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 80 = 502.4.'},
+        C:{text:'20096', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'160', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m273', skill:'Word problems', prompt:'The sum of three consecutive integers is 366. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'120', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'121', explain:'This is the middle integer, not the largest.'},
+        C:{text:'122', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'123', explain:'Let the integers be n, n+1, n+2: 3n+3=366, so n=121, meaning the largest is 123.'}
+      } },
+    { id:'m274', skill:'Word problems', prompt:'A car travels 1170 miles in 13 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1170 / 13 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m275', skill:'Word problems', prompt:'Thirteen times a number plus 10 is 140. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 10 from both sides (13x=130), then divide by 13 (x=10).'},
+        D:{text:'130', explain:'This is the value of 13x, not x itself.'}
+      } },
+    { id:'m276', skill:'Word problems', prompt:'A recipe calls for 24 cups of flour for 96 cookies. How many cups are needed for 120 cookies?', correct:'B',
+      choices:{
+        A:{text:'27', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'30', explain:'120 cookies is 1.25 times 96, so 24 cups x 1.25 = 30 cups.'},
+        C:{text:'28', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'32', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m277', skill:'Exponents', prompt:'What is 6 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'24', explain:'This treats the exponent as multiplication (6x4), not repeated multiplication.'},
+        B:{text:'1296', explain:'6 multiplied by itself 4 times equals 1296.'},
+        C:{text:'216', explain:'That\'s 6 cubed, not 6 to the 4th power.'},
+        D:{text:'7776', explain:'That\'s 6 to the 5th power, not the 4th.'}
+      } },
+    { id:'m278', skill:'Number properties', prompt:'What is the least common multiple of 32 and 48?', correct:'A',
+      choices:{
+        A:{text:'96', explain:'96 is the smallest number that both 32 and 48 divide into evenly.'},
+        B:{text:'1536', explain:'1536 is a common multiple, but not the least one.'},
+        C:{text:'16', explain:'16 is a common factor, not a common multiple.'},
+        D:{text:'64', explain:'64 is not evenly divisible by 48.'}
+      } },
+    { id:'m279', skill:'Number properties', prompt:'What is the greatest common factor of 128 and 192?', correct:'C',
+      choices:{
+        A:{text:'16', explain:'16 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'32', explain:'32 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'64', explain:'64 is the largest number that divides both 128 and 192 evenly.'},
+        D:{text:'384', explain:'384 is a common multiple, not a common factor.'}
+      } },
+    { id:'m280', skill:'Exponents', prompt:'What is 15 squared minus 12 squared?', correct:'A',
+      choices:{
+        A:{text:'81', explain:'15 squared is 225 and 12 squared is 144, and 225-144=81.'},
+        B:{text:'144', explain:'This is 12 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m281', skill:'Algebra', prompt:'Solve for x: 11x - 19 = 80', correct:'B',
+      choices:{
+        A:{text:'8', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9', explain:'Add 19 to both sides (11x=99), then divide by 11 (x=9).'},
+        C:{text:'10', explain:'Overshoots the correct value.'},
+        D:{text:'99', explain:'This is the value of 11x, not x itself.'}
+      } },
+    { id:'m282', skill:'Algebra', prompt:'Solve for x: 10(x + 8) = 110', correct:'C',
+      choices:{
+        A:{text:'1', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'5', explain:'Close, but doesn\'t match subtracting 8 correctly.'},
+        C:{text:'3', explain:'Divide both sides by 10 (x+8=11), then subtract 8 (x=3).'},
+        D:{text:'11', explain:'This is the value inside the parentheses before subtracting 8, not x itself.'}
+      } },
+    { id:'m283', skill:'Algebra', prompt:'Simplify: 14(2x - 7) + 9x', correct:'D',
+      choices:{
+        A:{text:'37x - 7', explain:'This drops part of the distributed constant.'},
+        B:{text:'23x - 98', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'37x + 98', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'37x - 98', explain:'Distribute first: 28x-98+9x, then combine like terms: 37x-98.'}
+      } },
+    { id:'m284', skill:'Algebra', prompt:'If 17x - 15 = 12x + 25, what is x?', correct:'C',
+      choices:{
+        A:{text:'6', explain:'Doesn\'t match solving the equation correctly.'},
+        B:{text:'7', explain:'Doesn\'t match the correct steps.'},
+        C:{text:'8', explain:'Subtract 12x from both sides (5x-15=25), then add 15 (5x=40), then divide by 5 (x=8).'},
+        D:{text:'40', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m285', skill:'Percentages', prompt:'What is 75% of 440?', correct:'C',
+      choices:{
+        A:{text:'310', explain:'Doesn\'t match 0.75x440.'},
+        B:{text:'320', explain:'Doesn\'t match the correct product.'},
+        C:{text:'330', explain:'0.75 x 440 = 330.'},
+        D:{text:'340', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m286', skill:'Fractions', prompt:'What is 5/6 + 1/8?', correct:'A',
+      choices:{
+        A:{text:'23/24', explain:'Using a common denominator of 24: 5/6=20/24 and 1/8=3/24, so 20/24+3/24=23/24.'},
+        B:{text:'6/14', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'3/4', explain:'Doesn\'t match adding 20/24 and 3/24 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m287', skill:'Percentages', prompt:'A jacket costs $168 after a 20% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$185', explain:'Doesn\'t match dividing 168 by 0.8.'},
+        B:{text:'$200', explain:'Overshoots the correct original price.'},
+        C:{text:'$210', explain:'If $168 is 80% of the original price, the original price is 168 divided by 0.8, which is $210.'},
+        D:{text:'$188', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m288', skill:'Fractions', prompt:'What is 15/16 - 3/8?', correct:'D',
+      choices:{
+        A:{text:'12/8', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'11/16', explain:'Doesn\'t match subtracting 6/16 from 15/16.'},
+        D:{text:'9/16', explain:'Using a common denominator of 16: 3/8=6/16, so 15/16-6/16=9/16.'}
+      } },
+    { id:'m289', skill:'Geometry', prompt:'What is the area of a rectangle with length 40 and width 18?', correct:'D',
+      choices:{
+        A:{text:'58', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'116', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'640', explain:'Doesn\'t match multiplying 40 and 18 correctly.'},
+        D:{text:'720', explain:'Area of a rectangle is length x width, so 40 x 18 = 720.'}
+      } },
+    { id:'m290', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 27 and width 19?', correct:'A',
+      choices:{
+        A:{text:'92', explain:'Perimeter of a rectangle is 2(length+width), so 2(46)=92.'},
+        B:{text:'513', explain:'This is the area, not the perimeter.'},
+        C:{text:'46', explain:'This is only half the correct perimeter.'},
+        D:{text:'84', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m291', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 18?', correct:'C',
+      choices:{
+        A:{text:'324', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'72', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'5832', explain:'Volume of a cube is side cubed, so 18x18x18=5832.'},
+        D:{text:'5400', explain:'Doesn\'t match multiplying 18x18x18 correctly.'}
+      } },
+    { id:'m292', skill:'Geometry', prompt:'What is the circumference of a circle with radius 90? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'282.6', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'565.2', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 90 = 565.2.'},
+        C:{text:'25434', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'180', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m293', skill:'Word problems', prompt:'The sum of three consecutive integers is 402. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'132', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'133', explain:'This is the middle integer, not the largest.'},
+        C:{text:'134', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'135', explain:'Let the integers be n, n+1, n+2: 3n+3=402, so n=133, meaning the largest is 135.'}
+      } },
+    { id:'m294', skill:'Word problems', prompt:'A car travels 1260 miles in 14 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1260 / 14 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m295', skill:'Word problems', prompt:'Fourteen times a number plus 11 is 151. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 11 from both sides (14x=140), then divide by 14 (x=10).'},
+        D:{text:'140', explain:'This is the value of 14x, not x itself.'}
+      } },
+    { id:'m296', skill:'Word problems', prompt:'A recipe calls for 28 cups of flour for 112 cookies. How many cups are needed for 140 cookies?', correct:'B',
+      choices:{
+        A:{text:'32', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'35', explain:'140 cookies is 1.25 times 112, so 28 cups x 1.25 = 35 cups.'},
+        C:{text:'33', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'38', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m297', skill:'Exponents', prompt:'What is 7 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'28', explain:'This treats the exponent as multiplication (7x4), not repeated multiplication.'},
+        B:{text:'2401', explain:'7 multiplied by itself 4 times equals 2401.'},
+        C:{text:'343', explain:'That\'s 7 cubed, not 7 to the 4th power.'},
+        D:{text:'16807', explain:'That\'s 7 to the 5th power, not the 4th.'}
+      } },
+    { id:'m298', skill:'Number properties', prompt:'What is the least common multiple of 36 and 54?', correct:'A',
+      choices:{
+        A:{text:'108', explain:'108 is the smallest number that both 36 and 54 divide into evenly.'},
+        B:{text:'1944', explain:'1944 is a common multiple, but not the least one.'},
+        C:{text:'18', explain:'18 is a common factor, not a common multiple.'},
+        D:{text:'72', explain:'72 is not evenly divisible by 54.'}
+      } },
+    { id:'m299', skill:'Number properties', prompt:'What is the greatest common factor of 144 and 216?', correct:'C',
+      choices:{
+        A:{text:'18', explain:'18 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'36', explain:'36 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'72', explain:'72 is the largest number that divides both 144 and 216 evenly.'},
+        D:{text:'432', explain:'432 is a common multiple, not a common factor.'}
+      } },
+    { id:'m300', skill:'Exponents', prompt:'What is 16 squared minus 13 squared?', correct:'A',
+      choices:{
+        A:{text:'87', explain:'16 squared is 256 and 13 squared is 169, and 256-169=87.'},
+        B:{text:'169', explain:'This is 13 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m301', skill:'Algebra', prompt:'Solve for x: 12x - 21 = 99', correct:'B',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10', explain:'Add 21 to both sides (12x=120), then divide by 12 (x=10).'},
+        C:{text:'11', explain:'Overshoots the correct value.'},
+        D:{text:'120', explain:'This is the value of 12x, not x itself.'}
+      } },
+    { id:'m302', skill:'Algebra', prompt:'Solve for x: 11(x + 9) = 132', correct:'C',
+      choices:{
+        A:{text:'1', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'5', explain:'Close, but doesn\'t match subtracting 9 correctly.'},
+        C:{text:'3', explain:'Divide both sides by 11 (x+9=12), then subtract 9 (x=3).'},
+        D:{text:'12', explain:'This is the value inside the parentheses before subtracting 9, not x itself.'}
+      } },
+    { id:'m303', skill:'Algebra', prompt:'Simplify: 15(2x - 8) + 10x', correct:'D',
+      choices:{
+        A:{text:'40x - 8', explain:'This drops part of the distributed constant.'},
+        B:{text:'25x - 120', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'40x + 120', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'40x - 120', explain:'Distribute first: 30x-120+10x, then combine like terms: 40x-120.'}
+      } },
+    { id:'m304', skill:'Algebra', prompt:'If 18x - 17 = 13x + 28, what is x?', correct:'A',
+      choices:{
+        A:{text:'9', explain:'Subtract 13x from both sides (5x-17=28), then add 17 (5x=45), then divide by 5 (x=9).'},
+        B:{text:'10', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'11', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'45', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m305', skill:'Percentages', prompt:'What is 85% of 460?', correct:'C',
+      choices:{
+        A:{text:'370', explain:'Doesn\'t match 0.85x460.'},
+        B:{text:'380', explain:'Doesn\'t match the correct product.'},
+        C:{text:'391', explain:'0.85 x 460 = 391.'},
+        D:{text:'400', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m306', skill:'Fractions', prompt:'What is 7/12 + 1/9?', correct:'A',
+      choices:{
+        A:{text:'25/36', explain:'Using a common denominator of 36: 7/12=21/36 and 1/9=4/36, so 21/36+4/36=25/36.'},
+        B:{text:'8/21', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'2/3', explain:'Doesn\'t match adding 21/36 and 4/36 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m307', skill:'Percentages', prompt:'A jacket costs $189 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$240', explain:'Doesn\'t match dividing 189 by 0.7.'},
+        B:{text:'$255', explain:'Overshoots the correct original price.'},
+        C:{text:'$270', explain:'If $189 is 70% of the original price, the original price is 189 divided by 0.7, which is $270.'},
+        D:{text:'$219', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m308', skill:'Fractions', prompt:'What is 17/18 - 4/9?', correct:'D',
+      choices:{
+        A:{text:'13/9', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'2/3', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'13/18', explain:'Doesn\'t match subtracting 8/18 from 17/18.'},
+        D:{text:'1/2', explain:'Using a common denominator of 18: 4/9=8/18, so 17/18-8/18=9/18=1/2.'}
+      } },
+    { id:'m309', skill:'Geometry', prompt:'What is the area of a rectangle with length 44 and width 19?', correct:'D',
+      choices:{
+        A:{text:'63', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'126', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'760', explain:'Doesn\'t match multiplying 44 and 19 correctly.'},
+        D:{text:'836', explain:'Area of a rectangle is length x width, so 44 x 19 = 836.'}
+      } },
+    { id:'m310', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 30 and width 22?', correct:'A',
+      choices:{
+        A:{text:'104', explain:'Perimeter of a rectangle is 2(length+width), so 2(52)=104.'},
+        B:{text:'660', explain:'This is the area, not the perimeter.'},
+        C:{text:'52', explain:'This is only half the correct perimeter.'},
+        D:{text:'96', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m311', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 19?', correct:'C',
+      choices:{
+        A:{text:'361', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'76', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'6859', explain:'Volume of a cube is side cubed, so 19x19x19=6859.'},
+        D:{text:'6500', explain:'Doesn\'t match multiplying 19x19x19 correctly.'}
+      } },
+    { id:'m312', skill:'Geometry', prompt:'What is the circumference of a circle with radius 100? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'314', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'628', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 100 = 628.'},
+        C:{text:'31400', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'200', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m313', skill:'Word problems', prompt:'The sum of three consecutive integers is 438. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'144', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'145', explain:'This is the middle integer, not the largest.'},
+        C:{text:'146', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'147', explain:'Let the integers be n, n+1, n+2: 3n+3=438, so n=145, meaning the largest is 147.'}
+      } },
+    { id:'m314', skill:'Word problems', prompt:'A car travels 1350 miles in 15 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1350 / 15 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m315', skill:'Word problems', prompt:'Fifteen times a number plus 12 is 162. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 12 from both sides (15x=150), then divide by 15 (x=10).'},
+        D:{text:'150', explain:'This is the value of 15x, not x itself.'}
+      } },
+    { id:'m316', skill:'Word problems', prompt:'A recipe calls for 32 cups of flour for 128 cookies. How many cups are needed for 160 cookies?', correct:'B',
+      choices:{
+        A:{text:'36', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'40', explain:'160 cookies is 1.25 times 128, so 32 cups x 1.25 = 40 cups.'},
+        C:{text:'38', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'42', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m317', skill:'Exponents', prompt:'What is 8 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'32', explain:'This treats the exponent as multiplication (8x4), not repeated multiplication.'},
+        B:{text:'4096', explain:'8 multiplied by itself 4 times equals 4096.'},
+        C:{text:'512', explain:'That\'s 8 cubed, not 8 to the 4th power.'},
+        D:{text:'32768', explain:'That\'s 8 to the 5th power, not the 4th.'}
+      } },
+    { id:'m318', skill:'Number properties', prompt:'What is the least common multiple of 40 and 60?', correct:'A',
+      choices:{
+        A:{text:'120', explain:'120 is the smallest number that both 40 and 60 divide into evenly.'},
+        B:{text:'2400', explain:'2400 is a common multiple, but not the least one.'},
+        C:{text:'20', explain:'20 is a common factor, not a common multiple.'},
+        D:{text:'80', explain:'80 is not evenly divisible by 60.'}
+      } },
+    { id:'m319', skill:'Number properties', prompt:'What is the greatest common factor of 160 and 240?', correct:'C',
+      choices:{
+        A:{text:'20', explain:'20 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'40', explain:'40 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'80', explain:'80 is the largest number that divides both 160 and 240 evenly.'},
+        D:{text:'480', explain:'480 is a common multiple, not a common factor.'}
+      } },
+    { id:'m320', skill:'Exponents', prompt:'What is 17 squared minus 14 squared?', correct:'A',
+      choices:{
+        A:{text:'93', explain:'17 squared is 289 and 14 squared is 196, and 289-196=93.'},
+        B:{text:'196', explain:'This is 14 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m321', skill:'Algebra', prompt:'Solve for x: 13x - 22 = 108', correct:'B',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10', explain:'Add 22 to both sides (13x=130), then divide by 13 (x=10).'},
+        C:{text:'11', explain:'Overshoots the correct value.'},
+        D:{text:'130', explain:'This is the value of 13x, not x itself.'}
+      } },
+    { id:'m322', skill:'Algebra', prompt:'Solve for x: 12(x + 10) = 144', correct:'C',
+      choices:{
+        A:{text:'0', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'4', explain:'Close, but doesn\'t match subtracting 10 correctly.'},
+        C:{text:'2', explain:'Divide both sides by 12 (x+10=12), then subtract 10 (x=2).'},
+        D:{text:'12', explain:'This is the value inside the parentheses before subtracting 10, not x itself.'}
+      } },
+    { id:'m323', skill:'Algebra', prompt:'Simplify: 16(2x - 9) + 11x', correct:'D',
+      choices:{
+        A:{text:'43x - 9', explain:'This drops part of the distributed constant.'},
+        B:{text:'27x - 144', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'43x + 144', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'43x - 144', explain:'Distribute first: 32x-144+11x, then combine like terms: 43x-144.'}
+      } },
+    { id:'m324', skill:'Algebra', prompt:'If 19x - 19 = 14x + 31, what is x?', correct:'A',
+      choices:{
+        A:{text:'10', explain:'Subtract 14x from both sides (5x-19=31), then add 19 (5x=50), then divide by 5 (x=10).'},
+        B:{text:'11', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'12', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'50', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m325', skill:'Percentages', prompt:'What is 90% of 480?', correct:'C',
+      choices:{
+        A:{text:'420', explain:'Doesn\'t match 0.9x480.'},
+        B:{text:'425', explain:'Doesn\'t match the correct product.'},
+        C:{text:'432', explain:'0.9 x 480 = 432.'},
+        D:{text:'440', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m326', skill:'Fractions', prompt:'What is 7/10 + 1/6?', correct:'A',
+      choices:{
+        A:{text:'13/15', explain:'Using a common denominator of 30: 7/10=21/30 and 1/6=5/30, so 21/30+5/30=26/30=13/15.'},
+        B:{text:'8/16', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'5/6', explain:'Doesn\'t match adding 21/30 and 5/30 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m327', skill:'Percentages', prompt:'A jacket costs $210 after a 25% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$250', explain:'Doesn\'t match dividing 210 by 0.75.'},
+        B:{text:'$260', explain:'Overshoots the correct original price.'},
+        C:{text:'$280', explain:'If $210 is 75% of the original price, the original price is 210 divided by 0.75, which is $280.'},
+        D:{text:'$235', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m328', skill:'Fractions', prompt:'What is 19/20 - 3/10?', correct:'D',
+      choices:{
+        A:{text:'16/10', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'15/20', explain:'Doesn\'t match subtracting 6/20 from 19/20.'},
+        D:{text:'13/20', explain:'Using a common denominator of 20: 3/10=6/20, so 19/20-6/20=13/20.'}
+      } },
+    { id:'m329', skill:'Geometry', prompt:'What is the area of a rectangle with length 48 and width 21?', correct:'D',
+      choices:{
+        A:{text:'69', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'138', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'950', explain:'Doesn\'t match multiplying 48 and 21 correctly.'},
+        D:{text:'1008', explain:'Area of a rectangle is length x width, so 48 x 21 = 1008.'}
+      } },
+    { id:'m330', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 33 and width 25?', correct:'A',
+      choices:{
+        A:{text:'116', explain:'Perimeter of a rectangle is 2(length+width), so 2(58)=116.'},
+        B:{text:'825', explain:'This is the area, not the perimeter.'},
+        C:{text:'58', explain:'This is only half the correct perimeter.'},
+        D:{text:'108', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m331', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 20?', correct:'C',
+      choices:{
+        A:{text:'400', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'80', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'8000', explain:'Volume of a cube is side cubed, so 20x20x20=8000.'},
+        D:{text:'7500', explain:'Doesn\'t match multiplying 20x20x20 correctly.'}
+      } },
+    { id:'m332', skill:'Geometry', prompt:'What is the circumference of a circle with radius 110? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'345.4', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'690.8', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 110 = 690.8.'},
+        C:{text:'37994', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'220', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m333', skill:'Word problems', prompt:'The sum of three consecutive integers is 471. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'155', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'156', explain:'This is the middle integer, not the largest.'},
+        C:{text:'157', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'158', explain:'Let the integers be n, n+1, n+2: 3n+3=471, so n=156, meaning the largest is 158.'}
+      } },
+    { id:'m334', skill:'Word problems', prompt:'A car travels 1440 miles in 16 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1440 / 16 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m335', skill:'Word problems', prompt:'Sixteen times a number plus 13 is 173. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 13 from both sides (16x=160), then divide by 16 (x=10).'},
+        D:{text:'160', explain:'This is the value of 16x, not x itself.'}
+      } },
+    { id:'m336', skill:'Word problems', prompt:'A recipe calls for 36 cups of flour for 144 cookies. How many cups are needed for 180 cookies?', correct:'B',
+      choices:{
+        A:{text:'40', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'45', explain:'180 cookies is 1.25 times 144, so 36 cups x 1.25 = 45 cups.'},
+        C:{text:'42', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'48', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m337', skill:'Exponents', prompt:'What is 9 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'36', explain:'This treats the exponent as multiplication (9x4), not repeated multiplication.'},
+        B:{text:'6561', explain:'9 multiplied by itself 4 times equals 6561.'},
+        C:{text:'729', explain:'That\'s 9 cubed, not 9 to the 4th power.'},
+        D:{text:'59049', explain:'That\'s 9 to the 5th power, not the 4th.'}
+      } },
+    { id:'m338', skill:'Number properties', prompt:'What is the least common multiple of 45 and 60?', correct:'A',
+      choices:{
+        A:{text:'180', explain:'180 is the smallest number that both 45 and 60 divide into evenly.'},
+        B:{text:'2700', explain:'2700 is a common multiple, but not the least one.'},
+        C:{text:'15', explain:'15 is a common factor, not a common multiple.'},
+        D:{text:'90', explain:'90 is not evenly divisible by 45.'}
+      } },
+    { id:'m339', skill:'Number properties', prompt:'What is the greatest common factor of 180 and 240?', correct:'C',
+      choices:{
+        A:{text:'20', explain:'20 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'30', explain:'30 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'60', explain:'60 is the largest number that divides both 180 and 240 evenly.'},
+        D:{text:'720', explain:'720 is a common multiple, not a common factor.'}
+      } },
+    { id:'m340', skill:'Exponents', prompt:'What is 18 squared minus 15 squared?', correct:'A',
+      choices:{
+        A:{text:'99', explain:'18 squared is 324 and 15 squared is 225, and 324-225=99.'},
+        B:{text:'225', explain:'This is 15 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m341', skill:'Algebra', prompt:'Solve for x: 14x - 24 = 116', correct:'B',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10', explain:'Add 24 to both sides (14x=140), then divide by 14 (x=10).'},
+        C:{text:'11', explain:'Overshoots the correct value.'},
+        D:{text:'140', explain:'This is the value of 14x, not x itself.'}
+      } },
+    { id:'m342', skill:'Algebra', prompt:'Solve for x: 13(x + 11) = 169', correct:'C',
+      choices:{
+        A:{text:'0', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'4', explain:'Close, but doesn\'t match subtracting 11 correctly.'},
+        C:{text:'2', explain:'Divide both sides by 13 (x+11=13), then subtract 11 (x=2).'},
+        D:{text:'13', explain:'This is the value inside the parentheses before subtracting 11, not x itself.'}
+      } },
+    { id:'m343', skill:'Algebra', prompt:'Simplify: 17(2x - 10) + 12x', correct:'D',
+      choices:{
+        A:{text:'46x - 10', explain:'This drops part of the distributed constant.'},
+        B:{text:'29x - 170', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'46x + 170', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'46x - 170', explain:'Distribute first: 34x-170+12x, then combine like terms: 46x-170.'}
+      } },
+    { id:'m344', skill:'Algebra', prompt:'If 20x - 21 = 15x + 34, what is x?', correct:'A',
+      choices:{
+        A:{text:'11', explain:'Subtract 15x from both sides (5x-21=34), then add 21 (5x=55), then divide by 5 (x=11).'},
+        B:{text:'12', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'13', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'55', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m345', skill:'Percentages', prompt:'What is 95% of 500?', correct:'C',
+      choices:{
+        A:{text:'460', explain:'Doesn\'t match 0.95x500.'},
+        B:{text:'465', explain:'Doesn\'t match the correct product.'},
+        C:{text:'475', explain:'0.95 x 500 = 475.'},
+        D:{text:'485', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m346', skill:'Fractions', prompt:'What is 7/8 + 1/10?', correct:'A',
+      choices:{
+        A:{text:'39/40', explain:'Using a common denominator of 40: 7/8=35/40 and 1/10=4/40, so 35/40+4/40=39/40.'},
+        B:{text:'8/18', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'9/10', explain:'Doesn\'t match adding 35/40 and 4/40 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m347', skill:'Percentages', prompt:'A jacket costs $231 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$280', explain:'Doesn\'t match dividing 231 by 0.7.'},
+        B:{text:'$300', explain:'Overshoots the correct original price.'},
+        C:{text:'$330', explain:'If $231 is 70% of the original price, the original price is 231 divided by 0.7, which is $330.'},
+        D:{text:'$261', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m348', skill:'Fractions', prompt:'What is 21/22 - 5/11?', correct:'D',
+      choices:{
+        A:{text:'16/11', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'3/4', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'8/11', explain:'This comes from incorrectly subtracting 5/22 (instead of the correctly converted 10/22) from 21/22.'},
+        D:{text:'1/2', explain:'Using a common denominator of 22: 5/11=10/22, so 21/22-10/22=11/22=1/2.'}
+      } },
+    { id:'m349', skill:'Geometry', prompt:'What is the area of a rectangle with length 52 and width 23?', correct:'D',
+      choices:{
+        A:{text:'75', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'150', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'1100', explain:'Doesn\'t match multiplying 52 and 23 correctly.'},
+        D:{text:'1196', explain:'Area of a rectangle is length x width, so 52 x 23 = 1196.'}
+      } },
+    { id:'m350', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 36 and width 28?', correct:'A',
+      choices:{
+        A:{text:'128', explain:'Perimeter of a rectangle is 2(length+width), so 2(64)=128.'},
+        B:{text:'1008', explain:'This is the area, not the perimeter.'},
+        C:{text:'64', explain:'This is only half the correct perimeter.'},
+        D:{text:'118', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m351', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 21?', correct:'C',
+      choices:{
+        A:{text:'441', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'84', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'9261', explain:'Volume of a cube is side cubed, so 21x21x21=9261.'},
+        D:{text:'8800', explain:'Doesn\'t match multiplying 21x21x21 correctly.'}
+      } },
+    { id:'m352', skill:'Geometry', prompt:'What is the circumference of a circle with radius 120? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'376.8', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'753.6', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 120 = 753.6.'},
+        C:{text:'45216', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'240', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m353', skill:'Word problems', prompt:'The sum of three consecutive integers is 504. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'166', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'167', explain:'This is the middle integer, not the largest.'},
+        C:{text:'168', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'169', explain:'Let the integers be n, n+1, n+2: 3n+3=504, so n=167, meaning the largest is 169.'}
+      } },
+    { id:'m354', skill:'Word problems', prompt:'A car travels 1530 miles in 17 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1530 / 17 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m355', skill:'Word problems', prompt:'Seventeen times a number plus 14 is 184. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 14 from both sides (17x=170), then divide by 17 (x=10).'},
+        D:{text:'170', explain:'This is the value of 17x, not x itself.'}
+      } },
+    { id:'m356', skill:'Word problems', prompt:'A recipe calls for 40 cups of flour for 160 cookies. How many cups are needed for 200 cookies?', correct:'B',
+      choices:{
+        A:{text:'44', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'50', explain:'200 cookies is 1.25 times 160, so 40 cups x 1.25 = 50 cups.'},
+        C:{text:'47', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'52', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m357', skill:'Exponents', prompt:'What is 10 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'40', explain:'This treats the exponent as multiplication (10x4), not repeated multiplication.'},
+        B:{text:'10000', explain:'10 multiplied by itself 4 times equals 10000.'},
+        C:{text:'1000', explain:'That\'s 10 cubed, not 10 to the 4th power.'},
+        D:{text:'100000', explain:'That\'s 10 to the 5th power, not the 4th.'}
+      } },
+    { id:'m358', skill:'Number properties', prompt:'What is the least common multiple of 50 and 75?', correct:'A',
+      choices:{
+        A:{text:'150', explain:'150 is the smallest number that both 50 and 75 divide into evenly.'},
+        B:{text:'3750', explain:'3750 is a common multiple, but not the least one.'},
+        C:{text:'25', explain:'25 is a common factor, not a common multiple.'},
+        D:{text:'100', explain:'100 is not evenly divisible by 75.'}
+      } },
+    { id:'m359', skill:'Number properties', prompt:'What is the greatest common factor of 200 and 280?', correct:'C',
+      choices:{
+        A:{text:'10', explain:'10 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'20', explain:'20 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'40', explain:'40 is the largest number that divides both 200 and 280 evenly.'},
+        D:{text:'1400', explain:'1400 is a common multiple, not a common factor.'}
+      } },
+    { id:'m360', skill:'Exponents', prompt:'What is 19 squared minus 16 squared?', correct:'A',
+      choices:{
+        A:{text:'105', explain:'19 squared is 361 and 16 squared is 256, and 361-256=105.'},
+        B:{text:'256', explain:'This is 16 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m361', skill:'Algebra', prompt:'Solve for x: 15x - 26 = 124', correct:'B',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10', explain:'Add 26 to both sides (15x=150), then divide by 15 (x=10).'},
+        C:{text:'11', explain:'Overshoots the correct value.'},
+        D:{text:'150', explain:'This is the value of 15x, not x itself.'}
+      } },
+    { id:'m362', skill:'Algebra', prompt:'Solve for x: 14(x + 12) = 196', correct:'C',
+      choices:{
+        A:{text:'0', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'4', explain:'Close, but doesn\'t match subtracting 12 correctly.'},
+        C:{text:'2', explain:'Divide both sides by 14 (x+12=14), then subtract 12 (x=2).'},
+        D:{text:'14', explain:'This is the value inside the parentheses before subtracting 12, not x itself.'}
+      } },
+    { id:'m363', skill:'Algebra', prompt:'Simplify: 18(2x - 11) + 13x', correct:'D',
+      choices:{
+        A:{text:'49x - 11', explain:'This drops part of the distributed constant.'},
+        B:{text:'31x - 198', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'49x + 198', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'49x - 198', explain:'Distribute first: 36x-198+13x, then combine like terms: 49x-198.'}
+      } },
+    { id:'m364', skill:'Algebra', prompt:'If 21x - 23 = 16x + 37, what is x?', correct:'A',
+      choices:{
+        A:{text:'12', explain:'Subtract 16x from both sides (5x-23=37), then add 23 (5x=60), then divide by 5 (x=12).'},
+        B:{text:'13', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'14', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'60', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m365', skill:'Percentages', prompt:'What is 90% of 520?', correct:'C',
+      choices:{
+        A:{text:'450', explain:'Doesn\'t match 0.9x520.'},
+        B:{text:'460', explain:'Doesn\'t match the correct product.'},
+        C:{text:'468', explain:'0.9 x 520 = 468.'},
+        D:{text:'480', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m366', skill:'Fractions', prompt:'What is 7/12 + 1/8?', correct:'A',
+      choices:{
+        A:{text:'17/24', explain:'Using a common denominator of 24: 7/12=14/24 and 1/8=3/24, so 14/24+3/24=17/24.'},
+        B:{text:'8/20', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'2/3', explain:'Doesn\'t match adding 14/24 and 3/24 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m367', skill:'Percentages', prompt:'A jacket costs $252 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$300', explain:'Doesn\'t match dividing 252 by 0.7.'},
+        B:{text:'$320', explain:'Overshoots the correct original price.'},
+        C:{text:'$360', explain:'If $252 is 70% of the original price, the original price is 252 divided by 0.7, which is $360.'},
+        D:{text:'$282', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m368', skill:'Fractions', prompt:'What is 23/24 - 7/12?', correct:'D',
+      choices:{
+        A:{text:'16/12', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'1/2', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'5/8', explain:'Doesn\'t match subtracting 14/24 from 23/24 correctly.'},
+        D:{text:'3/8', explain:'Using a common denominator of 24: 7/12=14/24, so 23/24-14/24=9/24=3/8.'}
+      } },
+    { id:'m369', skill:'Geometry', prompt:'What is the area of a rectangle with length 56 and width 25?', correct:'D',
+      choices:{
+        A:{text:'81', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'162', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'1300', explain:'Doesn\'t match multiplying 56 and 25 correctly.'},
+        D:{text:'1400', explain:'Area of a rectangle is length x width, so 56 x 25 = 1400.'}
+      } },
+    { id:'m370', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 39 and width 31?', correct:'A',
+      choices:{
+        A:{text:'140', explain:'Perimeter of a rectangle is 2(length+width), so 2(70)=140.'},
+        B:{text:'1209', explain:'This is the area, not the perimeter.'},
+        C:{text:'70', explain:'This is only half the correct perimeter.'},
+        D:{text:'132', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m371', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 22?', correct:'C',
+      choices:{
+        A:{text:'484', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'88', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'10648', explain:'Volume of a cube is side cubed, so 22x22x22=10648.'},
+        D:{text:'10000', explain:'Doesn\'t match multiplying 22x22x22 correctly.'}
+      } },
+    { id:'m372', skill:'Geometry', prompt:'What is the circumference of a circle with radius 130? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'408.2', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'816.4', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 130 = 816.4.'},
+        C:{text:'53066', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'260', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m373', skill:'Word problems', prompt:'The sum of three consecutive integers is 537. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'177', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'178', explain:'This is the middle integer, not the largest.'},
+        C:{text:'179', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'180', explain:'Let the integers be n, n+1, n+2: 3n+3=537, so n=178, meaning the largest is 180.'}
+      } },
+    { id:'m374', skill:'Word problems', prompt:'A car travels 1620 miles in 18 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1620 / 18 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m375', skill:'Word problems', prompt:'Eighteen times a number plus 15 is 195. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 15 from both sides (18x=180), then divide by 18 (x=10).'},
+        D:{text:'180', explain:'This is the value of 18x, not x itself.'}
+      } },
+    { id:'m376', skill:'Word problems', prompt:'A recipe calls for 44 cups of flour for 176 cookies. How many cups are needed for 220 cookies?', correct:'B',
+      choices:{
+        A:{text:'48', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'55', explain:'220 cookies is 1.25 times 176, so 44 cups x 1.25 = 55 cups.'},
+        C:{text:'51', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'58', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m377', skill:'Exponents', prompt:'What is 11 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'44', explain:'This treats the exponent as multiplication (11x4), not repeated multiplication.'},
+        B:{text:'14641', explain:'11 multiplied by itself 4 times equals 14641.'},
+        C:{text:'1331', explain:'That\'s 11 cubed, not 11 to the 4th power.'},
+        D:{text:'161051', explain:'That\'s 11 to the 5th power, not the 4th.'}
+      } },
+    { id:'m378', skill:'Number properties', prompt:'What is the least common multiple of 56 and 84?', correct:'A',
+      choices:{
+        A:{text:'168', explain:'168 is the smallest number that both 56 and 84 divide into evenly.'},
+        B:{text:'4704', explain:'4704 is a common multiple, but not the least one.'},
+        C:{text:'28', explain:'28 is a common factor, not a common multiple.'},
+        D:{text:'112', explain:'112 is not evenly divisible by 84.'}
+      } },
+    { id:'m379', skill:'Number properties', prompt:'What is the greatest common factor of 224 and 280?', correct:'C',
+      choices:{
+        A:{text:'14', explain:'14 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'28', explain:'28 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'56', explain:'56 is the largest number that divides both 224 and 280 evenly.'},
+        D:{text:'1120', explain:'1120 is a common multiple, not a common factor.'}
+      } },
+    { id:'m380', skill:'Exponents', prompt:'What is 20 squared minus 17 squared?', correct:'A',
+      choices:{
+        A:{text:'111', explain:'20 squared is 400 and 17 squared is 289, and 400-289=111.'},
+        B:{text:'289', explain:'This is 17 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
+      } },
+    { id:'m381', skill:'Algebra', prompt:'Solve for x: 16x - 27 = 133', correct:'B',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'10', explain:'Add 27 to both sides (16x=160), then divide by 16 (x=10).'},
+        C:{text:'11', explain:'Overshoots the correct value.'},
+        D:{text:'160', explain:'This is the value of 16x, not x itself.'}
+      } },
+    { id:'m382', skill:'Algebra', prompt:'Solve for x: 15(x + 13) = 225', correct:'C',
+      choices:{
+        A:{text:'0', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'4', explain:'Close, but doesn\'t match subtracting 13 correctly.'},
+        C:{text:'2', explain:'Divide both sides by 15 (x+13=15), then subtract 13 (x=2).'},
+        D:{text:'15', explain:'This is the value inside the parentheses before subtracting 13, not x itself.'}
+      } },
+    { id:'m383', skill:'Algebra', prompt:'Simplify: 19(2x - 12) + 14x', correct:'D',
+      choices:{
+        A:{text:'52x - 12', explain:'This drops part of the distributed constant.'},
+        B:{text:'33x - 228', explain:'This incorrectly combines the x-term with the constant multiplier.'},
+        C:{text:'52x + 228', explain:'This changes the sign of the constant incorrectly.'},
+        D:{text:'52x - 228', explain:'Distribute first: 38x-228+14x, then combine like terms: 52x-228.'}
+      } },
+    { id:'m384', skill:'Algebra', prompt:'If 22x - 25 = 17x + 40, what is x?', correct:'A',
+      choices:{
+        A:{text:'13', explain:'Subtract 17x from both sides (5x-25=40), then add 25 (5x=65), then divide by 5 (x=13).'},
+        B:{text:'14', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'15', explain:'Doesn\'t match the correct steps.'},
+        D:{text:'65', explain:'This is the value of 5x, not x itself.'}
+      } },
+    { id:'m385', skill:'Percentages', prompt:'What is 85% of 560?', correct:'C',
+      choices:{
+        A:{text:'460', explain:'Doesn\'t match 0.85x560.'},
+        B:{text:'470', explain:'Doesn\'t match the correct product.'},
+        C:{text:'476', explain:'0.85 x 560 = 476.'},
+        D:{text:'485', explain:'Overshoots the correct product.'}
+      } },
+    { id:'m386', skill:'Fractions', prompt:'What is 7/9 + 1/12?', correct:'A',
+      choices:{
+        A:{text:'31/36', explain:'Using a common denominator of 36: 7/9=28/36 and 1/12=3/36, so 28/36+3/36=31/36.'},
+        B:{text:'8/21', explain:'Adding numerators and denominators directly isn\'t how fractions are added.'},
+        C:{text:'5/6', explain:'Doesn\'t match adding 28/36 and 3/36 correctly.'},
+        D:{text:'1', explain:'Overshoots the correct sum.'}
+      } },
+    { id:'m387', skill:'Percentages', prompt:'A jacket costs $273 after a 30% discount. What was the original price?', correct:'C',
+      choices:{
+        A:{text:'$320', explain:'Doesn\'t match dividing 273 by 0.7.'},
+        B:{text:'$340', explain:'Overshoots the correct original price.'},
+        C:{text:'$390', explain:'If $273 is 70% of the original price, the original price is 273 divided by 0.7, which is $390.'},
+        D:{text:'$303', explain:'Doesn\'t match reversing the discount correctly.'}
+      } },
+    { id:'m388', skill:'Fractions', prompt:'What is 25/26 - 6/13?', correct:'D',
+      choices:{
+        A:{text:'19/13', explain:'This doesn\'t represent a valid simplified fraction result here.'},
+        B:{text:'2/3', explain:'Doesn\'t match the correct subtraction.'},
+        C:{text:'5/8', explain:'Doesn\'t match subtracting 12/26 from 25/26.'},
+        D:{text:'1/2', explain:'Using a common denominator of 26: 6/13=12/26, so 25/26-12/26=13/26=1/2.'}
+      } },
+    { id:'m389', skill:'Geometry', prompt:'What is the area of a rectangle with length 60 and width 27?', correct:'D',
+      choices:{
+        A:{text:'87', explain:'This is the sum of length and width, related to perimeter, not area.'},
+        B:{text:'174', explain:'This doubles the sum, still a perimeter-related number.'},
+        C:{text:'1520', explain:'Doesn\'t match multiplying 60 and 27 correctly.'},
+        D:{text:'1620', explain:'Area of a rectangle is length x width, so 60 x 27 = 1620.'}
+      } },
+    { id:'m390', skill:'Geometry', prompt:'What is the perimeter of a rectangle with length 42 and width 34?', correct:'A',
+      choices:{
+        A:{text:'152', explain:'Perimeter of a rectangle is 2(length+width), so 2(76)=152.'},
+        B:{text:'1428', explain:'This is the area, not the perimeter.'},
+        C:{text:'76', explain:'This is only half the correct perimeter.'},
+        D:{text:'142', explain:'Doesn\'t match the correct perimeter formula.'}
+      } },
+    { id:'m391', skill:'Geometry', prompt:'What is the volume of a cube with a side length of 23?', correct:'C',
+      choices:{
+        A:{text:'529', explain:'This is only the area of one face, not the full volume.'},
+        B:{text:'92', explain:'This resembles a perimeter-style calculation, not volume.'},
+        C:{text:'12167', explain:'Volume of a cube is side cubed, so 23x23x23=12167.'},
+        D:{text:'11500', explain:'Doesn\'t match multiplying 23x23x23 correctly.'}
+      } },
+    { id:'m392', skill:'Geometry', prompt:'What is the circumference of a circle with radius 140? (use pi \u2248 3.14)', correct:'B',
+      choices:{
+        A:{text:'439.6', explain:'This is pi x radius, missing the factor of 2.'},
+        B:{text:'879.2', explain:'Circumference = 2 x pi x radius = 2 x 3.14 x 140 = 879.2.'},
+        C:{text:'61544', explain:'This is actually the area (pi x radius squared), not circumference.'},
+        D:{text:'280', explain:'This is just the radius times 2, not the circumference formula.'}
+      } },
+    { id:'m393', skill:'Word problems', prompt:'The sum of three consecutive integers is 570. What is the largest?', correct:'D',
+      choices:{
+        A:{text:'188', explain:'This is the smallest integer, not the largest.'},
+        B:{text:'189', explain:'This is the middle integer, not the largest.'},
+        C:{text:'190', explain:'Doesn\'t match the correct largest integer.'},
+        D:{text:'191', explain:'Let the integers be n, n+1, n+2: 3n+3=570, so n=189, meaning the largest is 191.'}
+      } },
+    { id:'m394', skill:'Word problems', prompt:'A car travels 1710 miles in 19 hours. What is its average speed?', correct:'A',
+      choices:{
+        A:{text:'90 mph', explain:'Speed = distance divided by time, so 1710 / 19 = 90 mph.'},
+        B:{text:'85 mph', explain:'Doesn\'t match the correct division.'},
+        C:{text:'95 mph', explain:'Overshoots the correct speed.'},
+        D:{text:'100 mph', explain:'This overshoots the correct speed by even more.'}
+      } },
+    { id:'m395', skill:'Word problems', prompt:'Nineteen times a number plus 16 is 206. What is the number?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'Doesn\'t match the correct steps.'},
+        B:{text:'9.5', explain:'Doesn\'t match solving the equation correctly.'},
+        C:{text:'10', explain:'Subtract 16 from both sides (19x=190), then divide by 19 (x=10).'},
+        D:{text:'190', explain:'This is the value of 19x, not x itself.'}
+      } },
+    { id:'m396', skill:'Word problems', prompt:'A recipe calls for 48 cups of flour for 192 cookies. How many cups are needed for 240 cookies?', correct:'B',
+      choices:{
+        A:{text:'52', explain:'Doesn\'t match the correct proportional scaling.'},
+        B:{text:'60', explain:'240 cookies is 1.25 times 192, so 48 cups x 1.25 = 60 cups.'},
+        C:{text:'56', explain:'Doesn\'t match scaling the ratio correctly.'},
+        D:{text:'64', explain:'This overshoots the correctly scaled amount.'}
+      } },
+    { id:'m397', skill:'Exponents', prompt:'What is 12 to the 4th power?', correct:'B',
+      choices:{
+        A:{text:'48', explain:'This treats the exponent as multiplication (12x4), not repeated multiplication.'},
+        B:{text:'20736', explain:'12 multiplied by itself 4 times equals 20736.'},
+        C:{text:'1728', explain:'That\'s 12 cubed, not 12 to the 4th power.'},
+        D:{text:'248832', explain:'That\'s 12 to the 5th power, not the 4th.'}
+      } },
+    { id:'m398', skill:'Number properties', prompt:'What is the least common multiple of 63 and 84?', correct:'A',
+      choices:{
+        A:{text:'252', explain:'252 is the smallest number that both 63 and 84 divide into evenly.'},
+        B:{text:'5292', explain:'5292 is a common multiple, but not the least one.'},
+        C:{text:'21', explain:'21 is a common factor, not a common multiple.'},
+        D:{text:'168', explain:'168 is not evenly divisible by 63.'}
+      } },
+    { id:'m399', skill:'Number properties', prompt:'What is the greatest common factor of 252 and 315?', correct:'C',
+      choices:{
+        A:{text:'9', explain:'9 divides both, but it isn\'t the greatest common factor.'},
+        B:{text:'21', explain:'21 divides both, but it isn\'t the greatest common factor.'},
+        C:{text:'63', explain:'63 is the largest number that divides both 252 and 315 evenly.'},
+        D:{text:'1260', explain:'1260 is a common multiple, not a common factor.'}
+      } },
+    { id:'m400', skill:'Exponents', prompt:'What is 21 squared minus 18 squared?', correct:'A',
+      choices:{
+        A:{text:'117', explain:'21 squared is 441 and 18 squared is 324, and 441-324=117.'},
+        B:{text:'324', explain:'This is 18 squared alone, not the full subtraction.'},
+        C:{text:'9', explain:'This doesn\'t match calculating both exponents correctly before subtracting.'},
+        D:{text:'63', explain:'Doesn\'t match the correct subtraction.'}
       } }
   ],
 
@@ -4962,6 +9637,1686 @@ const QUESTIONS = {
         B:{text:'Because the printer jammed, the meeting was delayed.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
         C:{text:'The printer jammed the meeting was delayed.', explain:'This runs the two ideas together with no punctuation or connector.'},
         D:{text:'The printer jammed; delayed, the meeting was.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l161', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The committee were divided on the issue.', explain:'"Committee" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The committee was divided on the issue.', explain:'This correctly treats "committee" as a singular unit.'},
+        C:{text:'The members are divided too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l162', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Physics are a challenging subject.', explain:'"Physics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Physics is a challenging subject.', explain:'This correctly treats "physics" as singular.'},
+        C:{text:'Chemistry is challenging too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l163', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one requirement honesty.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one requirement: honesty.', explain:'A colon correctly introduces the explanation of her requirement.'},
+        C:{text:'She had one requirement, honesty.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one requirement; honesty.', explain:'A semicolon needs a complete sentence on both sides, and "honesty" alone isn\'t complete.'}
+      } },
+    { id:'l164', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'We need milk eggs and bread.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'We need milk, eggs, and bread.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'We need milk, eggs and bread,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'We need, milk eggs and bread.', explain:'The comma right after "need" is misplaced.'}
+      } },
+    { id:'l165', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The teacher praised him and I.', explain:'As the object of "praised," this should be "him and me," not "him and I."'},
+        B:{text:'The teacher praised him and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The teacher praised us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l166', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Give it to whomever needs it most.', explain:'Since this pronoun is the subject of "needs," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Give it to whoever needs it most.', explain:'This correctly uses "whoever" as the subject of "needs."'},
+        C:{text:'Whoever needs it most should have it.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l167', skill:'Sentence combining', prompt:'What is the best way to combine: "The bus was late. Students missed first period."?', correct:'B',
+      choices:{
+        A:{text:'The bus was late, students missed first period.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the bus was late, students missed first period.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The bus was late students missed first period.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The bus was late; missed, students first period.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l168', skill:'Sentence combining', prompt:'What is the best way to combine: "The battery died. The phone shut off."?', correct:'B',
+      choices:{
+        A:{text:'The battery died, the phone shut off.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the battery died, the phone shut off.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The battery died the phone shut off.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The battery died; off, the phone shut.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l169', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We visited the Lincoln memorial in Washington.', explain:'"Memorial" should be capitalized as part of the proper name "Lincoln Memorial."'},
+        B:{text:'We visited the Lincoln Memorial in washington.', explain:'"Washington" is a proper noun and should be capitalized.'},
+        C:{text:'We visited the Lincoln Memorial in Washington.', explain:'Both "Lincoln Memorial" and "Washington" are correctly capitalized as proper nouns.'},
+        D:{text:'we visited the Lincoln Memorial in Washington.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l170', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She teaches at Boston university in massachusetts.', explain:'"University" should be capitalized as part of the proper name "Boston University," and Massachusetts needs capitalizing too.'},
+        B:{text:'She teaches at Boston University in massachusetts.', explain:'"Massachusetts" is a proper noun and should be capitalized.'},
+        C:{text:'She teaches at Boston University in Massachusetts.', explain:'Both "Boston University" and "Massachusetts" are correctly capitalized as proper nouns.'},
+        D:{text:'she teaches at Boston University in Massachusetts.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l171', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Anyone can join if they pay the fee.', explain:'"Anyone" is grammatically singular, so traditional agreement calls for "he or she" rather than "they."'},
+        B:{text:'Anyone can join if he or she pays the fee.', explain:'This correctly uses a singular pronoun to match the singular "anyone."'},
+        C:{text:'All members must pay the fee.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l172', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the cats finished their food.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "its" rather than "their."'},
+        B:{text:'Neither of the cats finished its food.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both cats finished their food.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l173', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The theater changed it's schedule.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The theater changed its schedule.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The schedule belongs to the theater.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l174', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Theyll be here soon.', explain:'This is missing the apostrophe needed for the contraction "they\'ll" (they will).'},
+        B:{text:"They'll be here soon.", explain:'This correctly uses the contraction "they\'ll" (they will).'},
+        C:{text:'Their arrival is expected soon.', explain:'This correctly uses the possessive "their."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l175', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The store closed, shoppers left disappointed.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The store closed; shoppers left disappointed.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The store closed shoppers left disappointed.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The store closed. and shoppers left.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l176', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring three things a map, water, and snacks.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring three things: a map, water, and snacks.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring three things, a map, water, and snacks.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring three things; a map, water, and snacks.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l177', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The oxes' yoke was heavy.", explain:'"Ox" has the irregular plural "oxen," so the possessive should be "oxen\'s," not "oxes\'."'},
+        B:{text:"The oxen's yoke was heavy.", explain:'This correctly forms the possessive of the irregular plural "oxen."'},
+        C:{text:'The yoke belonged to the oxen.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l178', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The bosss car was new.', explain:'This needs an apostrophe to show possession: "boss\'s car."'},
+        B:{text:"The boss's car was new.", explain:'This correctly uses the possessive "boss\'s."'},
+        C:{text:'The car belonged to the boss.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l179', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Physics require careful calculation.', explain:'"Physics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Physics requires careful calculation.', explain:'This correctly treats "physics" as singular.'},
+        C:{text:'Chemistry requires careful calculation too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l180', skill:'Sentence combining', prompt:'What is the best way to combine: "The Wi-Fi went down. Everyone lost connection."?', correct:'B',
+      choices:{
+        A:{text:'The Wi-Fi went down, everyone lost connection.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the Wi-Fi went down, everyone lost connection.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The Wi-Fi went down everyone lost connection.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The Wi-Fi went down; connection, everyone lost.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l181', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The pack of wolves were hunting together.', explain:'"Pack" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The pack of wolves was hunting together.', explain:'This correctly treats "pack" as a singular unit.'},
+        C:{text:'The wolves are hunting together too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l182', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Mathematics are her strongest subject.', explain:'"Mathematics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Mathematics is her strongest subject.', explain:'This correctly treats "mathematics" as singular.'},
+        C:{text:'Science is her strongest subject too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l183', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He had one dream to fly a plane.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'He had one dream: to fly a plane.', explain:'A colon correctly introduces the explanation of his dream.'},
+        C:{text:'He had one dream, to fly a plane.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'He had one dream; to fly a plane.', explain:'A semicolon needs a complete sentence on both sides, and "to fly a plane" alone isn\'t complete.'}
+      } },
+    { id:'l184', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She packed shirts socks and shoes.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'She packed shirts, socks, and shoes.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'She packed shirts, socks and shoes,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'She packed, shirts socks and shoes.', explain:'The comma right after "packed" is misplaced.'}
+      } },
+    { id:'l185', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'This decision was made by my parents and I.', explain:'As the object of "by," this should be "my parents and me," not "my parents and I."'},
+        B:{text:'This decision was made by my parents and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'This decision was made by them.', explain:'This correctly uses the object pronoun "them."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l186', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Select whomever seems most prepared.', explain:'Since this pronoun is the subject of "seems," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Select whoever seems most prepared.', explain:'This correctly uses "whoever" as the subject of "seems."'},
+        C:{text:'Whoever seems most prepared will be selected.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l187', skill:'Sentence combining', prompt:'What is the best way to combine: "The fire alarm sounded. Everyone exited calmly."?', correct:'B',
+      choices:{
+        A:{text:'The fire alarm sounded, everyone exited calmly.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the fire alarm sounded, everyone exited calmly.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The fire alarm sounded everyone exited calmly.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The fire alarm sounded; calmly, everyone exited.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l188', skill:'Sentence combining', prompt:'What is the best way to combine: "The teacher was absent. A substitute taught the class."?', correct:'B',
+      choices:{
+        A:{text:'The teacher was absent, a substitute taught the class.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the teacher was absent, a substitute taught the class.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The teacher was absent a substitute taught the class.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The teacher was absent; taught, a substitute the class.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l189', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We toured the Great wall of China last summer.', explain:'"Wall of China" should be capitalized as part of the proper name "Great Wall of China."'},
+        B:{text:'We toured the Great Wall of China last Summer.', explain:'"Summer" is a season and shouldn\'t be capitalized here.'},
+        C:{text:'We toured the Great Wall of China last summer.', explain:'"Great Wall of China" is correctly capitalized as a proper noun, and "summer" is correctly lowercase as a season.'},
+        D:{text:'we toured the Great Wall of China last summer.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l190', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He works for the Federal bureau of Investigation.', explain:'"Bureau" should be capitalized as part of the proper name "Federal Bureau of Investigation."'},
+        B:{text:'He works for the Federal Bureau of investigation.', explain:'"Investigation" should be capitalized as part of the proper name.'},
+        C:{text:'He works for the Federal Bureau of Investigation.', explain:'"Federal Bureau of Investigation" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he works for the Federal Bureau of Investigation.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l191', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Someone left their keys on the table.', explain:'"Someone" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Someone left his or her keys on the table.', explain:'This correctly uses a singular pronoun to match the singular "someone."'},
+        C:{text:'Several people left keys on the table.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l192', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Each of the dancers practiced their routine alone.', explain:'"Each" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Each of the dancers practiced his or her routine alone.', explain:'This correctly uses a singular pronoun to match the singular "each."'},
+        C:{text:'All the dancers practiced their routines alone.', explain:'This correctly uses the plural "their" to match the plural "all."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l193', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The airline changed it's boarding policy.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The airline changed its boarding policy.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The policy belongs to the airline.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l194', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Shes going to be late.', explain:'This is missing the apostrophe needed for the contraction "she\'s" (she is).'},
+        B:{text:"She's going to be late.", explain:'This correctly uses the contraction "she\'s" (she is).'},
+        C:{text:'Her lateness is expected.', explain:'This correctly uses the possessive "her."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l195', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The train stalled, passengers grew restless.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The train stalled; passengers grew restless.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The train stalled passengers grew restless.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The train stalled. and passengers grew restless.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l196', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Pack these items goggles, sunscreen, and a towel.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Pack these items: goggles, sunscreen, and a towel.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Pack these items, goggles, sunscreen, and a towel.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Pack these items; goggles, sunscreen, and a towel.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l197', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The childrens' playground was renovated.", explain:'"Children" is already the irregular plural of child, so the possessive should be "children\'s," not "childrens\'."'},
+        B:{text:"The children's playground was renovated.", explain:'This correctly forms the possessive of the irregular plural "children."'},
+        C:{text:'The playground belonged to the children.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l198', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The waitress uniform needed pressing.', explain:'This needs an apostrophe to show possession: "waitress\'s uniform."'},
+        B:{text:"The waitress's uniform needed pressing.", explain:'This correctly uses the possessive "waitress\'s."'},
+        C:{text:'The uniform belonged to the waitress.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l199', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Mathematics require logical thinking.', explain:'"Mathematics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Mathematics requires logical thinking.', explain:'This correctly treats "mathematics" as singular.'},
+        C:{text:'Science requires logical thinking too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l200', skill:'Sentence combining', prompt:'What is the best way to combine: "The concert ended late. Fans rushed to their cars."?', correct:'B',
+      choices:{
+        A:{text:'The concert ended late, fans rushed to their cars.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the concert ended late, fans rushed to their cars.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The concert ended late fans rushed to their cars.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The concert ended late; cars, fans rushed to their.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l201', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The team of scientists were researching the virus.', explain:'"Team" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The team of scientists was researching the virus.', explain:'This correctly treats "team" as a singular unit.'},
+        C:{text:'The scientists are researching the virus too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l202', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Statistics are a required course.', explain:'"Statistics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Statistics is a required course.', explain:'This correctly treats "statistics" as singular.'},
+        C:{text:'Biology is a required course too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l203', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one fear public speaking.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one fear: public speaking.', explain:'A colon correctly introduces the explanation of her fear.'},
+        C:{text:'She had one fear, public speaking.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one fear; public speaking.', explain:'A semicolon needs a complete sentence on both sides, and "public speaking" alone isn\'t complete.'}
+      } },
+    { id:'l204', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He bought apples bananas and grapes.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'He bought apples, bananas, and grapes.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'He bought apples, bananas and grapes,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'He bought, apples bananas and grapes.', explain:'The comma right after "bought" is misplaced.'}
+      } },
+    { id:'l205', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The award went to her and I.', explain:'As the object of "went to," this should be "her and me," not "her and I."'},
+        B:{text:'The award went to her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The award went to us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l206', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Thank whomever helped clean up.', explain:'Since this pronoun is the subject of "helped," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Thank whoever helped clean up.', explain:'This correctly uses "whoever" as the subject of "helped."'},
+        C:{text:'Whoever helped clean up deserves thanks.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l207', skill:'Sentence combining', prompt:'What is the best way to combine: "The rain stopped. The game resumed."?', correct:'B',
+      choices:{
+        A:{text:'The rain stopped, the game resumed.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Once the rain stopped, the game resumed.', explain:'This correctly uses "once" to show the timing relationship between the two events.'},
+        C:{text:'The rain stopped the game resumed.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The rain stopped; resumed, the game.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l208', skill:'Sentence combining', prompt:'What is the best way to combine: "The alarm clock broke. He overslept."?', correct:'B',
+      choices:{
+        A:{text:'The alarm clock broke, he overslept.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the alarm clock broke, he overslept.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The alarm clock broke he overslept.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The alarm clock broke; overslept, he.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l209', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We visited mount Rushmore in South Dakota.', explain:'"Mount" should be capitalized as part of the proper name "Mount Rushmore."'},
+        B:{text:'We visited Mount Rushmore in south Dakota.', explain:'"South Dakota" is a proper noun and should be fully capitalized.'},
+        C:{text:'We visited Mount Rushmore in South Dakota.', explain:'Both "Mount Rushmore" and "South Dakota" are correctly capitalized as proper nouns.'},
+        D:{text:'we visited Mount Rushmore in South Dakota.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l210', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She attends Duke university in North carolina.', explain:'"University" should be capitalized as part of the proper name "Duke University," and "Carolina" needs capitalizing too.'},
+        B:{text:'She attends Duke University in north Carolina.', explain:'"North" should be capitalized as part of the proper name "North Carolina."'},
+        C:{text:'She attends Duke University in North Carolina.', explain:'Both "Duke University" and "North Carolina" are correctly capitalized as proper nouns.'},
+        D:{text:'she attends Duke University in North Carolina.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l211', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Nobody forgot their homework.', explain:'"Nobody" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Nobody forgot his or her homework.', explain:'This correctly uses a singular pronoun to match the singular "nobody."'},
+        C:{text:'All the students remembered their homework.', explain:'This correctly uses the plural "their" to match the plural "all the students."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l212', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Either of the boys can bring their skateboard.', explain:'"Either" is grammatically singular, so traditional agreement calls for "his" rather than "their."'},
+        B:{text:'Either of the boys can bring his skateboard.', explain:'This correctly uses a singular pronoun to match the singular "either."'},
+        C:{text:'Both boys can bring their skateboards.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l213', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The store changed it's hours.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The store changed its hours.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The hours belong to the store.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l214', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Wed better hurry.', explain:'This is missing the apostrophe needed for the contraction "we\'d" (we had/would).'},
+        B:{text:"We'd better hurry.", explain:'This correctly uses the contraction "we\'d" (we had/would).'},
+        C:{text:'Our timing is tight.', explain:'This correctly uses the possessive "our."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l215', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The lights flickered, the power went out.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The lights flickered; the power went out.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The lights flickered the power went out.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The lights flickered. and the power went out.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l216', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring these tools a hammer, nails, and a saw.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring these tools: a hammer, nails, and a saw.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring these tools, a hammer, nails, and a saw.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring these tools; a hammer, nails, and a saw.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l217', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The mens' locker room was locked.", explain:'"Men" is already plural, so it just needs an apostrophe-s: "men\'s," not "mens\'."'},
+        B:{text:"The men's locker room was locked.", explain:'This correctly forms the possessive of the irregular plural "men."'},
+        C:{text:'The locker room belonged to the men.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l218', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The actress costume needed alterations.', explain:'This needs an apostrophe to show possession: "actress\'s costume."'},
+        B:{text:"The actress's costume needed alterations.", explain:'This correctly uses the possessive "actress\'s."'},
+        C:{text:'The costume belonged to the actress.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l219', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Statistics require careful interpretation.', explain:'"Statistics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Statistics requires careful interpretation.', explain:'This correctly treats "statistics" as singular.'},
+        C:{text:'Data requires careful interpretation too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l220', skill:'Sentence combining', prompt:'What is the best way to combine: "The library closed for renovations. Students studied elsewhere."?', correct:'B',
+      choices:{
+        A:{text:'The library closed for renovations, students studied elsewhere.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the library closed for renovations, students studied elsewhere.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The library closed for renovations students studied elsewhere.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The library closed for renovations; elsewhere, students studied.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l221', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The flock of birds were migrating south.', explain:'"Flock" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The flock of birds was migrating south.', explain:'This correctly treats "flock" as a singular unit.'},
+        C:{text:'The birds are migrating south too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l222', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Economics are her favorite subject.', explain:'"Economics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Economics is her favorite subject.', explain:'This correctly treats "economics" as singular.'},
+        C:{text:'History is her favorite subject too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l223', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one goal to graduate early.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one goal: to graduate early.', explain:'A colon correctly introduces the explanation of her goal.'},
+        C:{text:'She had one goal, to graduate early.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one goal; to graduate early.', explain:'A semicolon needs a complete sentence on both sides, and "to graduate early" alone isn\'t complete.'}
+      } },
+    { id:'l224', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He needed pens paper and folders.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'He needed pens, paper, and folders.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'He needed pens, paper and folders,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'He needed, pens paper and folders.', explain:'The comma right after "needed" is misplaced.'}
+      } },
+    { id:'l225', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The invitation was sent to him and I.', explain:'As the object of "sent to," this should be "him and me," not "him and I."'},
+        B:{text:'The invitation was sent to him and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The invitation was sent to us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l226', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Choose whomever arrives first.', explain:'Since this pronoun is the subject of "arrives," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Choose whoever arrives first.', explain:'This correctly uses "whoever" as the subject of "arrives."'},
+        C:{text:'Whoever arrives first gets a prize.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l227', skill:'Sentence combining', prompt:'What is the best way to combine: "The power outage lasted hours. Homework was done by candlelight."?', correct:'B',
+      choices:{
+        A:{text:'The power outage lasted hours, homework was done by candlelight.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the power outage lasted hours, homework was done by candlelight.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The power outage lasted hours homework was done by candlelight.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The power outage lasted hours; candlelight, homework was done by.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l228', skill:'Sentence combining', prompt:'What is the best way to combine: "The recipe called for basil. The store had none."?', correct:'B',
+      choices:{
+        A:{text:'The recipe called for basil, the store had none.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the recipe called for basil, the store had none.', explain:'This correctly uses "although" to show the contrast between the recipe\'s need and the store\'s stock.'},
+        C:{text:'The recipe called for basil the store had none.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The recipe called for basil; none, the store had.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l229', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We hiked through Yosemite national park.', explain:'"National Park" should be capitalized as part of the proper name "Yosemite National Park."'},
+        B:{text:'We hiked through Yosemite National park.', explain:'"Park" should be capitalized as part of the proper name "Yosemite National Park."'},
+        C:{text:'We hiked through Yosemite National Park.', explain:'"Yosemite National Park" is correctly capitalized in full as a proper noun.'},
+        D:{text:'we hiked through Yosemite National Park.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l230', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She interned at the World health Organization.', explain:'"Health" should be capitalized as part of the proper name "World Health Organization."'},
+        B:{text:'She interned at the World Health organization.', explain:'"Organization" should be capitalized as part of the proper name.'},
+        C:{text:'She interned at the World Health Organization.', explain:'"World Health Organization" is correctly capitalized in full as a proper noun.'},
+        D:{text:'she interned at the World Health Organization.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l231', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Everybody deserves their chance to speak.', explain:'"Everybody" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Everybody deserves his or her chance to speak.', explain:'This correctly uses a singular pronoun to match the singular "everybody."'},
+        C:{text:'All students deserve their chance to speak.', explain:'This correctly uses the plural "their" to match the plural "all students."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l232', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the sisters brought their umbrella.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "her" rather than "their."'},
+        B:{text:'Neither of the sisters brought her umbrella.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both sisters brought their umbrellas.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l233', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The company revealed it's new logo.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The company revealed its new logo.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The logo belongs to the company.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l234', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Whos responsible for this mess?', explain:'This is missing the apostrophe needed for the contraction "who\'s" (who is).'},
+        B:{text:"Who's responsible for this mess?", explain:'This correctly uses the contraction "who\'s" (who is).'},
+        C:{text:'Whose mess is this?', explain:'This correctly uses the possessive "whose."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l235', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The elevator jammed, tenants complained.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The elevator jammed; tenants complained.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The elevator jammed tenants complained.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The elevator jammed. and tenants complained.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l236', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring these snacks chips, pretzels, and fruit.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring these snacks: chips, pretzels, and fruit.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring these snacks, chips, pretzels, and fruit.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring these snacks; chips, pretzels, and fruit.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l237', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The wolves den was hidden deep in the forest.', explain:'This needs an apostrophe to show possession: "wolves\' den."'},
+        B:{text:"The wolves' den was hidden deep in the forest.", explain:'This correctly uses the plural possessive "wolves\'."'},
+        C:{text:'The den belonged to the wolves.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l238', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The witness testimony was inconsistent.', explain:'This needs an apostrophe to show possession: "witness\'s testimony."'},
+        B:{text:"The witness's testimony was inconsistent.", explain:'This correctly uses the possessive "witness\'s."'},
+        C:{text:'The testimony came from the witness.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l239', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Economics affect every part of daily life.', explain:'"Economics" is treated as a singular subject here, so it needs "affects," not "affect."'},
+        B:{text:'Economics affects every part of daily life.', explain:'This correctly treats "economics" as singular.'},
+        C:{text:'Politics affects daily life too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l240', skill:'Sentence combining', prompt:'What is the best way to combine: "The internet connection failed. The video call ended abruptly."?', correct:'B',
+      choices:{
+        A:{text:'The internet connection failed, the video call ended abruptly.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the internet connection failed, the video call ended abruptly.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The internet connection failed the video call ended abruptly.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The internet connection failed; abruptly, the video call ended.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l241', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The panel of judges were divided on the winner.', explain:'"Panel" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The panel of judges was divided on the winner.', explain:'This correctly treats "panel" as a singular unit.'},
+        C:{text:'The judges are divided too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l242', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Measles are a contagious disease.', explain:'"Measles" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Measles is a contagious disease.', explain:'This correctly treats "measles" as singular.'},
+        C:{text:'Chickenpox is contagious too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l243', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one excuse forgetfulness.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one excuse: forgetfulness.', explain:'A colon correctly introduces the explanation of her excuse.'},
+        C:{text:'She had one excuse, forgetfulness.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one excuse; forgetfulness.', explain:'A semicolon needs a complete sentence on both sides, and "forgetfulness" alone isn\'t complete.'}
+      } },
+    { id:'l244', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She bought rice beans and salsa.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'She bought rice, beans, and salsa.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'She bought rice, beans and salsa,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'She bought, rice beans and salsa.', explain:'The comma right after "bought" is misplaced.'}
+      } },
+    { id:'l245', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'This letter is from my brother and I.', explain:'As the object of "from," this should be "my brother and me," not "my brother and I."'},
+        B:{text:'This letter is from my brother and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'This letter is from him.', explain:'This correctly uses the object pronoun "him."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l246', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Reward whomever finds the lost dog.', explain:'Since this pronoun is the subject of "finds," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Reward whoever finds the lost dog.', explain:'This correctly uses "whoever" as the subject of "finds."'},
+        C:{text:'Whoever finds the lost dog gets a reward.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l247', skill:'Sentence combining', prompt:'What is the best way to combine: "The bakery closed early. Customers were turned away."?', correct:'B',
+      choices:{
+        A:{text:'The bakery closed early, customers were turned away.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the bakery closed early, customers were turned away.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The bakery closed early customers were turned away.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The bakery closed early; away, customers were turned.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l248', skill:'Sentence combining', prompt:'What is the best way to combine: "The movie got great reviews. Ticket sales still disappointed the studio."?', correct:'B',
+      choices:{
+        A:{text:'The movie got great reviews, ticket sales still disappointed the studio.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the movie got great reviews, ticket sales still disappointed the studio.', explain:'This correctly uses "although" to show the contrast between the reviews and the sales.'},
+        C:{text:'The movie got great reviews ticket sales still disappointed the studio.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The movie got great reviews; disappointed, ticket sales still.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l249', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We drove along route 66 through Arizona.', explain:'"Route" should be capitalized as part of the proper name "Route 66."'},
+        B:{text:'We drove along Route 66 through arizona.', explain:'"Arizona" is a proper noun and should be capitalized.'},
+        C:{text:'We drove along Route 66 through Arizona.', explain:'Both "Route 66" and "Arizona" are correctly capitalized as proper nouns.'},
+        D:{text:'we drove along Route 66 through Arizona.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l250', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He graduated from west point military academy.', explain:'"West Point Military Academy" should be fully capitalized as a proper name.'},
+        B:{text:'He graduated from West Point military academy.', explain:'"Military Academy" should be capitalized as part of the proper name "West Point Military Academy."'},
+        C:{text:'He graduated from West Point Military Academy.', explain:'"West Point Military Academy" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he graduated from West Point Military Academy.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l251', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Each of the players signed their own jersey.', explain:'"Each" is grammatically singular, so traditional agreement calls for "his" rather than "their."'},
+        B:{text:'Each of the players signed his own jersey.', explain:'This correctly uses a singular pronoun to match the singular "each."'},
+        C:{text:'All the players signed their own jerseys.', explain:'This correctly uses the plural "their" to match the plural "all."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l252', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the twins finished their plate.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "his" rather than "their."'},
+        B:{text:'Neither of the twins finished his plate.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both twins finished their plates.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l253', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The band changed it's setlist.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The band changed its setlist.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The setlist belongs to the band.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l254', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Theyre going to be late again.', explain:'This is missing the apostrophe needed for the contraction "they\'re" (they are).'},
+        B:{text:"They're going to be late again.", explain:'This correctly uses the contraction "they\'re" (they are).'},
+        C:{text:'Their lateness is a pattern.', explain:'This correctly uses the possessive "their."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l255', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The bridge closed, drivers took a detour.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The bridge closed; drivers took a detour.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The bridge closed drivers took a detour.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The bridge closed. and drivers took a detour.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l256', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Pack these clothes a coat, boots, and gloves.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Pack these clothes: a coat, boots, and gloves.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Pack these clothes, a coat, boots, and gloves.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Pack these clothes; a coat, boots, and gloves.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l257', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The ladies purses were left on the table.', explain:'This needs an apostrophe to show possession: "ladies\' purses."'},
+        B:{text:"The ladies' purses were left on the table.", explain:'This correctly uses the plural possessive "ladies\'."'},
+        C:{text:'The purses belonged to the ladies.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l258', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The princess castle was enormous.', explain:'This needs an apostrophe to show possession: "princess\'s castle."'},
+        B:{text:"The princess's castle was enormous.", explain:'This correctly uses the possessive "princess\'s."'},
+        C:{text:'The castle belonged to the princess.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l259', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Measles require immediate medical attention in some cases.', explain:'"Measles" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Measles requires immediate medical attention in some cases.', explain:'This correctly treats "measles" as singular.'},
+        C:{text:'Chickenpox requires attention too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l260', skill:'Sentence combining', prompt:'What is the best way to combine: "The website crashed. Orders could not be processed."?', correct:'B',
+      choices:{
+        A:{text:'The website crashed, orders could not be processed.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the website crashed, orders could not be processed.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The website crashed orders could not be processed.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The website crashed; processed, orders could not be.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l261', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The herd of cattle were grazing peacefully.', explain:'"Herd" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The herd of cattle was grazing peacefully.', explain:'This correctly treats "herd" as a singular unit.'},
+        C:{text:'The cattle are grazing peacefully too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l262', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Physics are her favorite class.', explain:'"Physics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Physics is her favorite class.', explain:'This correctly treats "physics" as singular.'},
+        C:{text:'Chemistry is her favorite class too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l263', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He had one weakness chocolate.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'He had one weakness: chocolate.', explain:'A colon correctly introduces the explanation of his weakness.'},
+        C:{text:'He had one weakness, chocolate.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'He had one weakness; chocolate.', explain:'A semicolon needs a complete sentence on both sides, and "chocolate" alone isn\'t complete.'}
+      } },
+    { id:'l264', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She needed flour eggs and butter.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'She needed flour, eggs, and butter.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'She needed flour, eggs and butter,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'She needed, flour eggs and butter.', explain:'The comma right after "needed" is misplaced.'}
+      } },
+    { id:'l265', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The gift was wrapped by her and I.', explain:'As the object of "by," this should be "her and me," not "her and I."'},
+        B:{text:'The gift was wrapped by her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The gift was wrapped by them.', explain:'This correctly uses the object pronoun "them."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l266', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Give it to whomever asks first.', explain:'Since this pronoun is the subject of "asks," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Give it to whoever asks first.', explain:'This correctly uses "whoever" as the subject of "asks."'},
+        C:{text:'Whoever asks first will receive it.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l267', skill:'Sentence combining', prompt:'What is the best way to combine: "The storm knocked out power. Neighbors shared a generator."?', correct:'B',
+      choices:{
+        A:{text:'The storm knocked out power, neighbors shared a generator.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the storm knocked out power, neighbors shared a generator.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The storm knocked out power neighbors shared a generator.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The storm knocked out power; generator, neighbors shared a.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l268', skill:'Sentence combining', prompt:'What is the best way to combine: "The bakery ran a discount. Lines stretched around the block."?', correct:'B',
+      choices:{
+        A:{text:'The bakery ran a discount, lines stretched around the block.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the bakery ran a discount, lines stretched around the block.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The bakery ran a discount lines stretched around the block.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The bakery ran a discount; block, lines stretched around the.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l269', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We visited niagara falls last spring.', explain:'"Niagara Falls" should be fully capitalized as a proper noun.'},
+        B:{text:'We visited Niagara Falls last Spring.', explain:'"Spring" is a season and shouldn\'t be capitalized here.'},
+        C:{text:'We visited Niagara Falls last spring.', explain:'"Niagara Falls" is correctly capitalized as a proper noun, and "spring" is correctly lowercase as a season.'},
+        D:{text:'we visited Niagara Falls last spring.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l270', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He works for the department of Justice.', explain:'"Department of" should be capitalized as part of the proper name "Department of Justice."'},
+        B:{text:'He works for the Department of justice.', explain:'"Justice" should be capitalized as part of the proper name "Department of Justice."'},
+        C:{text:'He works for the Department of Justice.', explain:'"Department of Justice" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he works for the Department of Justice.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l271', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Anybody can join if they sign up early.', explain:'"Anybody" is grammatically singular, so traditional agreement calls for "he or she" rather than "they."'},
+        B:{text:'Anybody can join if he or she signs up early.', explain:'This correctly uses a singular pronoun to match the singular "anybody."'},
+        C:{text:'All members can join if they sign up early.', explain:'This correctly uses the plural "they" to match the plural "all members."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l272', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Each of the puppies needs their shots soon.', explain:'"Each" is grammatically singular, so traditional agreement calls for "its" rather than "their."'},
+        B:{text:'Each of the puppies needs its shots soon.', explain:'This correctly uses a singular pronoun to match the singular "each."'},
+        C:{text:'All the puppies need their shots soon.', explain:'This correctly uses the plural "their" to match the plural "all."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l273', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The team celebrated it's victory.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The team celebrated its victory.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The victory belonged to the team.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l274', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Youve done a great job.', explain:'This is missing the apostrophe needed for the contraction "you\'ve" (you have).'},
+        B:{text:"You've done a great job.", explain:'This correctly uses the contraction "you\'ve" (you have).'},
+        C:{text:'Your effort really showed.', explain:'This correctly uses the possessive "your."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l275', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The printer jammed, the office fell behind schedule.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The printer jammed; the office fell behind schedule.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The printer jammed the office fell behind schedule.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The printer jammed. and the office fell behind.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l276', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring these documents an ID, a form, and a receipt.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring these documents: an ID, a form, and a receipt.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring these documents, an ID, a form, and a receipt.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring these documents; an ID, a form, and a receipt.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l277', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The geese feathers scattered across the pond.', explain:'"Geese" is already an irregular plural, so it needs an apostrophe-s to show possession: "geese\'s feathers."'},
+        B:{text:"The geese's feathers scattered across the pond.", explain:'This correctly forms the possessive of the irregular plural "geese."'},
+        C:{text:'The feathers belonged to the geese.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l278', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The duchess gown was elegant.', explain:'This needs an apostrophe to show possession: "duchess\'s gown."'},
+        B:{text:"The duchess's gown was elegant.", explain:'This correctly uses the possessive "duchess\'s."'},
+        C:{text:'The gown belonged to the duchess.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l279', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Physics require years of dedicated study.', explain:'"Physics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Physics requires years of dedicated study.', explain:'This correctly treats "physics" as singular.'},
+        C:{text:'Chemistry requires dedicated study too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l280', skill:'Sentence combining', prompt:'What is the best way to combine: "The flight was delayed. Passengers waited at the gate."?', correct:'B',
+      choices:{
+        A:{text:'The flight was delayed, passengers waited at the gate.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the flight was delayed, passengers waited at the gate.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The flight was delayed passengers waited at the gate.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The flight was delayed; gate, passengers waited at the.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l281', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The pod of dolphins were swimming close to shore.', explain:'"Pod" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The pod of dolphins was swimming close to shore.', explain:'This correctly treats "pod" as a singular unit.'},
+        C:{text:'The dolphins are swimming close to shore too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l282', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Ethics are a required course for graduation.', explain:'"Ethics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Ethics is a required course for graduation.', explain:'This correctly treats "ethics" as singular.'},
+        C:{text:'Philosophy is a required course too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l283', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one condition punctuality.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one condition: punctuality.', explain:'A colon correctly introduces the explanation of her condition.'},
+        C:{text:'She had one condition, punctuality.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one condition; punctuality.', explain:'A semicolon needs a complete sentence on both sides, and "punctuality" alone isn\'t complete.'}
+      } },
+    { id:'l284', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He packed socks shirts and shoes.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'He packed socks, shirts, and shoes.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'He packed socks, shirts and shoes,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'He packed, socks shirts and shoes.', explain:'The comma right after "packed" is misplaced.'}
+      } },
+    { id:'l285', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The trophy was awarded to him and I.', explain:'As the object of "awarded to," this should be "him and me," not "him and I."'},
+        B:{text:'The trophy was awarded to him and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The trophy was awarded to us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l286', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Select whomever performs best in the tryout.', explain:'Since this pronoun is the subject of "performs," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Select whoever performs best in the tryout.', explain:'This correctly uses "whoever" as the subject of "performs."'},
+        C:{text:'Whoever performs best in the tryout will be selected.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l287', skill:'Sentence combining', prompt:'What is the best way to combine: "The generator failed. The hospital switched to backup power."?', correct:'B',
+      choices:{
+        A:{text:'The generator failed, the hospital switched to backup power.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the generator failed, the hospital switched to backup power.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The generator failed the hospital switched to backup power.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The generator failed; power, the hospital switched to backup.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l288', skill:'Sentence combining', prompt:'What is the best way to combine: "The critics loved the film. Audiences stayed away in droves."?', correct:'B',
+      choices:{
+        A:{text:'The critics loved the film, audiences stayed away in droves.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the critics loved the film, audiences stayed away in droves.', explain:'This correctly uses "although" to show the contrast between the reviews and the turnout.'},
+        C:{text:'The critics loved the film audiences stayed away in droves.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The critics loved the film; droves, audiences stayed away in.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l289', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We toured the golden gate bridge in san francisco.', explain:'"Golden Gate Bridge" and "San Francisco" should be fully capitalized as proper nouns.'},
+        B:{text:'We toured the Golden Gate Bridge in San francisco.', explain:'"Francisco" should be capitalized as part of the proper name "San Francisco."'},
+        C:{text:'We toured the Golden Gate Bridge in San Francisco.', explain:'Both "Golden Gate Bridge" and "San Francisco" are correctly capitalized as proper nouns.'},
+        D:{text:'we toured the Golden Gate Bridge in San Francisco.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l290', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She works at the Centers for disease Control.', explain:'"Disease" should be capitalized as part of the proper name "Centers for Disease Control."'},
+        B:{text:'She works at the Centers for Disease control.', explain:'"Control" should be capitalized as part of the proper name "Centers for Disease Control."'},
+        C:{text:'She works at the Centers for Disease Control.', explain:'"Centers for Disease Control" is correctly capitalized in full as a proper noun.'},
+        D:{text:'she works at the Centers for Disease Control.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l291', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Everyone must bring their own lunch on the trip.', explain:'"Everyone" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Everyone must bring his or her own lunch on the trip.', explain:'This correctly uses a singular pronoun to match the singular "everyone."'},
+        C:{text:'All students must bring their own lunch.', explain:'This correctly uses the plural "their" to match the plural "all students."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l292', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Either of the cats can use their own bowl.', explain:'"Either" is grammatically singular, so traditional agreement calls for "its" rather than "their."'},
+        B:{text:'Either of the cats can use its own bowl.', explain:'This correctly uses a singular pronoun to match the singular "either."'},
+        C:{text:'Both cats can use their own bowls.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l293', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The museum expanded it's collection.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The museum expanded its collection.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The collection belongs to the museum.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l294', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Its been a long day.', explain:'This should be the contraction "it\'s" (it has), not the possessive "its."'},
+        B:{text:"It's been a long day.", explain:'This correctly uses the contraction "it\'s" (it has).'},
+        C:{text:'Its color faded in the sun.', explain:'This correctly uses the possessive "its."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l295', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The signal weakened, the call dropped.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The signal weakened; the call dropped.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The signal weakened the call dropped.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The signal weakened. and the call dropped.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l296', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring these supplies a notebook, a pen, and a calculator.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring these supplies: a notebook, a pen, and a calculator.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring these supplies, a notebook, a pen, and a calculator.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring these supplies; a notebook, a pen, and a calculator.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l297', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The mice tails were surprisingly long.', explain:'"Mice" is already an irregular plural, so it needs an apostrophe-s to show possession: "mice\'s tails."'},
+        B:{text:"The mice's tails were surprisingly long.", explain:'This correctly forms the possessive of the irregular plural "mice."'},
+        C:{text:'The tails belonged to the mice.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l298', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The countess jewels were stolen.', explain:'This needs an apostrophe to show possession: "countess\'s jewels."'},
+        B:{text:"The countess's jewels were stolen.", explain:'This correctly uses the possessive "countess\'s."'},
+        C:{text:'The jewels belonged to the countess.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l299', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Ethics require careful consideration in every field.', explain:'"Ethics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Ethics requires careful consideration in every field.', explain:'This correctly treats "ethics" as singular.'},
+        C:{text:'Logic requires careful consideration too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l300', skill:'Sentence combining', prompt:'What is the best way to combine: "The battery died. The remote stopped working."?', correct:'B',
+      choices:{
+        A:{text:'The battery died, the remote stopped working.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the battery died, the remote stopped working.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The battery died the remote stopped working.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The battery died; working, the remote stopped.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l301', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The gaggle of geese were crossing the road.', explain:'"Gaggle" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The gaggle of geese was crossing the road.', explain:'This correctly treats "gaggle" as a singular unit.'},
+        C:{text:'The geese are crossing the road too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l302', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Aerobics are a great cardio workout.', explain:'"Aerobics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Aerobics is a great cardio workout.', explain:'This correctly treats "aerobics" as singular.'},
+        C:{text:'Yoga is a great workout too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l303', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He had one rule honesty.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'He had one rule: honesty.', explain:'A colon correctly introduces the explanation of his rule.'},
+        C:{text:'He had one rule, honesty.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'He had one rule; honesty.', explain:'A semicolon needs a complete sentence on both sides, and "honesty" alone isn\'t complete.'}
+      } },
+    { id:'l304', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She grabbed a hat scarf and gloves.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'She grabbed a hat, scarf, and gloves.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'She grabbed a hat, scarf and gloves,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'She grabbed, a hat scarf and gloves.', explain:'The comma right after "grabbed" is misplaced.'}
+      } },
+    { id:'l305', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The prize was split between her and I.', explain:'As the object of "between," this should be "her and me," not "her and I."'},
+        B:{text:'The prize was split between her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The prize was split between us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l306', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Invite whomever wants to come along.', explain:'Since this pronoun is the subject of "wants," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Invite whoever wants to come along.', explain:'This correctly uses "whoever" as the subject of "wants."'},
+        C:{text:'Whoever wants to come along should say so.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l307', skill:'Sentence combining', prompt:'What is the best way to combine: "The engine overheated. The mechanic pulled over immediately."?', correct:'B',
+      choices:{
+        A:{text:'The engine overheated, the mechanic pulled over immediately.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the engine overheated, the mechanic pulled over immediately.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The engine overheated the mechanic pulled over immediately.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The engine overheated; immediately, the mechanic pulled over.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l308', skill:'Sentence combining', prompt:'What is the best way to combine: "The restaurant received terrible reviews. It stayed fully booked for months."?', correct:'B',
+      choices:{
+        A:{text:'The restaurant received terrible reviews, it stayed fully booked for months.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the restaurant received terrible reviews, it stayed fully booked for months.', explain:'This correctly uses "although" to show the contrast between the reviews and the bookings.'},
+        C:{text:'The restaurant received terrible reviews it stayed fully booked for months.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The restaurant received terrible reviews; months, it stayed fully booked for.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l309', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We hiked through great smoky mountains national park.', explain:'"Great Smoky Mountains National Park" should be fully capitalized as a proper noun.'},
+        B:{text:'We hiked through Great Smoky Mountains national park.', explain:'"National Park" should be capitalized as part of the proper name.'},
+        C:{text:'We hiked through Great Smoky Mountains National Park.', explain:'"Great Smoky Mountains National Park" is correctly capitalized in full as a proper noun.'},
+        D:{text:'we hiked through Great Smoky Mountains National Park.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l310', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He interned at the Federal bureau of Investigation.', explain:'"Bureau of" should be capitalized as part of the proper name "Federal Bureau of Investigation."'},
+        B:{text:'He interned at the Federal Bureau of investigation.', explain:'"Investigation" should be capitalized as part of the proper name.'},
+        C:{text:'He interned at the Federal Bureau of Investigation.', explain:'"Federal Bureau of Investigation" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he interned at the Federal Bureau of Investigation.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l311', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Somebody left their umbrella in the lobby.', explain:'"Somebody" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Somebody left his or her umbrella in the lobby.', explain:'This correctly uses a singular pronoun to match the singular "somebody."'},
+        C:{text:'All the guests left their umbrellas in the lobby.', explain:'This correctly uses the plural "their" to match the plural "all the guests."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l312', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the brothers finished their homework.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "his" rather than "their."'},
+        B:{text:'Neither of the brothers finished his homework.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both brothers finished their homework.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l313', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The company revised it's policy.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The company revised its policy.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The policy belongs to the company.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l314', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Wasnt that the best movie ever?', explain:'This is missing the apostrophe needed for the contraction "wasn\'t" (was not).'},
+        B:{text:"Wasn't that the best movie ever?", explain:'This correctly uses the contraction "wasn\'t" (was not).'},
+        C:{text:'That was truly a great movie.', explain:'This sentence has no contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l315', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The Wi-Fi went down, the meeting paused.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The Wi-Fi went down; the meeting paused.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The Wi-Fi went down the meeting paused.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The Wi-Fi went down. and the meeting paused.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l316', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Bring these items a tent, a sleeping bag, and a flashlight.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Bring these items: a tent, a sleeping bag, and a flashlight.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Bring these items, a tent, a sleeping bag, and a flashlight.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Bring these items; a tent, a sleeping bag, and a flashlight.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l317', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The oxen yoke needed repairs.', explain:'"Oxen" is already an irregular plural, so it needs an apostrophe-s to show possession: "oxen\'s yoke."'},
+        B:{text:"The oxen's yoke needed repairs.", explain:'This correctly forms the possessive of the irregular plural "oxen."'},
+        C:{text:'The yoke belonged to the oxen.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l318', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The empress throne was made of gold.', explain:'This needs an apostrophe to show possession: "empress\'s throne."'},
+        B:{text:"The empress's throne was made of gold.", explain:'This correctly uses the possessive "empress\'s."'},
+        C:{text:'The throne belonged to the empress.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l319', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Aerobics require a lot of stamina.', explain:'"Aerobics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Aerobics requires a lot of stamina.', explain:'This correctly treats "aerobics" as singular.'},
+        C:{text:'Yoga requires flexibility too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l320', skill:'Sentence combining', prompt:'What is the best way to combine: "The volcano erupted. Nearby towns were evacuated."?', correct:'B',
+      choices:{
+        A:{text:'The volcano erupted, nearby towns were evacuated.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the volcano erupted, nearby towns were evacuated.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The volcano erupted nearby towns were evacuated.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The volcano erupted; evacuated, nearby towns were.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l321', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The bunch of grapes were left on the counter.', explain:'"Bunch" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The bunch of grapes was left on the counter.', explain:'This correctly treats "bunch" as a singular unit.'},
+        C:{text:'The grapes are left on the counter too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l322', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Mathematics are her favorite subject.', explain:'"Mathematics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Mathematics is her favorite subject.', explain:'This correctly treats "mathematics" as singular.'},
+        C:{text:'Science is her favorite subject too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l323', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He had one hobby fishing.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'He had one hobby: fishing.', explain:'A colon correctly introduces the explanation of his hobby.'},
+        C:{text:'He had one hobby, fishing.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'He had one hobby; fishing.', explain:'A semicolon needs a complete sentence on both sides, and "fishing" alone isn\'t complete.'}
+      } },
+    { id:'l324', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'They ordered soup salad and bread.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'They ordered soup, salad, and bread.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'They ordered soup, salad and bread,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'They ordered, soup salad and bread.', explain:'The comma right after "ordered" is misplaced.'}
+      } },
+    { id:'l325', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The blame fell on her and I.', explain:'As the object of "on," this should be "her and me," not "her and I."'},
+        B:{text:'The blame fell on her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The blame fell on us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l326', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"Tell whomever calls that I'm busy.", explain:'Since this pronoun is the subject of "calls," it should be "whoever," not the object form "whomever."'},
+        B:{text:"Tell whoever calls that I'm busy.", explain:'This correctly uses "whoever" as the subject of "calls."'},
+        C:{text:'Whoever calls should leave a message.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l327', skill:'Sentence combining', prompt:'What is the best way to combine: "The alarm sounded. Everyone evacuated the building."?', correct:'B',
+      choices:{
+        A:{text:'The alarm sounded, everyone evacuated the building.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the alarm sounded, everyone evacuated the building.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The alarm sounded everyone evacuated the building.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The alarm sounded; building, everyone evacuated the.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l328', skill:'Sentence combining', prompt:'What is the best way to combine: "The team practiced daily. They still lost the championship."?', correct:'B',
+      choices:{
+        A:{text:'The team practiced daily, they still lost the championship.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the team practiced daily, they still lost the championship.', explain:'This correctly uses "although" to show the contrast between the practice and the outcome.'},
+        C:{text:'The team practiced daily they still lost the championship.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The team practiced daily; championship, they still lost the.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l329', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We explored mount rainier national park.', explain:'"Mount Rainier National Park" should be fully capitalized as a proper noun.'},
+        B:{text:'We explored Mount Rainier national park.', explain:'"National Park" should be capitalized as part of the proper name.'},
+        C:{text:'We explored Mount Rainier National Park.', explain:'"Mount Rainier National Park" is correctly capitalized in full as a proper noun.'},
+        D:{text:'we explored Mount Rainier National Park.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l330', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She works for the environmental Protection Agency.', explain:'"Environmental" should be capitalized as part of the proper name "Environmental Protection Agency."'},
+        B:{text:'She works for the Environmental protection Agency.', explain:'"Protection" should be capitalized as part of the proper name.'},
+        C:{text:'She works for the Environmental Protection Agency.', explain:'"Environmental Protection Agency" is correctly capitalized in full as a proper noun.'},
+        D:{text:'she works for the Environmental Protection Agency.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l331', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'No one forgot their ticket for the show.', explain:'"No one" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'No one forgot his or her ticket for the show.', explain:'This correctly uses a singular pronoun to match the singular "no one."'},
+        C:{text:'All the guests forgot their tickets.', explain:'This correctly uses the plural "their" to match the plural "all the guests."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l332', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Either of the dogs can wear their new collar.', explain:'"Either" is grammatically singular, so traditional agreement calls for "its" rather than "their."'},
+        B:{text:'Either of the dogs can wear its new collar.', explain:'This correctly uses a singular pronoun to match the singular "either."'},
+        C:{text:'Both dogs can wear their new collars.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l333', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The airline changed it's boarding policy.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The airline changed its boarding policy.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The policy belongs to the airline.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l334', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Theyll be here any minute.', explain:'This is missing the apostrophe needed for the contraction "they\'ll" (they will).'},
+        B:{text:"They'll be here any minute.", explain:'This correctly uses the contraction "they\'ll" (they will).'},
+        C:{text:'Their arrival is expected soon.', explain:'This correctly uses the possessive "their."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l335', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The traffic stalled, commuters grew frustrated.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The traffic stalled; commuters grew frustrated.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The traffic stalled commuters grew frustrated.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The traffic stalled. and commuters grew frustrated.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l336', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Pack these tools a wrench, a hammer, and pliers.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Pack these tools: a wrench, a hammer, and pliers.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Pack these tools, a wrench, a hammer, and pliers.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Pack these tools; a wrench, a hammer, and pliers.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l337', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The children toys were scattered everywhere.', explain:'"Children" is already an irregular plural, so it needs an apostrophe-s to show possession: "children\'s toys."'},
+        B:{text:"The children's toys were scattered everywhere.", explain:'This correctly forms the possessive of the irregular plural "children."'},
+        C:{text:'The toys belonged to the children.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l338', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The heiress fortune was inherited early.', explain:'This needs an apostrophe to show possession: "heiress\'s fortune."'},
+        B:{text:"The heiress's fortune was inherited early.", explain:'This correctly uses the possessive "heiress\'s."'},
+        C:{text:'The fortune belonged to the heiress.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l339', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Mathematics require logical thinking skills.', explain:'"Mathematics" is treated as a singular subject here, so it needs "requires," not "require."'},
+        B:{text:'Mathematics requires logical thinking skills.', explain:'This correctly treats "mathematics" as singular.'},
+        C:{text:'Science requires logical thinking too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l340', skill:'Sentence combining', prompt:'What is the best way to combine: "The bridge was under construction. Traffic was rerouted downtown."?', correct:'B',
+      choices:{
+        A:{text:'The bridge was under construction, traffic was rerouted downtown.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the bridge was under construction, traffic was rerouted downtown.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The bridge was under construction traffic was rerouted downtown.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The bridge was under construction; downtown, traffic was rerouted.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l341', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The stack of papers were on his desk.', explain:'"Stack" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The stack of papers was on his desk.', explain:'This correctly treats "stack" as a singular unit.'},
+        C:{text:'The papers are on his desk too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l342', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Genetics are a fascinating field of study.', explain:'"Genetics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Genetics is a fascinating field of study.', explain:'This correctly treats "genetics" as singular.'},
+        C:{text:'Biology is fascinating too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l343', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one fear failure.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one fear: failure.', explain:'A colon correctly introduces the explanation of her fear.'},
+        C:{text:'She had one fear, failure.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one fear; failure.', explain:'A semicolon needs a complete sentence on both sides, and "failure" alone isn\'t complete.'}
+      } },
+    { id:'l344', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He bought milk eggs and cheese.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'He bought milk, eggs, and cheese.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'He bought milk, eggs and cheese,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'He bought, milk eggs and cheese.', explain:'The comma right after "bought" is misplaced.'}
+      } },
+    { id:'l345', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The secret was shared with her and I.', explain:'As the object of "with," this should be "her and me," not "her and I."'},
+        B:{text:'The secret was shared with her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The secret was shared with us.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l346', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Award the prize to whomever scores highest.', explain:'Since this pronoun is the subject of "scores," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Award the prize to whoever scores highest.', explain:'This correctly uses "whoever" as the subject of "scores."'},
+        C:{text:'Whoever scores highest wins the prize.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l347', skill:'Sentence combining', prompt:'What is the best way to combine: "The pipes froze. The water main burst."?', correct:'B',
+      choices:{
+        A:{text:'The pipes froze, the water main burst.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the pipes froze, the water main burst.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The pipes froze the water main burst.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The pipes froze; burst, the water main.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l348', skill:'Sentence combining', prompt:'What is the best way to combine: "The band rehearsed for months. Their debut show was still rocky."?', correct:'B',
+      choices:{
+        A:{text:'The band rehearsed for months, their debut show was still rocky.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the band rehearsed for months, their debut show was still rocky.', explain:'This correctly uses "although" to show the contrast between the rehearsal and the outcome.'},
+        C:{text:'The band rehearsed for months their debut show was still rocky.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The band rehearsed for months; rocky, their debut show was still.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l349', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We visited zion national park last spring.', explain:'"Zion National Park" should be fully capitalized as a proper noun.'},
+        B:{text:'We visited Zion National park last Spring.', explain:'"Park" should be capitalized, and "Spring" should not be, since it\'s used as a season here.'},
+        C:{text:'We visited Zion National Park last spring.', explain:'"Zion National Park" is correctly capitalized as a proper noun, and "spring" is correctly lowercase as a season.'},
+        D:{text:'we visited Zion National Park last spring.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l350', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He testified before the Senate judiciary Committee.', explain:'"Judiciary" should be capitalized as part of the proper name "Senate Judiciary Committee."'},
+        B:{text:'He testified before the Senate Judiciary committee.', explain:'"Committee" should be capitalized as part of the proper name.'},
+        C:{text:'He testified before the Senate Judiciary Committee.', explain:'"Senate Judiciary Committee" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he testified before the Senate Judiciary Committee.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l351', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Each employee must submit their timesheet by Friday.', explain:'"Each" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Each employee must submit his or her timesheet by Friday.', explain:'This correctly uses a singular pronoun to match the singular "each."'},
+        C:{text:'All employees must submit their timesheets by Friday.', explain:'This correctly uses the plural "their" to match the plural "all employees."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l352', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the applicants submitted their references.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Neither of the applicants submitted his or her references.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both applicants submitted their references.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l353', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The organization updated it's mission statement.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The organization updated its mission statement.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The mission statement belongs to the organization.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l354', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Shes the best candidate for the job.', explain:'This is missing the apostrophe needed for the contraction "she\'s" (she is).'},
+        B:{text:"She's the best candidate for the job.", explain:'This correctly uses the contraction "she\'s" (she is).'},
+        C:{text:'Her qualifications are impressive.', explain:'This correctly uses the possessive "her."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l355', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The server crashed, users lost their data.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The server crashed; users lost their data.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The server crashed users lost their data.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The server crashed. and users lost their data.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l356', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Order these parts a filter, a belt, and a hose.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Order these parts: a filter, a belt, and a hose.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Order these parts, a filter, a belt, and a hose.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Order these parts; a filter, a belt, and a hose.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l357', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The people opinions varied widely.', explain:'"People" is already an irregular plural, so it needs an apostrophe-s to show possession: "people\'s opinions."'},
+        B:{text:"The people's opinions varied widely.", explain:'This correctly forms the possessive of the irregular plural "people."'},
+        C:{text:'The opinions belonged to the people.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l358', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The waitress tips were generous that night.', explain:'This needs an apostrophe to show possession: "waitress\'s tips."'},
+        B:{text:"The waitress's tips were generous that night.", explain:'This correctly uses the possessive "waitress\'s."'},
+        C:{text:'The tips belonged to the waitress.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l359', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Genetics play a major role in inherited traits.', explain:'"Genetics" is treated as a singular subject here, so it needs "plays," not "play."'},
+        B:{text:'Genetics plays a major role in inherited traits.', explain:'This correctly treats "genetics" as singular.'},
+        C:{text:'Environment plays a role too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l360', skill:'Sentence combining', prompt:'What is the best way to combine: "The projector malfunctioned. The presentation was delayed."?', correct:'B',
+      choices:{
+        A:{text:'The projector malfunctioned, the presentation was delayed.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the projector malfunctioned, the presentation was delayed.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The projector malfunctioned the presentation was delayed.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The projector malfunctioned; delayed, the presentation was.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l361', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The array of choices were overwhelming.', explain:'"Array" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The array of choices was overwhelming.', explain:'This correctly treats "array" as a singular unit.'},
+        C:{text:'The choices are overwhelming too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l362', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Robotics are a growing field in schools.', explain:'"Robotics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Robotics is a growing field in schools.', explain:'This correctly treats "robotics" as singular.'},
+        C:{text:'Coding is a growing field too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l363', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He had one goal victory.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'He had one goal: victory.', explain:'A colon correctly introduces the explanation of his goal.'},
+        C:{text:'He had one goal, victory.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'He had one goal; victory.', explain:'A semicolon needs a complete sentence on both sides, and "victory" alone isn\'t complete.'}
+      } },
+    { id:'l364', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She needed tape scissors and glue.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'She needed tape, scissors, and glue.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'She needed tape, scissors and glue,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'She needed, tape scissors and glue.', explain:'The comma right after "needed" is misplaced.'}
+      } },
+    { id:'l365', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The award goes to her and I this year.', explain:'As the object of "goes to," this should be "her and me," not "her and I."'},
+        B:{text:'The award goes to her and me this year.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The award goes to us this year.', explain:'This correctly uses the object pronoun "us."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l366', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Hire whomever impresses the panel most.', explain:'Since this pronoun is the subject of "impresses," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Hire whoever impresses the panel most.', explain:'This correctly uses "whoever" as the subject of "impresses."'},
+        C:{text:'Whoever impresses the panel most gets hired.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l367', skill:'Sentence combining', prompt:'What is the best way to combine: "The dam failed. The valley flooded within hours."?', correct:'B',
+      choices:{
+        A:{text:'The dam failed, the valley flooded within hours.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'When the dam failed, the valley flooded within hours.', explain:'This correctly uses "when" to show the timing relationship between the two events.'},
+        C:{text:'The dam failed the valley flooded within hours.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The dam failed; hours, the valley flooded within.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l368', skill:'Sentence combining', prompt:'What is the best way to combine: "The company invested heavily in advertising. Sales still declined."?', correct:'B',
+      choices:{
+        A:{text:'The company invested heavily in advertising, sales still declined.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the company invested heavily in advertising, sales still declined.', explain:'This correctly uses "although" to show the contrast between the investment and the outcome.'},
+        C:{text:'The company invested heavily in advertising sales still declined.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The company invested heavily in advertising; declined, sales still.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l369', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We toured Independence hall in Philadelphia.', explain:'"Hall" should be capitalized as part of the proper name "Independence Hall."'},
+        B:{text:'We toured Independence Hall in philadelphia.', explain:'"Philadelphia" is a proper noun and should be capitalized.'},
+        C:{text:'We toured Independence Hall in Philadelphia.', explain:'Both "Independence Hall" and "Philadelphia" are correctly capitalized as proper nouns.'},
+        D:{text:'we toured Independence Hall in Philadelphia.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l370', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'She clerked for the Supreme court of the United States.', explain:'"Court" should be capitalized as part of the proper name "Supreme Court of the United States."'},
+        B:{text:'She clerked for the Supreme Court of the united States.', explain:'"United" should be capitalized as part of the proper name "United States."'},
+        C:{text:'She clerked for the Supreme Court of the United States.', explain:'"Supreme Court of the United States" is correctly capitalized in full as a proper noun.'},
+        D:{text:'she clerked for the Supreme Court of the United States.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l371', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Someone left their jacket in the classroom.', explain:'"Someone" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Someone left his or her jacket in the classroom.', explain:'This correctly uses a singular pronoun to match the singular "someone."'},
+        C:{text:'All the students left their jackets in the classroom.', explain:'This correctly uses the plural "their" to match the plural "all the students."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l372', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Neither of the roommates cleaned their side of the room.', explain:'"Neither" is grammatically singular, so traditional agreement calls for "his" rather than "their."'},
+        B:{text:'Neither of the roommates cleaned his side of the room.', explain:'This correctly uses a singular pronoun to match the singular "neither."'},
+        C:{text:'Both roommates cleaned their sides of the room.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l373', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The city updated it's recycling program.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The city updated its recycling program.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The program belongs to the city.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l374', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Whered you put the keys?', explain:'This is missing the apostrophe needed for the contraction "where\'d" (where did).'},
+        B:{text:"Where'd you put the keys?", explain:'This correctly uses the contraction "where\'d" (where did).'},
+        C:{text:'Whose keys are these?', explain:'This correctly uses the possessive "whose."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l375', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The battery died, the flashlight went dark.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The battery died; the flashlight went dark.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The battery died the flashlight went dark.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The battery died. and the flashlight went dark.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l376', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Pack these essentials a map, water, and snacks.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Pack these essentials: a map, water, and snacks.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Pack these essentials, a map, water, and snacks.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Pack these essentials; a map, water, and snacks.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l377', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The men jackets hung by the door.', explain:'"Men" is already an irregular plural, so it needs an apostrophe-s to show possession: "men\'s jackets."'},
+        B:{text:"The men's jackets hung by the door.", explain:'This correctly forms the possessive of the irregular plural "men."'},
+        C:{text:'The jackets belonged to the men.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l378', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The baroness estate was auctioned off.', explain:'This needs an apostrophe to show possession: "baroness\'s estate."'},
+        B:{text:"The baroness's estate was auctioned off.", explain:'This correctly uses the possessive "baroness\'s."'},
+        C:{text:'The estate belonged to the baroness.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l379', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Robotics involve both engineering and programming skills.', explain:'"Robotics" is treated as a singular subject here, so it needs "involves," not "involve."'},
+        B:{text:'Robotics involves both engineering and programming skills.', explain:'This correctly treats "robotics" as singular.'},
+        C:{text:'Coding involves problem-solving too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l380', skill:'Sentence combining', prompt:'What is the best way to combine: "The concert sold out in minutes. Scalpers raised ticket prices dramatically."?', correct:'B',
+      choices:{
+        A:{text:'The concert sold out in minutes, scalpers raised ticket prices dramatically.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the concert sold out in minutes, scalpers raised ticket prices dramatically.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The concert sold out in minutes scalpers raised ticket prices dramatically.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The concert sold out in minutes; dramatically, scalpers raised ticket prices.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l381', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The set of instructions were confusing.', explain:'"Set" is treated as a singular unit here, so it needs "was," not "were."'},
+        B:{text:'The set of instructions was confusing.', explain:'This correctly treats "set" as a singular unit.'},
+        C:{text:'The instructions are confusing too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l382', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Linguistics are a fascinating area of study.', explain:'"Linguistics" is treated as a singular subject here, so it needs "is," not "are."'},
+        B:{text:'Linguistics is a fascinating area of study.', explain:'This correctly treats "linguistics" as singular.'},
+        C:{text:'Literature is fascinating too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l383', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'She had one rule respect.', explain:'This is missing the colon needed to introduce the explanation.'},
+        B:{text:'She had one rule: respect.', explain:'A colon correctly introduces the explanation of her rule.'},
+        C:{text:'She had one rule, respect.', explain:'A colon, not a comma, should introduce this explanation.'},
+        D:{text:'She had one rule; respect.', explain:'A semicolon needs a complete sentence on both sides, and "respect" alone isn\'t complete.'}
+      } },
+    { id:'l384', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'He carried a backpack tent and sleeping bag.', explain:'This is missing the commas needed to separate the list items.'},
+        B:{text:'He carried a backpack, tent, and sleeping bag.', explain:'Commas correctly separate each item in the list.'},
+        C:{text:'He carried a backpack, tent and sleeping bag,', explain:'This sentence incorrectly ends with a comma instead of a period.'},
+        D:{text:'He carried, a backpack tent and sleeping bag.', explain:'The comma right after "carried" is misplaced.'}
+      } },
+    { id:'l385', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The invitation came from her and I.', explain:'As the object of "from," this should be "her and me," not "her and I."'},
+        B:{text:'The invitation came from her and me.', explain:'This correctly uses the object pronoun "me."'},
+        C:{text:'The invitation came from them.', explain:'This correctly uses the object pronoun "them."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l386', skill:'Pronoun case', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Choose whomever seems most qualified.', explain:'Since this pronoun is the subject of "seems," it should be "whoever," not the object form "whomever."'},
+        B:{text:'Choose whoever seems most qualified.', explain:'This correctly uses "whoever" as the subject of "seems."'},
+        C:{text:'Whoever seems most qualified gets the job.', explain:'This correctly uses "whoever" as the subject of the sentence.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l387', skill:'Sentence combining', prompt:'What is the best way to combine: "The volcano rumbled for days. Scientists issued an evacuation warning."?', correct:'B',
+      choices:{
+        A:{text:'The volcano rumbled for days, scientists issued an evacuation warning.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the volcano rumbled for days, scientists issued an evacuation warning.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The volcano rumbled for days scientists issued an evacuation warning.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The volcano rumbled for days; warning, scientists issued an evacuation.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l388', skill:'Sentence combining', prompt:'What is the best way to combine: "The startup raised millions in funding. It still went bankrupt within a year."?', correct:'B',
+      choices:{
+        A:{text:'The startup raised millions in funding, it still went bankrupt within a year.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Although the startup raised millions in funding, it still went bankrupt within a year.', explain:'This correctly uses "although" to show the contrast between the funding and the outcome.'},
+        C:{text:'The startup raised millions in funding it still went bankrupt within a year.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The startup raised millions in funding; year, it still went bankrupt within a.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
+      } },
+    { id:'l389', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'We climbed pikes peak in Colorado.', explain:'"Pikes Peak" should be fully capitalized as a proper noun.'},
+        B:{text:'We climbed Pikes Peak in colorado.', explain:'"Colorado" is a proper noun and should be capitalized.'},
+        C:{text:'We climbed Pikes Peak in Colorado.', explain:'Both "Pikes Peak" and "Colorado" are correctly capitalized as proper nouns.'},
+        D:{text:'we climbed Pikes Peak in Colorado.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l390', skill:'Capitalization', prompt:'Which sentence is capitalized correctly?', correct:'C',
+      choices:{
+        A:{text:'He works at the National institutes of Health.', explain:'"Institutes of" should be capitalized as part of the proper name "National Institutes of Health."'},
+        B:{text:'He works at the National Institutes of health.', explain:'"Health" should be capitalized as part of the proper name.'},
+        C:{text:'He works at the National Institutes of Health.', explain:'"National Institutes of Health" is correctly capitalized in full as a proper noun.'},
+        D:{text:'he works at the National Institutes of Health.', explain:'The sentence-starting word should be capitalized.'}
+      } },
+    { id:'l391', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Nobody wants their name added to that list.', explain:'"Nobody" is grammatically singular, so traditional agreement calls for "his or her" rather than "their."'},
+        B:{text:'Nobody wants his or her name added to that list.', explain:'This correctly uses a singular pronoun to match the singular "nobody."'},
+        C:{text:'All the volunteers want their names added to the list.', explain:'This correctly uses the plural "their" to match the plural "all the volunteers."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l392', skill:'Pronoun agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Either of the sisters can borrow their car.', explain:'"Either" is grammatically singular, so traditional agreement calls for "her" rather than "their."'},
+        B:{text:'Either of the sisters can borrow her car.', explain:'This correctly uses a singular pronoun to match the singular "either."'},
+        C:{text:'Both sisters can borrow their cars.', explain:'This correctly uses the plural "their" to match the plural "both."'},
+        D:{text:'No mistake', explain:'Choice A contains an error under traditional agreement rules, so this option is incorrect.'}
+      } },
+    { id:'l393', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:"The council revised it's bylaws.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
+        B:{text:'The council revised its bylaws.', explain:'This correctly uses the possessive "its."'},
+        C:{text:'The bylaws belong to the council.', explain:'This sentence has no possessive or contraction error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l394', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Wholl be responsible for cleanup?', explain:'This is missing the apostrophe needed for the contraction "who\'ll" (who will).'},
+        B:{text:"Who'll be responsible for cleanup?", explain:'This correctly uses the contraction "who\'ll" (who will).'},
+        C:{text:'Whose responsibility is this?', explain:'This correctly uses the possessive "whose."'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l395', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'The lights dimmed, the audience fell silent.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'The lights dimmed; the audience fell silent.', explain:'A semicolon correctly joins these two related complete sentences.'},
+        C:{text:'The lights dimmed the audience fell silent.', explain:'This runs the two sentences together with no punctuation at all.'},
+        D:{text:'The lights dimmed. and the audience fell silent.', explain:'A period followed by a lowercase conjunction doesn\'t form a proper sentence structure.'}
+      } },
+    { id:'l396', skill:'Punctuation', prompt:'Which sentence is punctuated correctly?', correct:'B',
+      choices:{
+        A:{text:'Gather these items a rope, a flashlight, and a first aid kit.', explain:'This is missing the colon needed to introduce the list.'},
+        B:{text:'Gather these items: a rope, a flashlight, and a first aid kit.', explain:'A colon correctly introduces the list, with commas separating each item.'},
+        C:{text:'Gather these items, a rope, a flashlight, and a first aid kit.', explain:'A colon, not a comma, should introduce a list like this.'},
+        D:{text:'Gather these items; a rope, a flashlight, and a first aid kit.', explain:'A semicolon needs a complete sentence on both sides, which this list doesn\'t provide.'}
+      } },
+    { id:'l397', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The women achievements were celebrated at the ceremony.', explain:'"Women" is already an irregular plural, so it needs an apostrophe-s to show possession: "women\'s achievements."'},
+        B:{text:"The women's achievements were celebrated at the ceremony.", explain:'This correctly forms the possessive of the irregular plural "women."'},
+        C:{text:'The achievements belonged to the women.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l398', skill:'Plurals vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'The governess salary was modest.', explain:'This needs an apostrophe to show possession: "governess\'s salary."'},
+        B:{text:"The governess's salary was modest.", explain:'This correctly uses the possessive "governess\'s."'},
+        C:{text:'The salary belonged to the governess.', explain:'This sentence has no possessive error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l399', skill:'Subject-verb agreement', prompt:'Which sentence contains an error?', correct:'A',
+      choices:{
+        A:{text:'Linguistics examine the structure of language.', explain:'"Linguistics" is treated as a singular subject here, so it needs "examines," not "examine."'},
+        B:{text:'Linguistics examines the structure of language.', explain:'This correctly treats "linguistics" as singular.'},
+        C:{text:'Literature examines human experience too.', explain:'This sentence has no agreement error.'},
+        D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
+      } },
+    { id:'l400', skill:'Sentence combining', prompt:'What is the best way to combine: "The museum extended its hours. Crowds could visit later in the evening."?', correct:'B',
+      choices:{
+        A:{text:'The museum extended its hours, crowds could visit later in the evening.', explain:'Joining two complete sentences with only a comma creates a comma splice.'},
+        B:{text:'Because the museum extended its hours, crowds could visit later in the evening.', explain:'This correctly shows the cause-and-effect relationship between the two events.'},
+        C:{text:'The museum extended its hours crowds could visit later in the evening.', explain:'This runs the two ideas together with no punctuation or connector.'},
+        D:{text:'The museum extended its hours; evening, crowds could visit later in the.', explain:'This awkwardly reorders the words in a way that doesn\'t read naturally.'}
       } }
   ],
 
@@ -6085,6 +12440,1686 @@ const QUESTIONS = {
         B:{text:'A reflection of nearby cars', explain:'Cars aren\'t mentioned as the source of the reflection in the passage.'},
         C:{text:'A bent reflection of the sky, not actual liquid', explain:'The passage states the "puddle" is "actually a distorted reflection of the sky," not real water.'},
         D:{text:'An optical device used by road engineers', explain:'No device is involved; this is a natural optical effect.'}
+      } },
+    { id:'r161', passage:'p41', skill:'Main idea', prompt:'This passage is primarily about:', correct:'C',
+      choices:{
+        A:{text:'How earthquakes are measured', explain:'Earthquake measurement isn\'t the passage\'s focus, just their role as a trigger.'},
+        B:{text:'The history of coastal cities', explain:'Coastal city history isn\'t discussed in the passage.'},
+        C:{text:'How tsunamis form and grow as they approach shore', explain:'The passage explains how tsunamis begin at sea and dramatically increase in height near shallow coastal water.'},
+        D:{text:'How ships are built to survive storms', explain:'Ship construction isn\'t discussed in the passage.'}
+      } },
+    { id:'r162', passage:'p41', skill:'Detail', prompt:'According to the passage, how tall can a tsunami wave be in the open ocean?', correct:'D',
+      choices:{
+        A:{text:'Tens of feet', explain:'This is the height reached near shore, not in the open ocean.'},
+        B:{text:'Over a hundred feet', explain:'This overstates the height given for the open ocean.'},
+        C:{text:'Completely invisible', explain:'The passage says the wave can pass unnoticed, not that it\'s literally invisible.'},
+        D:{text:'A foot or two', explain:'The passage states a tsunami wave "may only be a foot or two tall" in the open ocean.'}
+      } },
+    { id:'r163', passage:'p41', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'displace' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Absorb completely', explain:'This contradicts water being pushed rather than absorbed.'},
+        B:{text:'Push out of the usual position', explain:'The passage describes an earthquake displacing "a massive volume of water," meaning pushing it out of place.'},
+        C:{text:'Freeze solid', explain:'Freezing isn\'t what displace describes.'},
+        D:{text:'Ignore entirely', explain:'Ignoring contradicts an active physical displacement of water.'}
+      } },
+    { id:'r164', passage:'p41', skill:'Inference', prompt:'It can be inferred that tsunamis are dangerous mainly because:', correct:'C',
+      choices:{
+        A:{text:'They are always visible far offshore', explain:'The passage states the opposite — they can pass beneath ships unnoticed.'},
+        B:{text:'They only occur during earthquakes on land', explain:'The passage specifies underwater earthquakes, not earthquakes on land.'},
+        C:{text:'Their energy compresses and grows dramatically in shallow coastal water', explain:'The passage explains the wave\'s energy becomes compressed near shore, causing dramatic height increases.'},
+        D:{text:'They move slower than normal ocean waves', explain:'Speed comparison to normal waves isn\'t discussed in the passage.'}
+      } },
+    { id:'r165', passage:'p42', skill:'Inference', prompt:"The passage suggests the coach's advice reflected the belief that:", correct:'C',
+      choices:{
+        A:{text:'Nervousness always disappears with enough practice', explain:'The passage states the coach never claimed nervousness would disappear.'},
+        B:{text:'Sofia should avoid debating until she felt confident', explain:'The passage shows Sofia continuing to debate despite her nervousness, contradicting this.'},
+        C:{text:'Managing nervousness while still performing matters more than eliminating it entirely', explain:'The coach teaches Sofia to keep speaking despite her wavering voice, prioritizing performance over eliminating nerves.'},
+        D:{text:'Stopping to collect herself was the best strategy', explain:'The passage states stopping "only drew more attention to the shake," contradicting this.'}
+      } },
+    { id:'r166', passage:'p42', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'Sofia winning a debate championship', explain:'The outcome of the debate isn\'t described in the passage.'},
+        B:{text:'A disagreement with her coach', explain:'No disagreement occurs in the passage.'},
+        C:{text:'A student learning to perform despite unresolved nervousness', explain:'The passage follows Sofia continuing to debate effectively even while visibly nervous.'},
+        D:{text:'Sofia quitting debate', explain:'The passage shows her competing at regionals, not quitting.'}
+      } },
+    { id:'r167', passage:'p42', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'wavered' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Remained perfectly steady', explain:'This is the opposite of wavered.'},
+        B:{text:'Shook or trembled unsteadily', explain:'The passage describes her voice wavering, meaning shaking or trembling unsteadily.'},
+        C:{text:'Grew louder', explain:'Volume isn\'t what wavered describes.'},
+        D:{text:'Stopped completely', explain:'The passage shows her continuing despite the waver, not stopping.'}
+      } },
+    { id:'r168', passage:'p42', skill:'Detail', prompt:'According to the passage, what did the coach teach Sofia to do despite her nervous voice?', correct:'C',
+      choices:{
+        A:{text:'Stop and start over', explain:'The passage states stopping only drew more attention, contradicting this as the taught strategy.'},
+        B:{text:'Switch to a different topic', explain:'Switching topics isn\'t mentioned in the passage.'},
+        C:{text:'Keep speaking anyway', explain:'The passage states the coach taught Sofia "to keep speaking even when her voice wavered."'},
+        D:{text:'Ask for more time', explain:'Requesting more time isn\'t mentioned in the passage.'}
+      } },
+    { id:'r169', passage:'p43', skill:'Main idea', prompt:'This passage is primarily about:', correct:'C',
+      choices:{
+        A:{text:'How police officers direct modern traffic', explain:'Modern traffic direction isn\'t the focus; the passage covers historical development.'},
+        B:{text:'The invention of gas lanterns', explain:'Gas lanterns are mentioned only as an early traffic light feature, not the main topic.'},
+        C:{text:'The historical development of the electric traffic light', explain:'The passage traces traffic lights from manual gas lanterns to automatic electric signals with a yellow light.'},
+        D:{text:'Rules of the road in different countries', explain:'International traffic rules aren\'t discussed in the passage.'}
+      } },
+    { id:'r170', passage:'p43', skill:'Detail', prompt:'According to the passage, what two colors did the first electric traffic signal use?', correct:'B',
+      choices:{
+        A:{text:'Red and yellow', explain:'Yellow was added later, according to the passage.'},
+        B:{text:'Red and green', explain:'The passage states the first electric signal "used only red and green lights."'},
+        C:{text:'Yellow and green', explain:'This isn\'t the pairing described in the passage.'},
+        D:{text:'Red, yellow, and green', explain:'This includes yellow, which the passage says was added later.'}
+      } },
+    { id:'r171', passage:'p43', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'manually' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Automatically', explain:'This is the opposite of manually.'},
+        B:{text:'By hand, without automation', explain:'The passage describes officers operating early signals "manually," meaning by hand.'},
+        C:{text:'Remotely', explain:'This contradicts the officer physically standing at the intersection.'},
+        D:{text:'Rarely', explain:'Frequency isn\'t what manually describes.'}
+      } },
+    { id:'r172', passage:'p43', skill:'Inference', prompt:'It can be inferred that the automatic timer was a significant improvement because:', correct:'C',
+      choices:{
+        A:{text:'It made the lights more colorful', explain:'Color addition (yellow) is mentioned separately from the timer.'},
+        B:{text:'It eliminated the need for traffic lights entirely', explain:'This contradicts traffic lights continuing to exist and evolve.'},
+        C:{text:'It removed the need for constant human operation of the signal', explain:'The passage states the timer removed "the need for constant human operation," addressing the exhausting, dangerous job described earlier.'},
+        D:{text:'It made intersections more dangerous', explain:'This contradicts the passage\'s framing of the timer as an improvement.'}
+      } },
+    { id:'r173', passage:'p44', skill:'Inference', prompt:"The passage suggests the teacher's earlier notes were intended to:", correct:'C',
+      choices:{
+        A:{text:'Discourage Jun from continuing art', explain:'The passage shows the teacher continuing to engage with Jun\'s work, not discouraging her.'},
+        B:{text:"Criticize Jun's technical skill", explain:'The notes question originality, not technical skill.'},
+        C:{text:'Push Jun to develop a personal style rather than imitate others', explain:'The teacher\'s repeated question about whose style it was aimed at getting Jun to find her own voice.'},
+        D:{text:'Compare Jun unfavorably to other students', explain:'No comparison to other students is mentioned in the passage.'}
+      } },
+    { id:'r174', passage:'p44', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'An art competition', explain:'No competition is described in the passage.'},
+        B:{text:'A disagreement between Jun and her teacher', explain:'No disagreement occurs; the teacher offers guidance rather than argument.'},
+        C:{text:'An artist discovering her own authentic style', explain:'The passage follows Jun moving from imitation to painting what she genuinely noticed.'},
+        D:{text:'Jun quitting painting', explain:'The passage shows Jun continuing to paint and improving, not quitting.'}
+      } },
+    { id:'r175', passage:'p44', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'quiet' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Loud and demanding', explain:'This is the opposite of quiet in this context.'},
+        B:{text:'Understated but pointed', explain:'The passage describes a "quiet note" that repeatedly asks a pointed question, suggesting understated but meaningful feedback.'},
+        C:{text:'Meaningless', explain:'This contradicts the note having a clear, repeated purpose.'},
+        D:{text:'Angry', explain:'Anger isn\'t suggested by the description of the notes.'}
+      } },
+    { id:'r176', passage:'p44', skill:'Detail', prompt:"According to the passage, what did Jun paint that finally satisfied her teacher?", correct:'C',
+      choices:{
+        A:{text:'A famous landmark', explain:'No landmark is mentioned in the passage.'},
+        B:{text:'A copy of a famous painting', explain:'This contradicts Jun moving away from copying other artists.'},
+        C:{text:'Ordinary things she noticed on her walk home', explain:'The passage describes her painting "a cracked sidewalk, a dog asleep in a doorway" from her actual walk home.'},
+        D:{text:'An abstract design with no real subject', explain:'The passage describes concrete, real objects, not abstract design.'}
+      } },
+    { id:'r177', passage:'p45', skill:'Main idea', prompt:'This passage is primarily about:', correct:'C',
+      choices:{
+        A:{text:'How tectonic plates collide at their edges', explain:'The passage specifically contrasts this with the Hawaiian hotspot process, which isn\'t edge-based.'},
+        B:{text:'The dangers of living near volcanoes', explain:'Danger isn\'t discussed in the passage.'},
+        C:{text:'How a stationary hotspot created the chain of Hawaiian Islands', explain:'The passage explains how the hotspot and moving tectonic plate together formed the island chain over time.'},
+        D:{text:'How ocean currents shape islands', explain:'Ocean currents aren\'t discussed in the passage.'}
+      } },
+    { id:'r178', passage:'p45', skill:'Detail', prompt:'According to the passage, what is currently forming underwater according to this process?', correct:'A',
+      choices:{
+        A:{text:'A brand-new Hawaiian island', explain:'The passage states this process "is expected to eventually create a brand-new Hawaiian island, currently forming underwater."'},
+        B:{text:'A new tectonic plate', explain:'A new plate isn\'t mentioned as forming in the passage.'},
+        C:{text:'An underwater cave system', explain:'Caves aren\'t mentioned in the passage.'},
+        D:{text:'A coral reef', explain:'Coral reefs aren\'t mentioned in the passage.'}
+      } },
+    { id:'r179', passage:'p45', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'progressively' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Randomly and without pattern', explain:'This contradicts the described gradual, sequential aging of the islands.'},
+        B:{text:'Gradually, in a continuing sequence', explain:'The passage describes islands getting "progressively older" the farther from the hotspot, meaning gradually and sequentially.'},
+        C:{text:'Suddenly and all at once', explain:'This contradicts the gradual process described.'},
+        D:{text:'Rarely and occasionally', explain:'Frequency isn\'t what progressively describes here.'}
+      } },
+    { id:'r180', passage:'p45', skill:'Inference', prompt:'It can be inferred that the islands farthest from the current hotspot location are:', correct:'B',
+      choices:{
+        A:{text:'The youngest in the chain', explain:'The passage states islands get older with distance from the current hotspot, contradicting this.'},
+        B:{text:'The oldest in the chain', explain:'The passage states islands "get progressively older the farther they are from the hotspot\'s current location."'},
+        C:{text:'Still actively erupting', explain:'The passage implies the newest island near the current hotspot is the one still forming, not the farthest ones.'},
+        D:{text:'Not part of the same island chain', explain:'The passage describes them as part of the same chain formed by the same hotspot.'}
+      } },
+    { id:'r181', passage:'p46', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How microphones are manufactured', explain:'Microphone manufacturing isn\'t discussed in the passage.'},
+        B:{text:'How noise-canceling headphones use destructive interference to reduce sound', explain:'The passage explains how the headphones generate an inverse sound wave to cancel out noise.'},
+        C:{text:'The dangers of loud noise exposure', explain:'Noise danger isn\'t discussed in the passage.'},
+        D:{text:'How airplane cabins are soundproofed', explain:'Cabin soundproofing generally isn\'t the passage\'s focus, just one example of the technology\'s use.'}
+      } },
+    { id:'r182', passage:'p46', skill:'Detail', prompt:'According to the passage, what kind of sounds does this technology struggle with most?', correct:'D',
+      choices:{
+        A:{text:'Steady, low-pitched sounds', explain:'The passage states the technology works "especially well" on these sounds, not struggles with them.'},
+        B:{text:'Sounds from airplane engines', explain:'This is listed as an example the technology handles well.'},
+        C:{text:'Sounds below human hearing range', explain:'This isn\'t mentioned in the passage.'},
+        D:{text:'Sudden or high-pitched sounds', explain:'The passage states the technology "struggles more with sudden or high-pitched sounds."'}
+      } },
+    { id:'r183', passage:'p46', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'inverse' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Identical copy', explain:'This is the opposite of inverse.'},
+        B:{text:'Exact opposite', explain:'The passage describes a wave that is "the exact inverse" of the incoming noise, meaning its opposite.'},
+        C:{text:'Louder version', explain:'Volume isn\'t what inverse describes.'},
+        D:{text:'Delayed echo', explain:'Timing isn\'t what inverse describes.'}
+      } },
+    { id:'r184', passage:'p46', skill:'Inference', prompt:'It can be inferred that noise-canceling headphones would be least effective at blocking:', correct:'C',
+      choices:{
+        A:{text:'A steady air conditioner hum', explain:'The passage states the technology handles steady, low-pitched sounds well.'},
+        B:{text:"An airplane engine's constant drone", explain:'The passage lists this as an example the technology handles well.'},
+        C:{text:'A sudden, sharp dog bark', explain:'The passage states the technology struggles most with sudden or high-pitched sounds, giving a dog barking as an example.'},
+        D:{text:'A low, steady hum from a fan', explain:'The passage states the technology handles steady, low-pitched sounds well.'}
+      } },
+    { id:'r185', passage:'p47', skill:'Inference', prompt:"The passage suggests the cousin's advice was based on the idea that:", correct:'B',
+      choices:{
+        A:{text:'Marisol needed more theoretical knowledge first', explain:'The passage states Marisol already had memorized theoretical knowledge, contradicting this as the missing piece.'},
+        B:{text:"Overthinking was getting in the way of Marisol's physical readiness", explain:'The cousin tells Marisol to "stop thinking" and trust that her body already knows what to do.'},
+        C:{text:'Marisol should wait until she felt no fear at all', explain:'The passage shows Marisol dropping in despite her shaking legs, not waiting for fear to disappear.'},
+        D:{text:'Watching others was more valuable than practicing herself', explain:'The passage shows watching alone wasn\'t enough; the cousin pushes her toward actually doing it.'}
+      } },
+    { id:'r186', passage:'p47', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'A skateboarding competition', explain:'No competition is described in the passage.'},
+        B:{text:'A disagreement with her cousin', explain:'No disagreement occurs in the passage.'},
+        C:{text:'A young skater overcoming hesitation to trust her preparation', explain:'The passage follows Marisol moving past her fear to successfully attempt the drop-in.'},
+        D:{text:'Marisol quitting skateboarding', explain:'The passage shows her successfully completing the attempt, not quitting.'}
+      } },
+    { id:'r187', passage:'p47', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'wobbly' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Perfectly balanced', explain:'This is the opposite of wobbly.'},
+        B:{text:'Unsteady, shaky', explain:'The passage describes "three wobbly seconds," suggesting an unsteady, shaky moment.'},
+        C:{text:'Extremely fast', explain:'Speed isn\'t what wobbly describes.'},
+        D:{text:'Completely still', explain:'This is the opposite of wobbly, which implies motion or instability.'}
+      } },
+    { id:'r188', passage:'p47', skill:'Detail', prompt:"According to the passage, how long did Marisol's first drop-in last?", correct:'C',
+      choices:{
+        A:{text:'One second', explain:'This isn\'t the duration given in the passage.'},
+        B:{text:'Ten seconds', explain:'This overstates the duration given in the passage.'},
+        C:{text:'Three seconds', explain:'The passage states "for three wobbly seconds, her body proved her cousin right."'},
+        D:{text:'A full minute', explain:'This overstates the duration given in the passage.'}
+      } },
+    { id:'r189', passage:'p48', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'Modern bicycle racing techniques', explain:'Modern racing isn\'t discussed in the passage.'},
+        B:{text:'The historical evolution of bicycle design toward the modern shape', explain:'The passage traces bicycles from pedal-less designs through oversized front wheels to the modern chain-driven safety bicycle.'},
+        C:{text:'How bicycle chains are manufactured', explain:'Chain manufacturing isn\'t discussed in the passage.'},
+        D:{text:'The invention of rubber tires', explain:'Tires aren\'t mentioned in the passage.'}
+      } },
+    { id:'r190', passage:'p48', skill:'Detail', prompt:'According to the passage, what problem did the oversized front wheel design cause?', correct:'C',
+      choices:{
+        A:{text:'It made bikes too slow', explain:'The passage states this design achieved "any real speed," contradicting slowness as the problem.'},
+        B:{text:'It made bikes too expensive to produce', explain:'Cost isn\'t mentioned as a problem in the passage.'},
+        C:{text:'It made bikes dangerously top-heavy and hard to mount', explain:'The passage states this design made the bikes "dangerously top-heavy and difficult to mount."'},
+        D:{text:'It prevented bikes from turning', explain:'Turning ability isn\'t mentioned as a problem in the passage.'}
+      } },
+    { id:'r191', passage:'p48', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'nicknamed' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Formally required to be called', explain:'This overstates the informal nature of a nickname.'},
+        B:{text:'Given an informal, familiar name', explain:'The passage describes the design being "nicknamed" the safety bicycle, meaning given a familiar name.'},
+        C:{text:'Permanently forgotten', explain:'This is the opposite of nicknamed.'},
+        D:{text:'Scientifically classified', explain:'A nickname is informal, not a scientific classification.'}
+      } },
+    { id:'r192', passage:'p48', skill:'Inference', prompt:'It can be inferred that the chain-driven rear wheel design was significant because:', correct:'D',
+      choices:{
+        A:{text:'It made bicycles slower but safer', explain:'Speed reduction isn\'t discussed as a tradeoff in the passage.'},
+        B:{text:'It eliminated the need for pedals entirely', explain:'This contradicts pedals continuing to exist on the safety bicycle.'},
+        C:{text:'It was the very first pedal design ever created', explain:'The passage describes earlier pedal designs on the oversized front wheel, contradicting this.'},
+        D:{text:'It allowed for a more balanced, stable design without needing an oversized wheel', explain:'The passage states this design led to "the safer, more balanced shape still recognizable today."'}
+      } },
+    { id:'r193', passage:'p49', skill:'Inference', prompt:'The passage suggests Grandpa valued the experience mainly because:', correct:'B',
+      choices:{
+        A:{text:'The radio itself was extremely valuable', explain:'The passage doesn\'t suggest the radio\'s monetary value was the point.'},
+        B:{text:'Efrain gained genuine understanding, not just a working radio', explain:'The passage states Grandpa celebrated Efrain\'s realization that he understood how it worked, more than the radio being fixed.'},
+        C:{text:'New radios were too expensive to buy', explain:'Cost of a new radio isn\'t discussed as the reason in the passage.'},
+        D:{text:'Efrain wanted to sell the radio afterward', explain:'Selling the radio isn\'t mentioned in the passage.'}
+      } },
+    { id:'r194', passage:'p49', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'Buying a new radio', explain:'The passage explicitly contrasts this with the choice to repair instead.'},
+        B:{text:'A disagreement over fixing versus replacing the radio', explain:'No disagreement occurs; Grandpa simply chooses to repair rather than replace.'},
+        C:{text:'A grandfather teaching genuine understanding through patient, hands-on work', explain:'The passage follows Grandpa guiding Efrain through methodical repair rather than quick fixes.'},
+        D:{text:'Efrain giving up on the repair', explain:'The passage shows the repair succeeding, not being abandoned.'}
+      } },
+    { id:'r195', passage:'p49', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'frayed' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Brand new', explain:'This is the opposite of frayed.'},
+        B:{text:'Worn and coming apart', explain:'The passage describes the cord as "frayed beyond safe use," meaning worn and unraveling.'},
+        C:{text:'Brightly colored', explain:'Color isn\'t what frayed describes.'},
+        D:{text:'Extremely heavy', explain:'Weight isn\'t what frayed describes.'}
+      } },
+    { id:'r196', passage:'p49', skill:'Detail', prompt:'According to the passage, how many Saturdays did the repair take?', correct:'C',
+      choices:{
+        A:{text:'One', explain:'This isn\'t the number given in the passage.'},
+        B:{text:'Two', explain:'This isn\'t the number given in the passage.'},
+        C:{text:'Three', explain:'The passage states "Grandpa spent three Saturdays teaching Efrain."'},
+        D:{text:'Four', explain:'This overstates the number given in the passage.'}
+      } },
+    { id:'r197', passage:'p50', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:"How Earth's magnetic field is measured", explain:'Measurement methods aren\'t discussed in the passage.'},
+        B:{text:'How the aurora borealis forms and why its colors vary', explain:'The passage explains the collision process behind the aurora and how different gases produce different colors.'},
+        C:{text:'The dangers of solar particles', explain:'Danger isn\'t discussed in the passage.'},
+        D:{text:'Why the poles are cold', explain:'Polar temperature isn\'t discussed in the passage.'}
+      } },
+    { id:'r198', passage:'p50', skill:'Detail', prompt:'According to the passage, which gas typically produces green or red light?', correct:'B',
+      choices:{
+        A:{text:'Nitrogen', explain:'The passage states nitrogen tends to produce blue or purple, not green or red.'},
+        B:{text:'Oxygen', explain:'The passage states "oxygen typically produces green or red light."'},
+        C:{text:'Hydrogen', explain:'Hydrogen isn\'t mentioned in the passage.'},
+        D:{text:'Helium', explain:'Helium isn\'t mentioned in the passage.'}
+      } },
+    { id:'r199', passage:'p50', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'channels' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Blocks completely', explain:'This contradicts particles still reaching the polar regions.'},
+        B:{text:'Directs or guides along a path', explain:'The passage describes the magnetic field channeling particles "toward the polar regions," meaning directing them.'},
+        C:{text:'Destroys', explain:'Destruction isn\'t what channels describes.'},
+        D:{text:'Randomly scatters', explain:'This contradicts the directed, non-random path described.'}
+      } },
+    { id:'r200', passage:'p50', skill:'Inference', prompt:'It can be inferred that the aurora is rarely seen at the equator because:', correct:'C',
+      choices:{
+        A:{text:'There are no gases present at the equator', explain:'The atmosphere, including its gases, exists globally, not just at the poles.'},
+        B:{text:"The sun doesn't reach the equator", explain:'This contradicts basic facts about sunlight reaching the equator, and isn\'t stated in the passage.'},
+        C:{text:"Earth's magnetic field directs charged particles mainly toward the poles", explain:'The passage states the magnetic field channels particles toward polar regions, explaining why the aurora is mainly visible at high latitudes.'},
+        D:{text:'The equator has no atmosphere', explain:'This is factually inconsistent with the passage\'s description of atmospheric gases producing light.'}
+      } },
+    { id:'r201', passage:'p51', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to design digital blueprints', explain:'Blueprint design software isn\'t discussed in the passage.'},
+        B:{text:'How 3D printers build objects layer by layer', explain:'The passage explains the process of melting filament and depositing it in successive layers to build an object.'},
+        C:{text:'The history of manufacturing', explain:'Manufacturing history isn\'t discussed in the passage.'},
+        D:{text:'How to repair a 3D printer nozzle', explain:'Repair isn\'t discussed in the passage.'}
+      } },
+    { id:'r202', passage:'p51', skill:'Detail', prompt:'According to the passage, what happens to plastic filament in a 3D printer?', correct:'C',
+      choices:{
+        A:{text:'It is frozen into shape', explain:'The passage describes heating and melting, not freezing.'},
+        B:{text:'It is carved away layer by layer', explain:'This describes traditional manufacturing, which the passage contrasts with 3D printing.'},
+        C:{text:'It is melted and then deposited along each layer', explain:'The passage states a nozzle "heats plastic filament until it melts, then deposits it precisely along each layer\'s outline."'},
+        D:{text:'It is mixed with metal before printing', explain:'Mixing with metal isn\'t mentioned in the passage.'}
+      } },
+    { id:'r203', passage:'p51', skill:'Vocabulary in context', prompt:"As used in the passage, the phrase 'cross-sections' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Entire finished objects', explain:'A cross-section is a slice of the object, not the whole finished piece.'},
+        B:{text:'Slices or segments cut through an object', explain:'The passage describes a blueprint "sliced into hundreds or even thousands of horizontal cross-sections," meaning thin slices.'},
+        C:{text:'Digital file formats', explain:'File formats aren\'t what cross-sections describes.'},
+        D:{text:'Printer error messages', explain:'Error messages aren\'t what cross-sections describes.'}
+      } },
+    { id:'r204', passage:'p51', skill:'Inference', prompt:'It can be inferred that 3D printing differs from traditional manufacturing mainly because:', correct:'D',
+      choices:{
+        A:{text:'It requires more expensive materials', explain:'Cost isn\'t discussed as the key difference in the passage.'},
+        B:{text:'It always produces smaller objects', explain:'Size isn\'t discussed as the key difference in the passage.'},
+        C:{text:'It cannot create complex shapes', explain:'The passage states the opposite: complex shapes with internal cavities can be built this way.'},
+        D:{text:'It adds material layer by layer instead of removing it from a solid block', explain:'The passage explicitly contrasts 3D printing\'s additive process with traditional manufacturing, which "starts with a solid block and removes material."'}
+      } },
+    { id:'r205', passage:'p52', skill:'Inference', prompt:"The neighbor's comment suggests that:", correct:'C',
+      choices:{
+        A:{text:'Aliyah should buy different seeds', explain:'The neighbor never suggests changing seeds.'},
+        B:{text:'The seed packet instructions were completely wrong', explain:'The passage doesn\'t suggest the instructions were wrong, just that plants don\'t follow strict schedules.'},
+        C:{text:"Growth doesn't follow fixed timelines printed on a package", explain:'The neighbor points out that "the plant hasn\'t read" the packet, implying natural growth doesn\'t follow a strict printed schedule.'},
+        D:{text:'Aliyah was watering the plants incorrectly', explain:'Watering technique isn\'t mentioned as a problem in the passage.'}
+      } },
+    { id:'r206', passage:'p52', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A gardening competition', explain:'No competition is described in the passage.'},
+        B:{text:'A young gardener learning patience despite delayed results', explain:'The passage follows Aliyah continuing to care for her plants despite them not sprouting on the expected schedule.'},
+        C:{text:'A disagreement with her neighbor', explain:'No disagreement occurs in the passage.'},
+        D:{text:'Aliyah giving up on gardening', explain:'The passage shows her continuing to water the plants, not giving up.'}
+      } },
+    { id:'r207', passage:'p52', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'sprout' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Begin to grow, emerge', explain:'The passage describes plantings failing to "sprout," meaning they hadn\'t yet begun to grow.'},
+        B:{text:'Wither and die', explain:'This is the opposite of sprout.'},
+        C:{text:'Be watered', explain:'Watering is a separate action from sprouting itself.'},
+        D:{text:'Be harvested', explain:'Harvesting happens much later than sprouting.'}
+      } },
+    { id:'r208', passage:'p52', skill:'Detail', prompt:'According to the passage, on what day did the shoot finally appear?', correct:'D',
+      choices:{
+        A:{text:'Day two', explain:'This isn\'t the day given in the passage.'},
+        B:{text:'Day fourteen', explain:'This is the promised timeline on the packet, not when the shoot actually appeared.'},
+        C:{text:'Day twenty-one', explain:'This overstates the day given in the passage.'},
+        D:{text:'Day nineteen', explain:'The passage states "on day nineteen, a single green shoot broke through the soil."'}
+      } },
+    { id:'r209', passage:'p53', skill:'Main idea', prompt:'This passage is primarily about:', correct:'C',
+      choices:{
+        A:{text:'How flint and steel are mined', explain:'Mining isn\'t discussed in the passage.'},
+        B:{text:'Modern matchbox manufacturing', explain:'Modern manufacturing isn\'t the passage\'s focus.'},
+        C:{text:'The historical development of matches from flint to safety matches', explain:'The passage traces fire-starting methods from flint and steel through friction matches to safety matches.'},
+        D:{text:'The chemistry of combustion', explain:'Combustion chemistry in general isn\'t discussed in the passage.'}
+      } },
+    { id:'r210', passage:'p53', skill:'Detail', prompt:'According to the passage, what problem did early friction matches have?', correct:'B',
+      choices:{
+        A:{text:'They were too expensive to produce', explain:'Cost isn\'t mentioned as a problem in the passage.'},
+        B:{text:'They could ignite unexpectedly and were unstable', explain:'The passage states early friction matches "were unstable enough to occasionally burst into flame unexpectedly in a person\'s pocket."'},
+        C:{text:'They required flint and steel to work', explain:'The passage describes friction matches as an alternative to flint and steel, not requiring them.'},
+        D:{text:'They took several minutes to light', explain:'This describes the older flint-and-steel method, not friction matches, which the passage says "ignited instantly."'}
+      } },
+    { id:'r211', passage:'p53', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'tinder' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Easily flammable material used to start a fire', explain:'The passage describes catching sparks "in dry tinder," meaning material that easily catches fire.'},
+        B:{text:'A type of metal tool', explain:'Tinder is a material, not a metal tool like flint and steel.'},
+        C:{text:'A chemical safety strip', explain:'This describes a feature of safety matches, not tinder.'},
+        D:{text:'A type of match', explain:'Tinder is the material used before matches, not a match itself.'}
+      } },
+    { id:'r212', passage:'p53', skill:'Inference', prompt:'It can be inferred that safety matches were significant because:', correct:'D',
+      choices:{
+        A:{text:'They eliminated the need for a matchbox entirely', explain:'The passage states safety matches specifically require a strip found on the matchbox, contradicting this.'},
+        B:{text:'They were the very first type of match ever invented', explain:'The passage describes friction matches as coming before safety matches.'},
+        C:{text:'They burned longer than friction matches', explain:'Burn duration isn\'t discussed in the passage.'},
+        D:{text:'A special chemical strip made them safe and reliable for household use', explain:'The passage states safety matches required a special strip and became "reliably safe enough for widespread household use."'}
+      } },
+    { id:'r213', passage:'p54', skill:'Inference', prompt:"The father's comment suggests he valued:", correct:'A',
+      choices:{
+        A:{text:'Patience as part of the activity itself, not just a hurdle before the reward', explain:'The father says waiting "is the whole sport," suggesting patience itself is valuable, not merely something to endure.'},
+        B:{text:'Catching as many fish as possible quickly', explain:'The passage shows him unconcerned with the slow pace, contradicting a focus on speed.'},
+        C:{text:'Moving to a new fishing spot immediately', explain:'The passage states he didn\'t suggest moving spots.'},
+        D:{text:'Giving up if nothing happens within an hour', explain:'The passage shows him continuing well past three hours, contradicting this.'}
+      } },
+    { id:'r214', passage:'p54', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A fishing competition', explain:'No competition is described in the passage.'},
+        B:{text:'A father teaching his son to value patience during fishing', explain:'The passage follows Dev learning to appreciate waiting as part of the experience, not just an obstacle.'},
+        C:{text:'A disagreement between Dev and his father', explain:'No disagreement occurs in the passage.'},
+        D:{text:'Dev giving up on fishing', explain:'The passage shows him continuing and eventually catching a fish, not giving up.'}
+      } },
+    { id:'r215', passage:'p54', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'declare' most nearly means:", correct:'C',
+      choices:{
+        A:{text:'Quietly wonder', explain:'This undersells the more definite, assertive tone declare implies.'},
+        B:{text:'Politely ask', explain:'Asking isn\'t what declare describes.'},
+        C:{text:'State firmly or officially', explain:'Dev was "ready to declare the entire afternoon a waste," meaning to state it firmly.'},
+        D:{text:'Silently ignore', explain:'This is the opposite of declaring something.'}
+      } },
+    { id:'r216', passage:'p54', skill:'Detail', prompt:"According to the passage, how long after the father's comment did Dev catch a fish?", correct:'B',
+      choices:{
+        A:{text:'Immediately', explain:'The passage specifies a time gap, not an immediate catch.'},
+        B:{text:'Twenty minutes', explain:'The passage states "twenty minutes later, Dev\'s rod bent sharply downward."'},
+        C:{text:'One hour', explain:'This overstates the time given in the passage.'},
+        D:{text:'The next day', explain:'This overstates the time given in the passage.'}
+      } },
+    { id:'r217', passage:'p55', skill:'Main idea', prompt:'This passage is primarily about:', correct:'C',
+      choices:{
+        A:{text:'How canyons are formed', explain:'Canyon formation isn\'t discussed in the passage.'},
+        B:{text:'How auditoriums are designed for acoustics', explain:'Auditorium design isn\'t discussed in the passage.'},
+        C:{text:'How echoes form and why they require distance to be perceived', explain:'The passage explains the sound-reflection process behind echoes and why they need enough distance to be noticeable.'},
+        D:{text:'The speed of sound in different materials', explain:'Sound speed in different materials generally isn\'t discussed in the passage.'}
+      } },
+    { id:'r218', passage:'p55', skill:'Detail', prompt:'According to the passage, what determines the length of the delay before an echo returns?', correct:'A',
+      choices:{
+        A:{text:'The distance to the reflecting surface', explain:'The passage states "the farther away the reflecting surface is, the longer the delay before the echo returns."'},
+        B:{text:'The loudness of the original sound', explain:'Loudness isn\'t identified as the factor determining delay in the passage.'},
+        C:{text:'The temperature of the air', explain:'Air temperature isn\'t discussed in the passage.'},
+        D:{text:'The time of day', explain:'Time of day isn\'t discussed in the passage.'}
+      } },
+    { id:'r219', passage:'p55', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'reflecting' most nearly means:", correct:'D',
+      choices:{
+        A:{text:'Absorbing completely', explain:'This is the opposite of reflecting.'},
+        B:{text:'Destroying', explain:'Destruction isn\'t what reflecting describes.'},
+        C:{text:'Creating from nothing', explain:'This isn\'t what reflecting describes.'},
+        D:{text:'Bouncing back', explain:'The passage describes sound striking a surface and bouncing back, matching the meaning of reflecting.'}
+      } },
+    { id:'r220', passage:'p55', skill:'Inference', prompt:"It can be inferred that echoes aren't noticeable in small rooms because:", correct:'B',
+      choices:{
+        A:{text:'Small rooms have no walls to reflect sound', explain:'The passage implies reflection requires a surface, and small rooms do have walls.'},
+        B:{text:'The reflected sound returns too quickly to be distinguished from the original', explain:'The passage states that if reflected sound "returns quickly enough, within a fraction of a second, the human ear cannot distinguish it from the original sound."'},
+        C:{text:'Sound cannot travel through air indoors', explain:'This contradicts basic facts about sound traveling through air, and isn\'t stated in the passage.'},
+        D:{text:'Small rooms are always silent', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r221', passage:'p56', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How solar water heaters work', explain:'Solar water heaters are mentioned only as a contrast to photovoltaic panels.'},
+        B:{text:'How solar panels convert sunlight into usable electricity', explain:'The passage explains the photovoltaic effect and how cells and panels combine to generate power.'},
+        C:{text:'How to install a home solar system', explain:'Installation isn\'t discussed in the passage.'},
+        D:{text:'The history of electrical grids', explain:'Grid history isn\'t discussed in the passage.'}
+      } },
+    { id:'r222', passage:'p56', skill:'Detail', prompt:'According to the passage, what does sunlight do to the silicon layer in a solar cell?', correct:'C',
+      choices:{
+        A:{text:'It heats the silicon until it melts', explain:'Melting isn\'t described in the passage.'},
+        B:{text:'It reflects harmlessly off the surface', explain:'This contradicts the passage\'s description of an active electrical effect.'},
+        C:{text:'It knocks electrons loose, creating a flow of current', explain:'The passage states sunlight "knocks electrons loose from their atoms, creating a flow of electrical current."'},
+        D:{text:'It changes the silicon into a liquid', explain:'A liquid state change isn\'t mentioned in the passage.'}
+      } },
+    { id:'r223', passage:'p56', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'treated' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Given a reward', explain:'This is a different, unrelated meaning of "treated."'},
+        B:{text:'Specially processed or prepared', explain:'The passage describes a "specially treated silicon layer," meaning processed to enable the photovoltaic effect.'},
+        C:{text:'Damaged accidentally', explain:'This contradicts the deliberate, engineered process described.'},
+        D:{text:'Ignored completely', explain:'This is the opposite of treated in this context.'}
+      } },
+    { id:'r224', passage:'p56', skill:'Inference', prompt:'It can be inferred that solar panels differ from solar water heaters mainly because:', correct:'D',
+      choices:{
+        A:{text:'Solar panels are much older technology', explain:'Age of the technologies isn\'t discussed in the passage.'},
+        B:{text:'Solar water heaters require silicon cells', explain:'The passage attributes silicon cells to photovoltaic panels, not water heaters.'},
+        C:{text:'Solar panels only work in cold climates', explain:'Climate isn\'t discussed in the passage.'},
+        D:{text:'Solar panels convert light into electricity rather than simply transferring heat', explain:'The passage contrasts water heaters, which "use sunlight to warm liquid directly," with panels, which "convert light energy into usable electricity."'}
+      } },
+    { id:'r225', passage:'p57', skill:'Inference', prompt:"The teacher's approach suggests she believed:", correct:'C',
+      choices:{
+        A:{text:'The opening paragraph was already perfect', explain:'The passage doesn\'t suggest the teacher judged the paragraph at all before Priya finished the story.'},
+        B:{text:'Priya should abandon the story entirely', explain:'The passage shows Priya completing the story, contradicting abandonment.'},
+        C:{text:'Finishing the whole story mattered more than perfecting one section first', explain:'By having Priya write the ending before returning to the opening, the teacher shifted focus from perfecting one part to completing the whole.'},
+        D:{text:'Priya needed to attend a different writing class', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r226', passage:'p57', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A writing competition', explain:'No competition is described in the passage.'},
+        B:{text:'A student learning to move past perfectionism by finishing her work', explain:'The passage follows Priya shifting from endless revision to completing her story.'},
+        C:{text:'A disagreement with her teacher', explain:'No disagreement occurs in the passage.'},
+        D:{text:'Priya giving up on writing', explain:'The passage shows her finishing the story, not giving up.'}
+      } },
+    { id:'r227', passage:'p57', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'reluctantly' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Unwillingly, with hesitation', explain:'The passage describes Priya finishing the ending "reluctantly," suggesting she did so with hesitation.'},
+        B:{text:'Eagerly and without hesitation', explain:'This is the opposite of reluctantly.'},
+        C:{text:'Angrily', explain:'Anger isn\'t what reluctantly describes.'},
+        D:{text:'Confidently', explain:'This is nearly the opposite of reluctantly.'}
+      } },
+    { id:'r228', passage:'p57', skill:'Detail', prompt:'According to the passage, what did the teacher ask Priya to write first?', correct:'C',
+      choices:{
+        A:{text:'A new opening paragraph', explain:'The passage states the teacher asked her to write the ending, not a new opening.'},
+        B:{text:'A summary of the whole story', explain:'A summary isn\'t mentioned in the passage.'},
+        C:{text:'The ending', explain:'The passage states the teacher "asked Priya to write the ending first, then come back to the beginning later."'},
+        D:{text:'A list of characters', explain:'A character list isn\'t mentioned in the passage.'}
+      } },
+    { id:'r229', passage:'p58', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How modern stamps are printed', explain:'Modern printing methods aren\'t discussed in the passage.'},
+        B:{text:'How postage stamps changed who paid for mail delivery', explain:'The passage explains the shift from recipient-paid to sender-paid postage with the introduction of stamps.'},
+        C:{text:'The history of British currency', explain:'Currency history isn\'t discussed in the passage.'},
+        D:{text:'Why some letters go undelivered today', explain:'Modern delivery failures aren\'t discussed in the passage.'}
+      } },
+    { id:'r230', passage:'p58', skill:'Detail', prompt:'According to the passage, before stamps existed, who was typically expected to pay for delivery?', correct:'C',
+      choices:{
+        A:{text:'The postal service itself', explain:'The passage doesn\'t describe the postal service absorbing the cost.'},
+        B:{text:'The government', explain:'Government-funded delivery isn\'t mentioned in the passage.'},
+        C:{text:'The recipient', explain:'The passage states "the person receiving a letter, not the sender, was typically expected to pay for its delivery."'},
+        D:{text:'A local shopkeeper', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r231', passage:'p58', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'adhesive' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Sticky, able to attach to a surface', explain:'The passage describes the "first adhesive postage stamp," meaning one that could stick to an envelope.'},
+        B:{text:'Extremely expensive', explain:'Cost isn\'t what adhesive describes.'},
+        C:{text:'Handwritten', explain:'This isn\'t what adhesive describes.'},
+        D:{text:'Impossible to remove', explain:'This overstates what adhesive simply means, sticky enough to attach.'}
+      } },
+    { id:'r232', passage:'p58', skill:'Inference', prompt:'It can be inferred that postage stamps increased mail usage mainly because:', correct:'D',
+      choices:{
+        A:{text:'Letters became much faster to deliver', explain:'Delivery speed isn\'t discussed as the reason in the passage.'},
+        B:{text:'The government began requiring people to send mail', explain:'This isn\'t suggested anywhere in the passage.'},
+        C:{text:'Stamps were required by international law', explain:'International law isn\'t discussed in the passage.'},
+        D:{text:'Senders no longer burdened recipients with unexpected delivery costs', explain:'The passage states senders no longer worried about "placing an unwanted financial burden on the person receiving their letter."'}
+      } },
+    { id:'r233', passage:'p59', skill:'Inference', prompt:'The passage suggests the treehouse project mattered to the siblings mainly because:', correct:'B',
+      choices:{
+        A:{text:'They wanted to sell the treehouse', explain:'Selling isn\'t mentioned in the passage.'},
+        B:{text:"It connected them to their grandmother's memory", explain:'The passage highlights repainting the treehouse the same blue their grandmother chose, and both understanding why it mattered without needing to say so.'},
+        C:{text:'They needed extra storage space', explain:'Storage isn\'t mentioned as the motivation in the passage.'},
+        D:{text:'Talia wanted a place to be alone', explain:'This isn\'t suggested in the passage; the project is shared between both siblings.'}
+      } },
+    { id:'r234', passage:'p59', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'A disagreement between siblings', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A weekend home renovation project', explain:'The passage states the project took most of the summer, not a single weekend.'},
+        C:{text:"Siblings restoring a treehouse as a way of honoring their grandmother's memory", explain:'The passage centers on Marcus and Talia carefully restoring the treehouse in a way tied to their grandmother.'},
+        D:{text:'Marcus refusing to help with the treehouse', explain:'The passage shows Marcus participating throughout the project.'}
+      } },
+    { id:'r235', passage:'p59', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'splinters' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Small, sharp pieces of wood', explain:'The passage describes "sanding down splinters," referring to small, sharp wood fragments.'},
+        B:{text:'Large wooden beams', explain:'This overstates the size splinters describes.'},
+        C:{text:'Paint chips', explain:'This isn\'t what splinters describes in context.'},
+        D:{text:'Metal nails', explain:'Splinters refers to wood, not metal.'}
+      } },
+    { id:'r236', passage:'p59', skill:'Detail', prompt:'According to the passage, what color did they repaint the treehouse?', correct:'D',
+      choices:{
+        A:{text:'A bright red', explain:'This isn\'t the color mentioned in the passage.'},
+        B:{text:'A plain white', explain:'This isn\'t the color mentioned in the passage.'},
+        C:{text:'A dark green', explain:'This isn\'t the color mentioned in the passage.'},
+        D:{text:"The same shade of blue their grandmother had chosen", explain:'The passage states they repainted the walls "the same shade of blue their grandmother had chosen years earlier."'}
+      } },
+    { id:'r237', passage:'p60', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How predators hunt in groups', explain:'Group hunting isn\'t discussed in the passage.'},
+        B:{text:'How animals use different types of camouflage to survive', explain:'The passage explains seasonal camouflage in the arctic fox and rapid camouflage in the octopus.'},
+        C:{text:'How arctic ecosystems are structured', explain:'Broader ecosystem structure isn\'t discussed in the passage.'},
+        D:{text:'How octopuses hunt for food', explain:'Octopus hunting behavior beyond camouflage isn\'t discussed in the passage.'}
+      } },
+    { id:'r238', passage:'p60', skill:'Detail', prompt:"According to the passage, what does the arctic fox's fur do in winter?", correct:'C',
+      choices:{
+        A:{text:'It falls out completely', explain:'This isn\'t described in the passage.'},
+        B:{text:'It turns brown to match rocks and soil', explain:'The passage states brown fur is for summer, not winter.'},
+        C:{text:'It turns white to match snowy surroundings', explain:'The passage states the arctic fox grows "white fur in winter to match snowy surroundings."'},
+        D:{text:'It changes color within seconds', explain:'This describes the octopus, not the arctic fox, according to the passage.'}
+      } },
+    { id:'r239', passage:'p60', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'undetected' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Without being noticed or discovered', explain:'The passage describes hunting prey "undetected," meaning without being noticed.'},
+        B:{text:'Loudly and obviously', explain:'This is the opposite of undetected.'},
+        C:{text:'Slowly and carefully', explain:'Speed or care isn\'t specifically what undetected describes.'},
+        D:{text:'Successfully and completely', explain:'This isn\'t precisely what undetected describes; it specifically refers to not being noticed.'}
+      } },
+    { id:'r240', passage:'p60', skill:'Inference', prompt:'It can be inferred that octopus camouflage differs from arctic fox camouflage mainly because:', correct:'D',
+      choices:{
+        A:{text:'It only works underwater', explain:'While true that octopuses live underwater, the passage\'s key contrast is about speed, not habitat.'},
+        B:{text:'It doesn\'t actually change appearance at all', explain:'This contradicts the passage\'s description of changing skin color and texture.'},
+        C:{text:'It requires a full year to complete', explain:'This is the opposite of what the passage describes for octopuses.'},
+        D:{text:'It changes almost instantly rather than seasonally', explain:'The passage contrasts the arctic fox\'s seasonal camouflage with the octopus\'s ability to change "almost instantly... within seconds."'}
+      } },
+    { id:'r241', passage:'p61', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to design a workout routine', explain:'Specific workout routines aren\'t discussed in the passage.'},
+        B:{text:'How muscles grow stronger through exercise and rest', explain:'The passage explains the tear-and-repair cycle of muscle growth and why rest is essential to it.'},
+        C:{text:'The dangers of overtraining', explain:'Overtraining risks aren\'t specifically discussed in the passage.'},
+        D:{text:'How hormones are produced in general', explain:'General hormone production isn\'t the passage\'s focus, just its role in muscle repair.'}
+      } },
+    { id:'r242', passage:'p61', skill:'Detail', prompt:'According to the passage, when does the muscle repair process primarily occur?', correct:'C',
+      choices:{
+        A:{text:'During the workout itself', explain:'The passage states repair doesn\'t happen "during the workout itself."'},
+        B:{text:'Immediately before exercising', explain:'This isn\'t when repair is described as occurring in the passage.'},
+        C:{text:'During rest, particularly sleep', explain:'The passage states repair "occurs primarily during rest, particularly sleep."'},
+        D:{text:'Only after several months of training', explain:'This timeframe isn\'t described in the passage.'}
+      } },
+    { id:'r243', passage:'p61', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'microscopic' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Extremely small, visible only with magnification', explain:'The passage describes "microscopic tears" in muscle fibers, meaning tears too small to see without magnification.'},
+        B:{text:'Extremely large and visible', explain:'This is the opposite of microscopic.'},
+        C:{text:'Painful', explain:'Pain level isn\'t what microscopic describes.'},
+        D:{text:'Permanent', explain:'Permanence isn\'t what microscopic describes.'}
+      } },
+    { id:'r244', passage:'p61', skill:'Inference', prompt:'It can be inferred that skipping rest days would:', correct:'D',
+      choices:{
+        A:{text:'Speed up muscle growth', explain:'This contradicts the passage\'s emphasis on rest as essential to the repair process.'},
+        B:{text:'Have no effect on muscle growth at all', explain:'This contradicts the passage\'s description of rest as necessary for repair.'},
+        C:{text:'Only affect very advanced athletes', explain:'The passage doesn\'t limit this effect to advanced athletes.'},
+        D:{text:'Prevent muscles from completing the rebuilding process', explain:'The passage states muscles without adequate recovery "cannot complete the rebuilding process."'}
+      } },
+    { id:'r245', passage:'p62', skill:'Inference', prompt:"The physical therapist's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Jasmine should wait even longer before attempting any jumps', explain:'The passage shows the therapist actively having Jasmine practice jumps at half height, not simply waiting longer.'},
+        B:{text:"Physical readiness needed to be paired with the body unlearning its fear response", explain:'By repeating the half-height jump until the flinching stopped, the therapist addressed both physical readiness and the fear response together.'},
+        C:{text:'The fear would disappear immediately once the ankle healed', explain:'The passage states the therapist never promised the fear would vanish, contradicting this.'},
+        D:{text:'Jasmine should switch to a different sport entirely', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r246', passage:'p62', skill:'Main idea', prompt:'This passage is mainly about:', correct:'C',
+      choices:{
+        A:{text:'A dancer quitting after an injury', explain:'The passage shows Jasmine returning to dance, not quitting.'},
+        B:{text:'A disagreement with her physical therapist', explain:'No disagreement occurs in the passage.'},
+        C:{text:'A dancer rebuilding both physical and mental confidence after an injury', explain:'The passage follows Jasmine regaining not just physical ability but also the confidence to trust her body again.'},
+        D:{text:'A doctor changing his recovery timeline', explain:'The doctor\'s six-week estimate isn\'t revised in the passage.'}
+      } },
+    { id:'r247', passage:'p62', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'flinching' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Pulling back or reacting nervously from fear', explain:'The passage describes Jasmine\'s body flinching before landing, meaning a nervous, fearful reaction.'},
+        B:{text:'Jumping with full confidence', explain:'This is the opposite of flinching.'},
+        C:{text:'Standing completely still', explain:'This isn\'t what flinching describes.'},
+        D:{text:'Celebrating a success', explain:'Celebration isn\'t what flinching describes.'}
+      } },
+    { id:'r248', passage:'p62', skill:'Detail', prompt:"According to the passage, how many days did the doctor's minimum recovery estimate represent?", correct:'C',
+      choices:{
+        A:{text:'Seven days', explain:'This isn\'t the number given in the passage.'},
+        B:{text:'Twenty-one days', explain:'This isn\'t the number given in the passage.'},
+        C:{text:'Forty-two days', explain:'The passage states Jasmine spent "every one of those forty-two days" following the doctor\'s "six weeks, minimum" estimate, which equals forty-two days.'},
+        D:{text:'Sixty days', explain:'This overstates the number given in the passage.'}
+      } },
+    { id:'r249', passage:'p63', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to harvest ice from frozen lakes', explain:'Ice harvesting is mentioned only as an earlier method, not the passage\'s main focus.'},
+        B:{text:'The historical development of mechanical refrigeration', explain:'The passage traces refrigeration from natural ice storage to modern compressor-based refrigerators with safer refrigerants.'},
+        C:{text:'How to safely store food today', explain:'Modern food storage practices generally aren\'t the passage\'s focus.'},
+        D:{text:'The chemistry of refrigerant gases', explain:'Detailed chemistry isn\'t discussed in the passage.'}
+      } },
+    { id:'r250', passage:'p63', skill:'Detail', prompt:'According to the passage, before mechanical refrigeration, where did people store ice to keep food cold?', correct:'C',
+      choices:{
+        A:{text:'Underground caves', explain:'This isn\'t mentioned in the passage.'},
+        B:{text:'Metal containers', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'Insulated icehouses', explain:'The passage states ice was stored "in insulated icehouses to keep food cold through warmer months."'},
+        D:{text:'Wooden barrels', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r251', passage:'p63', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'compressors' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Devices that freeze water into ice blocks', explain:'This describes the earlier ice-harvesting method, not what compressors do.'},
+        B:{text:'Devices that cycle and compress a gas or substance', explain:'The passage describes compressors that "cycle a refrigerant gas," matching this meaning.'},
+        C:{text:'Devices that measure temperature', explain:'Measuring temperature isn\'t what compressors are described as doing.'},
+        D:{text:'Devices that generate electricity', explain:'Electricity generation isn\'t what compressors are described as doing.'}
+      } },
+    { id:'r252', passage:'p63', skill:'Inference', prompt:'It can be inferred that safer synthetic refrigerants were developed mainly because:', correct:'A',
+      choices:{
+        A:{text:'Early refrigerant gases were somewhat toxic and needed replacing', explain:'The passage states early models "sometimes used mildly toxic refrigerant gases, which is why safer synthetic refrigerants were developed later."'},
+        B:{text:'Natural ice became too expensive to harvest', explain:'This isn\'t given as the reason for developing synthetic refrigerants.'},
+        C:{text:'Compressors stopped working with natural ice', explain:'This isn\'t discussed in the passage.'},
+        D:{text:'Governments banned all refrigeration entirely', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r253', passage:'p64', skill:'Inference', prompt:"The passage suggests the friends' earlier failures were mainly due to:", correct:'D',
+      choices:{
+        A:{text:'Customers refusing to buy lemonade', explain:'The passage doesn\'t suggest a lack of customers was the issue.'},
+        B:{text:'Priya and Noah arguing constantly', explain:'No ongoing argument is described in the passage.'},
+        C:{text:'Bad weather ruining their stands', explain:'Weather isn\'t mentioned in the passage.'},
+        D:{text:'Not tracking their costs and sales carefully', explain:'The passage shows their fortunes changing once they wrote down "every cost and every sale," implying this tracking had been missing before.'}
+      } },
+    { id:'r254', passage:'p64', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'Two friends ending their business partnership', explain:'The passage shows them continuing and succeeding, not ending their partnership.'},
+        B:{text:'Two friends solving a recurring problem by tracking their numbers instead of guessing', explain:'The passage follows Priya and Noah fixing their recurring losses through careful record-keeping.'},
+        C:{text:'A disagreement over what drinks to sell', explain:'No disagreement over products occurs in the passage.'},
+        D:{text:'Noah taking over the business alone', explain:'The passage shows them continuing to work together, not Noah taking over.'}
+      } },
+    { id:'r255', passage:'p64', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'disappearing' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Being lost or unaccounted for', explain:'The passage describes figuring out "where their money had been disappearing to," meaning where it was being lost or unaccounted for.'},
+        B:{text:'Being saved and growing', explain:'This is the opposite of disappearing in this context.'},
+        C:{text:'Being spent on advertising', explain:'Advertising isn\'t mentioned in the passage.'},
+        D:{text:'Being counted twice', explain:'This isn\'t what disappearing describes.'}
+      } },
+    { id:'r256', passage:'p64', skill:'Detail', prompt:'According to the passage, what did Noah suggest they do for one Saturday?', correct:'C',
+      choices:{
+        A:{text:'Close the stand entirely', explain:'The passage shows them running the stand, not closing it.'},
+        B:{text:'Raise their prices without explanation', explain:'This isn\'t what Noah suggested in the passage.'},
+        C:{text:'Write down every cost and every sale', explain:'The passage states Noah suggested they "write down every cost and every sale for one single Saturday."'},
+        D:{text:'Hire a third partner', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r257', passage:'p65', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to recycle old batteries', explain:'Recycling isn\'t discussed in the passage.'},
+        B:{text:'How batteries store and release energy through chemical reactions', explain:'The passage explains the chemical reaction between electrodes that produces electrical current.'},
+        C:{text:'The history of battery invention', explain:'Battery history isn\'t discussed in the passage.'},
+        D:{text:'How to choose the right battery for a device', explain:'Battery selection isn\'t discussed in the passage.'}
+      } },
+    { id:'r258', passage:'p65', skill:'Detail', prompt:"According to the passage, what happens to a rechargeable battery's chemical reaction when connected to a charger?", correct:'C',
+      choices:{
+        A:{text:'It stops completely and never restarts', explain:'This contradicts the battery being usable again after charging.'},
+        B:{text:'It speeds up permanently', explain:'This isn\'t described in the passage.'},
+        C:{text:'It runs in reverse, restoring the original materials', explain:'The passage states the chemical reaction "can run in reverse when connected to a charger, restoring the original materials."'},
+        D:{text:'It creates an entirely new chemical compound', explain:'This isn\'t described in the passage.'}
+      } },
+    { id:'r259', passage:'p65', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'electrodes' most nearly means:", correct:'A',
+      choices:{
+        A:{text:"The two different materials involved in a battery's chemical reaction", explain:'The passage describes "two different materials, called electrodes," involved in the chemical reaction.'},
+        B:{text:'The outer plastic casing of a battery', explain:'This isn\'t what electrodes describes in the passage.'},
+        C:{text:'The device being powered by the battery', explain:'This isn\'t what electrodes describes.'},
+        D:{text:'The charger used to recharge a battery', explain:'This isn\'t what electrodes describes.'}
+      } },
+    { id:'r260', passage:'p65', skill:'Inference', prompt:'It can be inferred that non-rechargeable batteries stop working:', correct:'B',
+      choices:{
+        A:{text:'As soon as they are removed from a device', explain:'This isn\'t suggested by the passage.'},
+        B:{text:'Once their chemical materials are used up entirely', explain:'The passage states a battery powers a device "until the chemical materials inside are mostly used up," implying that once used up, it stops working and, for non-rechargeable types, cannot be restored.'},
+        C:{text:'Only after being charged too many times', explain:'This describes rechargeable batteries, not non-rechargeable ones.'},
+        D:{text:'The moment they are manufactured', explain:'This contradicts batteries functioning at all before use.'}
+      } },
+    { id:'r261', passage:'p66', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to predict earthquakes before they happen', explain:'Prediction methods aren\'t discussed in the passage.'},
+        B:{text:'How earthquake magnitude scales work logarithmically', explain:'The passage explains that each whole number increase represents a much larger jump in ground motion and energy, not a simple linear increase.'},
+        C:{text:'The dangers of living near fault lines', explain:'Living near fault lines isn\'t discussed in the passage.'},
+        D:{text:'How seismographs are built', explain:'Seismograph construction isn\'t discussed in the passage.'}
+      } },
+    { id:'r262', passage:'p66', skill:'Detail', prompt:'According to the passage, how much more ground shaking does a magnitude 5 earthquake produce compared to a magnitude 4?', correct:'C',
+      choices:{
+        A:{text:'Twice as much', explain:'This isn\'t the ratio given in the passage.'},
+        B:{text:'The same amount', explain:'This contradicts the passage\'s explanation of a logarithmic scale.'},
+        C:{text:'About ten times more', explain:'The passage states a magnitude 5 earthquake "produces about ten times more ground shaking than a magnitude 4."'},
+        D:{text:'About one hundred times more', explain:'This is the ratio given between magnitude 5 and magnitude 3, not magnitude 4.'}
+      } },
+    { id:'r263', passage:'p66', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'logarithmic' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Increasing by a multiplying factor rather than a fixed amount', explain:'The passage describes each whole number increase as representing motion "roughly ten times larger," a multiplying rather than fixed increase.'},
+        B:{text:'Increasing by exactly one unit each time', explain:'This describes a simple linear scale, which the passage explicitly contrasts with the logarithmic one.'},
+        C:{text:'Remaining constant regardless of magnitude', explain:'This contradicts the passage\'s description of increasing motion and energy.'},
+        D:{text:'Decreasing steadily over time', explain:'This isn\'t what logarithmic describes in the passage.'}
+      } },
+    { id:'r264', passage:'p66', skill:'Inference', prompt:'It can be inferred that:', correct:'D',
+      choices:{
+        A:{text:'A magnitude 7 and magnitude 6 earthquake cause similar damage', explain:'This contradicts the passage\'s explanation of dramatically increased destructiveness at higher magnitudes.'},
+        B:{text:'Earthquake magnitude has no relationship to energy released', explain:'The passage explicitly connects magnitude to energy release.'},
+        C:{text:'Magnitude scales increase by a fixed, small amount each level', explain:'This contradicts the logarithmic relationship described in the passage.'},
+        D:{text:'A small numerical difference in magnitude can represent a very large difference in destructive power', explain:'The passage explains that magnitude numbers "seem only slightly different" while representing dramatically different levels of destruction.'}
+      } },
+    { id:'r265', passage:'p67', skill:'Inference', prompt:"The tutor's approach suggests she believed:", correct:'C',
+      choices:{
+        A:{text:'Math would suddenly become easy for Malia', explain:'The passage states the tutor never promised this.'},
+        B:{text:'Malia should avoid speaking during problems to reduce pressure', explain:'The passage shows the tutor having Malia explain each step out loud, contradicting this.'},
+        C:{text:'Building calm awareness of mistakes mattered more than promising instant confidence', explain:'The tutor has Malia notice wrong turns calmly rather than panic, prioritizing awareness over quick fixes to confidence.'},
+        D:{text:'Malia should switch to a different subject entirely', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r266', passage:'p67', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A student giving up on math entirely', explain:'The passage shows Malia continuing to work at math, not giving up.'},
+        B:{text:'A student overcoming math anxiety by learning to notice and correct her own mistakes', explain:'The passage follows Malia moving from expecting failure to catching and fixing her own error.'},
+        C:{text:'A disagreement with her tutor', explain:'No disagreement occurs in the passage.'},
+        D:{text:'A tutor changing Malia\'s test format', explain:'Test format changes aren\'t discussed in the passage.'}
+      } },
+    { id:'r267', passage:'p67', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'panic' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Sudden, overwhelming fear or anxiety', explain:'The passage contrasts noticing mistakes "calmly" with reacting in "panic," meaning sudden overwhelming fear.'},
+        B:{text:'Careful, methodical thinking', explain:'This is the opposite of panic.'},
+        C:{text:'Complete confidence', explain:'This is the opposite of panic.'},
+        D:{text:'Quiet indifference', explain:'This is nearly the opposite of panic.'}
+      } },
+    { id:'r268', passage:'p67', skill:'Detail', prompt:"According to the passage, what did Malia do for the first time on her next test?", correct:'D',
+      choices:{
+        A:{text:'Score a perfect grade', explain:'The passage states her score "wasn\'t perfect."'},
+        B:{text:'Ask her tutor for help during the test', explain:'The passage states she fixed the mistake "without any help at all."'},
+        C:{text:'Skip the hardest problem entirely', explain:'This isn\'t mentioned in the passage.'},
+        D:{text:'Catch and fix her own mistake without help', explain:'The passage states she "caught her own mistake halfway through a problem — and fixed it without any help at all."'}
+      } },
+    { id:'r269', passage:'p68', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How buttons are manufactured today', explain:'Button manufacturing isn\'t discussed in the passage.'},
+        B:{text:'The historical development of the zipper into a reliable clothing fastener', explain:'The passage traces the zipper from an unreliable early device to a dependable modern fastener.'},
+        C:{text:'The history of the fashion industry generally', explain:'The broader fashion industry isn\'t the passage\'s focus.'},
+        D:{text:'How to repair a broken zipper', explain:'Zipper repair isn\'t discussed in the passage.'}
+      } },
+    { id:'r270', passage:'p68', skill:'Detail', prompt:'According to the passage, what problem did the earliest zipper-like device have?', correct:'C',
+      choices:{
+        A:{text:'It was too expensive to manufacture', explain:'Cost isn\'t mentioned as the problem in the passage.'},
+        B:{text:'It could only be used on shoes', explain:'This limitation isn\'t mentioned in the passage.'},
+        C:{text:'It was unreliable and prone to popping open', explain:'The passage states the earliest device "was unreliable and prone to popping open unexpectedly."'},
+        D:{text:'It required electricity to operate', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r271', passage:'p68', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'interlocking' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Completely separate and unconnected', explain:'This is the opposite of interlocking.'},
+        B:{text:'Fitting together securely, joined in a connected way', explain:'The passage describes "interlocking teeth that gripped securely," meaning parts that fit together and connect.'},
+        C:{text:'Extremely fragile', explain:'This isn\'t what interlocking describes.'},
+        D:{text:'Brightly colored', explain:'Color isn\'t what interlocking describes.'}
+      } },
+    { id:'r272', passage:'p68', skill:'Inference', prompt:"It can be inferred that the zipper's improved design succeeded mainly because:", correct:'A',
+      choices:{
+        A:{text:'It solved the reliability problem of earlier versions', explain:'The passage states the improved design with interlocking teeth "became dependable enough for everyday clothing," directly addressing the earlier reliability issue.'},
+        B:{text:'It was cheaper than all earlier fasteners combined', explain:'Cost isn\'t discussed as the reason for its success in the passage.'},
+        C:{text:'Buttons and hooks were banned from use', explain:'No such ban is mentioned in the passage.'},
+        D:{text:'It was invented by a famous fashion designer', explain:'The inventor\'s identity isn\'t discussed in the passage.'}
+      } },
+    { id:'r273', passage:'p69', skill:'Inference', prompt:"The grandmother's refusal to write down exact measurements suggests she believed:", correct:'C',
+      choices:{
+        A:{text:'The recipe was a secret that should never be shared', explain:'The passage shows her actively teaching Diego, contradicting secrecy as the motive.'},
+        B:{text:'Diego lacked the ability to ever learn the recipe', explain:'The passage shows him eventually succeeding, contradicting this.'},
+        C:{text:'Certain skills could only be learned through repeated hands-on practice', explain:'The grandmother insists "some things could only be learned by touch and by watching," reflecting this belief.'},
+        D:{text:'Written recipes were inherently inaccurate', explain:'This isn\'t suggested in the passage; her objection is about how the skill is learned, not the accuracy of writing.'}
+      } },
+    { id:'r274', passage:'p69', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between Diego and his grandmother', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A grandson learning a family recipe through patient, hands-on practice', explain:'The passage follows Diego gradually learning to make tamales by working alongside his grandmother over time.'},
+        C:{text:'Diego giving up on learning to cook', explain:'The passage shows him succeeding, not giving up.'},
+        D:{text:'A cooking competition between family members', explain:'No competition is described in the passage.'}
+      } },
+    { id:'r275', passage:'p69', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'unmistakably' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Clearly and without doubt', explain:'The passage describes the tamales tasting "unmistakably, like home," meaning clearly and without any doubt.'},
+        B:{text:'Barely noticeably', explain:'This is nearly the opposite of unmistakably.'},
+        C:{text:'By complete accident', explain:'This isn\'t what unmistakably describes.'},
+        D:{text:'Somewhat questionably', explain:'This is the opposite of unmistakably.'}
+      } },
+    { id:'r276', passage:'p69', skill:'Detail', prompt:'According to the passage, how long did it take Diego to make tamales that tasted like his grandmother\'s?', correct:'D',
+      choices:{
+        A:{text:'A single afternoon', explain:'This understates the time given in the passage.'},
+        B:{text:'One month', explain:'This isn\'t the timeframe given in the passage.'},
+        C:{text:'Six months', explain:'This isn\'t the timeframe given in the passage.'},
+        D:{text:'A full year of Sunday afternoons', explain:'The passage states it took "a full year of Sunday afternoons spent standing beside her."'}
+      } },
+    { id:'r277', passage:'p70', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How sunburns are treated after they occur', explain:'Treatment of sunburns isn\'t discussed in the passage.'},
+        B:{text:'How mineral and chemical sunscreens protect skin from UV radiation differently', explain:'The passage explains the two different mechanisms by which mineral and chemical sunscreens block UV rays.'},
+        C:{text:'The history of sunscreen invention', explain:'Sunscreen history isn\'t discussed in the passage.'},
+        D:{text:'How to choose the correct SPF level', explain:'SPF selection isn\'t discussed in the passage.'}
+      } },
+    { id:'r278', passage:'p70', skill:'Detail', prompt:'According to the passage, how does mineral sunscreen protect the skin?', correct:'C',
+      choices:{
+        A:{text:'By absorbing UV radiation and converting it to heat', explain:'This describes chemical sunscreen, not mineral sunscreen, according to the passage.'},
+        B:{text:'By blocking sunlight from reaching the atmosphere', explain:'This isn\'t how the passage describes either sunscreen type.'},
+        C:{text:'By physically reflecting UV rays away from the body', explain:'The passage states mineral sunscreens "physically reflect UV rays away from the body."'},
+        D:{text:'By causing the skin to tan more quickly', explain:'This isn\'t how the passage describes sunscreen protection.'}
+      } },
+    { id:'r279', passage:'p70', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'compounds' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Substances formed from combined chemical elements', explain:'The passage describes chemical sunscreens containing "compounds that absorb UV radiation," referring to chemical substances.'},
+        B:{text:'Fenced outdoor areas', explain:'This is an unrelated meaning of compounds, not used in this context.'},
+        C:{text:'Physical barriers on the skin\'s surface', explain:'This describes mineral sunscreen particles, not what "compounds" specifically refers to here.'},
+        D:{text:'Types of sunburns', explain:'This isn\'t what compounds describes in the passage.'}
+      } },
+    { id:'r280', passage:'p70', skill:'Inference', prompt:'It can be inferred that chemical sunscreen should be applied:', correct:'B',
+      choices:{
+        A:{text:'At the exact same time as mineral sunscreen, with no difference', explain:'The passage describes different effectiveness timelines for the two types, contradicting no difference.'},
+        B:{text:'Earlier than mineral sunscreen before sun exposure begins', explain:'The passage states chemical sunscreen "typically takes about twenty minutes to become fully effective," while mineral sunscreen works "almost immediately," implying chemical sunscreen needs to go on sooner.'},
+        C:{text:'Only after already being in the sun for an hour', explain:'This isn\'t suggested by the passage.'},
+        D:{text:'Only at night', explain:'This contradicts the purpose of protecting skin from daytime sun exposure.'}
+      } },
+    { id:'r281', passage:'p71', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to harvest honey safely from a hive', explain:'Harvesting methods aren\'t discussed in the passage.'},
+        B:{text:"Why honey doesn't spoil, due to its unique chemical properties", explain:'The passage explains how low water content, acidity, and bee behavior all contribute to honey resisting spoilage.'},
+        C:{text:'How bees communicate with each other', explain:'Bee communication isn\'t discussed in the passage.'},
+        D:{text:'The nutritional value of honey', explain:'Nutritional value isn\'t discussed in the passage.'}
+      } },
+    { id:'r282', passage:'p71', skill:'Detail', prompt:'According to the passage, what do bees do to reduce moisture content in honey?', correct:'C',
+      choices:{
+        A:{text:'They add acidic substances to it', explain:'The passage attributes acidity to honey\'s natural chemistry, not an action bees take.'},
+        B:{text:'They store it at cold temperatures', explain:'Temperature control isn\'t mentioned in the passage.'},
+        C:{text:'They fan their wings over it to evaporate excess water', explain:'The passage states bees "reduce the moisture content by fanning their wings over the honey."'},
+        D:{text:'They mix it with pollen', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r283', passage:'p71', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'inhospitable' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Unwelcoming, not suitable for survival', explain:'The passage describes honey as an "inhospitable environment" for bacteria and mold, meaning unsuitable for their survival.'},
+        B:{text:'Extremely welcoming and supportive', explain:'This is the opposite of inhospitable.'},
+        C:{text:'Sweet-tasting', explain:'Taste isn\'t what inhospitable describes.'},
+        D:{text:'Ancient', explain:'Age isn\'t what inhospitable describes.'}
+      } },
+    { id:'r284', passage:'p71', skill:'Inference', prompt:'It can be inferred that bacteria and mold struggle to survive in honey mainly because of:', correct:'D',
+      choices:{
+        A:{text:'Its bright golden color', explain:'Color isn\'t discussed as a factor in the passage.'},
+        B:{text:'Its thick, sticky texture alone', explain:'Texture isn\'t identified as the key factor in the passage.'},
+        C:{text:'The wax used to seal each cell', explain:'Wax sealing is mentioned, but not identified as the reason bacteria and mold struggle to survive within the honey itself.'},
+        D:{text:'Its low water content and acidity', explain:'The passage states honey\'s low water content and natural acidity are what make it "extremely difficult for bacteria or mold to survive and multiply."'}
+      } },
+    { id:'r285', passage:'p72', skill:'Inference', prompt:"The passage suggests Elena's effort mattered mainly because:", correct:'B',
+      choices:{
+        A:{text:'It helped her get a better grade in school', explain:'Grades aren\'t mentioned in the passage.'},
+        B:{text:'It helped Amara feel less isolated', explain:'The passage ends noting Amara "didn\'t look like she was standing entirely alone," directly tying Elena\'s effort to reduced isolation.'},
+        C:{text:'It impressed the other students in the class', explain:'Other students\' reactions aren\'t discussed in the passage.'},
+        D:{text:'It fulfilled a class assignment', explain:'No assignment is mentioned in the passage.'}
+      } },
+    { id:'r286', passage:'p72', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between two classmates', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A student learning sign language to connect with a new classmate', explain:'The passage follows Elena studying and practicing sign language specifically to communicate with Amara.'},
+        C:{text:'A teacher assigning a language project', explain:'No teacher assignment is mentioned in the passage.'},
+        D:{text:'Amara teaching the whole class sign language', explain:'The passage shows Elena learning on her own, not Amara teaching the class.'}
+      } },
+    { id:'r287', passage:'p72', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'clumsy' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Awkward, lacking skill or grace', explain:'The passage describes Elena\'s hands feeling clumsy before practice made them more skilled, meaning awkward or lacking grace.'},
+        B:{text:'Extremely skilled and graceful', explain:'This is the opposite of clumsy.'},
+        C:{text:'Fast and efficient', explain:'This isn\'t what clumsy describes.'},
+        D:{text:'Confident and assured', explain:'This is nearly the opposite of clumsy.'}
+      } },
+    { id:'r288', passage:'p72', skill:'Detail', prompt:"According to the passage, how long did Elena spend practicing sign language before her first conversation with Amara?", correct:'C',
+      choices:{
+        A:{text:'A single afternoon', explain:'This understates the time given in the passage.'},
+        B:{text:'One week', explain:'This isn\'t the timeframe given in the passage.'},
+        C:{text:'That whole month', explain:'The passage states Elena "spent her afternoons that whole month watching sign language videos."'},
+        D:{text:'An entire school year', explain:'This overstates the timeframe given in the passage.'}
+      } },
+    { id:'r289', passage:'p73', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How dentists recommend brushing technique', explain:'Brushing technique isn\'t discussed in the passage.'},
+        B:{text:'The historical shift from animal-hair to nylon toothbrush bristles', explain:'The passage traces toothbrush bristles from animal hair to modern nylon and explains why the shift happened.'},
+        C:{text:'The chemistry of tooth enamel', explain:'Tooth enamel chemistry isn\'t discussed in the passage.'},
+        D:{text:'How toothpaste is manufactured', explain:'Toothpaste manufacturing isn\'t discussed in the passage.'}
+      } },
+    { id:'r290', passage:'p73', skill:'Detail', prompt:'According to the passage, what problem did animal-hair bristles have compared to nylon?', correct:'C',
+      choices:{
+        A:{text:'They were too expensive to produce', explain:'Cost isn\'t mentioned as animal-hair\'s specific problem in the passage.'},
+        B:{text:'They could only be used once', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'They retained bacteria and dried poorly', explain:'The passage states animal-hair bristles "tended to retain bacteria and dry poorly between uses."'},
+        D:{text:'They were too soft to clean teeth effectively', explain:'Softness isn\'t mentioned as the problem in the passage.'}
+      } },
+    { id:'r291', passage:'p73', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'abrasive' most nearly means:", correct:'B',
+      choices:{
+        A:{text:'Extremely soft and gentle', explain:'This is the opposite of abrasive.'},
+        B:{text:'Rough, capable of scraping or wearing away a surface', explain:'The passage describes cloth "rubbed with abrasive powders," meaning powders rough enough to scrape a surface.'},
+        C:{text:'Sweet-smelling', explain:'Scent isn\'t what abrasive describes.'},
+        D:{text:'Brightly colored', explain:'Color isn\'t what abrasive describes.'}
+      } },
+    { id:'r292', passage:'p73', skill:'Inference', prompt:'It can be inferred that nylon bristles became widespread mainly because:', correct:'A',
+      choices:{
+        A:{text:'They were more hygienic and affordable to manufacture', explain:'The passage states nylon "dried faster, resisted bacterial growth better, and could be manufactured far more cheaply," directly supporting this.'},
+        B:{text:'Governments required their use by law', explain:'No such requirement is mentioned in the passage.'},
+        C:{text:'Animal-hair bristles became extinct as a resource', explain:'This isn\'t suggested anywhere in the passage.'},
+        D:{text:'They were invented by a toothpaste company', explain:'The inventor\'s identity isn\'t discussed in the passage.'}
+      } },
+    { id:'r293', passage:'p74', skill:'Inference', prompt:"The mother's suggestion implies she believed:", correct:'D',
+      choices:{
+        A:{text:'Theo should stop trying to read entirely', explain:'The passage shows Theo continuing to read and eventually succeeding, contradicting this.'},
+        B:{text:'Marcus was reading the wrong books with Theo', explain:'Book selection isn\'t discussed as the issue in the passage.'},
+        C:{text:'Theo needed a different teacher altogether', explain:'This isn\'t suggested anywhere in the passage.'},
+        D:{text:'Interrupting every mistake immediately was undermining Theo\'s confidence', explain:'By suggesting Marcus let Theo finish sentences before correcting errors, the mother addressed how constant interruption may have been discouraging Theo.'}
+      } },
+    { id:'r294', passage:'p74', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between brothers', explain:'No disagreement occurs in the passage.'},
+        B:{text:'An older brother helping a younger sibling build reading confidence through patience', explain:'The passage follows Marcus adjusting his approach so Theo can build confidence with reading.'},
+        C:{text:'Marcus refusing to read with Theo anymore', explain:'The passage shows Marcus continuing to help Theo, not refusing.'},
+        D:{text:'A teacher assigning extra reading homework', explain:'No teacher or assignment is mentioned in the passage.'}
+      } },
+    { id:'r295', passage:'p74', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'unbearably' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'To an extreme, difficult-to-tolerate degree', explain:'The passage describes the new approach feeling "unbearably slow," meaning to an extreme, hard-to-tolerate degree.'},
+        B:{text:'Barely noticeable', explain:'This is nearly the opposite of unbearably.'},
+        C:{text:'Pleasantly', explain:'This is the opposite of unbearably in this context.'},
+        D:{text:'Briefly', explain:'This isn\'t precisely what unbearably describes.'}
+      } },
+    { id:'r296', passage:'p74', skill:'Detail', prompt:'According to the passage, how long did it take before Theo finished a page without a mistake?', correct:'C',
+      choices:{
+        A:{text:'A single day', explain:'This understates the time given in the passage.'},
+        B:{text:'One week', explain:'This isn\'t the timeframe given in the passage.'},
+        C:{text:'Three weeks', explain:'The passage states "three weeks later, Theo finished an entire page without a single mistake."'},
+        D:{text:'Six months', explain:'This overstates the timeframe given in the passage.'}
+      } },
+    { id:'r297', passage:'p75', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to plant seeds correctly in a garden', explain:'Planting technique isn\'t the passage\'s focus, just an example used within it.'},
+        B:{text:'How plants use hormones to grow toward light and against gravity', explain:'The passage explains phototropism and gravitropism as hormone-driven responses guiding plant growth direction.'},
+        C:{text:'The chemistry of plant hormones in general', explain:'Broader plant hormone chemistry isn\'t the passage\'s focus, just auxin\'s specific role.'},
+        D:{text:'How plants absorb water through their roots', explain:'Water absorption isn\'t discussed in the passage.'}
+      } },
+    { id:'r298', passage:'p75', skill:'Detail', prompt:'According to the passage, what causes a stem to bend toward light?', correct:'C',
+      choices:{
+        A:{text:'Roots growing away from the light source', explain:'Root behavior relates to gravitropism, not the stem-bending response described here.'},
+        B:{text:'The stem physically twisting toward the sun', explain:'This isn\'t the mechanism described in the passage.'},
+        C:{text:'Auxin causing shaded-side cells to elongate faster', explain:'The passage states auxin "accumulates on the shaded side... causing cells there to elongate faster," which bends the stem toward light.'},
+        D:{text:'The plant losing water on its sunlit side', explain:'Water loss isn\'t described as the mechanism in the passage.'}
+      } },
+    { id:'r299', passage:'p75', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'elongate' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'To become longer or stretch out', explain:'The passage describes cells that "elongate faster," meaning they stretch out or grow longer.'},
+        B:{text:'To shrink or become shorter', explain:'This is the opposite of elongate.'},
+        C:{text:'To change color', explain:'Color isn\'t what elongate describes.'},
+        D:{text:'To die off', explain:'This isn\'t what elongate describes.'}
+      } },
+    { id:'r300', passage:'p75', skill:'Inference', prompt:'It can be inferred that a sideways-planted seed will still grow correctly because:', correct:'B',
+      choices:{
+        A:{text:'Farmers always replant seeds that land sideways', explain:'This isn\'t mentioned in the passage.'},
+        B:{text:'Gravitropism causes roots and stems to orient themselves regardless of initial position', explain:'The passage states gravitropism ensures roots grow down and stems grow up "regardless of a seed\'s orientation when it was planted."'},
+        C:{text:'Sideways seeds receive extra sunlight', explain:'This isn\'t suggested in the passage.'},
+        D:{text:'Auxin only functions in sideways-planted seeds', explain:'The passage describes auxin functioning generally, not only in this specific scenario.'}
+      } },
+    { id:'r301', passage:'p76', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How submarines are constructed', explain:'General submarine construction isn\'t discussed in the passage.'},
+        B:{text:'How submarines control depth using ballast tanks', explain:'The passage explains how flooding and clearing ballast tanks with water and air allows a submarine to dive, surface, and hover.'},
+        C:{text:'The history of submarine warfare', explain:'Submarine warfare history isn\'t discussed in the passage.'},
+        D:{text:'How sonar detects underwater objects', explain:'Sonar isn\'t discussed in the passage.'}
+      } },
+    { id:'r302', passage:'p76', skill:'Detail', prompt:'According to the passage, what happens when seawater floods the ballast tanks?', correct:'C',
+      choices:{
+        A:{text:'The submarine becomes lighter and rises', explain:'This describes the opposite process, which happens when air replaces water.'},
+        B:{text:'The submarine\'s engines shut off automatically', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'The submarine gains weight and sinks', explain:'The passage states flooding the tanks adds "weight that causes the submarine to sink."'},
+        D:{text:'The submarine\'s hull begins to leak', explain:'Leaking isn\'t described as a normal part of this process in the passage.'}
+      } },
+    { id:'r303', passage:'p76', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'ballast' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Weight used to control stability or depth', explain:'The passage describes "ballast tanks" used to control the submarine\'s depth by adjusting weight.'},
+        B:{text:'A type of engine fuel', explain:'This isn\'t what ballast describes in the passage.'},
+        C:{text:'A navigational instrument', explain:'This isn\'t what ballast describes.'},
+        D:{text:'A communication device', explain:'This isn\'t what ballast describes.'}
+      } },
+    { id:'r304', passage:'p76', skill:'Inference', prompt:'It can be inferred that a submarine hovering at a fixed depth has:', correct:'B',
+      choices:{
+        A:{text:'Completely emptied its ballast tanks of both air and water', explain:'This would likely cause the submarine to rise rather than hover steadily.'},
+        B:{text:'Carefully balanced the water and air inside its ballast tanks', explain:'The passage states balancing "the amount of water and air inside these tanks" allows a submarine "to hover at a chosen depth."'},
+        C:{text:'Turned off its engines entirely', explain:'Engine operation isn\'t discussed in the passage.'},
+        D:{text:'Reached the deepest point the ocean allows', explain:'Maximum depth isn\'t discussed in the passage.'}
+      } },
+    { id:'r305', passage:'p77', skill:'Inference', prompt:"The uncle's approach suggests he believed:", correct:'C',
+      choices:{
+        A:{text:'Ravi should be forced into the deep end immediately', explain:'The passage shows the opposite — he starts Ravi in the shallow end with no pressure.'},
+        B:{text:'Ravi would never learn to swim', explain:'The passage shows Ravi eventually succeeding, contradicting this.'},
+        C:{text:'Small, low-pressure steps mattered more than pushing Ravi toward swimming directly', explain:'The uncle starts with simply putting a face in shallow water, showing a preference for small steps over direct pressure.'},
+        D:{text:'Ravi\'s cousins should slow down their own swimming', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r306', passage:'p77', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A swimming competition between cousins', explain:'No competition is described in the passage.'},
+        B:{text:'A boy overcoming a fear of water through small, patient steps', explain:'The passage follows Ravi gradually building comfort in water through gentle, incremental steps.'},
+        C:{text:'A disagreement between Ravi and his uncle', explain:'No disagreement occurs in the passage.'},
+        D:{text:'Ravi giving up on learning to swim', explain:'The passage shows him succeeding, not giving up.'}
+      } },
+    { id:'r307', passage:'p77', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'paddled' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Moved through water using simple swimming motions', explain:'The passage describes Ravi paddling "a few feet on his own," meaning moving through water with basic swimming motions.'},
+        B:{text:'Sank beneath the surface', explain:'This is the opposite of what paddled describes.'},
+        C:{text:'Stood still in place', explain:'This is the opposite of paddled.'},
+        D:{text:'Climbed out of the water', explain:'This isn\'t what paddled describes.'}
+      } },
+    { id:'r308', passage:'p77', skill:'Detail', prompt:'According to the passage, how long did it take before Ravi attempted a real stroke?', correct:'C',
+      choices:{
+        A:{text:'A single afternoon', explain:'This understates the time given in the passage.'},
+        B:{text:'Three days', explain:'This isn\'t the timeframe given in the passage.'},
+        C:{text:'A full week', explain:'The passage states "days of just floating and blowing bubbles turned into a full week before Ravi ever attempted a real stroke."'},
+        D:{text:'An entire summer', explain:'This overstates the timeframe given for the first stroke attempt in the passage.'}
+      } },
+    { id:'r309', passage:'p78', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How modern eyeglasses are manufactured', explain:'Modern manufacturing isn\'t discussed in the passage.'},
+        B:{text:'The historical development of eyeglasses from simple lenses to a wearable design', explain:'The passage traces eyeglasses from handheld lenses to the modern design with arms over the ears.'},
+        C:{text:'The biology of human eyesight', explain:'Eye biology isn\'t discussed in the passage.'},
+        D:{text:'How to choose the right eyeglass prescription', explain:'Prescription selection isn\'t discussed in the passage.'}
+      } },
+    { id:'r310', passage:'p78', skill:'Detail', prompt:'According to the passage, what problem did the earliest eyeglasses have?', correct:'C',
+      choices:{
+        A:{text:'They were too heavy to wear', explain:'Weight isn\'t mentioned as the problem in the passage.'},
+        B:{text:'They could only be used indoors', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'They had no arms to hold them in place', explain:'The passage states the earliest eyeglasses were "designed to be held up to the eyes or perched carefully on the nose without any arms to hold them in place."'},
+        D:{text:'They magnified images too strongly', explain:'This isn\'t mentioned as a problem in the passage.'}
+      } },
+    { id:'r311', passage:'p78', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'rivet' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'A fastener joining two parts together', explain:'The passage describes lenses "connected by a rivet," meaning a fastener joining the two lenses.'},
+        B:{text:'A type of glass used in lenses', explain:'This isn\'t what rivet describes in the passage.'},
+        C:{text:'A magnifying tool', explain:'This isn\'t what rivet describes.'},
+        D:{text:'A protective case', explain:'This isn\'t what rivet describes.'}
+      } },
+    { id:'r312', passage:'p78', skill:'Inference', prompt:"It can be inferred that the addition of arms in the 1700s design was significant mainly because:", correct:'D',
+      choices:{
+        A:{text:'It made the lenses magnify images more powerfully', explain:'Magnification power isn\'t discussed as the benefit of arms in the passage.'},
+        B:{text:'It eliminated the need for lenses entirely', explain:'This contradicts the basic function of eyeglasses described in the passage.'},
+        C:{text:'It made eyeglasses much cheaper to produce', explain:'Cost isn\'t discussed in the passage.'},
+        D:{text:'It freed wearers\' hands by keeping the glasses securely in place', explain:'The passage states arms "finally allowed wearers to keep both hands free while their glasses stayed securely in place."'}
+      } },
+    { id:'r313', passage:'p79', skill:'Inference', prompt:"The teacher's requirement suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Yun should be removed from the group entirely', explain:'This contradicts the passage, which shows Yun becoming a central part of the group.'},
+        B:{text:'A structured way of collecting ideas could surface contributions that might otherwise go unheard', explain:'By requiring a written idea from every member, the teacher created a structure that ensured quieter voices like Yun\'s were included.'},
+        C:{text:'Loud debate was the only valid way to generate ideas', explain:'This contradicts the passage, since the teacher introduced a different, quieter method.'},
+        D:{text:'Yun\'s ideas were less valuable than her teammates\'', explain:'This contradicts the passage, which shows Yun\'s idea becoming central to the group\'s work.'}
+      } },
+    { id:'r314', passage:'p79', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement within a project group', explain:'No disagreement is described in the passage.'},
+        B:{text:'A shy student gaining confidence and recognition through a structured group process', explain:'The passage follows Yun moving from staying quiet to having her idea shape the group\'s entire presentation.'},
+        C:{text:'A teacher removing a student from a group', explain:'No removal occurs in the passage.'},
+        D:{text:'A group failing to complete their presentation', explain:'The passage shows the group succeeding, building their presentation around Yun\'s idea.'}
+      } },
+    { id:'r315', passage:'p79', skill:'Vocabulary in context', prompt:"As used in the passage, the phrase 'singling her out' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Calling special attention to one person specifically', explain:'The passage describes the teacher acting "without singling her out publicly," meaning without calling special attention to Yun specifically.'},
+        B:{text:'Removing someone from a group entirely', explain:'This isn\'t what singling out describes.'},
+        C:{text:'Praising an entire group equally', explain:'This is nearly the opposite of singling someone out.'},
+        D:{text:'Ignoring someone completely', explain:'This isn\'t what singling out describes.'}
+      } },
+    { id:'r316', passage:'p79', skill:'Detail', prompt:'According to the passage, what did the teacher require from every team member before the next meeting?', correct:'C',
+      choices:{
+        A:{text:'A verbal presentation to the whole class', explain:'This isn\'t what the teacher required, according to the passage.'},
+        B:{text:'A group vote on the best idea', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'One written idea from every member', explain:'The passage states the teacher "asked each team to submit one written idea from every member before their next meeting."'},
+        D:{text:'A summary of everyone else\'s ideas', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r317', passage:'p80', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to install a home thermostat', explain:'Installation isn\'t discussed in the passage.'},
+        B:{text:'How a thermostat regulates temperature by comparing current and target readings', explain:'The passage explains the basic comparison-and-response process a thermostat uses, plus how programmable versions extend it.'},
+        C:{text:'The history of home heating systems', explain:'Heating system history isn\'t discussed in the passage.'},
+        D:{text:'How to choose the most energy-efficient thermostat', explain:'Energy efficiency comparisons aren\'t discussed in the passage.'}
+      } },
+    { id:'r318', passage:'p80', skill:'Detail', prompt:'According to the passage, what happens when room temperature drops below the target?', correct:'C',
+      choices:{
+        A:{text:'The thermostat shuts off completely', explain:'This contradicts the passage\'s description of the heating system activating.'},
+        B:{text:'The cooling system turns on', explain:'The passage describes the heating system turning on when temperature drops, not the cooling system.'},
+        C:{text:'The thermostat signals the heating system to turn on', explain:'The passage states when temperature drops below target, "the thermostat signals the heating system to turn on."'},
+        D:{text:'The target temperature automatically changes', explain:'This isn\'t described in the passage; the target stays fixed until changed by the user or schedule.'}
+      } },
+    { id:'r319', passage:'p80', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'programmable' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Capable of being set in advance to perform tasks automatically', explain:'The passage describes "programmable thermostats" that let users "set different target temperatures for different times of day," matching this meaning.'},
+        B:{text:'Impossible to adjust once installed', explain:'This is the opposite of programmable.'},
+        C:{text:'Powered only by solar energy', explain:'This isn\'t what programmable describes.'},
+        D:{text:'Connected only to a smartphone app', explain:'This isn\'t specifically what the passage describes as programmable.'}
+      } },
+    { id:'r320', passage:'p80', skill:'Inference', prompt:'It can be inferred that programmable thermostats:', correct:'B',
+      choices:{
+        A:{text:'Cannot maintain a consistent temperature', explain:'This contradicts the basic function described in the passage.'},
+        B:{text:'Reduce the need for people to manually adjust temperature settings throughout the day', explain:'The passage states programmable thermostats adjust settings "automatically... rather than requiring someone to manually adjust the setting each time."'},
+        C:{text:'Only work during winter months', explain:'This isn\'t suggested in the passage.'},
+        D:{text:'Require a technician to change settings each day', explain:'This contradicts the automatic adjustment described in the passage.'}
+      } },
+    { id:'r321', passage:'p81', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How glaciers form from snowfall', explain:'Glacier formation isn\'t discussed in the passage.'},
+        B:{text:'How glaciers shape landscapes through erosion and deposition', explain:'The passage explains how glaciers carve valleys and leave behind moraines through their movement.'},
+        C:{text:'The effects of climate change on glaciers', explain:'Climate change isn\'t discussed in the passage.'},
+        D:{text:'How rivers differ from glaciers in general', explain:'Rivers are mentioned only briefly as a contrast, not the passage\'s focus.'}
+      } },
+    { id:'r322', passage:'p81', skill:'Detail', prompt:'According to the passage, what shape valley does a glacier typically carve?', correct:'C',
+      choices:{
+        A:{text:'A narrow, V-shaped valley', explain:'The passage attributes V-shaped valleys to rivers, not glaciers.'},
+        B:{text:'A perfectly circular basin', explain:'This isn\'t described in the passage.'},
+        C:{text:'A wide, U-shaped valley', explain:'The passage states glaciers carve "wide, U-shaped valleys that look distinctly different" from river valleys.'},
+        D:{text:'A shallow, flat plain', explain:'This isn\'t described in the passage.'}
+      } },
+    { id:'r323', passage:'p81', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'deposition' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'The process of leaving material in a new location', explain:'The passage describes a glacier "depositing" sediment and boulders, meaning leaving material behind in a new location.'},
+        B:{text:'The process of melting completely', explain:'This isn\'t what deposition describes.'},
+        C:{text:'The process of freezing water into ice', explain:'This isn\'t what deposition describes.'},
+        D:{text:'The process of measuring valley depth', explain:'This isn\'t what deposition describes.'}
+      } },
+    { id:'r324', passage:'p81', skill:'Inference', prompt:'It can be inferred that moraines can help scientists:', correct:'B',
+      choices:{
+        A:{text:'Predict future earthquakes', explain:'Earthquakes aren\'t discussed in the passage.'},
+        B:{text:'Determine how far a glacier once extended', explain:'The passage states moraines "mark exactly how far the ice once extended," directly supporting this use.'},
+        C:{text:'Measure the current speed of a river', explain:'River speed isn\'t discussed in the passage.'},
+        D:{text:'Calculate the age of nearby mountains', explain:'Mountain age isn\'t discussed in the passage.'}
+      } },
+    { id:'r325', passage:'p82', skill:'Inference', prompt:"The neighbor's approach suggests she wanted to:", correct:'B',
+      choices:{
+        A:{text:'Teach Devon a lesson about self-reliance by refusing to help', explain:'This contradicts the passage, which shows her actively providing help.'},
+        B:{text:'Help without making Devon feel like he owed her anything directly', explain:'By leaving food "without being asked" and including instructions rather than demands, she offered help in a low-pressure way.'},
+        C:{text:'Replace cooking for Devon\'s mother permanently', explain:'This isn\'t suggested in the passage; the help appears tied to the mother\'s recovery period.'},
+        D:{text:'Get recognition from the neighborhood for her cooking', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r326', passage:'p82', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between neighbors', explain:'No disagreement occurs in the passage.'},
+        B:{text:"A neighbor's quiet generosity helping a teenager learn to cook and give back in return", explain:'The passage follows the neighbor\'s soup deliveries leading Devon to learn cooking and eventually reciprocate.'},
+        C:{text:"Devon's mother teaching him to cook before her surgery", explain:'The passage shows the neighbor, not the mother, teaching Devon through her example.'},
+        D:{text:'Devon refusing help from his neighbor', explain:'The passage shows Devon accepting and building on the neighbor\'s help.'}
+      } },
+    { id:'r327', passage:'p82', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'rulebook' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'A strict set of rules to be followed exactly', explain:'The passage contrasts using instructions as "a starting point rather than a rulebook," meaning something followed rigidly.'},
+        B:{text:'A cookbook with many recipes', explain:'This isn\'t precisely what rulebook describes in this context.'},
+        C:{text:'A container for soup', explain:'This isn\'t what rulebook describes.'},
+        D:{text:'A handwritten note', explain:'This isn\'t precisely what rulebook describes; it refers to strict rules, not the note itself.'}
+      } },
+    { id:'r328', passage:'p82', skill:'Detail', prompt:"According to the passage, what did Devon leave on the neighbor's porch by the third week?", correct:'C',
+      choices:{
+        A:{text:'A thank-you card', explain:'This isn\'t mentioned in the passage.'},
+        B:{text:'The empty containers from her soup', explain:'This isn\'t specifically what the passage describes him leaving.'},
+        C:{text:'An extra container of his own soup', explain:'The passage states Devon was "leaving an extra container on her porch in return."'},
+        D:{text:'A list of ingredients he needed', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r329', passage:'p83', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to sharpen a pencil correctly', explain:'Sharpening technique isn\'t discussed in the passage.'},
+        B:{text:'The historical development of the modern pencil using graphite and clay', explain:'The passage traces the shift from pure graphite tools to the graphite-clay mixture that enabled modern pencils.'},
+        C:{text:'The chemistry of ink production', explain:'Ink isn\'t discussed in the passage.'},
+        D:{text:'How artists choose which pencil to use', explain:'Artist preferences aren\'t discussed in the passage.'}
+      } },
+    { id:'r330', passage:'p83', skill:'Detail', prompt:'According to the passage, what problem did earlier writing tools like pure graphite have?', correct:'C',
+      choices:{
+        A:{text:'They were too expensive to produce', explain:'Cost isn\'t mentioned as the problem in the passage.'},
+        B:{text:'They could only be used by professional artists', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'They were messy, fragile, or difficult to control', explain:'The passage states earlier tools "were messy, fragile, or difficult to control precisely."'},
+        D:{text:'They produced no visible mark on paper', explain:'This contradicts the basic function of these tools described in the passage.'}
+      } },
+    { id:'r331', passage:'p83', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'ratio' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'The proportional relationship between two amounts', explain:'The passage describes adjusting "the ratio of the two materials," meaning the proportional relationship between graphite and clay.'},
+        B:{text:'The total weight of a pencil', explain:'This isn\'t what ratio describes.'},
+        C:{text:'The length of a pencil', explain:'This isn\'t what ratio describes.'},
+        D:{text:'A type of writing tool', explain:'This isn\'t what ratio describes.'}
+      } },
+    { id:'r332', passage:'p83', skill:'Inference', prompt:'It can be inferred that adjusting the graphite-to-clay ratio allowed manufacturers to:', correct:'B',
+      choices:{
+        A:{text:'Change the color of the pencil\'s wooden casing', explain:'The casing isn\'t discussed in the passage.'},
+        B:{text:"Control how hard or soft a pencil's mark would be", explain:'The passage states adjusting the ratio let manufacturers "control the hardness of the resulting pencil core," directly affecting mark darkness and hardness.'},
+        C:{text:'Eliminate the need for sharpening entirely', explain:'This isn\'t suggested in the passage.'},
+        D:{text:'Make every pencil identical in hardness', explain:'This contradicts the passage\'s description of producing "a whole range of pencils."'}
+      } },
+    { id:'r333', passage:'p84', skill:'Inference', prompt:"The teacher's advice suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Nadia should avoid performing in public entirely', explain:'This contradicts the passage, which shows Nadia continuing to perform.'},
+        B:{text:'Narrowing Nadia\'s focus to one person could reduce her performance anxiety', explain:'By suggesting Nadia focus on one friendly face rather than the whole audience, the teacher aimed to reduce the overwhelming pressure of a crowd.'},
+        C:{text:'Nadia needed to memorize the piece more thoroughly', explain:'Memorization isn\'t mentioned as the issue in the passage.'},
+        D:{text:'The audience should be removed from future recitals', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r334', passage:'p84', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A violinist quitting music after repeated failures', explain:'The passage shows Nadia continuing to perform and succeeding, not quitting.'},
+        B:{text:'A violinist overcoming stage fright by changing how she focuses during a performance', explain:'The passage follows Nadia successfully completing a piece by shifting her focus to one person in the crowd.'},
+        C:{text:'A disagreement between Nadia and her teacher', explain:'No disagreement occurs in the passage.'},
+        D:{text:'A competition between violinists', explain:'No competition is described in the passage.'}
+      } },
+    { id:'r335', passage:'p84', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'trembled' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Shook slightly, especially from nervousness', explain:'The passage describes Nadia\'s hands trembling while walking onstage, meaning shaking slightly from nervousness.'},
+        B:{text:'Moved with complete steadiness', explain:'This is the opposite of trembled.'},
+        C:{text:'Applauded loudly', explain:'This isn\'t what trembled describes.'},
+        D:{text:'Rested motionless', explain:'This is nearly the opposite of trembled.'}
+      } },
+    { id:'r336', passage:'p84', skill:'Detail', prompt:"According to the passage, where in the piece did Nadia find her aunt's face in the crowd?", correct:'C',
+      choices:{
+        A:{text:'Before she even walked onstage', explain:'This isn\'t when she found her aunt\'s face, according to the passage.'},
+        B:{text:'At the very final note', explain:'This isn\'t when she found her aunt\'s face, according to the passage.'},
+        C:{text:'Around the third measure', explain:'The passage states "somewhere around the third measure, she found her aunt\'s face in the third row."'},
+        D:{text:'Halfway through the piece', explain:'This isn\'t the specific point mentioned in the passage.'}
+      } },
+    { id:'r337', passage:'p85', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to choose the best headphones for music', explain:'Product selection isn\'t discussed in the passage.'},
+        B:{text:'How noise-canceling headphones use destructive interference to reduce sound', explain:'The passage explains how microphones detect noise and generate an inverted wave that cancels it out.'},
+        C:{text:'The history of headphone technology', explain:'Headphone history isn\'t discussed in the passage.'},
+        D:{text:'How airplane engines produce sound', explain:'Airplane engines are mentioned only as an example, not the passage\'s focus.'}
+      } },
+    { id:'r338', passage:'p85', skill:'Detail', prompt:'According to the passage, what does the headphone system generate in response to incoming sound?', correct:'C',
+      choices:{
+        A:{text:'A louder version of the same sound', explain:'This contradicts the noise-reducing purpose described in the passage.'},
+        B:{text:'A completely different, unrelated sound', explain:'The passage describes generating a related, inverted version of the same sound, not an unrelated one.'},
+        C:{text:'An inverted version of that same sound wave', explain:'The passage states the system generates "an inverted version of that same sound wave to play back through the speakers."'},
+        D:{text:'A visual display of the sound wave', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r339', passage:'p85', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'inverted' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Flipped or reversed in form', explain:'The passage describes generating an "inverted version" of a sound wave, meaning a flipped or reversed version.'},
+        B:{text:'Made significantly louder', explain:'Volume isn\'t what inverted describes.'},
+        C:{text:'Slowed down considerably', explain:'Speed isn\'t what inverted describes.'},
+        D:{text:'Completely erased', explain:'This isn\'t what inverted describes; the wave still exists, just flipped.'}
+      } },
+    { id:'r340', passage:'p85', skill:'Inference', prompt:'It can be inferred that noise-canceling headphones are:', correct:'B',
+      choices:{
+        A:{text:'Equally effective against every type of sound', explain:'This contradicts the passage\'s distinction between steady and rapidly changing sounds.'},
+        B:{text:'Less effective against sudden, high-pitched sounds than against steady, low sounds', explain:'The passage states the technology "works best on low, steady sounds," since "higher-pitched or rapidly changing sounds are much harder... to predict and cancel out."'},
+        C:{text:'Only useful on airplanes', explain:'Airplanes are used only as an example in the passage, not a limitation on where the technology works.'},
+        D:{text:'Incapable of canceling any sound at all', explain:'This contradicts the basic function described throughout the passage.'}
+      } },
+    { id:'r341', passage:'p86', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How bridges are painted and maintained', explain:'Maintenance isn\'t discussed in the passage.'},
+        B:{text:'How suspension bridges support weight through cables rather than rigid supports', explain:'The passage explains how main and vertical cables distribute weight, allowing flexibility in wind.'},
+        C:{text:'The history of bridge construction', explain:'Bridge construction history isn\'t discussed in the passage.'},
+        D:{text:'How to calculate a bridge\'s maximum load', explain:'Load calculation isn\'t discussed in the passage.'}
+      } },
+    { id:'r342', passage:'p86', skill:'Detail', prompt:'According to the passage, what do the smaller vertical cables do?', correct:'C',
+      choices:{
+        A:{text:'They anchor the bridge directly into the ground', explain:'The passage attributes ground anchoring to the main cables, not the vertical ones.'},
+        B:{text:'They connect the towers to each other', explain:'This isn\'t described in the passage.'},
+        C:{text:'They transfer the roadway\'s weight upward into the main cables', explain:'The passage states vertical cables "transfer the weight of the roadway upward into the main cables."'},
+        D:{text:'They allow cars to cross the bridge', explain:'This describes the roadway, not the vertical cables specifically.'}
+      } },
+    { id:'r343', passage:'p86', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'anchored' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Firmly fixed or secured in place', explain:'The passage describes main cables "anchored deep into the ground," meaning firmly fixed in place.'},
+        B:{text:'Loosely draped', explain:'This is the opposite of anchored.'},
+        C:{text:'Painted a specific color', explain:'This isn\'t what anchored describes.'},
+        D:{text:'Measured precisely', explain:'This isn\'t what anchored describes.'}
+      } },
+    { id:'r344', passage:'p86', skill:'Inference', prompt:'It can be inferred that suspension bridges are well suited for very long spans mainly because:', correct:'B',
+      choices:{
+        A:{text:'They require less steel than other bridge designs', explain:'Material quantity isn\'t discussed in the passage.'},
+        B:{text:'Their flexibility prevents them from cracking under stress', explain:'The passage states the design\'s flexibility helps it withstand wind "where rigid designs would otherwise crack under stress."'},
+        C:{text:'They are always built near large bodies of water', explain:'This isn\'t suggested in the passage.'},
+        D:{text:'They can be built without towers', explain:'This contradicts the passage, which describes towers as essential to the design.'}
+      } },
+    { id:'r345', passage:'p87', skill:'Inference', prompt:"The passage suggests Marcus's habit of redoing everyone's work stemmed mainly from:", correct:'B',
+      choices:{
+        A:{text:'A lack of interest in his classes', explain:'This contradicts the passage, which shows Marcus deeply invested in the quality of the work.'},
+        B:{text:'Difficulty trusting others to meet his standards', explain:'The passage states Marcus was "convinced no one else\'s work would meet his standard," directly indicating this difficulty trusting others.'},
+        C:{text:'A requirement set by his teachers', explain:'No such requirement is mentioned in the passage.'},
+        D:{text:'A desire to finish assignments faster', explain:'The passage shows the opposite — his habit made him stay up until 2 a.m., taking longer, not finishing faster.'}
+      } },
+    { id:'r346', passage:'p87', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between Marcus and his advisor', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A student learning to let go of control and trust his teammates', explain:'The passage follows Marcus learning to leave a teammate\'s work unedited and seeing a positive result.'},
+        C:{text:'Marcus quitting group projects entirely', explain:'The passage shows him continuing to work in groups, not quitting.'},
+        D:{text:'A teacher grading Marcus unfairly', explain:'No unfair grading is described in the passage.'}
+      } },
+    { id:'r347', passage:'p87', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'restraint' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Self-control, holding back from acting', explain:'The passage describes Marcus using "every ounce of restraint" not to fix his partner\'s paragraph, meaning self-control.'},
+        B:{text:'A physical device used to hold something', explain:'This is a different, unrelated meaning of restraint.'},
+        C:{text:'Complete freedom to act however one wants', explain:'This is the opposite of restraint.'},
+        D:{text:'A formal punishment', explain:'This isn\'t what restraint describes.'}
+      } },
+    { id:'r348', passage:'p87', skill:'Detail', prompt:'According to the passage, what specific paragraph did Marcus resist fixing?', correct:'C',
+      choices:{
+        A:{text:'His own introduction paragraph', explain:'The passage describes his partner\'s paragraph, not his own.'},
+        B:{text:'The conclusion of the report', explain:'This isn\'t the specific paragraph mentioned in the passage.'},
+        C:{text:'His partner\'s slightly awkward introduction paragraph', explain:'The passage states he resisted fixing "his partner\'s slightly awkward introduction paragraph."'},
+        D:{text:'A paragraph written by his advisor', explain:'The advisor didn\'t write any part of the assignment, according to the passage.'}
+      } },
+    { id:'r349', passage:'p88', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How modern traffic lights are manufactured', explain:'Modern manufacturing isn\'t discussed in the passage.'},
+        B:{text:'The historical development of the traffic light from manual control to a three-color signal', explain:'The passage traces traffic control from police officers to electric signals to the addition of a yellow light.'},
+        C:{text:'The rules of the road for drivers today', explain:'Current driving rules aren\'t discussed in the passage.'},
+        D:{text:'How traffic patterns are studied by engineers', explain:'Traffic pattern studies aren\'t discussed in the passage.'}
+      } },
+    { id:'r350', passage:'p88', skill:'Detail', prompt:'According to the passage, what did the first electric traffic signal require an officer to do?', correct:'C',
+      choices:{
+        A:{text:'Stand in the intersection at all times', explain:'The passage describes an earlier method using officers directly in the road, not the electric signal method.'},
+        B:{text:'Wave a flag to direct cars', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'Manually switch between red and green from a nearby control box', explain:'The passage states the first electric signal "required an officer to switch between them manually from a nearby control box."'},
+        D:{text:'Record the number of cars passing through', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r351', passage:'p88', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'abruptly' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Suddenly, without warning', explain:'The passage contrasts stopping "abruptly" with slowing "gradually," meaning suddenly and without warning.'},
+        B:{text:'Gradually and smoothly', explain:'This is the opposite of abruptly.'},
+        C:{text:'Loudly', explain:'This isn\'t what abruptly describes.'},
+        D:{text:'Rarely', explain:'This isn\'t what abruptly describes.'}
+      } },
+    { id:'r352', passage:'p88', skill:'Inference', prompt:'It can be inferred that the yellow light reduced collisions mainly by:', correct:'B',
+      choices:{
+        A:{text:'Making the red light brighter', explain:'Brightness isn\'t discussed in the passage.'},
+        B:{text:'Giving drivers advance warning of an upcoming change', explain:'The passage states yellow was added "to warn drivers a change was coming," allowing gradual slowing instead of abrupt stops.'},
+        C:{text:'Eliminating the need for red lights entirely', explain:'This contradicts the three-light system described in the passage.'},
+        D:{text:'Requiring officers to stand at every intersection', explain:'This contradicts the automation the passage describes.'}
+      } },
+    { id:'r353', passage:'p89', skill:'Inference', prompt:"The coach's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Priya and Wren should be separated permanently', explain:'This contradicts the passage, which shows them practicing together.'},
+        B:{text:'Rebuilding trust required focused, repeated practice rather than a single conversation', explain:'By having them run a passing drill together daily for two weeks, the coach relied on consistent practice rather than a one-time talk.'},
+        C:{text:'Wren should be removed from the team', explain:'This contradicts the passage, which shows Wren remaining an active player.'},
+        D:{text:'Priya was solely responsible for the lost passes', explain:'This isn\'t suggested in the passage; the coach\'s approach involves both players equally.'}
+      } },
+    { id:'r354', passage:'p89', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A permanent conflict between two teammates', explain:'The passage shows the conflict resolving, not persisting permanently.'},
+        B:{text:'Two teammates rebuilding trust through consistent practice together', explain:'The passage follows Priya and Wren regaining trust through the coach\'s structured drill.'},
+        C:{text:'A coach benching two players for poor performance', explain:'The passage states the coach did not bench either player.'},
+        D:{text:'A championship game between two teams', explain:'No championship is described in the passage.'}
+      } },
+    { id:'r355', passage:'p89', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'bench' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'To remove a player from active play', explain:'The passage states the coach "didn\'t bench either player," meaning she didn\'t remove them from active play.'},
+        B:{text:'To reward a player with extra playing time', explain:'This is the opposite of bench.'},
+        C:{text:'To physically sit on a piece of furniture', explain:'This is a different, unrelated meaning of bench.'},
+        D:{text:'To praise a player publicly', explain:'This isn\'t what bench describes.'}
+      } },
+    { id:'r356', passage:'p89', skill:'Detail', prompt:'According to the passage, how long did Priya and Wren practice together before the trust was rebuilt?', correct:'C',
+      choices:{
+        A:{text:'A single practice session', explain:'This understates the time given in the passage.'},
+        B:{text:'One game', explain:'This isn\'t the timeframe given in the passage.'},
+        C:{text:'Two weeks', explain:'The passage states they ran the drill together "for two weeks straight."'},
+        D:{text:'An entire season', explain:'This overstates the timeframe given in the passage.'}
+      } },
+    { id:'r357', passage:'p90', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How GPS satellites determine location', explain:'GPS isn\'t discussed in the passage.'},
+        B:{text:"How a compass uses Earth's magnetic field to indicate direction", explain:'The passage explains how a magnetized needle aligns with Earth\'s magnetic field to point toward magnetic north.'},
+        C:{text:'The history of navigation tools', explain:'Navigation history isn\'t discussed in the passage.'},
+        D:{text:'How to read a topographic map', explain:'Map reading isn\'t discussed in the passage.'}
+      } },
+    { id:'r358', passage:'p90', skill:'Detail', prompt:'According to the passage, what allows the compass needle to turn despite Earth\'s relatively weak magnetic pull?', correct:'C',
+      choices:{
+        A:{text:'A small internal battery', explain:'A battery isn\'t mentioned in the passage; the compass works without one.'},
+        B:{text:'A strong external magnet', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'A low-friction pivot', explain:'The passage states the needle is "free to rotate on a low-friction pivot," allowing even a weak magnetic pull to turn it.'},
+        D:{text:'A digital sensor', explain:'This isn\'t mentioned in the passage; the compass described is a simple magnetic needle device.'}
+      } },
+    { id:'r359', passage:'p90', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'declination' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'A deviation or difference from an expected direction', explain:'The passage describes "magnetic declination" as the difference between magnetic north and true geographic north.'},
+        B:{text:'A sudden increase in strength', explain:'This isn\'t what declination describes.'},
+        C:{text:'A type of compass material', explain:'This isn\'t what declination describes.'},
+        D:{text:'A complete reversal of direction', explain:'This overstates what declination describes; it\'s a difference, not a full reversal.'}
+      } },
+    { id:'r360', passage:'p90', skill:'Inference', prompt:'It can be inferred that a compass reading toward magnetic north:', correct:'B',
+      choices:{
+        A:{text:'Is always identical to true geographic north', explain:'This contradicts the passage\'s explanation of magnetic declination.'},
+        B:{text:'May require adjustment to indicate true geographic north accurately', explain:'The passage explains magnetic declination and states "some compasses include an adjustment feature to correct for this gap."'},
+        C:{text:'Cannot be used for navigation at all', explain:'This contradicts the basic function of a compass described in the passage.'},
+        D:{text:'Only works correctly at the equator', explain:'This isn\'t suggested in the passage.'}
+      } },
+    { id:'r361', passage:'p91', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to choose the best camera lens', explain:'Lens selection isn\'t discussed in the passage.'},
+        B:{text:"How a camera's aperture controls both light and depth of field", explain:'The passage explains how aperture size affects both the amount of light entering and how much of the image stays in focus.'},
+        C:{text:'How camera sensors capture images', explain:'Sensor technology isn\'t discussed in the passage.'},
+        D:{text:'The history of photography', explain:'Photography history isn\'t discussed in the passage.'}
+      } },
+    { id:'r362', passage:'p91', skill:'Detail', prompt:'According to the passage, what does a wider aperture produce in terms of depth of field?', correct:'C',
+      choices:{
+        A:{text:'A deeper depth of field', explain:'The passage attributes a deeper, larger depth of field to a narrower aperture, not a wider one.'},
+        B:{text:'No change in depth of field at all', explain:'This contradicts the passage\'s explanation of the relationship between aperture and depth of field.'},
+        C:{text:'A shallower depth of field', explain:'The passage states a wider aperture "produces a shallower depth of field."'},
+        D:{text:'A depth of field that depends only on the sensor', explain:'This isn\'t what the passage attributes depth of field to.'}
+      } },
+    { id:'r363', passage:'p91', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'shallower' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Covering a narrower range of distances in focus', explain:'The passage describes a "shallower depth of field" where "only a narrow range of distances stays in sharp focus."'},
+        B:{text:'Covering a much wider range of distances in focus', explain:'This is the opposite of shallower in this context.'},
+        C:{text:'Extremely dark', explain:'This isn\'t what shallower describes here.'},
+        D:{text:'Physically thin', explain:'This isn\'t the specific meaning of shallower in this photographic context.'}
+      } },
+    { id:'r364', passage:'p91', skill:'Inference', prompt:'It can be inferred that landscape photographers prefer a narrow aperture mainly because:', correct:'B',
+      choices:{
+        A:{text:'It lets in the maximum amount of light possible', explain:'The passage attributes maximum light to a wider aperture, not a narrow one.'},
+        B:{text:'They want both near and far details in sharp focus', explain:'The passage states narrow apertures are chosen for landscapes "where they want both nearby and distant details to appear sharp."'},
+        C:{text:'It makes the camera lighter to carry', explain:'Weight isn\'t discussed in the passage.'},
+        D:{text:'It eliminates the need for a tripod', explain:'Tripods aren\'t discussed in the passage.'}
+      } },
+    { id:'r365', passage:'p92', skill:'Inference', prompt:"The sister's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Simone should stop checking the mailbox entirely', explain:'The passage shows the sister joining Simone at the mailbox rather than telling her to stop.'},
+        B:{text:'Being present mattered more than trying to fix or shorten the anxious waiting', explain:'The sister never tried to end the waiting; she simply showed up, offering companionship rather than a solution.'},
+        C:{text:'The acceptance letter would definitely be good news', explain:'This isn\'t suggested anywhere in the passage.'},
+        D:{text:'Simone should apply to a different school instead', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r366', passage:'p92', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between sisters', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A sister supporting Simone through the anxious wait for a college acceptance letter', explain:'The passage follows the sister\'s quiet companionship during Simone\'s stressful daily wait.'},
+        C:{text:'Simone getting rejected from college', explain:'The passage doesn\'t reveal the letter\'s content, just its arrival.'},
+        D:{text:'A mail carrier delivering letters late', explain:'Mail delivery timing isn\'t the passage\'s focus.'}
+      } },
+    { id:'r367', passage:'p92', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'ridiculous' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Absurd or silly, often in an amusing way', explain:'The passage describes the sister telling "a ridiculous story," meaning an absurd, amusing one.'},
+        B:{text:'Extremely serious and somber', explain:'This is the opposite of ridiculous in this context.'},
+        C:{text:'Completely true and factual', explain:'This isn\'t what ridiculous describes.'},
+        D:{text:'Very short', explain:'Length isn\'t what ridiculous describes.'}
+      } },
+    { id:'r368', passage:'p92', skill:'Detail', prompt:'According to the passage, on what day did the acceptance letter finally arrive?', correct:'C',
+      choices:{
+        A:{text:'A special holiday', explain:'This isn\'t the day mentioned in the passage.'},
+        B:{text:'A Friday', explain:'This isn\'t the day mentioned in the passage.'},
+        C:{text:'An ordinary Tuesday', explain:'The passage states "the letter came on an ordinary Tuesday."'},
+        D:{text:'The very first day of checking', explain:'This contradicts the three weeks of checking described in the passage.'}
+      } },
+    { id:'r369', passage:'p93', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How modern elevators are manufactured today', explain:'Modern manufacturing isn\'t discussed in the passage.'},
+        B:{text:'How the invention of a safety brake made passenger elevators trustworthy', explain:'The passage explains how the safety brake solved the danger of cable failure, enabling public trust in elevators.'},
+        C:{text:'The history of skyscraper design', explain:'Skyscraper design generally isn\'t the passage\'s focus, just a consequence mentioned briefly.'},
+        D:{text:'How elevator cables are manufactured', explain:'Cable manufacturing isn\'t discussed in the passage.'}
+      } },
+    { id:'r370', passage:'p93', skill:'Detail', prompt:'According to the passage, what problem did freight elevators have before the safety brake was invented?', correct:'C',
+      choices:{
+        A:{text:'They moved too slowly to be useful', explain:'Speed isn\'t mentioned as the problem in the passage.'},
+        B:{text:'They could only carry small loads', explain:'Load capacity isn\'t mentioned as the problem in the passage.'},
+        C:{text:'A snapped cable could cause the platform to crash with no way to stop it', explain:'The passage states "a single snapped cable could send the entire platform crashing to the ground with no way to stop it."'},
+        D:{text:'They required too much electricity to run', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r371', passage:'p93', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'demonstrated' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Shown publicly to prove something works', explain:'The passage describes the safety brake "demonstrated publicly by cutting the cable," meaning shown publicly to prove it worked.'},
+        B:{text:'Kept completely secret', explain:'This is the opposite of demonstrated.'},
+        C:{text:'Sold for a high price', explain:'This isn\'t what demonstrated describes.'},
+        D:{text:'Patented legally', explain:'This isn\'t what demonstrated describes.'}
+      } },
+    { id:'r372', passage:'p93', skill:'Inference', prompt:"It can be inferred that the safety brake's public demonstration was significant mainly because:", correct:'B',
+      choices:{
+        A:{text:'It proved the inventor was extremely wealthy', explain:'Wealth isn\'t discussed in the passage.'},
+        B:{text:'It proved elevators could be trusted despite cable failure', explain:'The passage states this demonstration "convinced the public that elevators could be trusted," directly showing this significance.'},
+        C:{text:'It eliminated the need for elevator cables entirely', explain:'This contradicts the passage, which still describes a lifting cable as part of the system.'},
+        D:{text:'It made elevators completely silent', explain:'Noise isn\'t discussed in the passage.'}
+      } },
+    { id:'r373', passage:'p94', skill:'Inference', prompt:"The coach's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Kenji should quit tennis after a losing streak', explain:'This contradicts the passage, which shows Kenji continuing to compete.'},
+        B:{text:"Acknowledging an opponent's strengths could help Kenji process losses in a healthier way", explain:'By having Kenji verbally recognize something his opponent did well, the coach redirected his focus from stormy self-criticism toward healthier reflection.'},
+        C:{text:'Kenji\'s opponents were always more skilled than him', explain:'This isn\'t suggested anywhere in the passage.'},
+        D:{text:'Losing shouldn\'t affect Kenji at all', explain:'The passage states the coach never told him "losing was fine," contradicting this.'}
+      } },
+    { id:'r374', passage:'p94', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A rivalry between two tennis players', explain:'The passage doesn\'t frame this as an ongoing rivalry, just a series of matches.'},
+        B:{text:'An athlete learning to handle losses with better sportsmanship', explain:'The passage follows Kenji shifting from isolating, angry reactions to a healthier way of processing defeat.'},
+        C:{text:'A coach benching Kenji for poor behavior', explain:'No benching is described in the passage.'},
+        D:{text:'Kenji winning a major tournament', explain:'The passage focuses on losses, not a winning tournament.'}
+      } },
+    { id:'r375', passage:'p94', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'stormy' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Marked by anger or turbulent emotion', explain:'The passage describes "stormy walks home," meaning walks marked by anger or turbulent emotion after a loss.'},
+        B:{text:'Marked by heavy rain', explain:'This is the literal weather meaning, not how the word is used here.'},
+        C:{text:'Calm and peaceful', explain:'This is the opposite of stormy in this context.'},
+        D:{text:'Extremely joyful', explain:'This is the opposite of stormy in this context.'}
+      } },
+    { id:'r376', passage:'p94', skill:'Detail', prompt:'According to the passage, what did the coach ask Kenji to do after their next defeat?', correct:'C',
+      choices:{
+        A:{text:'Apologize to his own doubles partner', explain:'This isn\'t what the coach asked, according to the passage.'},
+        B:{text:'Write a letter describing his mistakes', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'Find and state one specific thing his opponent had done well', explain:'The passage states the coach asked Kenji "to find one specific thing his opponent had done well and say it out loud to that opponent\'s face."'},
+        D:{text:'Practice an extra hour that day', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r377', passage:'p95', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How ocean currents affect marine life', explain:'Ocean currents and marine life aren\'t discussed in the passage.'},
+        B:{text:"How the moon's gravitational pull causes ocean tides", explain:'The passage explains how the moon\'s pull creates two water bulges that produce daily high and low tides.'},
+        C:{text:'The history of tide prediction', explain:'Tide prediction history isn\'t discussed in the passage.'},
+        D:{text:'How tsunamis form', explain:'Tsunamis aren\'t discussed in the passage.'}
+      } },
+    { id:'r378', passage:'p95', skill:'Detail', prompt:'According to the passage, how many high tides do most coastal locations experience each day?', correct:'B',
+      choices:{
+        A:{text:'One', explain:'This understates the number given in the passage.'},
+        B:{text:'Two', explain:'The passage states most locations experience "two high tides and two low tides each day."'},
+        C:{text:'Three', explain:'This overstates the number given in the passage.'},
+        D:{text:'Four', explain:'This overstates the number given in the passage.'}
+      } },
+    { id:'r379', passage:'p95', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'bulge' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'A rounded, outward swelling', explain:'The passage describes a "bulge of water" formed by the moon\'s pull, meaning a rounded, outward swelling.'},
+        B:{text:'A sudden drop in water level', explain:'This is nearly the opposite of bulge.'},
+        C:{text:'A type of ocean current', explain:'This isn\'t what bulge describes.'},
+        D:{text:'A measurement of depth', explain:'This isn\'t what bulge describes.'}
+      } },
+    { id:'r380', passage:'p95', skill:'Inference', prompt:'It can be inferred that tide timing shifts slightly each day mainly because:', correct:'B',
+      choices:{
+        A:{text:'Earth\'s rotation speed changes daily', explain:'This isn\'t suggested in the passage; Earth\'s rotation is treated as roughly constant.'},
+        B:{text:'The moon is also moving in its own orbit', explain:'The passage states timing "shifts slightly because the moon is also slowly moving in its own orbit."'},
+        C:{text:'Ocean temperatures change from day to day', explain:'Temperature isn\'t discussed in the passage.'},
+        D:{text:'Coastal locations move slightly each day', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r381', passage:'p96', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to manufacture hand sanitizer', explain:'Manufacturing isn\'t discussed in the passage.'},
+        B:{text:"How hand sanitizer's alcohol content kills germs", explain:'The passage explains how alcohol breaks down germ membranes and why clean hands matter for effectiveness.'},
+        C:{text:'The history of hygiene products', explain:'Product history isn\'t discussed in the passage.'},
+        D:{text:'How viruses spread between people', explain:'Virus transmission isn\'t discussed in the passage.'}
+      } },
+    { id:'r382', passage:'p96', skill:'Detail', prompt:"According to the passage, what does alcohol do to the germ's outer membrane?", correct:'C',
+      choices:{
+        A:{text:'It strengthens the membrane temporarily', explain:'This contradicts the passage\'s description of the membrane breaking down.'},
+        B:{text:'It has no effect on the membrane at all', explain:'This contradicts the basic mechanism described in the passage.'},
+        C:{text:'It breaks it down, causing proteins inside to lose structure', explain:'The passage states alcohol "breaks down the outer protective membrane... causing the proteins inside to lose their structure."'},
+        D:{text:'It changes the membrane\'s color', explain:'Color isn\'t discussed in the passage.'}
+      } },
+    { id:'r383', passage:'p96', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'shield' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'To block or protect from contact', explain:'The passage describes dirt and grease that can "shield germs from direct contact with the alcohol," meaning block or protect them.'},
+        B:{text:'To expose completely', explain:'This is the opposite of shield.'},
+        C:{text:'To destroy instantly', explain:'This isn\'t what shield describes.'},
+        D:{text:'To multiply rapidly', explain:'This isn\'t what shield describes.'}
+      } },
+    { id:'r384', passage:'p96', skill:'Inference', prompt:'It can be inferred that hand sanitizer:', correct:'B',
+      choices:{
+        A:{text:'Works equally well on all surfaces, not just hands', explain:'The passage focuses specifically on hands, not other surfaces.'},
+        B:{text:'Works less effectively on visibly dirty hands than on clean ones', explain:'The passage states sanitizer "works best on visibly clean hands," since dirt can "reduce its effectiveness significantly."'},
+        C:{text:'Takes several hours to kill germs', explain:'The passage states this process happens "within seconds," contradicting this.'},
+        D:{text:'Cannot kill any viruses at all', explain:'This contradicts the passage, which states it works on "many viruses."'}
+      } },
+    { id:'r385', passage:'p97', skill:'Inference', prompt:"The teacher's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Students should never ask questions in class', explain:'This contradicts the passage, which shows the teacher creating a system specifically for questions.'},
+        B:{text:'Anonymity could reveal that struggling with a topic was more common than students assumed', explain:'The anonymous slips let Aiden discover his confusion was shared by many classmates, something he wouldn\'t have learned by staying silent.'},
+        C:{text:'Aiden needed extra tutoring outside of class', explain:'This isn\'t mentioned in the passage.'},
+        D:{text:'The class was performing below expectations overall', explain:'This isn\'t suggested in the passage.'}
+      } },
+    { id:'r386', passage:'p97', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement between Aiden and his teacher', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A student realizing his confusion was shared by classmates through an anonymous question system', explain:'The passage follows Aiden discovering that many classmates had the same unspoken question he did.'},
+        C:{text:'Aiden failing a major exam', explain:'No exam or failure is described in the passage.'},
+        D:{text:'A teacher removing anonymous questions from her classroom', explain:'The passage shows the teacher introducing, not removing, this system.'}
+      } },
+    { id:'r387', passage:'p97', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'anonymous' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Without a name attached, unidentified', explain:'The passage describes an "anonymous slip of paper... without their name attached," meaning unidentified.'},
+        B:{text:'Signed and clearly labeled', explain:'This is the opposite of anonymous.'},
+        C:{text:'Written in a foreign language', explain:'This isn\'t what anonymous describes.'},
+        D:{text:'Extremely long', explain:'Length isn\'t what anonymous describes.'}
+      } },
+    { id:'r388', passage:'p97', skill:'Detail', prompt:'According to the passage, what did Aiden discover when the teacher read the slips back to the class?', correct:'C',
+      choices:{
+        A:{text:'That no one else had any questions', explain:'This contradicts the passage, which describes many similar questions.'},
+        B:{text:'That his handwriting was recognized anyway', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'That many other students had asked a nearly identical question', explain:'The passage states "half the box\'s questions were nearly identical to the one Aiden had been too afraid to ask."'},
+        D:{text:'That the teacher had made a mistake collecting the slips', explain:'This isn\'t mentioned in the passage.'}
+      } },
+    { id:'r389', passage:'p98', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How airbags work in modern cars', explain:'Airbags aren\'t discussed in the passage.'},
+        B:{text:'How the three-point seatbelt became a widespread safety standard', explain:'The passage explains the seatbelt\'s development and how its open licensing helped it spread quickly.'},
+        C:{text:'The history of the automobile industry generally', explain:'The broader automobile industry isn\'t the passage\'s focus.'},
+        D:{text:'How car crash tests are conducted today', explain:'Crash testing isn\'t discussed in the passage.'}
+      } },
+    { id:'r390', passage:'p98', skill:'Detail', prompt:'According to the passage, what problem did lap-only seatbelts have compared to the three-point design?', correct:'C',
+      choices:{
+        A:{text:'They were more expensive to manufacture', explain:'Cost isn\'t mentioned as the problem in the passage.'},
+        B:{text:'They could only be used in the front seats', explain:'This isn\'t mentioned in the passage.'},
+        C:{text:'They were less effective at preventing injury', explain:'The passage states the three-point belt "quickly proved far more effective at preventing injury than the simple lap-only belts."'},
+        D:{text:'They were uncomfortable to wear for long trips', explain:'Comfort isn\'t discussed in the passage.'}
+      } },
+    { id:'r391', passage:'p98', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'ejected' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Thrown out or forced out suddenly', explain:'The passage describes passengers being "ejected entirely during a sudden stop," meaning thrown out suddenly.'},
+        B:{text:'Comfortably seated', explain:'This is the opposite of ejected.'},
+        C:{text:'Slowly guided out', explain:'This understates the suddenness that ejected describes.'},
+        D:{text:'Given a warning', explain:'This isn\'t what ejected describes.'}
+      } },
+    { id:'r392', passage:'p98', skill:'Inference', prompt:'It can be inferred that the three-point seatbelt spread quickly mainly because:', correct:'B',
+      choices:{
+        A:{text:'Governments immediately banned all other seatbelt designs', explain:'No such ban is mentioned in the passage.'},
+        B:{text:'Its inventor allowed other automakers to use it without paying for exclusive rights', explain:'The passage states the inventor "chose not to patent it exclusively, allowing other automakers to use it freely," directly enabling rapid spread.'},
+        C:{text:'It was significantly cheaper than lap-only belts', explain:'Cost comparison isn\'t discussed in the passage.'},
+        D:{text:'Cars could no longer be sold without it starting immediately', explain:'This isn\'t suggested in the passage.'}
+      } },
+    { id:'r393', passage:'p99', skill:'Inference', prompt:"The bandmate's approach suggests she believed:", correct:'B',
+      choices:{
+        A:{text:'Omar should give up on improvisation entirely', explain:'This contradicts the passage, which shows Omar developing his improvisation skills.'},
+        B:{text:'A strict limitation could help Omar build confidence in improvising more than open-ended freedom would', explain:'By restricting Omar to just three notes rather than unlimited options, the bandmate helped him build improvisational skill within manageable boundaries.'},
+        C:{text:'Sheet music should be avoided completely from then on', explain:'This isn\'t suggested in the passage; sheet music is simply contrasted with improvisation.'},
+        D:{text:'Omar\'s bandmates were more talented than he was', explain:'This isn\'t suggested anywhere in the passage.'}
+      } },
+    { id:'r394', passage:'p99', skill:'Main idea', prompt:'This passage is mainly about:', correct:'B',
+      choices:{
+        A:{text:'A disagreement within Omar\'s jazz combo', explain:'No disagreement occurs in the passage.'},
+        B:{text:'A musician learning to improvise by working within a small, deliberate limitation', explain:'The passage follows Omar developing improvisational confidence through the three-note exercise.'},
+        C:{text:'Omar quitting the jazz combo', explain:'The passage shows him continuing and improving, not quitting.'},
+        D:{text:'A competition between jazz musicians', explain:'No competition is described in the passage.'}
+      } },
+    { id:'r395', passage:'p99', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'suffocating' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Overwhelmingly restrictive or confining', explain:'The passage describes the limitation feeling "suffocating at first," meaning overwhelmingly restrictive.'},
+        B:{text:'Pleasantly freeing', explain:'This is the opposite of suffocating in this context.'},
+        C:{text:'Extremely loud', explain:'This isn\'t what suffocating describes.'},
+        D:{text:'Completely silent', explain:'This isn\'t what suffocating describes.'}
+      } },
+    { id:'r396', passage:'p99', skill:'Detail', prompt:'According to the passage, how many notes did the bandmate give Omar to build a solo from?', correct:'B',
+      choices:{
+        A:{text:'One', explain:'This understates the number given in the passage.'},
+        B:{text:'Three', explain:'The passage states the bandmate started "handing him just three notes before each rehearsal."'},
+        C:{text:'Five', explain:'This overstates the number given in the passage.'},
+        D:{text:'All the notes in the scale', explain:'This contradicts the deliberate limitation described in the passage.'}
+      } },
+    { id:'r397', passage:'p100', skill:'Main idea', prompt:'This passage is primarily about:', correct:'B',
+      choices:{
+        A:{text:'How to bake different types of bread', explain:'Baking instructions aren\'t discussed in the passage.'},
+        B:{text:'How yeast fermentation causes bread dough to rise', explain:'The passage explains how yeast produces carbon dioxide gas that becomes trapped in the dough\'s gluten network.'},
+        C:{text:'The nutritional value of different flours', explain:'Nutrition isn\'t discussed in the passage.'},
+        D:{text:'The history of bread-making', explain:'Bread-making history isn\'t discussed in the passage.'}
+      } },
+    { id:'r398', passage:'p100', skill:'Detail', prompt:'According to the passage, what gas does yeast produce as it consumes sugar in the dough?', correct:'C',
+      choices:{
+        A:{text:'Oxygen', explain:'This isn\'t the gas described in the passage.'},
+        B:{text:'Nitrogen', explain:'This isn\'t the gas described in the passage.'},
+        C:{text:'Carbon dioxide', explain:'The passage states yeast "consumes the sugars... and produces carbon dioxide gas as a byproduct."'},
+        D:{text:'Hydrogen', explain:'This isn\'t the gas described in the passage.'}
+      } },
+    { id:'r399', passage:'p100', skill:'Vocabulary in context', prompt:"As used in the passage, the word 'elastic' most nearly means:", correct:'A',
+      choices:{
+        A:{text:'Able to stretch and return to shape without breaking', explain:'The passage describes gluten as "elastic," meaning able to stretch without breaking as gas expands the dough.'},
+        B:{text:'Extremely brittle and easily broken', explain:'This is the opposite of elastic.'},
+        C:{text:'Sticky to the touch', explain:'This isn\'t what elastic describes.'},
+        D:{text:'Cold in temperature', explain:'This isn\'t what elastic describes.'}
+      } },
+    { id:'r400', passage:'p100', skill:'Inference', prompt:'It can be inferred that refrigerating dough slows its rise mainly because:', correct:'B',
+      choices:{
+        A:{text:'Cold dough contains less flour', explain:'Flour content isn\'t affected by temperature, and this isn\'t discussed in the passage.'},
+        B:{text:'Cold temperatures slow the yeast\'s fermentation process', explain:'The passage states fermentation "works fastest in warm environments and slows dramatically in cold ones," directly explaining the effect of refrigeration.'},
+        C:{text:'Cold dough loses its gluten entirely', explain:'This isn\'t suggested in the passage.'},
+        D:{text:'Refrigerators remove all sugar from the dough', explain:'This isn\'t suggested anywhere in the passage.'}
       } }
   ]
 };
