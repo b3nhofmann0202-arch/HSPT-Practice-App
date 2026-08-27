@@ -252,15 +252,34 @@ let skillState = {
   qfSecondsLeft: 0,
   qfTimerHandle: null,
   qfAnswered: false,
-  qfDone: false
+  qfDone: false,
+  // adaptive difficulty
+  qfLevel: 'easy',
+  qfCorrectStreak: 0,
+  qfIncorrectStreak: 0,
+  qfUsedIds: null,
+  qfPools: null,
+  qfLevelChangeMsg: null,
+  qfLevelStats: null
 };
 const QF_TIME_PER_QUESTION = 12;
+const QF_ROUND_SIZE = 10;
+// Weighted mix of tiers served at each adaptive level: mostly on-level questions,
+// with some easier/harder ones mixed in for variety and smoother transitions.
+const QF_LEVEL_WEIGHTS = {
+  easy:   { easy: 0.7, medium: 0.3, hard: 0 },
+  medium: { easy: 0.2, medium: 0.6, hard: 0.2 },
+  hard:   { easy: 0,   medium: 0.3, hard: 0.7 }
+};
 
 function ensureSkillsProgress(){
   if (!profile.skills_progress) profile.skills_progress = {};
   if (!profile.skills_progress.vocab) profile.skills_progress.vocab = {};
   if (typeof profile.skills_progress.dojoBestStreak !== 'number') profile.skills_progress.dojoBestStreak = 0;
   if (!profile.skills_progress.quickfireBest) profile.skills_progress.quickfireBest = {};
+  if (!profile.skills_progress.qfAdaptive) profile.skills_progress.qfAdaptive = {};
+  if (!profile.skills_progress.qfAdaptive.quant) profile.skills_progress.qfAdaptive.quant = { level: 'easy' };
+  if (!profile.skills_progress.qfAdaptive.math) profile.skills_progress.qfAdaptive.math = { level: 'easy' };
   if (!profile.lessons_completed) profile.lessons_completed = {};
 }
 
@@ -305,6 +324,7 @@ function renderAuth(mode){
             ? `New here? <a href="#" onclick="renderAuth('signup');return false" style="color:var(--maroon)">Create an account</a>`
             : `Already have an account? <a href="#" onclick="renderAuth('login');return false" style="color:var(--maroon)">Log in</a>`}
         </p>
+        ${mode === 'login' ? `<p style="font-size:12px;text-align:center;margin:8px 0 0"><a href="#" onclick="renderForgotPassword();return false" style="color:var(--slate)">Forgot password?</a></p>` : ''}
         <p id="auth-error" style="font-size:12px;color:var(--maroon);margin:10px 0 0"></p>
       </div>
     </div>`;
@@ -320,6 +340,72 @@ async function doAuth(mode){
     : await supa.auth.signUp({ email, password });
   if (error) { errEl.textContent = error.message; return; }
   session = data.session;
+  await afterLogin();
+}
+
+// ---------- Forgot password ----------
+function renderForgotPassword(){
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="auth-wrap">
+      <div class="brand" style="justify-content:center;margin-bottom:24px">
+        <div class="seal">M</div><span class="brand-name">Merit</span>
+      </div>
+      <div class="card">
+        <p style="font-weight:500;font-size:14px;margin:0 0 6px">Reset your password</p>
+        <p class="muted" style="font-size:12px;margin:0 0 14px">Enter your email and we'll send you a link to set a new password.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+          <input id="forgot-email" type="email" placeholder="Email">
+        </div>
+        <button class="btn" style="width:100%;margin-bottom:10px" onclick="sendResetEmail()">Send reset link</button>
+        <p style="font-size:12px;text-align:center;margin:0">
+          <a href="#" onclick="renderAuth('login');return false" style="color:var(--maroon)">Back to log in</a>
+        </p>
+        <p id="forgot-error" style="font-size:12px;color:var(--maroon);margin:10px 0 0"></p>
+        <p id="forgot-success" style="font-size:12px;color:var(--success);margin:10px 0 0"></p>
+      </div>
+    </div>`;
+}
+
+async function sendResetEmail(){
+  const email = document.getElementById('forgot-email').value;
+  const errEl = document.getElementById('forgot-error');
+  const successEl = document.getElementById('forgot-success');
+  errEl.textContent = '';
+  successEl.textContent = '';
+  if (!email) { errEl.textContent = 'Enter your email first.'; return; }
+  const { error } = await supa.auth.resetPasswordForEmail(email, { redirectTo: window.location.origin });
+  if (error) { errEl.textContent = error.message; return; }
+  successEl.textContent = 'Check your email for a link to reset your password.';
+}
+
+// ---------- Set new password (after clicking the emailed reset link) ----------
+function renderResetPassword(){
+  const root = document.getElementById('root');
+  root.innerHTML = `
+    <div class="auth-wrap">
+      <div class="brand" style="justify-content:center;margin-bottom:24px">
+        <div class="seal">M</div><span class="brand-name">Merit</span>
+      </div>
+      <div class="card">
+        <p style="font-weight:500;font-size:14px;margin:0 0 6px">Set a new password</p>
+        <p class="muted" style="font-size:12px;margin:0 0 14px">Choose a new password for your account.</p>
+        <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:12px">
+          <input id="new-password" type="password" placeholder="New password">
+        </div>
+        <button class="btn" style="width:100%;margin-bottom:10px" onclick="updatePassword()">Update password</button>
+        <p id="reset-error" style="font-size:12px;color:var(--maroon);margin:10px 0 0"></p>
+      </div>
+    </div>`;
+}
+
+async function updatePassword(){
+  const password = document.getElementById('new-password').value;
+  const errEl = document.getElementById('reset-error');
+  errEl.textContent = '';
+  if (!password || password.length < 6) { errEl.textContent = 'Password must be at least 6 characters.'; return; }
+  const { error } = await supa.auth.updateUser({ password });
+  if (error) { errEl.textContent = error.message; return; }
   await afterLogin();
 }
 
@@ -764,7 +850,7 @@ function skillMenuHTML(){
       <div class="skill-card" onclick="openQuickfirePicker()">
         <div class="icon" style="background:var(--success)">Q</div>
         <p style="font-weight:500;font-size:14px;margin:0 0 4px">Quick-fire quant &amp; math</p>
-        <p class="muted" style="font-size:12px;margin:0">${QF_TIME_PER_QUESTION}s per question, beat your best score</p>
+        <p class="muted" style="font-size:12px;margin:0">${QF_TIME_PER_QUESTION}s per question, adapts to your level</p>
       </div>
     </div>
   `;
@@ -1035,9 +1121,83 @@ function openQuickfirePicker(){
   renderView();
 }
 
+// Group a category's items by difficulty tier once per round, so draws are cheap.
+function qfBuildPools(category){
+  const pools = { easy: [], medium: [], hard: [] };
+  QUICKFIRE[category].forEach(q => { if (pools[q.difficulty]) pools[q.difficulty].push(q); });
+  return pools;
+}
+
+// Pick a tier for the next question, weighted by the student's current level.
+function qfPickTier(level){
+  const w = QF_LEVEL_WEIGHTS[level] || QF_LEVEL_WEIGHTS.easy;
+  const r = Math.random();
+  let cumulative = 0;
+  for (const tier of ['easy', 'medium', 'hard']) {
+    cumulative += w[tier];
+    if (r < cumulative) return tier;
+  }
+  return 'medium';
+}
+
+// Draw one not-yet-used question, weighted toward the current adaptive level.
+// Falls back to neighboring tiers if the preferred tier is exhausted (shouldn't
+// normally happen — each tier has 80+ items per category, far more than a
+// 10-question round could draw from a single tier).
+function qfDrawQuestion(){
+  let tier = qfPickTier(skillState.qfLevel);
+  let pool = skillState.qfPools[tier].filter(q => !skillState.qfUsedIds.has(q.id));
+  if (pool.length === 0) {
+    const fallbackOrder = tier === 'easy' ? ['medium', 'hard'] : tier === 'hard' ? ['medium', 'easy'] : ['easy', 'hard'];
+    for (const t of fallbackOrder) {
+      pool = skillState.qfPools[t].filter(q => !skillState.qfUsedIds.has(q.id));
+      if (pool.length > 0) { tier = t; break; }
+    }
+  }
+  if (pool.length === 0) return null;
+  const q = pool[Math.floor(Math.random() * pool.length)];
+  skillState.qfUsedIds.add(q.id);
+  skillState.qfLevelStats[tier] = (skillState.qfLevelStats[tier] || 0) + 1;
+  return q;
+}
+
+// 3-correct-in-a-row moves up a tier; 2-incorrect-in-a-row moves down a tier.
+// Returns 'up', 'down', or null so the caller can show/persist a change.
+function qfUpdateLevel(correct){
+  const order = ['easy', 'medium', 'hard'];
+  let idx = order.indexOf(skillState.qfLevel);
+  let direction = null;
+  if (correct) {
+    skillState.qfCorrectStreak++;
+    skillState.qfIncorrectStreak = 0;
+    if (skillState.qfCorrectStreak >= 3 && idx < order.length - 1) {
+      idx++;
+      skillState.qfCorrectStreak = 0;
+      direction = 'up';
+    }
+  } else {
+    skillState.qfIncorrectStreak++;
+    skillState.qfCorrectStreak = 0;
+    if (skillState.qfIncorrectStreak >= 2 && idx > 0) {
+      idx--;
+      skillState.qfIncorrectStreak = 0;
+      direction = 'down';
+    }
+  }
+  if (direction) skillState.qfLevel = order[idx];
+  return direction;
+}
+
 function startQuickfire(category){
   skillState.qfCategory = category;
-  skillState.qfQueue = shuffleArray(QUICKFIRE[category]);
+  skillState.qfLevel = (profile.skills_progress.qfAdaptive[category] || {}).level || 'easy';
+  skillState.qfCorrectStreak = 0;
+  skillState.qfIncorrectStreak = 0;
+  skillState.qfUsedIds = new Set();
+  skillState.qfPools = qfBuildPools(category);
+  skillState.qfLevelStats = { easy: 0, medium: 0, hard: 0 };
+  skillState.qfLevelChangeMsg = null;
+  skillState.qfQueue = [qfDrawQuestion()];
   skillState.qfIndex = 0;
   skillState.qfScore = 0;
   skillState.qfAnswered = false;
@@ -1060,6 +1220,12 @@ function startQfTimer(){
         skillState.qfSelected = null;
         const q = skillState.qfQueue[skillState.qfIndex];
         logMistake({ source:'quickfire', detail:skillState.qfCategory, prompt:q.prompt, chosen:'No answer (time ran out)', correct:q.choices[q.correct].text });
+        const direction = qfUpdateLevel(false);
+        if (direction) {
+          skillState.qfLevelChangeMsg = direction;
+          profile.skills_progress.qfAdaptive[skillState.qfCategory].level = skillState.qfLevel;
+          saveProfile({ skills_progress: profile.skills_progress });
+        }
         renderView();
       }
     }
@@ -1069,16 +1235,18 @@ function startQfTimer(){
 function quickfireHTML(){
   if (!skillState.qfCategory) {
     const best = profile.skills_progress.quickfireBest;
+    const levels = profile.skills_progress.qfAdaptive;
+    const levelLabel = l => l.charAt(0).toUpperCase() + l.slice(1);
     return `<h1>Quick-fire quant &amp; math</h1>
-      <p class="muted" style="margin:6px 0 16px">${QF_TIME_PER_QUESTION} seconds per question. Choose a category.</p>
+      <p class="muted" style="margin:6px 0 16px">${QF_TIME_PER_QUESTION} seconds per question &middot; ${QF_ROUND_SIZE} questions per round &middot; difficulty adapts to you as you go. Choose a category.</p>
       <div class="skill-menu">
         <div class="skill-card" onclick="startQuickfire('quant')">
           <p style="font-weight:500;font-size:14px;margin:0 0 4px">Quantitative</p>
-          <p class="muted" style="font-size:12px;margin:0">Best: ${best.quant !== undefined ? best.quant + '/10' : 'not yet attempted'}</p>
+          <p class="muted" style="font-size:12px;margin:0">Best: ${best.quant !== undefined ? best.quant + '/' + QF_ROUND_SIZE : 'not yet attempted'} &middot; Current level: ${levelLabel(levels.quant.level)}</p>
         </div>
         <div class="skill-card" onclick="startQuickfire('math')">
           <p style="font-weight:500;font-size:14px;margin:0 0 4px">Mathematics</p>
-          <p class="muted" style="font-size:12px;margin:0">Best: ${best.math !== undefined ? best.math + '/10' : 'not yet attempted'}</p>
+          <p class="muted" style="font-size:12px;margin:0">Best: ${best.math !== undefined ? best.math + '/' + QF_ROUND_SIZE : 'not yet attempted'} &middot; Current level: ${levelLabel(levels.math.level)}</p>
         </div>
       </div>
       <div style="margin-top:8px"><button class="btn ghost" onclick="backToSkillMenu()">Back to skill builder</button></div>`;
@@ -1086,10 +1254,13 @@ function quickfireHTML(){
 
   if (skillState.qfDone) {
     const best = profile.skills_progress.quickfireBest[skillState.qfCategory];
+    const levelLabel = skillState.qfLevel.charAt(0).toUpperCase() + skillState.qfLevel.slice(1);
+    const mix = skillState.qfLevelStats;
     return `<h1>Quick-fire results</h1>
       <div class="card" style="margin-top:16px">
-        <p style="margin:0;font-weight:500">Score: ${skillState.qfScore} of ${skillState.qfQueue.length}</p>
-        <p class="muted" style="margin:6px 0 0;font-size:13px">Personal best: ${best}/10</p>
+        <p style="margin:0;font-weight:500">Score: ${skillState.qfScore} of ${QF_ROUND_SIZE}</p>
+        <p class="muted" style="margin:6px 0 0;font-size:13px">Personal best: ${best}/${QF_ROUND_SIZE}</p>
+        <p class="muted" style="margin:6px 0 0;font-size:13px">You're now at the <strong>${levelLabel}</strong> level &middot; this round mixed ${mix.easy} easy, ${mix.medium} medium, ${mix.hard} hard</p>
       </div>
       <div style="margin-top:16px;display:flex;gap:8px">
         <button class="btn" onclick="startQuickfire('${skillState.qfCategory}')">Go again</button>
@@ -1109,18 +1280,25 @@ function quickfireHTML(){
     choicesHTML += `<div class="choice-row ${isSelected?'selected':''}" style="${extra}" onclick="answerQuickfire('${letter}')">
       <span class="choice-dot"></span><span style="font-size:13px">${c.text}</span></div>`;
   });
+  let levelBanner = '';
+  if (skillState.qfLevelChangeMsg === 'up') {
+    levelBanner = `<p style="margin:0 0 10px;font-size:12px;color:var(--success);font-weight:500">Nice streak \u2014 stepping up to ${skillState.qfLevel} questions.</p>`;
+  } else if (skillState.qfLevelChangeMsg === 'down') {
+    levelBanner = `<p style="margin:0 0 10px;font-size:12px;color:var(--slate);font-weight:500">Dialing back to ${skillState.qfLevel} questions for a bit.</p>`;
+  }
   let feedback = '';
   if (skillState.qfAnswered) {
     const chosen = skillState.qfSelected ? q.choices[skillState.qfSelected] : null;
-    feedback = `<div class="model-answer">${chosen ? chosen.explain : 'Time ran out on this one. ' + q.choices[q.correct].explain}</div>
-      <div style="margin-top:14px"><button class="btn" onclick="nextQuickfire()">${skillState.qfIndex === skillState.qfQueue.length-1 ? 'See results' : 'Next'}</button></div>`;
+    feedback = `${levelBanner}<div class="model-answer">${chosen ? chosen.explain : 'Time ran out on this one. ' + q.choices[q.correct].explain}</div>
+      <div style="margin-top:14px"><button class="btn" onclick="nextQuickfire()">${skillState.qfIndex === QF_ROUND_SIZE-1 ? 'See results' : 'Next'}</button></div>`;
   }
+  const levelLabel = skillState.qfLevel.charAt(0).toUpperCase() + skillState.qfLevel.slice(1);
   return `
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
       <h1 style="font-size:18px">Quick-fire &middot; ${skillState.qfCategory}</h1>
       <span class="timer" id="qf-timer">${skillState.qfSecondsLeft}s</span>
     </div>
-    <p class="muted" style="font-size:12px;margin:0 0 12px">Question ${skillState.qfIndex+1} of ${skillState.qfQueue.length} &middot; Score: ${skillState.qfScore}</p>
+    <p class="muted" style="font-size:12px;margin:0 0 12px">Question ${skillState.qfIndex+1} of ${QF_ROUND_SIZE} &middot; Score: ${skillState.qfScore} &middot; Level: ${levelLabel}</p>
     <p style="font-size:14px;font-weight:500;margin:0 0 14px">${q.prompt}</p>
     <div>${choicesHTML}</div>
     ${feedback}
@@ -1133,10 +1311,17 @@ function answerQuickfire(letter){
   skillState.qfSelected = letter;
   skillState.qfAnswered = true;
   const q = skillState.qfQueue[skillState.qfIndex];
-  if (letter === q.correct) {
+  const correct = letter === q.correct;
+  if (correct) {
     skillState.qfScore++;
   } else {
     logMistake({ source:'quickfire', detail:skillState.qfCategory, prompt:q.prompt, chosen:q.choices[letter].text, correct:q.choices[q.correct].text });
+  }
+  const direction = qfUpdateLevel(correct);
+  if (direction) {
+    skillState.qfLevelChangeMsg = direction;
+    profile.skills_progress.qfAdaptive[skillState.qfCategory].level = skillState.qfLevel;
+    saveProfile({ skills_progress: profile.skills_progress });
   }
   renderView();
 }
@@ -1145,7 +1330,8 @@ async function nextQuickfire(){
   skillState.qfIndex++;
   skillState.qfAnswered = false;
   skillState.qfSelected = null;
-  if (skillState.qfIndex >= skillState.qfQueue.length) {
+  skillState.qfLevelChangeMsg = null;
+  if (skillState.qfIndex >= QF_ROUND_SIZE) {
     skillState.qfDone = true;
     const best = profile.skills_progress.quickfireBest[skillState.qfCategory] || 0;
     if (skillState.qfScore > best) {
@@ -1155,6 +1341,8 @@ async function nextQuickfire(){
     renderView();
     return;
   }
+  const q = qfDrawQuestion();
+  skillState.qfQueue.push(q);
   skillState.qfSecondsLeft = QF_TIME_PER_QUESTION;
   startQfTimer();
   renderView();
@@ -1475,6 +1663,16 @@ function renderMistakeJournal(){
     ${rows}
   `;
 }
+
+// When the user clicks the password-reset link in their email, Supabase parses the
+// recovery token from the URL and fires this event with a temporary session — show
+// the "set a new password" screen instead of the normal login/app flow.
+supa.auth.onAuthStateChange((event, sess) => {
+  if (event === 'PASSWORD_RECOVERY') {
+    session = sess;
+    renderResetPassword();
+  }
+});
 
 async function init(){
   const { data } = await supa.auth.getSession();
