@@ -50,7 +50,14 @@ export default async function handler(req, res) {
 
     if (!response.ok) {
       const errText = await response.text();
-      return res.status(response.status).json({ error: `Gemini API error: ${errText}` });
+      // Log the real error server-side (visible in Vercel's function logs) so it's
+      // still debuggable, but never show raw upstream error text to the student.
+      console.error('Gemini API error', response.status, errText);
+
+      if (response.status === 429) {
+        return res.status(429).json({ error: "The tutor is getting a lot of questions right now — give it a moment and try again." });
+      }
+      return res.status(response.status).json({ error: 'The tutor hit a snag on its end. Please try again in a moment.' });
     }
 
     const data = await response.json();
