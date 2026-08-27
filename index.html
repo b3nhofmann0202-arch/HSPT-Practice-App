@@ -56,11 +56,23 @@
   .tile .name{font-size:13px;font-weight:500;margin:0}
   .bar{height:5px;border-radius:3px;background:var(--tint);overflow:hidden;margin-top:8px}
   .bar > div{height:100%}
-  .quicklinks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .quicklinks{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px}
   .quick{border-radius:10px;padding:12px;text-align:center;cursor:pointer;font-size:12px;font-weight:500;
     border:0.5px solid var(--border);background:var(--card)}
   .quick.primary{background:var(--ink);color:var(--paper);border:none}
   .placeholder{padding:40px 20px;text-align:center;border:1px dashed var(--border);border-radius:12px}
+  .cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin:14px 0}
+  .cal-dow{font-size:10px;text-transform:uppercase;letter-spacing:0.04em;color:var(--slate);
+    text-align:center;padding-bottom:2px}
+  .cal-cell{border:0.5px solid var(--border);border-radius:8px;padding:6px;min-height:60px;
+    background:var(--card);display:flex;flex-direction:column;gap:3px}
+  .cal-cell.clickable{cursor:pointer}
+  .cal-cell.clickable:hover{background:var(--tint)}
+  .cal-cell.empty{border:none;background:transparent}
+  .cal-cell.today{border:1.5px solid var(--gold)}
+  .cal-cell.done{opacity:0.55}
+  .cal-daynum{font-size:11px;font-weight:500}
+  .cal-task{font-size:9.5px;line-height:1.25;color:var(--slate)}
   .auth-wrap{max-width:340px;margin:80px auto;padding:0 20px}
   .warning{background:#FAECE7;border:0.5px solid #E8B9A4;color:#712B13;border-radius:10px;
     padding:12px 14px;font-size:12px;line-height:1.6;margin-bottom:16px}
@@ -198,6 +210,7 @@ function pickSectionQuestions(key, count){
 }
 const NAV = [
   {key:'dashboard', label:'Dashboard'},
+  {key:'pacing', label:'Pacing plan'},
   {key:'practice', label:'Practice tests'},
   {key:'tutor', label:'AI tutor'},
   {key:'skills', label:'Skill builder'},
@@ -209,6 +222,10 @@ let session = null;
 let profile = null;
 let activeView = 'dashboard';
 let tutorHistory = []; // {role:'student'|'tutor', text}
+
+// ---------- Pacing plan state ----------
+let pacingState = { monthOffset: 0 };
+let pacingTodayTask = null; // set whenever dashboard or pacing view renders; read by the "Go" button
 
 // ---------- Practice test state ----------
 let practiceState = {
@@ -280,6 +297,9 @@ function ensureSkillsProgress(){
   if (!profile.skills_progress.qfAdaptive) profile.skills_progress.qfAdaptive = {};
   if (!profile.skills_progress.qfAdaptive.quant) profile.skills_progress.qfAdaptive.quant = { level: 'easy' };
   if (!profile.skills_progress.qfAdaptive.math) profile.skills_progress.qfAdaptive.math = { level: 'easy' };
+  if (!profile.pacing_plan) profile.pacing_plan = { completed: {} };
+  if (!profile.pacing_plan.completed) profile.pacing_plan.completed = {};
+  if (!profile.pacing_plan.availableDays) profile.pacing_plan.availableDays = [true,true,true,true,true,true,true];
   if (!profile.lessons_completed) profile.lessons_completed = {};
 }
 
@@ -478,6 +498,7 @@ function setView(view){
 function renderView(){
   const root = document.getElementById('view-root');
   if (activeView === 'dashboard') { root.innerHTML = dashboardHTML(); return; }
+  if (activeView === 'pacing') { renderPacingPlan(); return; }
   if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
   if (activeView === 'practice') { renderPractice(); return; }
   if (activeView === 'skills') { renderSkillBuilder(); return; }
@@ -1348,8 +1369,277 @@ async function nextQuickfire(){
   renderView();
 }
 
+// ---------- Pacing plan ----------
+// Picks the section with the lowest current mastery (ties broken by SECTIONS order).
+function pickWeakestSection(){
+  const m = profile.mastery || {};
+  let weakest = SECTIONS[0].key, weakestVal = 101;
+  SECTIONS.forEach(s => {
+    const v = m[s.key] ?? 0;
+    if (v < weakestVal) { weakestVal = v; weakest = s.key; }
+  });
+  return weakest;
+}
+
+function nextIncompleteLesson(sectionKey){
+  return LESSONS.find(l => l.section === sectionKey && !profile.lessons_completed[l.id]) || null;
+}
+
+// Weakest-mastery section that still has an unfinished lesson, so lesson-day never
+// points at a section the student has already completed every lesson for.
+function pickWeakestSectionWithIncompleteLesson(){
+  const ordered = [...SECTIONS].sort((a,b) =>
+    ((profile.mastery && profile.mastery[a.key]) || 0) - ((profile.mastery && profile.mastery[b.key]) || 0));
+  for (const s of ordered) { if (nextIncompleteLesson(s.key)) return s.key; }
+  return null;
+}
+
+// Priority order used when a blocked day's task rolls forward onto the next
+// available day — highest-value tasks (practice tests) win the first open slot;
+// lowest-priority tasks are what quietly drop if a week doesn't have enough
+// available days to fit everything.
+const PACING_PRIORITY = ['practice-full','practice-section','lesson','lesson-review','vocab','quickfire','review','dojo','punctuation'];
+function pacingPriorityRank(type){
+  const idx = PACING_PRIORITY.indexOf(type);
+  return idx === -1 ? PACING_PRIORITY.length : idx;
+}
+
+function isDayAvailable(dow){
+  const avail = (profile.pacing_plan && profile.pacing_plan.availableDays) || [true,true,true,true,true,true,true];
+  return avail[dow] !== false;
+}
+
+function togglePacingAvailability(dow){
+  const avail = [...((profile.pacing_plan && profile.pacing_plan.availableDays) || [true,true,true,true,true,true,true])];
+  avail[dow] = !avail[dow];
+  profile.pacing_plan.availableDays = avail;
+  saveProfile({ pacing_plan: profile.pacing_plan });
+  renderView();
+}
+
+// What a given date would get in the plain weekly rotation, ignoring availability
+// entirely. `fixed:true` marks days (taper/test day/after test) that never move and
+// never interact with the rollover queue, regardless of availability settings.
+function pacingNativeTask(dateObj){
+  const testDateObj = new Date(profile.test_date + 'T00:00:00');
+  const msPerDay = 86400000;
+  const daysUntilTest = Math.round((testDateObj - dateObj) / msPerDay);
+
+  if (daysUntilTest < 0) return { type:'after-test', label:'\u2014', color:'var(--border)', actionable:false, fixed:true };
+  if (daysUntilTest === 0) return { type:'testday', label:'Test day!', color:'var(--maroon)', actionable:false, fixed:true };
+  if (daysUntilTest === 1) return { type:'taper', label:'Light review, rest up', color:'var(--slate)', actionable:false, fixed:true };
+
+  const dow = dateObj.getDay(); // 0 Sun .. 6 Sat
+  const weekParity = Math.floor(daysUntilTest / 7) % 2;
+
+  if (dow === 0) return { type:'rest', label:'Rest day', color:'var(--border)', actionable:false, fixed:false };
+
+  if (dow === 1) {
+    // Keep full-length (2h21m) tests off the schedule in the final stretch; favor a
+    // single weak-section test instead, and alternate full/section tests in earlier weeks.
+    if (daysUntilTest < 5 || weekParity === 1) {
+      const sec = pickWeakestSection();
+      const info = SECTIONS.find(s => s.key === sec);
+      return { type:'practice-section', sectionKey:sec, label:info.name+' practice test', color:info.color, actionable:true, fixed:false };
+    }
+    return { type:'practice-full', label:'Full practice test', color:'var(--maroon)', actionable:true, fixed:false };
+  }
+  if (dow === 2) {
+    const weakSection = pickWeakestSectionWithIncompleteLesson();
+    if (weakSection) {
+      const lesson = nextIncompleteLesson(weakSection);
+      const info = SECTIONS.find(s => s.key === weakSection);
+      return { type:'lesson', lessonId:lesson.id, label:'Lesson: '+lesson.title, color:info.color, actionable:true, fixed:false };
+    }
+    return { type:'lesson-review', label:'Review any lesson', color:'var(--ink)', actionable:true, fixed:false };
+  }
+  if (dow === 3) return { type:'vocab', label:'Vocab practice', color:'var(--gold)', actionable:true, fixed:false };
+  if (dow === 4) return { type:'quickfire', label:'Quick-fire drills', color:'var(--success)', actionable:true, fixed:false };
+  if (dow === 5) return { type:'review', label:'Review missed questions', color:'var(--slate)', actionable:true, fixed:false };
+  // Saturday
+  return weekParity === 0
+    ? { type:'dojo', label:'Logic Dojo', color:'var(--ink)', actionable:true, fixed:false }
+    : { type:'punctuation', label:'Punctuation surgeon', color:'var(--ink)', actionable:true, fixed:false };
+}
+
+// Computes the full Sun-Sat task assignment for the calendar week containing
+// `anyDateInWeek`. Fixed days (taper/test day/after-test) are untouched by
+// availability. For the remaining days, any day the student marked unavailable
+// contributes its native task to a pending queue instead of being assigned it; each
+// available day then pulls the highest-priority pending task, or falls back to its
+// own native task if nothing is waiting. Anything still pending at week's end drops.
+function pacingWeekAssignments(anyDateInWeek){
+  const sunday = new Date(anyDateInWeek);
+  sunday.setHours(0,0,0,0);
+  sunday.setDate(sunday.getDate() - sunday.getDay());
+
+  const days = [];
+  for (let i=0; i<7; i++){
+    const d = new Date(sunday);
+    d.setDate(sunday.getDate() + i);
+    days.push(d);
+  }
+
+  const results = new Array(7).fill(null);
+  const pending = []; // native tasks waiting for a slot (from blocked days or prior preemptions)
+
+  days.forEach((d, i) => {
+    const native = pacingNativeTask(d);
+    if (native.fixed) { results[i] = native; return; }
+
+    if (!isDayAvailable(i)) {
+      results[i] = { type:'unavailable', label:'Not a study day', color:'var(--border)', actionable:false, fixed:false };
+      if (native.type !== 'rest') pending.push({ ...native, rolledFrom:i });
+      return;
+    }
+
+    // Available day: this day's own task competes for the slot alongside anything
+    // already queued, so a task that loses out here (not just a directly-blocked
+    // one) also rolls forward instead of quietly vanishing.
+    const candidates = native.type === 'rest' ? [...pending] : [...pending, native];
+    if (candidates.length === 0) { results[i] = native; return; }
+    candidates.sort((a,b) => pacingPriorityRank(a.type) - pacingPriorityRank(b.type));
+    const winner = candidates.shift();
+    results[i] = winner === native ? native : { ...winner, rolledOver:true };
+    pending.length = 0;
+    pending.push(...candidates);
+  });
+
+  return results;
+}
+
+function pacingTaskForDate(dateObj){
+  return pacingWeekAssignments(dateObj)[dateObj.getDay()];
+}
+
+// Jumps straight into whatever pacingTodayTask points at. Navigates to the picker
+// (rather than auto-starting) for practice tests, since those are a real time
+// commitment the student should confirm themselves.
+function pacingGoAction(task){
+  if (!task) return;
+  switch (task.type) {
+    case 'practice-full':
+    case 'practice-section':
+      setView('practice');
+      break;
+    case 'lesson':
+      setView('lessons'); openLesson(task.lessonId);
+      break;
+    case 'lesson-review':
+      setView('lessons');
+      break;
+    case 'vocab':
+      setView('skills'); openVocab();
+      break;
+    case 'quickfire':
+      setView('skills'); openQuickfirePicker();
+      break;
+    case 'dojo':
+      setView('skills'); openDojo();
+      break;
+    case 'punctuation':
+      setView('skills'); openPunctuation();
+      break;
+    case 'review':
+      setView('mistakes');
+      break;
+  }
+}
+
+function togglePacingDay(dateStr){
+  const completed = { ...(profile.pacing_plan.completed || {}) };
+  if (completed[dateStr]) delete completed[dateStr];
+  else completed[dateStr] = true;
+  profile.pacing_plan.completed = completed;
+  saveProfile({ pacing_plan: profile.pacing_plan });
+  renderView();
+}
+
+function changePacingMonth(delta){
+  pacingState.monthOffset += delta;
+  renderView();
+}
+
+function renderPacingPlan(){
+  const root = document.getElementById('view-root');
+  const today = new Date(); today.setHours(0,0,0,0);
+  const todayStr = today.toISOString().slice(0,10);
+  pacingTodayTask = pacingTaskForDate(today);
+  const completed = profile.pacing_plan.completed || {};
+
+  const monthDate = new Date();
+  monthDate.setDate(1);
+  monthDate.setMonth(monthDate.getMonth() + pacingState.monthOffset);
+  const monthLabel = monthDate.toLocaleString('en-US', { month:'long', year:'numeric' });
+  const year = monthDate.getFullYear();
+  const month = monthDate.getMonth();
+  const firstDow = new Date(year, month, 1).getDay();
+  const daysInMonth = new Date(year, month+1, 0).getDate();
+
+  let cells = '';
+  for (let i=0; i<firstDow; i++) cells += `<div class="cal-cell empty"></div>`;
+  for (let d=1; d<=daysInMonth; d++){
+    const cellDate = new Date(year, month, d);
+    const cellDateStr = cellDate.toISOString().slice(0,10);
+    const task = pacingTaskForDate(cellDate);
+    const isToday = cellDateStr === todayStr;
+    const isDone = !!completed[cellDateStr];
+    const canToggle = task.type !== 'after-test' && task.type !== 'rest' && task.type !== 'testday' && task.type !== 'unavailable';
+    const labelText = task.rolledOver ? '\u21b3 ' + task.label : task.label;
+    cells += `<div class="cal-cell ${canToggle?'clickable':''} ${isToday?'today':''} ${isDone?'done':''}"
+        style="border-left:4px solid ${task.color}" ${canToggle?`onclick="togglePacingDay('${cellDateStr}')"`:''}>
+      <span class="cal-daynum">${d}${isDone?' \u2713':''}</span>
+      <span class="cal-task">${labelText}</span>
+    </div>`;
+  }
+  const dowNames = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+  const dowLabels = dowNames.map(l => `<div class="cal-dow">${l}</div>`).join('');
+  const days = daysUntil(profile.test_date);
+  const availToggles = dowNames.map((lbl, i) => {
+    const on = isDayAvailable(i);
+    return `<button class="btn ${on?'':'ghost'}" style="padding:6px 12px;font-size:12px" onclick="togglePacingAvailability(${i})">${lbl}</button>`;
+  }).join('');
+
+  root.innerHTML = `
+    <h1>Pacing plan</h1>
+    <p class="muted" style="margin:6px 0 20px">
+      ${days >= 0
+        ? days + ' days until test day \u2014 a suggested task for each day, weighted toward your weaker sections. Tap a day to check it off.'
+        : 'Test day has passed \u2014 set a new date from the Dashboard to plan another stretch.'}
+    </p>
+    <div class="card" style="margin-bottom:20px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <p class="muted" style="font-size:12px;margin:0 0 4px">Today's task</p>
+        <p style="margin:0;font-weight:500;font-size:14px">${pacingTodayTask.label}</p>
+      </div>
+      ${pacingTodayTask.actionable ? `<button class="btn" onclick="pacingGoAction(pacingTodayTask)">Go</button>` : ''}
+    </div>
+    <div class="card" style="margin-bottom:20px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 4px">Which days can you study?</p>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">Turn off a day you're always busy \u2014 its task rolls forward to your next available day instead of getting skipped.</p>
+      <div style="display:flex;gap:6px;flex-wrap:wrap">${availToggles}</div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
+      <button class="btn ghost" onclick="changePacingMonth(-1)">&larr; Prev</button>
+      <p style="font-weight:500;margin:0">${monthLabel}</p>
+      <button class="btn ghost" onclick="changePacingMonth(1)">Next &rarr;</button>
+    </div>
+    <div class="cal-grid">${dowLabels}${cells}</div>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:14px;font-size:11px;color:var(--slate)">
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--maroon);margin-right:4px"></span>Practice test</span>
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--gold);margin-right:4px"></span>Vocab</span>
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--success);margin-right:4px"></span>Quick-fire</span>
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--ink);margin-right:4px"></span>Lesson &middot; Dojo &middot; Punctuation</span>
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--slate);margin-right:4px"></span>Review / taper</span>
+      <span><span style="display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--border);margin-right:4px"></span>Rest / day off</span>
+      <span>\u21b3 = rolled forward from a day off</span>
+    </div>
+  `;
+}
+
 function dashboardHTML(){
   const days = daysUntil(profile.test_date);
+  pacingTodayTask = pacingTaskForDate(new Date());
   let tiles = '';
   SECTIONS.forEach(s => {
     const val = (profile.mastery && profile.mastery[s.key]) || 0;
@@ -1365,6 +1655,15 @@ function dashboardHTML(){
       <button class="btn ghost" onclick="openSettings()">Edit profile</button>
     </div>
     <p class="muted" style="margin:0 0 20px">${days >= 0 ? days + ' days until test day' : 'Test day has passed — set a new date'}</p>
+    <div class="card" style="margin-bottom:14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div>
+        <p class="muted" style="font-size:12px;margin:0 0 4px">Today's pacing plan task</p>
+        <p style="margin:0;font-weight:500;font-size:14px">${pacingTodayTask.label}</p>
+      </div>
+      ${pacingTodayTask.actionable
+        ? `<button class="btn" onclick="pacingGoAction(pacingTodayTask)">Go</button>`
+        : `<button class="btn ghost" onclick="setView('pacing')">View plan</button>`}
+    </div>
     <div class="card" style="margin-bottom:20px">
       ${profile.resume_section
         ? `<p class="muted" style="font-size:13px;margin:0 0 8px">Continue where you left off</p>
@@ -1383,6 +1682,7 @@ function dashboardHTML(){
       <div class="quick primary" onclick="setView('tutor')">Ask AI tutor</div>
       <div class="quick" onclick="setView('skills')">Skill builder</div>
       <div class="quick" onclick="setView('lessons')">Lessons</div>
+      <div class="quick" onclick="setView('pacing')">Pacing plan</div>
     </div>
     <div id="settings-panel"></div>
   `;
