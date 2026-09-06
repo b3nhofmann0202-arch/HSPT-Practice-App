@@ -218,6 +218,7 @@ const NAV = [
   {key:'skills', label:'Skill builder'},
   {key:'lessons', label:'Lessons'},
   {key:'mistakes', label:'Mistake journal'},
+  {key:'friends', label:'Friends'},
   {key:'help', label:'Help & Suggestions'}
 ];
 
@@ -225,6 +226,10 @@ let session = null;
 let profile = null;
 let activeView = 'dashboard';
 let tutorHistory = []; // {role:'student'|'tutor', text}
+
+// ---------- Friends state ----------
+// Populated by fetchFriendsData(); incoming.length also drives the sidebar badge.
+let friendsState = { loaded: false, incoming: [], sent: [], friends: [] };
 
 // ---------- Pacing plan state ----------
 let pacingState = { monthOffset: 0 };
@@ -435,7 +440,22 @@ async function updatePassword(){
 async function afterLogin(){
   await loadProfile();
   ensureSkillsProgress();
+  applyBackgroundColor();
+  await fetchFriendsData();
   renderApp();
+}
+
+// A custom background overrides --paper (the page's outer canvas color) regardless
+// of light/dark mode, applied as an inline style so it beats the theme's own CSS
+// variable value. Only --paper is customizable — card backgrounds and text colors
+// stay fixed, since most actual text sits inside cards rather than directly on the
+// page background, keeping this safe to pick freely without a contrast checker.
+function applyBackgroundColor(){
+  if (profile && profile.background_color) {
+    document.documentElement.style.setProperty('--paper', profile.background_color);
+  } else {
+    document.documentElement.style.removeProperty('--paper');
+  }
 }
 
 // ---------- Profile ----------
@@ -473,8 +493,11 @@ function renderNav(){
   const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
   let html = '<div class="brand"><div class="seal">M</div><span class="brand-name">Merit</span></div>';
   NAV.forEach(item => {
+    const badge = (item.key === 'friends' && friendsState.incoming.length)
+      ? `<span style="background:var(--maroon);color:#fff;border-radius:10px;padding:1px 7px;font-size:10px;margin-left:6px">${friendsState.incoming.length}</span>`
+      : '';
     html += `<button class="navbtn ${activeView===item.key?'active':''}" onclick="setView('${item.key}')">
-      <span class="navdot"></span>${item.label}</button>`;
+      <span class="navdot"></span>${item.label}${badge}</button>`;
   });
   html += `<div class="sidebar-footer">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
@@ -507,6 +530,7 @@ function renderView(){
   if (activeView === 'skills') { renderSkillBuilder(); return; }
   if (activeView === 'lessons') { renderLessons(); return; }
   if (activeView === 'mistakes') { renderMistakeJournal(); return; }
+  if (activeView === 'friends') { renderFriends(); return; }
   if (activeView === 'help') { root.innerHTML = helpHTML(); return; }
 }
 
@@ -1809,6 +1833,7 @@ function dashboardHTML(){
 
 function openSettings(){
   const panel = document.getElementById('settings-panel');
+  const currentColor = profile.background_color || (document.documentElement.getAttribute('data-theme') === 'dark' ? '#161B26' : '#F6F1E4');
   panel.innerHTML = `
     <div class="card" style="margin-top:16px">
       <p style="font-weight:500;font-size:13px;margin:0 0 10px">Edit profile</p>
@@ -1818,6 +1843,15 @@ function openSettings(){
       </div>
       <button class="btn" onclick="saveSettings()">Save</button>
     </div>
+    <div class="card" style="margin-top:16px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 4px">Background color</p>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">Pick any color for your page background. A light or muted shade tends to be easiest to read against the dark text.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <input id="bg-color-picker" type="color" value="${currentColor}" style="width:44px;height:36px;padding:2px;border:1px solid var(--border);border-radius:6px;cursor:pointer">
+        <button class="btn" onclick="saveBackgroundColor()">Apply</button>
+        <button class="btn ghost" onclick="resetBackgroundColor()">Reset to theme default</button>
+      </div>
+    </div>
     <div class="card" style="margin-top:16px;border:1px solid var(--maroon)">
       <p style="font-weight:500;font-size:13px;margin:0 0 4px">Reset all progress</p>
       <p class="muted" style="font-size:12px;margin:0 0 10px">Wipes mastery, the mistake journal, skill builder progress, completed lessons, pacing plan check-offs, and any in-progress test. Your name, test date, and login stay the same. This cannot be undone.</p>
@@ -1826,6 +1860,20 @@ function openSettings(){
         <button class="btn" style="background:var(--maroon)" onclick="resetAllProgress()">Reset everything</button>
       </div>
     </div>`;
+}
+
+async function saveBackgroundColor(){
+  const color = document.getElementById('bg-color-picker').value;
+  profile.background_color = color;
+  applyBackgroundColor();
+  await saveProfile({ background_color: color });
+}
+
+async function resetBackgroundColor(){
+  profile.background_color = null;
+  applyBackgroundColor();
+  await saveProfile({ background_color: null });
+  openSettings();
 }
 
 async function resetAllProgress(){
@@ -1844,6 +1892,231 @@ async function resetAllProgress(){
   });
   tutorHistory = [];
   setView('dashboard');
+}
+
+// ---------- Friends ----------
+// A friend code is the only way to connect — never name/email search — so there's
+// no way to browse or stumble onto another student's account. Excludes 0/O/1/I to
+// avoid visual mix-ups when a student reads a code aloud or copies it by hand.
+const FRIEND_CODE_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+
+function generateFriendCode(){
+  let code = '';
+  for (let i=0; i<6; i++) code += FRIEND_CODE_ALPHABET[Math.floor(Math.random() * FRIEND_CODE_ALPHABET.length)];
+  return code;
+}
+
+// Assigns a code the first time it's needed only. Retries on the (very unlikely)
+// unique-constraint collision with another student's freshly generated code.
+async function ensureFriendCode(){
+  if (profile.friend_code) return;
+  for (let attempt = 0; attempt < 5; attempt++) {
+    const code = generateFriendCode();
+    const { error } = await supa.from('profiles').update({ friend_code: code }).eq('id', profile.id);
+    if (!error) { profile.friend_code = code; return; }
+  }
+}
+
+async function regenerateFriendCode(){
+  if (!confirm('Generate a new code? Anyone who had your old code will no longer be able to use it to send a request. Friends you already have stay connected.')) return;
+  profile.friend_code = null;
+  await ensureFriendCode();
+  renderView();
+}
+
+// Pulls all three friend-related lists through the narrow RPC functions only —
+// never a direct query against another user's profiles row.
+async function fetchFriendsData(){
+  try {
+    const [friendsRes, sentRes, incomingRes] = await Promise.all([
+      supa.rpc('get_my_friends'),
+      supa.rpc('get_my_sent_requests'),
+      supa.rpc('get_my_incoming_requests')
+    ]);
+    friendsState.friends = (friendsRes.data || []).sort((a,b) => (b.streak||0) - (a.streak||0));
+    friendsState.sent = sentRes.data || [];
+    friendsState.incoming = incomingRes.data || [];
+    friendsState.loaded = true;
+  } catch (e) {
+    friendsState.loaded = false;
+  }
+}
+
+async function acknowledgeFriendsNotice(){
+  await saveProfile({ friends_notice_seen: true });
+  renderView();
+}
+
+async function saveFriendNickname(){
+  const val = document.getElementById('friend-nickname-input').value.trim();
+  if (!val) return;
+  await saveProfile({ friend_nickname: val });
+  renderView();
+}
+
+async function toggleHideStreakFriends(){
+  await saveProfile({ hide_streak_from_friends: !profile.hide_streak_from_friends });
+  renderView();
+}
+
+async function sendFriendRequest(){
+  const input = document.getElementById('friend-code-input');
+  const code = input.value.trim().toUpperCase();
+  const errEl = document.getElementById('friend-request-error');
+  errEl.textContent = '';
+  if (!code) return;
+  if (profile.friend_code && code === profile.friend_code) { errEl.textContent = "That's your own code!"; return; }
+
+  const { data, error } = await supa.rpc('find_profile_by_friend_code', { code });
+  if (error || !data || !data.length) { errEl.textContent = 'No account found with that code. Double-check it and try again.'; return; }
+  const match = data[0];
+
+  // Guard against a duplicate request in either direction before inserting.
+  const { data: existing } = await supa.from('friendships').select('id')
+    .or(`and(requester_id.eq.${profile.id},recipient_id.eq.${match.id}),and(requester_id.eq.${match.id},recipient_id.eq.${profile.id})`);
+  if (existing && existing.length) { errEl.textContent = 'You already have a pending or accepted connection with this student.'; return; }
+
+  const { error: insertError } = await supa.from('friendships').insert({ requester_id: profile.id, recipient_id: match.id, status: 'pending' });
+  if (insertError) { errEl.textContent = 'Something went wrong sending that request. Please try again.'; return; }
+  input.value = '';
+  await fetchFriendsData();
+  renderNav(); renderView();
+}
+
+async function acceptFriendRequest(friendshipId){
+  await supa.from('friendships').update({ status: 'accepted' }).eq('id', friendshipId);
+  await fetchFriendsData();
+  renderNav(); renderView();
+}
+
+async function declineFriendRequest(friendshipId){
+  await supa.from('friendships').delete().eq('id', friendshipId);
+  await fetchFriendsData();
+  renderNav(); renderView();
+}
+
+async function cancelSentRequest(friendshipId){
+  await supa.from('friendships').delete().eq('id', friendshipId);
+  await fetchFriendsData();
+  renderView();
+}
+
+async function removeFriend(friendshipId){
+  if (!confirm('Remove this friend? You can always reconnect later with their code.')) return;
+  await supa.from('friendships').delete().eq('id', friendshipId);
+  await fetchFriendsData();
+  renderView();
+}
+
+async function renderFriends(){
+  const root = document.getElementById('view-root');
+  await ensureFriendCode();
+  // The user may have navigated to a different tab while the above was in
+  // flight — bail out rather than overwrite whatever view they're on now.
+  if (activeView !== 'friends') return;
+
+  if (!profile.friends_notice_seen) {
+    root.innerHTML = `
+      <h1>Friends</h1>
+      <div class="warning" style="margin:14px 0">
+        <p style="margin:0 0 10px"><strong>Before you add friends:</strong> Merit's Friends feature connects you with other students using a private code you share yourself — there's no public search, and no way for anyone to browse or find you without that exact code.</p>
+        <p style="margin:0 0 10px">Once connected, a friend can only ever see a nickname you choose (never your real account name) and your study streak — nothing else about your account, your practice results, or your schedule. You can hide your streak, remove a friend, or generate a new code at any time.</p>
+        <p style="margin:0">If you're not sure whether you should be sharing this with classmates, check with a parent or guardian first.</p>
+      </div>
+      <button class="btn" onclick="acknowledgeFriendsNotice()">I understand, continue</button>
+    `;
+    return;
+  }
+
+  if (!friendsState.loaded) await fetchFriendsData();
+  if (activeView !== 'friends') return;
+
+  let incomingHTML = '';
+  if (friendsState.incoming.length) {
+    incomingHTML = `<p style="font-weight:500;font-size:13px;margin:20px 0 8px">Requests waiting on you</p>`;
+    friendsState.incoming.forEach(r => {
+      incomingHTML += `<div class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <span style="font-size:13px;font-weight:500">${r.display_name}</span>
+        <div style="display:flex;gap:6px">
+          <button class="btn" style="padding:6px 12px;font-size:12px" onclick="acceptFriendRequest('${r.friendship_id}')">Accept</button>
+          <button class="btn ghost" style="padding:6px 12px;font-size:12px" onclick="declineFriendRequest('${r.friendship_id}')">Decline</button>
+        </div>
+      </div>`;
+    });
+  }
+
+  let sentHTML = '';
+  if (friendsState.sent.length) {
+    sentHTML = `<p style="font-weight:500;font-size:13px;margin:20px 0 8px">Requests you've sent</p>`;
+    friendsState.sent.forEach(r => {
+      sentHTML += `<div class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <span style="font-size:13px">${r.display_name} <span class="muted">&middot; waiting for them to accept</span></span>
+        <button class="btn ghost" style="padding:6px 12px;font-size:12px" onclick="cancelSentRequest('${r.friendship_id}')">Cancel</button>
+      </div>`;
+    });
+  }
+
+  let friendRows = '';
+  if (!friendsState.friends.length) {
+    friendRows = `<div class="placeholder"><p class="muted" style="margin:0">No friends added yet — share your code below with a classmate to get started.</p></div>`;
+  } else {
+    friendsState.friends.forEach(f => {
+      friendRows += `<div class="card" style="margin-bottom:8px;display:flex;justify-content:space-between;align-items:center;gap:10px">
+        <span style="font-size:13px;font-weight:500">${f.display_name}</span>
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:13px">${f.streak_hidden ? '<span class="muted">Streak hidden</span>' : (f.streak||0) + '-day streak'}</span>
+          <a href="#" onclick="removeFriend('${f.friendship_id}');return false" style="font-size:12px;color:var(--slate)">Remove</a>
+        </div>
+      </div>`;
+    });
+  }
+
+  root.innerHTML = `
+    <h1>Friends</h1>
+    <div class="warning" style="margin:14px 0 20px">
+      Friends can only ever see the nickname you choose below and your study streak — never your real name, email, practice results, mistake journal, or pacing plan. Adding someone always requires their exact code; there's no way to search for or browse other students.
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 6px">Your nickname</p>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">This is the only name friends ever see — pick something other than your full real name if you'd rather keep that private.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="friend-nickname-input" value="${profile.friend_nickname || ''}" placeholder="e.g. StudyBuddy22" style="flex:1;min-width:140px">
+        <button class="btn" onclick="saveFriendNickname()">Save</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 6px">Your code</p>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">Share this with a classmate so they can add you. It's never shown to anyone unless you share it yourself.</p>
+      <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
+        <span style="font-family:monospace;font-size:18px;font-weight:600;letter-spacing:0.1em;background:var(--tint);padding:6px 14px;border-radius:6px">${profile.friend_code || '\u2014'}</span>
+        <button class="btn ghost" onclick="regenerateFriendCode()">Generate new code</button>
+      </div>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:13px;margin:0 0 6px">Add a friend</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap">
+        <input id="friend-code-input" placeholder="Enter their code" style="flex:1;min-width:140px;text-transform:uppercase">
+        <button class="btn" onclick="sendFriendRequest()">Send request</button>
+      </div>
+      <p id="friend-request-error" style="font-size:12px;color:var(--maroon);margin:8px 0 0"></p>
+    </div>
+
+    <div class="card">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;font-weight:500">Hide my streak from friends</span>
+        <button class="btn ${profile.hide_streak_from_friends ? '' : 'ghost'}" style="padding:5px 12px;font-size:12px" onclick="toggleHideStreakFriends()">${profile.hide_streak_from_friends ? 'Hidden' : 'Visible'}</button>
+      </div>
+    </div>
+
+    ${incomingHTML}
+    ${sentHTML}
+
+    <p style="font-weight:500;font-size:13px;margin:20px 0 8px">Your friends${friendsState.friends.length ? ' (sorted by streak)' : ''}</p>
+    ${friendRows}
+  `;
 }
 
 // ---------- Help & Suggestions ----------
@@ -1890,8 +2163,13 @@ function helpHTML(){
     </div>
 
     <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Friends</p>
+      <p class="muted" style="font-size:13px;margin:0">Connect with classmates using a private code — never a name or email search — to see each other's study streaks and add a little friendly competition. A friend only ever sees a nickname you choose and your streak, nothing else about your account. You can hide your streak, remove a friend, or generate a new code at any time.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
       <p style="font-weight:500;font-size:14px;margin:0 0 6px">Account & settings</p>
-      <p class="muted" style="font-size:13px;margin:0">From the Dashboard's "Edit profile" panel: change your name or test date, or use "Reset all progress" to wipe mastery, the mistake journal, Skill builder progress, completed lessons, and pacing-plan check-offs (your name, test date, and login stay the same — this requires typing RESET to confirm and can't be undone). Forgot your password? Use the "Forgot password?" link on the login screen. The light/dark mode switch lives at the bottom of the sidebar.</p>
+      <p class="muted" style="font-size:13px;margin:0">From the Dashboard's "Edit profile" panel: change your name or test date, pick a custom background color, or use "Reset all progress" to wipe mastery, the mistake journal, Skill builder progress, completed lessons, and pacing-plan check-offs (your name, test date, login, and Friends settings all stay the same — this requires typing RESET to confirm and can't be undone). Forgot your password? Use the "Forgot password?" link on the login screen. The light/dark mode switch lives at the bottom of the sidebar.</p>
     </div>
   `;
 }
