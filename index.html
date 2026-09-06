@@ -1711,10 +1711,30 @@ async function saveSettings(){
 }
 
 // ---------- AI tutor ----------
+// Turns the tutor's (or the student's) raw text into safe, lightly-formatted HTML.
+// Escapes HTML first so any literal <, >, or & (including anything a student types)
+// can't break the page or inject markup. Then strips LaTeX-style $...$ / $$...$$
+// delimiters down to plain text (no renderer for those here), and converts Markdown
+// **bold** and *italic* into real <strong>/<em> tags. The italic regex specifically
+// requires non-space characters right after the opening * and right before the
+// closing one, so a stray multiplication asterisk like "2 * 3" is never mistaken
+// for the start of an italic span.
+function formatTutorText(text){
+  let out = String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+  out = out.replace(/\$\$([^$]+)\$\$/g, '$1').replace(/\$([^$]+)\$/g, '$1');
+  out = out.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+  out = out.replace(/\*([^\s*][^*]*[^\s*]|[^\s*])\*/g, '<em>$1</em>');
+  out = out.replace(/\n/g, '<br>');
+  return out;
+}
+
 function tutorHTML(){
   let log = '';
   tutorHistory.forEach(turn => {
-    log += `<div class="bubble ${turn.role === 'student' ? 'student' : 'tutor'}">${turn.text}</div>`;
+    log += `<div class="bubble ${turn.role === 'student' ? 'student' : 'tutor'}">${formatTutorText(turn.text)}</div>`;
   });
   if (!tutorHistory.length) {
     log = `<div class="bubble tutor">Hi ${profile.name}, I'm your Merit tutor. Tell me a topic you'd like help with — or a question you got wrong.</div>`;
