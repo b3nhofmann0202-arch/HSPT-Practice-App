@@ -217,7 +217,8 @@ const NAV = [
   {key:'tutor', label:'AI tutor'},
   {key:'skills', label:'Skill builder'},
   {key:'lessons', label:'Lessons'},
-  {key:'mistakes', label:'Mistake journal'}
+  {key:'mistakes', label:'Mistake journal'},
+  {key:'help', label:'Help & Suggestions'}
 ];
 
 let session = null;
@@ -506,6 +507,7 @@ function renderView(){
   if (activeView === 'skills') { renderSkillBuilder(); return; }
   if (activeView === 'lessons') { renderLessons(); return; }
   if (activeView === 'mistakes') { renderMistakeJournal(); return; }
+  if (activeView === 'help') { root.innerHTML = helpHTML(); return; }
 }
 
 // ---------- Practice tests ----------
@@ -515,6 +517,30 @@ function renderPractice(){
   if (practiceState.phase === 'taking') { root.innerHTML = testTakingHTML(); return; }
   if (practiceState.phase === 'review') { root.innerHTML = reviewHTML(); return; }
   root.innerHTML = pickerHTML();
+}
+
+// Shown on both the practice picker and the Dashboard whenever a test was left
+// mid-way. Resume picks up with the same questions, same answers, same time left;
+// Submit as-is grades it right now (unanswered = missed); Discard clears it so a
+// fresh test can be started without the "you'll lose this" confirm in startTest().
+function resumeBannerHTML(){
+  const snap = profile.practice_in_progress;
+  if (!snap) return '';
+  const currentKey = snap.sectionOrder[snap.currentSectionIdx];
+  const sectionInfo = SECTIONS.find(s => s.key === currentKey);
+  const label = snap.sectionOrder.length > 1 ? 'Full practice test' : sectionInfo.name;
+  const totalInSection = snap.sectionQuestions[currentKey].length;
+  return `<div class="card" style="margin-bottom:20px;border:1.5px solid var(--gold)">
+    <p style="font-weight:500;font-size:14px;margin:0 0 4px">Unfinished test: ${label}</p>
+    <p class="muted" style="font-size:13px;margin:0 0 12px">
+      ${sectionInfo.name} &middot; question ${snap.index+1} of ${totalInSection} &middot; ${formatTime(snap.secondsLeft)} left in this section${snap.sectionOrder.length > 1 ? ` &middot; section ${snap.currentSectionIdx+1} of ${snap.sectionOrder.length}` : ''}
+    </p>
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      <button class="btn" onclick="resumePracticeTest()">Resume</button>
+      <button class="btn ghost" onclick="submitPracticeTestNow()">Submit as-is</button>
+      <button class="btn ghost" onclick="discardPracticeTest()">Discard</button>
+    </div>
+  </div>`;
 }
 
 function pickerHTML(){
@@ -533,10 +559,14 @@ function pickerHTML(){
   });
   return `<h1>Practice tests</h1>
     <p class="muted" style="margin:6px 0 0">Choose a full test or focus on one section. Each test matches the real HSPT's question count and timing, with a fresh random set of questions drawn every time.</p>
+    ${resumeBannerHTML()}
     <div class="picker-grid">${tiles}</div>`;
 }
 
 function startTest(sectionKey){
+  if (profile.practice_in_progress) {
+    if (!confirm('You have an unfinished test in progress. Starting a new one will discard it. Continue?')) return;
+  }
   const order = sectionKey ? [sectionKey] : SECTIONS.map(s => s.key);
   const sectionQuestions = {};
   order.forEach(key => { sectionQuestions[key] = pickSectionQuestions(key, OFFICIAL_TEST_SPEC[key].count); });
@@ -558,6 +588,79 @@ function startTest(sectionKey){
     totalQuestions: 0
   };
   saveProfile({ resume_section: sectionKey ? SECTIONS.find(s=>s.key===sectionKey).name : 'Full practice test' });
+  savePracticeSnapshot();
+  renderNav();
+  renderView();
+}
+
+// Persists everything needed to fully reconstruct practiceState after a reload:
+// which questions were drawn for this exact attempt, where the student is, what
+// they've answered/flagged so far, and how much time was left. Saved frequently
+// (every answer, every navigation, and periodically while the timer runs) so a
+// closed tab loses as little as possible. secondsLeft is a plain countdown value,
+// not a wall-clock deadline — resuming continues from exactly that number, so no
+// time is ever charged for however long the tab was closed.
+function savePracticeSnapshot(){
+  if (practiceState.phase !== 'taking' && practiceState.phase !== 'sectionIntro') return;
+  const snapshot = {
+    sectionKey: practiceState.sectionKey,
+    sectionOrder: practiceState.sectionOrder,
+    currentSectionIdx: practiceState.currentSectionIdx,
+    sectionQuestions: practiceState.sectionQuestions,
+    index: practiceState.index,
+    answers: practiceState.answers,
+    flagged: practiceState.flagged,
+    secondsLeft: practiceState.secondsLeft
+  };
+  profile.practice_in_progress = snapshot;
+  saveProfile({ practice_in_progress: snapshot });
+}
+
+function practiceStateFromSnapshot(snap){
+  return {
+    phase: 'taking',
+    sectionKey: snap.sectionKey,
+    sectionOrder: snap.sectionOrder,
+    currentSectionIdx: snap.currentSectionIdx,
+    sectionQuestions: snap.sectionQuestions,
+    questions: snap.sectionQuestions[snap.sectionOrder[snap.currentSectionIdx]],
+    index: snap.index,
+    answers: snap.answers,
+    flagged: snap.flagged,
+    secondsLeft: snap.secondsLeft,
+    timerHandle: null,
+    reviewIndex: 0,
+    missed: [],
+    correctCount: 0,
+    totalQuestions: 0
+  };
+}
+
+// Picks up exactly where the student left off — same questions, same answers so
+// far, same time remaining. No penalty for however long they were away.
+function resumePracticeTest(){
+  const snap = profile.practice_in_progress;
+  if (!snap) return;
+  practiceState = practiceStateFromSnapshot(snap);
+  startTimer();
+  setView('practice');
+}
+
+// Grades the in-progress attempt right now without resuming it — anything not yet
+// answered (including whole sections never reached) is logged to the mistake
+// journal as missed, same as if the timer had run out naturally.
+async function submitPracticeTestNow(){
+  const snap = profile.practice_in_progress;
+  if (!snap) return;
+  if (!confirm('Submit this test now? Anything not yet answered will be logged as missed.')) return;
+  practiceState = practiceStateFromSnapshot(snap);
+  await finishTest();
+  setView('practice');
+}
+
+async function discardPracticeTest(){
+  if (!confirm('Discard your in-progress test? This cannot be undone.')) return;
+  await saveProfile({ practice_in_progress: null, resume_section: null });
   renderNav();
   renderView();
 }
@@ -595,6 +698,7 @@ function advanceSection(){
   practiceState.index = 0;
   practiceState.secondsLeft = OFFICIAL_TEST_SPEC[key].minutes * 60;
   practiceState.phase = 'sectionIntro';
+  savePracticeSnapshot();
   renderNav();
   renderView();
 }
@@ -605,6 +709,10 @@ function startTimer(){
     practiceState.secondsLeft--;
     const el = document.getElementById('test-timer');
     if (el) el.textContent = formatTime(practiceState.secondsLeft);
+    // Persist the countdown periodically (not every second) so a closed tab loses
+    // at most a few seconds of timer freshness — never real elapsed time, since
+    // resuming always continues from this saved value rather than a wall clock.
+    if (practiceState.secondsLeft > 0 && practiceState.secondsLeft % 15 === 0) savePracticeSnapshot();
     if (practiceState.secondsLeft <= 0) {
       clearInterval(practiceState.timerHandle);
       advanceSection();
@@ -678,28 +786,40 @@ function testTakingHTML(){
     </div>
     <div class="bubblegrid">${grid}</div>
     <p class="muted" style="font-size:11px;margin:6px 0 0">Green = answered &middot; gold = flagged &middot; navy = current</p>
+    <p style="margin:14px 0 0"><a href="#" onclick="endTestEarly();return false" style="font-size:12px;color:var(--slate)">End test early &mdash; submit what I have so far</a></p>
   `;
 }
 
 function selectAnswer(qid, letter){
   practiceState.answers[qid] = letter;
+  savePracticeSnapshot();
   renderView();
 }
 
 function toggleFlag(qid){
   practiceState.flagged[qid] = !practiceState.flagged[qid];
+  savePracticeSnapshot();
   renderView();
 }
 
 function nextQuestion(){
-  if (practiceState.index < practiceState.questions.length - 1) { practiceState.index++; renderView(); }
+  if (practiceState.index < practiceState.questions.length - 1) { practiceState.index++; savePracticeSnapshot(); renderView(); }
 }
 function prevQuestion(){
-  if (practiceState.index > 0) { practiceState.index--; renderView(); }
+  if (practiceState.index > 0) { practiceState.index--; savePracticeSnapshot(); renderView(); }
 }
 function jumpToQuestion(i){
   practiceState.index = i;
+  savePracticeSnapshot();
   renderView();
+}
+
+// Lets a student bail out mid-test (not just on the final question) with everything
+// not yet answered — including whole sections never reached — logged as missed,
+// same as if time had simply run out.
+function endTestEarly(){
+  if (!confirm('End the test now? Anything not yet answered will be logged as missed.')) return;
+  finishTest();
 }
 
 async function finishTest(){
@@ -751,7 +871,8 @@ async function finishTest(){
     mistakes: newMistakes,
     streak: newStreak,
     last_active: today,
-    resume_section: null
+    resume_section: null,
+    practice_in_progress: null
   });
 
   practiceState.phase = 'review';
@@ -1666,18 +1787,14 @@ function dashboardHTML(){
         ? `<button class="btn" onclick="pacingGoAction(pacingTodayTask)">Go</button>`
         : `<button class="btn ghost" onclick="setView('pacing')">View plan</button>`}
     </div>
-    <div class="card" style="margin-bottom:20px">
-      ${profile.resume_section
-        ? `<p class="muted" style="font-size:13px;margin:0 0 8px">Continue where you left off</p>
-           <div style="display:flex;justify-content:space-between;align-items:center">
-             <span style="font-size:13px;font-weight:500">${profile.resume_section}</span>
-             <button class="btn" onclick="setView('practice')">Resume</button>
-           </div>`
-        : `<p style="margin:0 0 4px;font-weight:500;font-size:14px">Start your first practice test</p>
+    ${profile.practice_in_progress
+      ? resumeBannerHTML()
+      : `<div class="card" style="margin-bottom:20px">
+           <p style="margin:0 0 4px;font-weight:500;font-size:14px">Start a practice test</p>
            <p class="muted" style="font-size:13px;margin:0 0 12px">Full-length or single-section, timed like the real thing.</p>
-           <button class="btn" onclick="setView('practice')">New practice test</button>`
-      }
-    </div>
+           <button class="btn" onclick="setView('practice')">New practice test</button>
+         </div>`
+    }
     <p class="muted" style="font-size:12px;text-transform:uppercase;letter-spacing:0.04em;margin:0 0 4px">Your sections</p>
     <div class="tiles">${tiles}</div>
     <div class="quicklinks">
@@ -1700,7 +1817,83 @@ function openSettings(){
         <input id="edit-date" type="date" value="${profile.test_date}">
       </div>
       <button class="btn" onclick="saveSettings()">Save</button>
+    </div>
+    <div class="card" style="margin-top:16px;border:1px solid var(--maroon)">
+      <p style="font-weight:500;font-size:13px;margin:0 0 4px">Reset all progress</p>
+      <p class="muted" style="font-size:12px;margin:0 0 10px">Wipes mastery, the mistake journal, skill builder progress, completed lessons, pacing plan check-offs, and any in-progress test. Your name, test date, and login stay the same. This cannot be undone.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+        <input id="reset-confirm-text" placeholder="Type RESET to confirm" style="flex:1;min-width:160px">
+        <button class="btn" style="background:var(--maroon)" onclick="resetAllProgress()">Reset everything</button>
+      </div>
     </div>`;
+}
+
+async function resetAllProgress(){
+  const val = document.getElementById('reset-confirm-text').value.trim();
+  if (val !== 'RESET') { alert('Type RESET (all caps) in the box to confirm.'); return; }
+  await saveProfile({
+    mastery: { verbal: 0, quant: 0, reading: 0, math: 0, language: 0 },
+    mistakes: [],
+    skills_progress: { vocab: {}, dojoBestStreak: 0, quickfireBest: {}, qfAdaptive: { quant: { level: 'easy' }, math: { level: 'easy' } } },
+    lessons_completed: {},
+    pacing_plan: { completed: {}, availableDays: [true,true,true,true,true,true,true] },
+    resume_section: null,
+    practice_in_progress: null,
+    streak: 0,
+    last_active: null
+  });
+  tutorHistory = [];
+  setView('dashboard');
+}
+
+// ---------- Help & Suggestions ----------
+function helpHTML(){
+  return `
+    <h1>Help & Suggestions</h1>
+    <div class="warning" style="margin:14px 0 24px">
+      Many features in this website are still highly experimental. If you notice any bugs or have any suggestions that would make your HSPT-studying experience better, please email <strong>merithsptwebsitehelp@gmail.com</strong>.
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Dashboard</p>
+      <p class="muted" style="font-size:13px;margin:0">Your home base — shows days until your test date, today's suggested pacing-plan task with a one-click "Go" button, mastery percentage per section, and quick links into the AI tutor, Skill builder, Lessons, and Pacing plan. "Edit profile" (top right) lets you change your name or test date.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Pacing plan</p>
+      <p class="muted" style="font-size:13px;margin:0">A day-by-day calendar between today and your test date, automatically weighted toward whichever section you're weakest in — practice tests, lessons, vocab, Quick-fire, and review are all rotated in across the week, tapering off right before your test date. Tap any day to check it off. Use the day-of-week toggles at the top to mark days you're never free to study — that day's task rolls forward to your next available day instead of disappearing.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Practice tests</p>
+      <p class="muted" style="font-size:13px;margin:0">Full-length or single-section tests, matching the real HSPT's exact question count and time limit, with a fresh random set of questions drawn every attempt. If you close the tab or navigate away mid-test, your progress is saved automatically — come back anytime and you'll see a banner offering to <strong>Resume</strong> (same questions, same answers, same time remaining — no time penalty for however long you were away), <strong>Submit as-is</strong> (grades what you've answered and logs the rest as missed), or <strong>Discard</strong>. You can also end a test early from within it if you'd rather stop and have it graded right away. <strong>DISCLAIMER</strong>: While the questions in the practice tests seek to imitate actual HSPT questions, the creator of this website must confess that they do not have access to actual previous HSPT tests. While the practice tests on this website are great, it may be worth investing in an actual HSPT prep book to get a better feel of what actual HSPT questions are like.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">AI tutor</p>
+      <p class="muted" style="font-size:13px;margin:0">A Socratic tutor that explains a concept in small pieces and checks your understanding before moving on, rather than just handing you answers. Runs on Google's free-tier Gemini API — avoid sharing personal or sensitive information in the chat. Use "New conversation" to clear the current chat and start fresh at any time.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Skill builder</p>
+      <p class="muted" style="font-size:13px;margin:0">Four focused drill modes: <strong>Vocab</strong> flashcard-style practice, <strong>Logic Dojo</strong> for syllogism reasoning, <strong>Punctuation surgeon</strong> for grammar fixes, and <strong>Quick-fire</strong> timed quant/math drills that automatically adapt their difficulty to your recent performance — answer a few in a row correctly and it steps up; miss a couple and it steps back down.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Lessons</p>
+      <p class="muted" style="font-size:13px;margin:0">21 lessons across all five HSPT sections, each with worked examples, "stop and check yourself" moments to test your understanding as you go, and a short quiz at the end. Missed practice questions link straight to the relevant lesson from the mistake journal.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Mistake journal</p>
+      <p class="muted" style="font-size:13px;margin:0">Every question you've missed, across practice tests, Skill builder, and lesson quizzes, in one filterable place — with a direct link back to the relevant lesson where one exists. "Clear journal" wipes it if you'd like a fresh start.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Account & settings</p>
+      <p class="muted" style="font-size:13px;margin:0">From the Dashboard's "Edit profile" panel: change your name or test date, or use "Reset all progress" to wipe mastery, the mistake journal, Skill builder progress, completed lessons, and pacing-plan check-offs (your name, test date, and login stay the same — this requires typing RESET to confirm and can't be undone). Forgot your password? Use the "Forgot password?" link on the login screen. The light/dark mode switch lives at the bottom of the sidebar.</p>
+    </div>
+  `;
 }
 
 async function saveSettings(){
@@ -1740,7 +1933,10 @@ function tutorHTML(){
     log = `<div class="bubble tutor">Hi ${profile.name}, I'm your Merit tutor. Tell me a topic you'd like help with — or a question you got wrong.</div>`;
   }
   return `
-    <h1>AI tutor</h1>
+    <div style="display:flex;justify-content:space-between;align-items:baseline">
+      <h1>AI tutor</h1>
+      ${tutorHistory.length ? `<button class="btn ghost" onclick="startNewTutorConversation()">New conversation</button>` : ''}
+    </div>
     <div class="warning">
       This tutor runs on Google's free-tier Gemini API. Your messages here may be used by Google to help train future models.
       Don't share anything personal or sensitive — no full name, address, school details beyond what's needed, passwords, or private family information. Keep it to HSPT questions and topics.
@@ -1751,6 +1947,14 @@ function tutorHTML(){
       <button class="btn" onclick="sendTutorMessage()">Send</button>
     </div>
   `;
+}
+
+// Clears the current chat only — tutorHistory has never been persisted to the
+// database, so this is just an in-memory reset with no server round-trip.
+function startNewTutorConversation(){
+  if (tutorHistory.length && !confirm('Start a new conversation? This clears the current chat.')) return;
+  tutorHistory = [];
+  renderView();
 }
 
 function scrollChatToBottom(){
@@ -1979,11 +2183,20 @@ function renderMistakeJournal(){
   }
 
   root.innerHTML = `
-    <h1>Mistake journal</h1>
+    <div style="display:flex;justify-content:space-between;align-items:baseline">
+      <h1>Mistake journal</h1>
+      ${all.length ? `<button class="btn ghost" onclick="clearMistakeJournal()">Clear journal</button>` : ''}
+    </div>
     <p class="muted" style="margin:6px 0 0">Every miss across practice tests, skill builder, and lessons, in one place.</p>
     ${filterBar}
     ${rows}
   `;
+}
+
+async function clearMistakeJournal(){
+  if (!confirm('Clear your entire mistake journal? This cannot be undone.')) return;
+  await saveProfile({ mistakes: [] });
+  renderView();
 }
 
 // When the user clicks the password-reset link in their email, Supabase parses the
