@@ -214,6 +214,7 @@ const NAV = [
   {key:'dashboard', label:'Dashboard'},
   {key:'pacing', label:'Pacing plan'},
   {key:'practice', label:'Practice tests'},
+  {key:'competitive', label:'Competitive Studying'},
   {key:'tutor', label:'AI tutor'},
   {key:'skills', label:'Skill builder'},
   {key:'lessons', label:'Lessons'},
@@ -236,6 +237,25 @@ let pacingState = { monthOffset: 0 };
 let pacingTodayTask = null; // set whenever dashboard or pacing view renders; read by the "Go" button
 
 // ---------- Practice test state ----------
+// ---------- Competitive Studying state ----------
+// Time is tracked in tenths of a second as an integer (never a float) so the
+// 7.5-second Long-mode wait penalty never drifts from floating-point rounding —
+// the same reason money is usually stored in cents rather than dollars.
+const COMPETITIVE_SPEC = {
+  short: { totalTenths: 1500, penaltyTenths: 50 },  // 150.0s game, 5.0s wrong-answer wait
+  long:  { totalTenths: 3000, penaltyTenths: 75 }   // 300.0s game, 7.5s wrong-answer wait
+};
+let competitiveState = {
+  phase: 'picker',      // 'picker' | 'playing' | 'results'
+  section: null, mode: null,
+  queue: [], index: 0,
+  streak: 0, score: 0,
+  totalTenths: 0, remainingTenths: 0, waitRemainingTenths: 0, penaltyTenths: 0,
+  timerHandle: null,
+  missed: [], answeredCount: 0, correctCount: 0,
+  isNewBest: false
+};
+
 let practiceState = {
   phase: 'picker',       // 'picker' | 'sectionIntro' | 'taking' | 'review'
   sectionKey: null,      // null means full test (all sections, official order)
@@ -527,6 +547,7 @@ function renderView(){
   if (activeView === 'pacing') { renderPacingPlan(); return; }
   if (activeView === 'tutor') { root.innerHTML = tutorHTML(); scrollChatToBottom(); return; }
   if (activeView === 'practice') { renderPractice(); return; }
+  if (activeView === 'competitive') { renderCompetitive(); return; }
   if (activeView === 'skills') { renderSkillBuilder(); return; }
   if (activeView === 'lessons') { renderLessons(); return; }
   if (activeView === 'mistakes') { renderMistakeJournal(); return; }
@@ -1041,6 +1062,213 @@ function getDueVocab(){
     return rec.due <= today;
   });
 }
+
+// ---------- Competitive Studying ----------
+function renderCompetitive(){
+  const root = document.getElementById('view-root');
+  if (competitiveState.phase === 'playing') { root.innerHTML = competitivePlayingHTML(); return; }
+  if (competitiveState.phase === 'results') { root.innerHTML = competitiveResultsHTML(); return; }
+  root.innerHTML = competitivePickerHTML();
+}
+
+function competitivePickerHTML(){
+  const scores = profile.competitive_scores || {};
+  let rows = '';
+  SECTIONS.forEach(s => {
+    const best = scores[s.key] || { short: 0, long: 0 };
+    rows += `<div class="card" style="margin-bottom:10px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 10px">${s.name}</p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <div style="flex:1;min-width:180px;display:flex;justify-content:space-between;align-items:center;padding:10px;border:1px solid var(--border);border-radius:8px">
+          <div>
+            <p style="margin:0;font-size:13px;font-weight:500">Short (2:30)</p>
+            <p class="muted" style="margin:0;font-size:11px">Best: ${best.short || 0} pts</p>
+          </div>
+          <button class="btn" style="padding:6px 12px;font-size:12px" onclick="startCompetitiveGame('${s.key}','short')">Play</button>
+        </div>
+        <div style="flex:1;min-width:180px;display:flex;justify-content:space-between;align-items:center;padding:10px;border:1px solid var(--border);border-radius:8px">
+          <div>
+            <p style="margin:0;font-size:13px;font-weight:500">Long (5:00)</p>
+            <p class="muted" style="margin:0;font-size:11px">Best: ${best.long || 0} pts</p>
+          </div>
+          <button class="btn" style="padding:6px 12px;font-size:12px" onclick="startCompetitiveGame('${s.key}','long')">Play</button>
+        </div>
+      </div>
+    </div>`;
+  });
+  return `
+    <h1>Competitive Studying</h1>
+    <p class="muted" style="margin:6px 0 20px">Answer as many questions as you can before time runs out. Correct answers earn 5 points, or 7.5 once you've built a streak of 5+ in a row. A wrong answer breaks your streak and costs you a few extra seconds off the clock. Your best score in each section and mode is visible to friends unless you hide it.</p>
+    ${rows}
+  `;
+}
+
+function startCompetitiveGame(sectionKey, mode){
+  const spec = COMPETITIVE_SPEC[mode];
+  competitiveState = {
+    phase: 'playing',
+    section: sectionKey, mode,
+    queue: shuffleArray(QUESTIONS[sectionKey]),
+    index: 0,
+    streak: 0, score: 0,
+    totalTenths: spec.totalTenths, remainingTenths: spec.totalTenths, waitRemainingTenths: 0,
+    penaltyTenths: spec.penaltyTenths,
+    timerHandle: null,
+    missed: [], answeredCount: 0, correctCount: 0,
+    isNewBest: false
+  };
+  startCompetitiveTimer();
+  renderView();
+}
+
+function startCompetitiveTimer(){
+  if (competitiveState.timerHandle) clearInterval(competitiveState.timerHandle);
+  competitiveState.timerHandle = setInterval(() => {
+    competitiveState.remainingTenths--;
+    let enteredWait = false, exitedWait = false;
+    if (competitiveState.waitRemainingTenths > 0) {
+      competitiveState.waitRemainingTenths--;
+      if (competitiveState.waitRemainingTenths <= 0) exitedWait = true;
+    }
+    if (competitiveState.remainingTenths <= 0) {
+      clearInterval(competitiveState.timerHandle);
+      finishCompetitiveGame();
+      return;
+    }
+    if (exitedWait) {
+      advanceCompetitiveQuestion();
+    } else {
+      updateCompetitiveTimerDisplay();
+    }
+  }, 100);
+}
+
+// Cheap per-tick DOM update (no full re-render) for the two numbers that change
+// every 100ms — matches the lightweight pattern the practice test timer already uses.
+function updateCompetitiveTimerDisplay(){
+  const mainEl = document.getElementById('competitive-timer');
+  if (mainEl) mainEl.textContent = formatTime(Math.ceil(competitiveState.remainingTenths / 10));
+  const waitEl = document.getElementById('competitive-wait-timer');
+  if (waitEl) waitEl.textContent = (competitiveState.waitRemainingTenths / 10).toFixed(1) + 's';
+}
+
+function answerCompetitive(letter){
+  if (competitiveState.waitRemainingTenths > 0) return; // ignore clicks during the wait penalty
+  const q = competitiveState.queue[competitiveState.index];
+  competitiveState.answeredCount++;
+  if (letter === q.correct) {
+    competitiveState.streak++;
+    const points = competitiveState.streak > 5 ? 7.5 : 5;
+    competitiveState.score += points;
+    competitiveState.correctCount++;
+    advanceCompetitiveQuestion();
+  } else {
+    competitiveState.streak = 0;
+    competitiveState.missed.push({ ...q, chosen: letter });
+    competitiveState.waitRemainingTenths = competitiveState.penaltyTenths;
+    renderView(); // switch to the "waiting" screen
+  }
+}
+
+function advanceCompetitiveQuestion(){
+  competitiveState.waitRemainingTenths = 0;
+  competitiveState.index++;
+  if (competitiveState.index >= competitiveState.queue.length) {
+    // Ran out of the shuffled pool — extremely unlikely given the time limits, but
+    // reshuffle and keep going rather than crash if a student is fast enough.
+    competitiveState.queue = competitiveState.queue.concat(shuffleArray(QUESTIONS[competitiveState.section]));
+  }
+  renderView();
+}
+
+async function finishCompetitiveGame(){
+  competitiveState.phase = 'results';
+
+  const journalEntries = competitiveState.missed.map(m => ({
+    source: 'competitive', section: competitiveState.section, skill: m.skill, prompt: m.prompt,
+    chosen: m.chosen ? m.choices[m.chosen].text : null, correct: m.choices[m.correct].text,
+    date: new Date().toISOString().slice(0,10)
+  }));
+  const newMistakes = [...(profile.mistakes || []), ...journalEntries].slice(-300);
+
+  const scores = { ...(profile.competitive_scores || {}) };
+  if (!scores[competitiveState.section]) scores[competitiveState.section] = { short: 0, long: 0 };
+  else scores[competitiveState.section] = { ...scores[competitiveState.section] };
+  const prevBest = scores[competitiveState.section][competitiveState.mode] || 0;
+  const isNewBest = competitiveState.score > prevBest;
+  if (isNewBest) scores[competitiveState.section][competitiveState.mode] = competitiveState.score;
+
+  await saveProfile({ mistakes: newMistakes, competitive_scores: scores });
+  competitiveState.isNewBest = isNewBest;
+  renderView();
+}
+
+function competitivePlayingHTML(){
+  const q = competitiveState.queue[competitiveState.index];
+  const sectionName = SECTIONS.find(s => s.key === competitiveState.section).name;
+  const isWaiting = competitiveState.waitRemainingTenths > 0;
+
+  let passageHTML = '';
+  if (q.passage) passageHTML = `<div class="passage-box">${PASSAGES[q.passage]}</div>`;
+
+  if (isWaiting) {
+    return `
+      <div class="test-header">
+        <div>
+          <p class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:0.05em;margin:0">${sectionName} &middot; ${competitiveState.mode === 'short' ? 'Short' : 'Long'}</p>
+          <h1 style="font-size:18px">Score: ${competitiveState.score}</h1>
+        </div>
+        <div style="text-align:right">
+          <p class="muted" style="font-size:11px;margin:0">Time remaining</p>
+          <p class="timer" id="competitive-timer">${formatTime(Math.ceil(competitiveState.remainingTenths / 10))}</p>
+        </div>
+      </div>
+      <div class="card" style="max-width:420px;margin:60px auto;text-align:center">
+        <p style="margin:0 0 8px;font-weight:500;font-size:16px">Not quite \u2014 streak reset</p>
+        <p class="muted" style="margin:0 0 16px">Next question in <span id="competitive-wait-timer">${(competitiveState.waitRemainingTenths/10).toFixed(1)}s</span></p>
+      </div>`;
+  }
+
+  let choicesHTML = '';
+  Object.entries(q.choices).forEach(([letter, choice]) => {
+    choicesHTML += `<div class="choice-row" onclick="answerCompetitive('${letter}')">
+      <span class="choice-dot"></span><span style="font-size:13px">${letter} &nbsp; ${choice.text}</span></div>`;
+  });
+
+  return `
+    <div class="test-header">
+      <div>
+        <p class="muted" style="font-size:11px;text-transform:uppercase;letter-spacing:0.05em;margin:0">${sectionName} &middot; ${competitiveState.mode === 'short' ? 'Short' : 'Long'}</p>
+        <h1 style="font-size:18px">Score: ${competitiveState.score}${competitiveState.streak >= 2 ? ` &middot; Streak: ${competitiveState.streak}${competitiveState.streak > 5 ? ' \ud83d\udd25' : ''}` : ''}</h1>
+      </div>
+      <div style="text-align:right">
+        <p class="muted" style="font-size:11px;margin:0">Time remaining</p>
+        <p class="timer" id="competitive-timer">${formatTime(Math.ceil(competitiveState.remainingTenths / 10))}</p>
+      </div>
+    </div>
+    ${passageHTML}
+    <p style="font-size:14px;font-weight:500;margin:0 0 14px">${q.prompt}</p>
+    <div>${choicesHTML}</div>
+  `;
+}
+
+function competitiveResultsHTML(){
+  const sectionName = SECTIONS.find(s => s.key === competitiveState.section).name;
+  return `
+    <h1>Round complete</h1>
+    <div class="card" style="margin-top:16px">
+      <p style="margin:0;font-weight:500;font-size:20px">${competitiveState.score} points</p>
+      <p class="muted" style="margin:6px 0 0;font-size:13px">${sectionName} &middot; ${competitiveState.mode === 'short' ? 'Short (2:30)' : 'Long (5:00)'}</p>
+      ${competitiveState.isNewBest ? `<p style="margin:10px 0 0;color:var(--success);font-weight:500;font-size:13px">New personal best!</p>` : ''}
+      <p class="muted" style="margin:10px 0 0;font-size:13px">${competitiveState.correctCount} correct out of ${competitiveState.answeredCount} answered</p>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:8px">
+      <button class="btn" onclick="startCompetitiveGame('${competitiveState.section}','${competitiveState.mode}')">Play again</button>
+      <button class="btn ghost" onclick="competitiveState.phase='picker';renderView();">Back to sections</button>
+    </div>
+  `;
+}
+
 
 function openVocab(){
   const due = getDueVocab();
@@ -1887,6 +2115,7 @@ async function resetAllProgress(){
     pacing_plan: { completed: {}, availableDays: [true,true,true,true,true,true,true] },
     resume_section: null,
     practice_in_progress: null,
+    competitive_scores: { verbal: {short:0,long:0}, quant: {short:0,long:0}, reading: {short:0,long:0}, math: {short:0,long:0}, language: {short:0,long:0} },
     streak: 0,
     last_active: null
   });
@@ -1964,6 +2193,11 @@ async function toggleHideMasteryFriends(){
   renderView();
 }
 
+async function toggleHideCompetitiveFriends(){
+  await saveProfile({ hide_competitive_from_friends: !profile.hide_competitive_from_friends });
+  renderView();
+}
+
 async function sendFriendRequest(){
   const input = document.getElementById('friend-code-input');
   const code = input.value.trim().toUpperCase();
@@ -2025,7 +2259,7 @@ async function renderFriends(){
       <h1>Friends</h1>
       <div class="warning" style="margin:14px 0">
         <p style="margin:0 0 10px"><strong>Before you add friends:</strong> Merit's Friends feature connects you with other students using a private code you share yourself — there's no public search, and no way for anyone to browse or find you without that exact code.</p>
-        <p style="margin:0 0 10px">Once connected, a friend can only ever see a nickname you choose (never your real account name), your study streak, and your mastery percentage in each section — nothing else about your account, your practice results, or your schedule. You can hide your streak and/or your mastery independently, remove a friend, or generate a new code at any time.</p>
+        <p style="margin:0 0 10px">Once connected, a friend can only ever see a nickname you choose (never your real account name), your study streak, your mastery percentage in each section, and your Competitive Studying high scores — nothing else about your account, your practice results, or your schedule. You can hide any of these three independently, remove a friend, or generate a new code at any time.</p>
         <p style="margin:0">If you're not sure whether you should be sharing this with classmates, check with a parent or guardian first.</p>
       </div>
       <button class="btn" onclick="acknowledgeFriendsNotice()">I understand, continue</button>
@@ -2069,6 +2303,12 @@ async function renderFriends(){
       const masteryLine = f.mastery_hidden
         ? '<span class="muted">Mastery hidden</span>'
         : SECTIONS.map(s => `${s.name.split(' ')[0]} ${(f.mastery && f.mastery[s.key]) || 0}%`).join(' &middot; ');
+      const competitiveLine = f.competitive_hidden
+        ? '<span class="muted">Competitive scores hidden</span>'
+        : 'Best (Short/Long): ' + SECTIONS.map(s => {
+            const best = (f.competitive_scores && f.competitive_scores[s.key]) || { short:0, long:0 };
+            return `${s.name.split(' ')[0]} ${best.short||0}/${best.long||0}`;
+          }).join(' &middot; ');
       friendRows += `<div class="card" style="margin-bottom:8px">
         <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
           <span style="font-size:13px;font-weight:500">${f.display_name}</span>
@@ -2078,6 +2318,7 @@ async function renderFriends(){
           </div>
         </div>
         <div style="margin-top:6px;font-size:11px;color:var(--slate)">${masteryLine}</div>
+        <div style="margin-top:4px;font-size:11px;color:var(--slate)">${competitiveLine}</div>
       </div>`;
     });
   }
@@ -2085,7 +2326,7 @@ async function renderFriends(){
   root.innerHTML = `
     <h1>Friends</h1>
     <div class="warning" style="margin:14px 0 20px">
-      Friends can only ever see the nickname you choose below, your study streak, and your mastery percentage in each section — never your real name, email, individual practice test scores, mistake journal, or pacing plan. Adding someone always requires their exact code; there's no way to search for or browse other students.
+      Friends can only ever see the nickname you choose below, your study streak, your mastery percentage in each section, and your Competitive Studying high scores — never your real name, email, individual practice test scores, mistake journal, or pacing plan. Adding someone always requires their exact code; there's no way to search for or browse other students.
     </div>
 
     <div class="card" style="margin-bottom:14px">
@@ -2120,9 +2361,13 @@ async function renderFriends(){
         <span style="font-size:13px;font-weight:500">Hide my streak from friends</span>
         <button class="btn ${profile.hide_streak_from_friends ? '' : 'ghost'}" style="padding:5px 12px;font-size:12px" onclick="toggleHideStreakFriends()">${profile.hide_streak_from_friends ? 'Hidden' : 'Visible'}</button>
       </div>
-      <div style="display:flex;justify-content:space-between;align-items:center">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
         <span style="font-size:13px;font-weight:500">Hide my section mastery from friends</span>
         <button class="btn ${profile.hide_mastery_from_friends ? '' : 'ghost'}" style="padding:5px 12px;font-size:12px" onclick="toggleHideMasteryFriends()">${profile.hide_mastery_from_friends ? 'Hidden' : 'Visible'}</button>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <span style="font-size:13px;font-weight:500">Hide my Competitive Studying scores from friends</span>
+        <button class="btn ${profile.hide_competitive_from_friends ? '' : 'ghost'}" style="padding:5px 12px;font-size:12px" onclick="toggleHideCompetitiveFriends()">${profile.hide_competitive_from_friends ? 'Hidden' : 'Visible'}</button>
       </div>
     </div>
 
@@ -2158,6 +2403,11 @@ function helpHTML(){
     </div>
 
     <div class="card" style="margin-bottom:14px">
+      <p style="font-weight:500;font-size:14px;margin:0 0 6px">Competitive Studying</p>
+      <p class="muted" style="font-size:13px;margin:0">A fast-paced timed game for each of the five sections. Choose Short (2:30) or Long (5:00) and answer as many questions as you can before time runs out. Correct answers earn 5 points, or 7.5 once you've built a streak of 5 or more in a row; a wrong answer breaks your streak and costs you a few extra seconds off the clock (5s in Short, 7.5s in Long) rather than pausing it. Your best score is tracked separately for every section and mode, and misses are logged to your mistake journal just like everywhere else.</p>
+    </div>
+
+    <div class="card" style="margin-bottom:14px">
       <p style="font-weight:500;font-size:14px;margin:0 0 6px">AI tutor</p>
       <p class="muted" style="font-size:13px;margin:0">A Socratic tutor that explains a concept in small pieces and checks your understanding before moving on, rather than just handing you answers. Runs on Google's free-tier Gemini API — avoid sharing personal or sensitive information in the chat. Use "New conversation" to clear the current chat and start fresh at any time.</p>
     </div>
@@ -2179,7 +2429,7 @@ function helpHTML(){
 
     <div class="card" style="margin-bottom:14px">
       <p style="font-weight:500;font-size:14px;margin:0 0 6px">Friends</p>
-      <p class="muted" style="font-size:13px;margin:0">Connect with classmates using a private code — never a name or email search — to see each other's study streaks and section mastery, and add a little friendly competition. A friend only ever sees a nickname you choose, your streak, and your mastery percentage per section — nothing else about your account. Streak and mastery visibility can each be hidden independently, and you can remove a friend or generate a new code at any time.</p>
+      <p class="muted" style="font-size:13px;margin:0">Connect with classmates using a private code — never a name or email search — to see each other's study streaks, section mastery, and Competitive Studying high scores, and add a little friendly competition. A friend only ever sees a nickname you choose plus whichever of those three you leave visible — nothing else about your account. Each one can be hidden independently, and you can remove a friend or generate a new code at any time.</p>
     </div>
 
     <div class="card" style="margin-bottom:14px">
@@ -2424,6 +2674,7 @@ async function nextLessonQuizQuestion(){
 function mistakeGroup(source){
   if (source === 'practice') return 'Practice test';
   if (source === 'lesson') return 'Lesson comprehension check';
+  if (source === 'competitive') return 'Competitive Studying';
   return 'Skill builder'; // vocab, dojo, quickfire, punctuation
 }
 
@@ -2434,6 +2685,7 @@ function mistakeSourceLabel(m){
   if (m.source === 'quickfire') return 'Skill builder \u2014 Quick-fire (' + (m.detail||'') + ')';
   if (m.source === 'punctuation') return 'Skill builder \u2014 Punctuation surgeon';
   if (m.source === 'lesson') return 'Lesson \u2014 ' + (m.detail || '');
+  if (m.source === 'competitive') return 'Competitive Studying' + (m.section ? ' \u2014 ' + (SECTIONS.find(s=>s.key===m.section)||{}).name : '');
   return 'Skill builder';
 }
 
@@ -2447,7 +2699,7 @@ function renderMistakeJournal(){
   const all = [...(profile.mistakes || [])].reverse();
   const filtered = mistakeFilter === 'all' ? all : all.filter(m => mistakeGroup(m.source) === mistakeFilter);
 
-  const groups = ['all', 'Practice test', 'Skill builder', 'Lesson comprehension check'];
+  const groups = ['all', 'Practice test', 'Skill builder', 'Lesson comprehension check', 'Competitive Studying'];
   let filterBar = '<div style="display:flex;gap:8px;margin:14px 0;flex-wrap:wrap">';
   groups.forEach(g => {
     const active = mistakeFilter === g;
