@@ -461,8 +461,10 @@ async function afterLogin(){
   await loadProfile();
   ensureSkillsProgress();
   applyBackgroundColor();
-  await fetchFriendsData();
   renderApp();
+  // Friends data loads in the background — the app must never wait on (or be
+  // broken by) it. The nav badge fills in once it arrives.
+  fetchFriendsData().then(() => { if (document.getElementById('sidebar')) renderNav(); });
 }
 
 // A custom background overrides --paper (the page's outer canvas color) regardless
@@ -2754,11 +2756,34 @@ supa.auth.onAuthStateChange((event, sess) => {
   }
 });
 
+// If startup fails (network down, Supabase project paused, a bad deploy), show
+// what went wrong instead of leaving a blank page.
+function showFatalError(err){
+  const root = document.getElementById('root');
+  if (!root) return;
+  const msg = String((err && err.message) || err || 'Unknown error').replace(/</g,'&lt;');
+  root.innerHTML = `<div style="max-width:520px;margin:60px auto;padding:0 20px;font-family:sans-serif">
+    <h2 style="margin:0 0 10px">Merit couldn't start</h2>
+    <p style="margin:0 0 10px;font-size:14px">Something went wrong while loading. Details:</p>
+    <pre style="white-space:pre-wrap;background:#00000012;padding:10px;border-radius:6px;font-size:12px">${msg}</pre>
+    <button onclick="location.reload()" style="padding:8px 16px;margin-top:10px">Reload</button>
+  </div>`;
+}
+window.addEventListener('unhandledrejection', e => {
+  const root = document.getElementById('root');
+  if (root && !root.innerHTML.trim()) showFatalError(e.reason);
+});
+
 async function init(){
-  const { data } = await supa.auth.getSession();
-  session = data.session;
-  if (session) { await afterLogin(); }
-  else { renderAuth('login'); }
+  try {
+    const { data } = await supa.auth.getSession();
+    session = data.session;
+    if (session) { await afterLogin(); }
+    else { renderAuth('login'); }
+  } catch (e) {
+    console.error('Merit startup failed', e);
+    showFatalError(e);
+  }
 }
 init();
 </script>
