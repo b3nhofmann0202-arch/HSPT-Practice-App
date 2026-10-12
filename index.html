@@ -192,6 +192,7 @@ function pickReadingQuestions(count){
     if (!groups[q.passage]) groups[q.passage] = [];
     groups[q.passage].push({ ...q, section: 'reading' });
   });
+  Object.keys(groups).forEach(k => { groups[k] = dedupeBySignature(groups[k]); });
   const passageKeys = shuffleArray(Object.keys(groups));
   let result = [];
   for (const pk of passageKeys) {
@@ -205,9 +206,29 @@ function pickReadingQuestions(count){
   }
   return result;
 }
+// Signature of a question's actual content, used to catch near-identical items
+// that have different ids. Shuffling alone can't repeat a question, but two
+// distinct ids holding the same prompt+choices would still look like a repeat
+// to a student, so a test is de-duplicated by content rather than by id.
+function questionSignature(q){
+  const choices = Object.keys(q.choices).sort()
+    .map(l => (q.choices[l].text || '').trim().toLowerCase()).sort().join('||');
+  return (q.passage || '') + '|' + (q.prompt || '').trim().toLowerCase() + '|' + choices;
+}
+
+function dedupeBySignature(list){
+  const seen = new Set();
+  return list.filter(q => {
+    const sig = questionSignature(q);
+    if (seen.has(sig)) return false;
+    seen.add(sig);
+    return true;
+  });
+}
+
 function pickSectionQuestions(key, count){
   if (key === 'reading') return pickReadingQuestions(count);
-  const pool = QUESTIONS[key].map(q => ({ ...q, section: key }));
+  const pool = dedupeBySignature(QUESTIONS[key].map(q => ({ ...q, section: key })));
   return shuffleArray(pool).slice(0, Math.min(count, pool.length));
 }
 const NAV = [
