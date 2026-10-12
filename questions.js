@@ -251,7 +251,7 @@ const QUESTIONS = {
       } },
     { id:'v21', skill:'Synonyms', prompt:'Choose the word that means the same as PRUDENT.', correct:'A',
       choices:{
-        A:{text:'Wise and careful', explain:'Prudent means showing careful, sensible judgment.'},
+        A:{text:'Cautious', explain:'Prudent means showing careful, sensible judgment.'},
         B:{text:'Careless', explain:'This is the opposite of prudent.'},
         C:{text:'Wealthy', explain:'Wealth isn\'t what prudent describes.'},
         D:{text:'Stubborn', explain:'Stubbornness isn\'t related to careful judgment.'}
@@ -393,29 +393,29 @@ const QUESTIONS = {
       choices:{
         A:{text:'Wealthy', explain:'Wealth isn\'t what meritorious describes.'},
         B:{text:'Confusing', explain:'Confusion isn\'t related to this word.'},
-        C:{text:'Deserving of praise', explain:'Meritorious means deserving reward or praise.'},
+        C:{text:'Praiseworthy', explain:'Meritorious means deserving reward or praise.'},
         D:{text:'Careless', explain:'Carelessness is nearly the opposite of meritorious behavior.'}
       } },
     { id:'v42', skill:'Synonyms', prompt:'Choose the word that means the same as IMPETUOUS.', correct:'D',
       choices:{
-        A:{text:'Careful and deliberate', explain:'This is nearly the opposite of impetuous.'},
-        B:{text:'Calm and patient', explain:'Patience is nearly the opposite of impetuous.'},
+        A:{text:'Deliberate', explain:'This is nearly the opposite of impetuous.'},
+        B:{text:'Patient', explain:'Patience is nearly the opposite of impetuous.'},
         C:{text:'Wealthy', explain:'Wealth isn\'t what impetuous describes.'},
-        D:{text:'Acting hastily without thinking', explain:'Impetuous means acting suddenly without careful thought.'}
+        D:{text:'Rash', explain:'Impetuous means acting suddenly without careful thought.'}
       } },
     { id:'v43', skill:'Synonyms', prompt:'Choose the word that means the same as VERACIOUS.', correct:'A',
       choices:{
-        A:{text:'Truthful and honest', explain:'Veracious means habitually telling the truth.'},
+        A:{text:'Truthful', explain:'Veracious means habitually telling the truth.'},
         B:{text:'Deceptive', explain:'This is the opposite of veracious.'},
         C:{text:'Wealthy', explain:'Wealth isn\'t what veracious describes.'},
         D:{text:'Silent', explain:'Silence isn\'t related to truthfulness.'}
       } },
     { id:'v44', skill:'Synonyms', prompt:'Choose the word that means the same as STOIC.', correct:'B',
       choices:{
-        A:{text:'Complaining constantly', explain:'This is the opposite of stoic.'},
-        B:{text:'Enduring hardship without complaint', explain:'Stoic describes enduring pain or hardship without showing feeling or complaint.'},
-        C:{text:'Wealthy and generous', explain:'Wealth isn\'t what stoic describes.'},
-        D:{text:'Nervous and anxious', explain:'Anxiety contradicts the calm endurance stoic describes.'}
+        A:{text:'Complaining', explain:'This is the opposite of stoic.'},
+        B:{text:'Uncomplaining', explain:'Stoic describes enduring pain or hardship without showing feeling or complaint.'},
+        C:{text:'Generous', explain:'Wealth isn\'t what stoic describes.'},
+        D:{text:'Anxious', explain:'Anxiety contradicts the calm endurance stoic describes.'}
       } },
     { id:'v45', skill:'Antonyms', prompt:'Choose the word most nearly opposite to LUCRATIVE.', correct:'C',
       choices:{
@@ -532,7 +532,7 @@ const QUESTIONS = {
     { id:'v61', skill:'Synonyms', prompt:'Choose the word that means the same as LOQUACIOUS.', correct:'B',
       choices:{
         A:{text:'Silent', explain:'This is the opposite of loquacious.'},
-        B:{text:'Very talkative', explain:'Loquacious means very talkative.'},
+        B:{text:'Talkative', explain:'Loquacious means very talkative.'},
         C:{text:'Careful', explain:'Carefulness isn\'t what loquacious describes.'},
         D:{text:'Confused', explain:'Confusion isn\'t what loquacious describes.'}
       } },
@@ -540,7 +540,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Fearful', explain:'This is the opposite of intrepid.'},
         B:{text:'Careless', explain:'Carelessness isn\'t what intrepid describes.'},
-        C:{text:'Fearless and adventurous', explain:'Intrepid means fearless and adventurous.'},
+        C:{text:'Fearless', explain:'Intrepid means fearless and adventurous.'},
         D:{text:'Confused', explain:'Confusion isn\'t what intrepid describes.'}
       } },
     { id:'v63', skill:'Synonyms', prompt:'Choose the word that means the same as MERCURIAL.', correct:'D',
@@ -548,11 +548,11 @@ const QUESTIONS = {
         A:{text:'Steady', explain:'This is the opposite of mercurial.'},
         B:{text:'Calm', explain:'This is nearly the opposite of mercurial.'},
         C:{text:'Predictable', explain:'This is the opposite of mercurial.'},
-        D:{text:'Changeable in mood', explain:'Mercurial means subject to sudden, unpredictable changes in mood.'}
+        D:{text:'Volatile', explain:'Mercurial means subject to sudden, unpredictable changes in mood.'}
       } },
     { id:'v64', skill:'Synonyms', prompt:'Choose the word that means the same as SAGACIOUS.', correct:'A',
       choices:{
-        A:{text:'Wise and shrewd', explain:'Sagacious means having good judgment, wise.'},
+        A:{text:'Shrewd', explain:'Sagacious means having good judgment, wise.'},
         B:{text:'Foolish', explain:'This is the opposite of sagacious.'},
         C:{text:'Careless', explain:'Carelessness contradicts wise judgment.'},
         D:{text:'Confused', explain:'Confusion isn\'t what sagacious describes.'}
@@ -671,7 +671,7 @@ const QUESTIONS = {
       } },
     { id:'v81', skill:'Synonyms', prompt:'Choose the word that means the same as DEXTEROUS.', correct:'A',
       choices:{
-        A:{text:'Skillful with the hands', explain:'Dexterous means skillful in using the hands or body.'},
+        A:{text:'Nimble', explain:'Dexterous means skillful in using the hands or body.'},
         B:{text:'Clumsy', explain:'This is the opposite of dexterous.'},
         C:{text:'Confused', explain:'Confusion isn\'t what dexterous describes.'},
         D:{text:'Careless', explain:'Carelessness contradicts skillful, precise movement.'}
@@ -679,7 +679,7 @@ const QUESTIONS = {
     { id:'v82', skill:'Synonyms', prompt:'Choose the word that means the same as COPIOUS.', correct:'B',
       choices:{
         A:{text:'Scarce', explain:'This is the opposite of copious.'},
-        B:{text:'Abundant and plentiful', explain:'Copious means abundant or plentiful in supply.'},
+        B:{text:'Plentiful', explain:'Copious means abundant or plentiful in supply.'},
         C:{text:'Confused', explain:'Confusion isn\'t what copious describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what copious describes.'}
       } },
@@ -687,7 +687,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Cheerful', explain:'This is the opposite of ominous.'},
         B:{text:'Calm', explain:'This is nearly the opposite of ominous.'},
-        C:{text:'Threatening or foreboding', explain:'Ominous means giving the impression something bad is about to happen.'},
+        C:{text:'Threatening', explain:'Ominous means giving the impression something bad is about to happen.'},
         D:{text:'Confused', explain:'Confusion isn\'t what ominous describes.'}
       } },
     { id:'v84', skill:'Synonyms', prompt:'Choose the word that means the same as JOVIAL.', correct:'D',
@@ -695,7 +695,7 @@ const QUESTIONS = {
         A:{text:'Gloomy', explain:'This is the opposite of jovial.'},
         B:{text:'Angry', explain:'This is nearly the opposite of jovial.'},
         C:{text:'Confused', explain:'Confusion isn\'t what jovial describes.'},
-        D:{text:'Cheerful and friendly', explain:'Jovial means cheerful, friendly, and good-humored.'}
+        D:{text:'Cheerful', explain:'Jovial means cheerful, friendly, and good-humored.'}
       } },
     { id:'v85', skill:'Antonyms', prompt:'Choose the word most nearly opposite to ELATED.', correct:'A',
       choices:{
@@ -707,7 +707,7 @@ const QUESTIONS = {
     { id:'v86', skill:'Antonyms', prompt:'Choose the word most nearly opposite to ADAMANT.', correct:'B',
       choices:{
         A:{text:'Stubborn', explain:'Stubborn is a synonym of adamant, not its opposite.'},
-        B:{text:'Flexible and open to change', explain:'Adamant means refusing to change one\'s mind, so flexible is its opposite.'},
+        B:{text:'Flexible', explain:'Adamant means refusing to change one\'s mind, so flexible is its opposite.'},
         C:{text:'Firm', explain:'Firm is a synonym of adamant, not opposite.'},
         D:{text:'Determined', explain:'Determined is related to adamant, not opposite.'}
       } },
@@ -715,7 +715,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Impulsive', explain:'Impulsive is related to spontaneous, not its opposite.'},
         B:{text:'Sudden', explain:'Sudden is a synonym of spontaneous, not opposite.'},
-        C:{text:'Carefully planned in advance', explain:'Spontaneous means done without planning, so carefully planned is its opposite.'},
+        C:{text:'Premeditated', explain:'Spontaneous means done without planning, so carefully planned is its opposite.'},
         D:{text:'Unpredictable', explain:'Unpredictable is related to spontaneous, not opposite.'}
       } },
     { id:'v88', skill:'Antonyms', prompt:'Choose the word most nearly opposite to GENEROUS.', correct:'D',
@@ -723,7 +723,7 @@ const QUESTIONS = {
         A:{text:'Kind', explain:'Kind is related to generous, not its opposite.'},
         B:{text:'Charitable', explain:'Charitable is a synonym of generous, not opposite.'},
         C:{text:'Giving', explain:'Giving is a synonym of generous, not opposite.'},
-        D:{text:'Stingy and unwilling to share', explain:'Generous means willing to give freely, so stingy is its opposite.'}
+        D:{text:'Stingy', explain:'Generous means willing to give freely, so stingy is its opposite.'}
       } },
     { id:'v89', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'A',
       choices:{
@@ -812,7 +812,7 @@ const QUESTIONS = {
     { id:'v101', skill:'Synonyms', prompt:'Choose the word that means the same as PUNGENT.', correct:'B',
       choices:{
         A:{text:'Bland', explain:'This is the opposite of pungent.'},
-        B:{text:'Sharp and strong in smell or taste', explain:'Pungent means having a sharp, strong smell or taste.'},
+        B:{text:'Sharp', explain:'Pungent means having a sharp, strong smell or taste.'},
         C:{text:'Confused', explain:'Confusion isn\'t what pungent describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what pungent describes.'}
       } },
@@ -820,7 +820,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Wasteful', explain:'This is nearly the opposite of expedient.'},
         B:{text:'Confused', explain:'Confusion isn\'t what expedient describes.'},
-        C:{text:'Convenient and practical', explain:'Expedient means convenient and practical, even if not always ideal.'},
+        C:{text:'Practical', explain:'Expedient means convenient and practical, even if not always ideal.'},
         D:{text:'Careless', explain:'Carelessness contradicts practical decision-making.'}
       } },
     { id:'v103', skill:'Synonyms', prompt:'Choose the word that means the same as INDIGNANT.', correct:'D',
@@ -828,7 +828,7 @@ const QUESTIONS = {
         A:{text:'Calm', explain:'This is the opposite of indignant.'},
         B:{text:'Pleased', explain:'This is the opposite of indignant.'},
         C:{text:'Confused', explain:'Confusion isn\'t what indignant describes.'},
-        D:{text:'Angry at unfair treatment', explain:'Indignant means feeling angry because of something unjust or unfair.'}
+        D:{text:'Resentful', explain:'Indignant means feeling angry because of something unjust or unfair.'}
       } },
     { id:'v104', skill:'Synonyms', prompt:'Choose the word that means the same as AFFLUENT.', correct:'A',
       choices:{
@@ -840,7 +840,7 @@ const QUESTIONS = {
     { id:'v105', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TRANSIENT.', correct:'B',
       choices:{
         A:{text:'Temporary', explain:'Temporary is a synonym of transient, not its opposite.'},
-        B:{text:'Permanent and lasting', explain:'Transient means lasting only a short time, so permanent is its opposite.'},
+        B:{text:'Permanent', explain:'Transient means lasting only a short time, so permanent is its opposite.'},
         C:{text:'Brief', explain:'Brief is a synonym of transient, not opposite.'},
         D:{text:'Passing', explain:'Passing is a synonym of transient, not opposite.'}
       } },
@@ -848,7 +848,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Merciful', explain:'Merciful is a synonym of lenient, not its opposite.'},
         B:{text:'Forgiving', explain:'Forgiving is a synonym of lenient, not opposite.'},
-        C:{text:'Strict and harsh', explain:'Lenient means mild or permissive, so strict is its opposite.'},
+        C:{text:'Strict', explain:'Lenient means mild or permissive, so strict is its opposite.'},
         D:{text:'Gentle', explain:'Gentle is related to lenient, not opposite.'}
       } },
     { id:'v107', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROSPEROUS.', correct:'D',
@@ -856,11 +856,11 @@ const QUESTIONS = {
         A:{text:'Successful', explain:'Successful is a synonym of prosperous, not its opposite.'},
         B:{text:'Thriving', explain:'Thriving is a synonym of prosperous, not opposite.'},
         C:{text:'Wealthy', explain:'Wealthy is a synonym of prosperous, not opposite.'},
-        D:{text:'Struggling and poor', explain:'Prosperous means successful and thriving, so struggling is its opposite.'}
+        D:{text:'Impoverished', explain:'Prosperous means successful and thriving, so struggling is its opposite.'}
       } },
     { id:'v108', skill:'Antonyms', prompt:'Choose the word most nearly opposite to DILATORY.', correct:'A',
       choices:{
-        A:{text:'Prompt and timely', explain:'Dilatory means slow to act or causing delay, so prompt is its opposite.'},
+        A:{text:'Prompt', explain:'Dilatory means slow to act or causing delay, so prompt is its opposite.'},
         B:{text:'Slow', explain:'Slow is a synonym of dilatory, not its opposite.'},
         C:{text:'Delayed', explain:'Delayed is a synonym of dilatory, not opposite.'},
         D:{text:'Hesitant', explain:'Hesitant is related to dilatory, not opposite.'}
@@ -951,7 +951,7 @@ const QUESTIONS = {
       } },
     { id:'v121', skill:'Synonyms', prompt:'Choose the word that means the same as ASSIDUOUS.', correct:'A',
       choices:{
-        A:{text:'Diligent and hardworking', explain:'Assiduous means showing great care and effort, diligent.'},
+        A:{text:'Diligent', explain:'Assiduous means showing great care and effort, diligent.'},
         B:{text:'Lazy', explain:'This is the opposite of assiduous.'},
         C:{text:'Confused', explain:'Confusion isn\'t what assiduous describes.'},
         D:{text:'Careless', explain:'Carelessness is the opposite of assiduous.'}
@@ -959,7 +959,7 @@ const QUESTIONS = {
     { id:'v122', skill:'Synonyms', prompt:'Choose the word that means the same as EBULLIENT.', correct:'B',
       choices:{
         A:{text:'Gloomy', explain:'This is the opposite of ebullient.'},
-        B:{text:'Cheerful and full of energy', explain:'Ebullient means overflowing with enthusiasm and high spirits.'},
+        B:{text:'Exuberant', explain:'Ebullient means overflowing with enthusiasm and high spirits.'},
         C:{text:'Confused', explain:'Confusion isn\'t what ebullient describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what ebullient describes.'}
       } },
@@ -967,7 +967,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Flexible', explain:'This is the opposite of obdurate.'},
         B:{text:'Confused', explain:'Confusion isn\'t what obdurate describes.'},
-        C:{text:'Stubborn and unyielding', explain:'Obdurate means stubbornly refusing to change one\'s opinion or course of action.'},
+        C:{text:'Stubborn', explain:'Obdurate means stubbornly refusing to change one\'s opinion or course of action.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what obdurate describes.'}
       } },
     { id:'v124', skill:'Synonyms', prompt:'Choose the word that means the same as PERSPICACIOUS.', correct:'D',
@@ -975,7 +975,7 @@ const QUESTIONS = {
         A:{text:'Foolish', explain:'This is the opposite of perspicacious.'},
         B:{text:'Careless', explain:'This is nearly the opposite of perspicacious.'},
         C:{text:'Confused', explain:'This is the opposite of perspicacious.'},
-        D:{text:'Perceptive and sharp-witted', explain:'Perspicacious means having keen insight or good judgment.'}
+        D:{text:'Perceptive', explain:'Perspicacious means having keen insight or good judgment.'}
       } },
     { id:'v125', skill:'Antonyms', prompt:'Choose the word most nearly opposite to MUNIFICENT.', correct:'A',
       choices:{
@@ -995,7 +995,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Wordy', explain:'Wordy is a synonym of prolix, not its opposite.'},
         B:{text:'Lengthy', explain:'Lengthy is related to prolix, not opposite.'},
-        C:{text:'Concise and brief', explain:'Prolix means using too many words, so concise is its opposite.'},
+        C:{text:'Concise', explain:'Prolix means using too many words, so concise is its opposite.'},
         D:{text:'Detailed', explain:'Detailed is related to prolix, not opposite.'}
       } },
     { id:'v128', skill:'Antonyms', prompt:'Choose the word most nearly opposite to INTRANSIGENT.', correct:'D',
@@ -1003,7 +1003,7 @@ const QUESTIONS = {
         A:{text:'Stubborn', explain:'Stubborn is a synonym of intransigent, not its opposite.'},
         B:{text:'Unyielding', explain:'Unyielding is a synonym of intransigent, not opposite.'},
         C:{text:'Firm', explain:'Firm is related to intransigent, not opposite.'},
-        D:{text:'Flexible and willing to compromise', explain:'Intransigent means refusing to change one\'s views, so flexible is its opposite.'}
+        D:{text:'Flexible', explain:'Intransigent means refusing to change one\'s views, so flexible is its opposite.'}
       } },
     { id:'v129', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
       choices:{
@@ -1092,7 +1092,7 @@ const QUESTIONS = {
     { id:'v141', skill:'Synonyms', prompt:'Choose the word that means the same as VORACIOUS.', correct:'B',
       choices:{
         A:{text:'Uninterested', explain:'This is the opposite of voracious.'},
-        B:{text:'Greedy, especially for food or knowledge', explain:'Voracious means having a very eager approach to an activity, especially eating.'},
+        B:{text:'Ravenous', explain:'Voracious means having a very eager approach to an activity, especially eating.'},
         C:{text:'Confused', explain:'Confusion isn\'t what voracious describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what voracious describes.'}
       } },
@@ -1100,7 +1100,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Strong', explain:'This is the opposite of tenuous.'},
         B:{text:'Confident', explain:'Confidence isn\'t what tenuous describes.'},
-        C:{text:'Weak and barely holding', explain:'Tenuous means very weak or flimsy, barely maintained.'},
+        C:{text:'Flimsy', explain:'Tenuous means very weak or flimsy, barely maintained.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what tenuous describes.'}
       } },
     { id:'v143', skill:'Synonyms', prompt:'Choose the word that means the same as STAUNCH.', correct:'D',
@@ -1108,12 +1108,12 @@ const QUESTIONS = {
         A:{text:'Disloyal', explain:'This is the opposite of staunch.'},
         B:{text:'Confused', explain:'Confusion isn\'t what staunch describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what staunch describes.'},
-        D:{text:'Firm and loyal in support', explain:'Staunch means loyal and committed in attitude, firmly supportive.'}
+        D:{text:'Loyal', explain:'Staunch means loyal and committed in attitude, firmly supportive.'}
       } },
     { id:'v144', skill:'Synonyms', prompt:'Choose the word that means the same as CAPRICIOUS.', correct:'A',
       choices:{
-        A:{text:'Unpredictable and impulsive', explain:'Capricious means given to sudden and unaccountable changes of mood or behavior.'},
-        B:{text:'Steady and reliable', explain:'This is the opposite of capricious.'},
+        A:{text:'Impulsive', explain:'Capricious means given to sudden and unaccountable changes of mood or behavior.'},
+        B:{text:'Steady', explain:'This is the opposite of capricious.'},
         C:{text:'Confused', explain:'Confusion isn\'t what capricious describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what capricious describes.'}
       } },
@@ -1128,7 +1128,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Cautious', explain:'Cautious is a synonym of wary, not its opposite.'},
         B:{text:'Suspicious', explain:'Suspicious is related to wary, not opposite.'},
-        C:{text:'Trusting and unguarded', explain:'Wary means cautious and watchful, so trusting is its opposite.'},
+        C:{text:'Trusting', explain:'Wary means cautious and watchful, so trusting is its opposite.'},
         D:{text:'Careful', explain:'Careful is related to wary, not opposite.'}
       } },
     { id:'v147', skill:'Antonyms', prompt:'Choose the word most nearly opposite to STOLID.', correct:'D',
@@ -1136,11 +1136,11 @@ const QUESTIONS = {
         A:{text:'Unemotional', explain:'Unemotional is a synonym of stolid, not its opposite.'},
         B:{text:'Calm', explain:'Calm is related to stolid, not opposite.'},
         C:{text:'Steady', explain:'Steady is related to stolid, not opposite.'},
-        D:{text:'Expressive and emotional', explain:'Stolid means showing little emotion, so expressive is its opposite.'}
+        D:{text:'Expressive', explain:'Stolid means showing little emotion, so expressive is its opposite.'}
       } },
     { id:'v148', skill:'Antonyms', prompt:'Choose the word most nearly opposite to VOLUBLE.', correct:'A',
       choices:{
-        A:{text:'Reticent and quiet', explain:'Voluble means talking fluently and at length, so reticent is its opposite.'},
+        A:{text:'Reticent', explain:'Voluble means talking fluently and at length, so reticent is its opposite.'},
         B:{text:'Talkative', explain:'Talkative is a synonym of voluble, not its opposite.'},
         C:{text:'Chatty', explain:'Chatty is a synonym of voluble, not opposite.'},
         D:{text:'Expressive', explain:'Expressive is related to voluble, not opposite.'}
@@ -1232,7 +1232,7 @@ const QUESTIONS = {
     { id:'v161', skill:'Synonyms', prompt:'Choose the word that means the same as EPHEMERAL.', correct:'B',
       choices:{
         A:{text:'Permanent', explain:'This is the opposite of ephemeral.'},
-        B:{text:'Short-lived and fleeting', explain:'Ephemeral means lasting for a very short time.'},
+        B:{text:'Fleeting', explain:'Ephemeral means lasting for a very short time.'},
         C:{text:'Confused', explain:'Confusion isn\'t what ephemeral describes.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what ephemeral describes.'}
       } },
@@ -1245,15 +1245,15 @@ const QUESTIONS = {
       } },
     { id:'v163', skill:'Synonyms', prompt:'Choose the word that means the same as INDOMITABLE.', correct:'D',
       choices:{
-        A:{text:'Easily defeated', explain:'This is the opposite of indomitable.'},
+        A:{text:'Defeatable', explain:'This is the opposite of indomitable.'},
         B:{text:'Weak', explain:'This is the opposite of indomitable.'},
         C:{text:'Confused', explain:'Confusion isn\'t what indomitable describes.'},
-        D:{text:'Unable to be defeated or subdued', explain:'Indomitable means impossible to subdue or defeat.'}
+        D:{text:'Unconquerable', explain:'Indomitable means impossible to subdue or defeat.'}
       } },
     { id:'v164', skill:'Synonyms', prompt:'Choose the word that means the same as VEHEMENT.', correct:'A',
       choices:{
-        A:{text:'Showing strong, forceful feeling', explain:'Vehement means showing intense and forceful feeling.'},
-        B:{text:'Calm and mild', explain:'This is the opposite of vehement.'},
+        A:{text:'Forceful', explain:'Vehement means showing intense and forceful feeling.'},
+        B:{text:'Mild', explain:'This is the opposite of vehement.'},
         C:{text:'Confused', explain:'Confusion isn\'t what vehement describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what vehement describes.'}
       } },
@@ -1268,7 +1268,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Trusting', explain:'Trusting is related to gullible, not its opposite.'},
         B:{text:'Naive', explain:'Naive is a synonym of gullible, not opposite.'},
-        C:{text:'Skeptical and wary', explain:'Gullible means easily deceived, so skeptical is its opposite.'},
+        C:{text:'Skeptical', explain:'Gullible means easily deceived, so skeptical is its opposite.'},
         D:{text:'Innocent', explain:'Innocent is related to gullible, not opposite.'}
       } },
     { id:'v167', skill:'Antonyms', prompt:'Choose the word most nearly opposite to HAUGHTY.', correct:'D',
@@ -1371,7 +1371,7 @@ const QUESTIONS = {
       } },
     { id:'v181', skill:'Synonyms', prompt:'Choose the word that means the same as PARSIMONIOUS.', correct:'A',
       choices:{
-        A:{text:'Stingy, unwilling to spend', explain:'Parsimonious means excessively unwilling to spend money or use resources.'},
+        A:{text:'Miserly', explain:'Parsimonious means excessively unwilling to spend money or use resources.'},
         B:{text:'Generous', explain:'This is the opposite of parsimonious.'},
         C:{text:'Confused', explain:'Confusion isn\'t what parsimonious describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what parsimonious describes.'}
@@ -1380,7 +1380,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Peaceful', explain:'This is the opposite of bellicose.'},
         B:{text:'Calm', explain:'This is the opposite of bellicose.'},
-        C:{text:'Warlike and aggressive', explain:'Bellicose means eager to fight, aggressive or warlike.'},
+        C:{text:'Aggressive', explain:'Bellicose means eager to fight, aggressive or warlike.'},
         D:{text:'Confused', explain:'Confusion isn\'t what bellicose describes.'}
       } },
     { id:'v183', skill:'Synonyms', prompt:'Choose the word that means the same as DIFFIDENT.', correct:'D',
@@ -1388,12 +1388,12 @@ const QUESTIONS = {
         A:{text:'Confident', explain:'This is the opposite of diffident.'},
         B:{text:'Bold', explain:'This is the opposite of diffident.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what diffident describes.'},
-        D:{text:'Shy and lacking self-confidence', explain:'Diffident means modest or shy due to lack of self-confidence.'}
+        D:{text:'Shy', explain:'Diffident means modest or shy due to lack of self-confidence.'}
       } },
     { id:'v184', skill:'Synonyms', prompt:'Choose the word that means the same as RESOLUTE.', correct:'B',
       choices:{
         A:{text:'Hesitant', explain:'This is the opposite of resolute.'},
-        B:{text:'Determined and firm', explain:'Resolute means admirably purposeful, determined, and unwavering.'},
+        B:{text:'Determined', explain:'Resolute means admirably purposeful, determined, and unwavering.'},
         C:{text:'Confused', explain:'Confusion isn\'t what resolute describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what resolute describes.'}
       } },
@@ -1409,7 +1409,7 @@ const QUESTIONS = {
         A:{text:'Brief', explain:'Brief is a synonym of curt, not its opposite.'},
         B:{text:'Blunt', explain:'Blunt is related to curt, not opposite.'},
         C:{text:'Abrupt', explain:'Abrupt is a synonym of curt, not opposite.'},
-        D:{text:'Expansive and courteous', explain:'Curt means rudely brief, so expansive and courteous is its opposite.'}
+        D:{text:'Courteous', explain:'Curt means rudely brief, so expansive and courteous is its opposite.'}
       } },
     { id:'v187', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PLIANT.', correct:'A',
       choices:{
@@ -1421,16 +1421,16 @@ const QUESTIONS = {
     { id:'v188', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PEDESTRIAN.', correct:'B',
       choices:{
         A:{text:'Ordinary', explain:'Ordinary is a synonym of pedestrian in this sense, not its opposite.'},
-        B:{text:'Extraordinary and remarkable', explain:'Pedestrian means dull or unremarkable, so extraordinary is its opposite.'},
+        B:{text:'Remarkable', explain:'Pedestrian means dull or unremarkable, so extraordinary is its opposite.'},
         C:{text:'Dull', explain:'Dull is a synonym of pedestrian, not opposite.'},
         D:{text:'Common', explain:'Common is related to pedestrian, not opposite.'}
       } },
     { id:'v189', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
       choices:{
-        A:{text:'Wolf', explain:'A wolf is a canine, fitting the shared category.'},
-        B:{text:'Fox', explain:'A fox is also a canine.'},
-        C:{text:'Coyote', explain:'A coyote is also a canine.'},
-        D:{text:'Falcon', explain:'Unlike the others, a falcon is a bird, not a canine.'}
+        A:{text:'Oak', explain:'An oak is a tree, fitting the shared category.'},
+        B:{text:'Maple', explain:'A maple is also a tree.'},
+        C:{text:'Birch', explain:'A birch is also a tree.'},
+        D:{text:'Salmon', explain:'Unlike the others, a salmon is a fish, not a tree.'}
       } },
     { id:'v190', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
       choices:{
@@ -1513,13 +1513,13 @@ const QUESTIONS = {
       choices:{
         A:{text:'Peaceful', explain:'This is the opposite of truculent.'},
         B:{text:'Calm', explain:'This is the opposite of truculent.'},
-        C:{text:'Fierce and aggressively defiant', explain:'Truculent means eager to argue or fight, fiercely defiant.'},
+        C:{text:'Belligerent', explain:'Truculent means eager to argue or fight, fiercely defiant.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what truculent describes.'}
       } },
     { id:'v202', skill:'Synonyms', prompt:'Choose the word that means the same as INEXORABLE.', correct:'A',
       choices:{
-        A:{text:'Impossible to stop, relentless', explain:'Inexorable means impossible to stop or prevent, relentless.'},
-        B:{text:'Easily stopped', explain:'This is the opposite of inexorable.'},
+        A:{text:'Relentless', explain:'Inexorable means impossible to stop or prevent, relentless.'},
+        B:{text:'Stoppable', explain:'This is the opposite of inexorable.'},
         C:{text:'Confused', explain:'Confusion isn\'t what inexorable describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what inexorable describes.'}
       } },
@@ -1528,18 +1528,18 @@ const QUESTIONS = {
         A:{text:'Volatile', explain:'This is the opposite of equable.'},
         B:{text:'Confused', explain:'Confusion isn\'t what equable describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what equable describes.'},
-        D:{text:'Calm and even-tempered', explain:'Equable means calm, steady, and not easily upset.'}
+        D:{text:'Placid', explain:'Equable means calm, steady, and not easily upset.'}
       } },
     { id:'v204', skill:'Synonyms', prompt:'Choose the word that means the same as PUNCTILIOUS.', correct:'B',
       choices:{
         A:{text:'Careless', explain:'This is the opposite of punctilious.'},
-        B:{text:'Very attentive to detail and formality', explain:'Punctilious means showing great attention to detail or correct behavior.'},
+        B:{text:'Meticulous', explain:'Punctilious means showing great attention to detail or correct behavior.'},
         C:{text:'Confused', explain:'Confusion isn\'t what punctilious describes.'},
-        D:{text:'Relaxed about rules', explain:'This is nearly the opposite of punctilious.'}
+        D:{text:'Lax', explain:'This is nearly the opposite of punctilious.'}
       } },
     { id:'v205', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMPASSIVE.', correct:'A',
       choices:{
-        A:{text:'Emotional and expressive', explain:'Impassive means showing no emotion, so emotional is its opposite.'},
+        A:{text:'Expressive', explain:'Impassive means showing no emotion, so emotional is its opposite.'},
         B:{text:'Calm', explain:'Calm is related to impassive, not its opposite.'},
         C:{text:'Unmoved', explain:'Unmoved is a synonym of impassive, not opposite.'},
         D:{text:'Steady', explain:'Steady is related to impassive, not opposite.'}
@@ -1548,7 +1548,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Passionate', explain:'Passionate is a synonym of fervid, not its opposite.'},
         B:{text:'Intense', explain:'Intense is related to fervid, not opposite.'},
-        C:{text:'Apathetic and indifferent', explain:'Fervid means having or showing intense feeling, so apathetic is its opposite.'},
+        C:{text:'Apathetic', explain:'Fervid means having or showing intense feeling, so apathetic is its opposite.'},
         D:{text:'Eager', explain:'Eager is related to fervid, not opposite.'}
       } },
     { id:'v207', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TEPID.', correct:'D',
@@ -1561,7 +1561,7 @@ const QUESTIONS = {
     { id:'v208', skill:'Antonyms', prompt:'Choose the word most nearly opposite to SERENE.', correct:'B',
       choices:{
         A:{text:'Peaceful', explain:'Peaceful is a synonym of serene, not its opposite.'},
-        B:{text:'Turbulent and agitated', explain:'Serene means calm and peaceful, so turbulent is its opposite.'},
+        B:{text:'Turbulent', explain:'Serene means calm and peaceful, so turbulent is its opposite.'},
         C:{text:'Calm', explain:'Calm is a synonym of serene, not opposite.'},
         D:{text:'Tranquil', explain:'Tranquil is a synonym of serene, not opposite.'}
       } },
@@ -1652,15 +1652,15 @@ const QUESTIONS = {
     { id:'v221', skill:'Synonyms', prompt:'Choose the word that means the same as CAPACIOUS.', correct:'B',
       choices:{
         A:{text:'Cramped', explain:'This is the opposite of capacious.'},
-        B:{text:'Spacious and roomy', explain:'Capacious means having a lot of space inside, roomy.'},
+        B:{text:'Roomy', explain:'Capacious means having a lot of space inside, roomy.'},
         C:{text:'Confused', explain:'Confusion isn\'t what capacious describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what capacious describes.'}
       } },
     { id:'v222', skill:'Synonyms', prompt:'Choose the word that means the same as PERFUNCTORY.', correct:'C',
       choices:{
         A:{text:'Enthusiastic', explain:'This is the opposite of perfunctory.'},
-        B:{text:'Careful and thorough', explain:'This is the opposite of perfunctory.'},
-        C:{text:'Done without real interest or care, routine', explain:'Perfunctory means carried out with minimal effort or reflection, as a routine.'},
+        B:{text:'Thorough', explain:'This is the opposite of perfunctory.'},
+        C:{text:'Cursory', explain:'Perfunctory means carried out with minimal effort or reflection, as a routine.'},
         D:{text:'Confused', explain:'Confusion isn\'t what perfunctory describes.'}
       } },
     { id:'v223', skill:'Synonyms', prompt:'Choose the word that means the same as VOCIFEROUS.', correct:'D',
@@ -1668,12 +1668,12 @@ const QUESTIONS = {
         A:{text:'Silent', explain:'This is the opposite of vociferous.'},
         B:{text:'Calm', explain:'This is the opposite of vociferous.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what vociferous describes.'},
-        D:{text:'Loud and forceful in expressing opinions', explain:'Vociferous means expressing opinions or feelings in a loud and forceful way.'}
+        D:{text:'Clamorous', explain:'Vociferous means expressing opinions or feelings in a loud and forceful way.'}
       } },
     { id:'v224', skill:'Synonyms', prompt:'Choose the word that means the same as TRACTABLE.', correct:'A',
       choices:{
-        A:{text:'Easily managed or controlled', explain:'Tractable means easy to control or influence, docile.'},
-        B:{text:'Stubborn and unmanageable', explain:'This is the opposite of tractable.'},
+        A:{text:'Manageable', explain:'Tractable means easy to control or influence, docile.'},
+        B:{text:'Unmanageable', explain:'This is the opposite of tractable.'},
         C:{text:'Confused', explain:'Confusion isn\'t what tractable describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what tractable describes.'}
       } },
@@ -1687,7 +1687,7 @@ const QUESTIONS = {
     { id:'v226', skill:'Antonyms', prompt:'Choose the word most nearly opposite to INSOLVENT.', correct:'B',
       choices:{
         A:{text:'Bankrupt', explain:'Bankrupt is a synonym of insolvent, not its opposite.'},
-        B:{text:'Financially sound, solvent', explain:'Insolvent means unable to pay debts, so financially sound is its opposite.'},
+        B:{text:'Solvent', explain:'Insolvent means unable to pay debts, so financially sound is its opposite.'},
         C:{text:'Broke', explain:'Broke is related to insolvent, not opposite.'},
         D:{text:'Indebted', explain:'Indebted is related to insolvent, not opposite.'}
       } },
@@ -1696,11 +1696,11 @@ const QUESTIONS = {
         A:{text:'Awkward', explain:'Awkward is a synonym of gauche, not its opposite.'},
         B:{text:'Clumsy', explain:'Clumsy is a synonym of gauche, not opposite.'},
         C:{text:'Tactless', explain:'Tactless is related to gauche, not opposite.'},
-        D:{text:'Graceful and socially poised', explain:'Gauche means socially awkward or clumsy, so graceful is its opposite.'}
+        D:{text:'Graceful', explain:'Gauche means socially awkward or clumsy, so graceful is its opposite.'}
       } },
     { id:'v228', skill:'Antonyms', prompt:'Choose the word most nearly opposite to GRANDILOQUENT.', correct:'A',
       choices:{
-        A:{text:'Plain-spoken and simple', explain:'Grandiloquent means using lofty, pompous language, so plain-spoken is its opposite.'},
+        A:{text:'Plainspoken', explain:'Grandiloquent means using lofty, pompous language, so plain-spoken is its opposite.'},
         B:{text:'Pompous', explain:'Pompous is a synonym of grandiloquent, not its opposite.'},
         C:{text:'Elaborate', explain:'Elaborate is related to grandiloquent, not opposite.'},
         D:{text:'Ornate', explain:'Ornate is related to grandiloquent, not opposite.'}
@@ -1714,10 +1714,10 @@ const QUESTIONS = {
       } },
     { id:'v230', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
       choices:{
-        A:{text:'Violin', explain:'A violin is a string instrument, fitting the shared category.'},
-        B:{text:'Viola', explain:'A viola is also a string instrument.'},
-        C:{text:'Cello', explain:'A cello is also a string instrument.'},
-        D:{text:'Trumpet', explain:'Unlike the others, a trumpet is a brass instrument, not a string instrument.'}
+        A:{text:'Mercury', explain:'Mercury is a planet, fitting the shared category.'},
+        B:{text:'Venus', explain:'Venus is also a planet.'},
+        C:{text:'Jupiter', explain:'Jupiter is also a planet.'},
+        D:{text:'Sirius', explain:'Unlike the others, Sirius is a star, not a planet.'}
       } },
     { id:'v231', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
       choices:{
@@ -1792,7 +1792,7 @@ const QUESTIONS = {
     { id:'v241', skill:'Synonyms', prompt:'Choose the word that means the same as JOCULAR.', correct:'B',
       choices:{
         A:{text:'Serious', explain:'This is the opposite of jocular.'},
-        B:{text:'Joking and playful in manner', explain:'Jocular means fond of joking, humorous and playful.'},
+        B:{text:'Playful', explain:'Jocular means fond of joking, humorous and playful.'},
         C:{text:'Confused', explain:'Confusion isn\'t what jocular describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what jocular describes.'}
       } },
@@ -1801,12 +1801,12 @@ const QUESTIONS = {
         A:{text:'Luxurious', explain:'This is the opposite of ascetic.'},
         B:{text:'Indulgent', explain:'This is the opposite of ascetic.'},
         C:{text:'Confused', explain:'Confusion isn\'t what ascetic describes.'},
-        D:{text:'Practicing strict self-denial, austere', explain:'Ascetic means practicing severe self-discipline and abstaining from indulgence.'}
+        D:{text:'Austere', explain:'Ascetic means practicing severe self-discipline and abstaining from indulgence.'}
       } },
     { id:'v243', skill:'Synonyms', prompt:'Choose the word that means the same as HEDONISTIC.', correct:'A',
       choices:{
-        A:{text:'Devoted to pleasure-seeking', explain:'Hedonistic means devoted to the pursuit of pleasure and self-indulgence.'},
-        B:{text:'Devoted to self-denial', explain:'This is the opposite of hedonistic.'},
+        A:{text:'Indulgent', explain:'Hedonistic means devoted to the pursuit of pleasure and self-indulgence.'},
+        B:{text:'Abstinent', explain:'This is the opposite of hedonistic.'},
         C:{text:'Confused', explain:'Confusion isn\'t what hedonistic describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t precisely what hedonistic describes.'}
       } },
@@ -1814,12 +1814,12 @@ const QUESTIONS = {
       choices:{
         A:{text:'Decisive', explain:'This is the opposite of vacillating.'},
         B:{text:'Confident', explain:'This is nearly the opposite of vacillating.'},
-        C:{text:'Wavering, indecisive between choices', explain:'Vacillating means wavering between different opinions or actions, indecisive.'},
+        C:{text:'Indecisive', explain:'Vacillating means wavering between different opinions or actions, indecisive.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what vacillating describes.'}
       } },
     { id:'v245', skill:'Antonyms', prompt:'Choose the word most nearly opposite to DENSE.', correct:'A',
       choices:{
-        A:{text:'Astute and sharp-witted', explain:'Dense, used informally, means slow to understand, so astute is its opposite.'},
+        A:{text:'Astute', explain:'Dense, used informally, means slow to understand, so astute is its opposite.'},
         B:{text:'Slow', explain:'Slow is related to dense in this sense, not its opposite.'},
         C:{text:'Confused', explain:'Confused is related to dense, not opposite.'},
         D:{text:'Foolish', explain:'Foolish is a synonym of dense in this sense, not its opposite.'}
@@ -1827,7 +1827,7 @@ const QUESTIONS = {
     { id:'v246', skill:'Antonyms', prompt:'Choose the word most nearly opposite to VAPID.', correct:'B',
       choices:{
         A:{text:'Dull', explain:'Dull is a synonym of vapid, not its opposite.'},
-        B:{text:'Engaging and stimulating', explain:'Vapid means dull or lacking excitement, so engaging is its opposite.'},
+        B:{text:'Stimulating', explain:'Vapid means dull or lacking excitement, so engaging is its opposite.'},
         C:{text:'Insipid', explain:'Insipid is a synonym of vapid, not opposite.'},
         D:{text:'Flat', explain:'Flat is related to vapid, not opposite.'}
       } },
@@ -1836,13 +1836,13 @@ const QUESTIONS = {
         A:{text:'Inactive', explain:'Inactive is a synonym of inert, not its opposite.'},
         B:{text:'Motionless', explain:'Motionless is related to inert, not opposite.'},
         C:{text:'Sluggish', explain:'Sluggish is related to inert, not opposite.'},
-        D:{text:'Active and dynamic', explain:'Inert means lacking the power to move or act, so active is its opposite.'}
+        D:{text:'Active', explain:'Inert means lacking the power to move or act, so active is its opposite.'}
       } },
     { id:'v248', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TORPID.', correct:'C',
       choices:{
         A:{text:'Lethargic', explain:'Lethargic is a synonym of torpid, not its opposite.'},
         B:{text:'Sluggish', explain:'Sluggish is a synonym of torpid, not opposite.'},
-        C:{text:'Energetic and lively', explain:'Torpid means mentally or physically inactive, so energetic is its opposite.'},
+        C:{text:'Energetic', explain:'Torpid means mentally or physically inactive, so energetic is its opposite.'},
         D:{text:'Dormant', explain:'Dormant is related to torpid, not opposite.'}
       } },
     { id:'v249', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
@@ -1933,12 +1933,12 @@ const QUESTIONS = {
       choices:{
         A:{text:'Honest', explain:'This is the opposite of sycophantic.'},
         B:{text:'Confused', explain:'Confusion isn\'t what sycophantic describes.'},
-        C:{text:'Flattering excessively to gain favor', explain:'Sycophantic means behaving in an excessively flattering way to gain advantage.'},
+        C:{text:'Obsequious', explain:'Sycophantic means behaving in an excessively flattering way to gain advantage.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what sycophantic describes.'}
       } },
     { id:'v262', skill:'Synonyms', prompt:'Choose the word that means the same as INTRACTABLE.', correct:'A',
       choices:{
-        A:{text:'Difficult to control or deal with, stubborn', explain:'Intractable means hard to control or deal with, stubborn.'},
+        A:{text:'Unruly', explain:'Intractable means hard to control or deal with, stubborn.'},
         B:{text:'Easygoing', explain:'This is the opposite of intractable.'},
         C:{text:'Confused', explain:'Confusion isn\'t what intractable describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what intractable describes.'}
@@ -1948,12 +1948,12 @@ const QUESTIONS = {
         A:{text:'Hostile', explain:'This is the opposite of congenial.'},
         B:{text:'Confused', explain:'Confusion isn\'t what congenial describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what congenial describes.'},
-        D:{text:'Pleasant and agreeable', explain:'Congenial means pleasant, friendly, and suited to one\'s needs.'}
+        D:{text:'Agreeable', explain:'Congenial means pleasant, friendly, and suited to one\'s needs.'}
       } },
     { id:'v264', skill:'Synonyms', prompt:'Choose the word that means the same as LUGUBRIOUS.', correct:'B',
       choices:{
         A:{text:'Cheerful', explain:'This is the opposite of lugubrious.'},
-        B:{text:'Mournful and dismal', explain:'Lugubrious means looking or sounding sad and dismal, often exaggeratedly so.'},
+        B:{text:'Mournful', explain:'Lugubrious means looking or sounding sad and dismal, often exaggeratedly so.'},
         C:{text:'Confused', explain:'Confusion isn\'t what lugubrious describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what lugubrious describes.'}
       } },
@@ -1961,13 +1961,13 @@ const QUESTIONS = {
       choices:{
         A:{text:'Reckless', explain:'Reckless is a synonym of foolhardy, not its opposite.'},
         B:{text:'Bold', explain:'Bold is related to foolhardy, not opposite.'},
-        C:{text:'Cautious and prudent', explain:'Foolhardy means recklessly bold, so cautious is its opposite.'},
+        C:{text:'Cautious', explain:'Foolhardy means recklessly bold, so cautious is its opposite.'},
         D:{text:'Daring', explain:'Daring is a synonym of foolhardy, not opposite.'}
       } },
     { id:'v266', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PENURIOUS.', correct:'B',
       choices:{
         A:{text:'Stingy', explain:'Stingy is a synonym of penurious, not its opposite.'},
-        B:{text:'Wealthy and generous', explain:'Penurious means extremely poor or excessively stingy, so wealthy and generous is its opposite.'},
+        B:{text:'Affluent', explain:'Penurious means extremely poor or excessively stingy, so wealthy and generous is its opposite.'},
         C:{text:'Poor', explain:'Poor is a synonym of penurious, not opposite.'},
         D:{text:'Frugal', explain:'Frugal is related to penurious, not opposite.'}
       } },
@@ -1976,11 +1976,11 @@ const QUESTIONS = {
         A:{text:'Moderate', explain:'Moderate is a synonym of abstemious, not its opposite.'},
         B:{text:'Sparing', explain:'Sparing is a synonym of abstemious, not opposite.'},
         C:{text:'Restrained', explain:'Restrained is related to abstemious, not opposite.'},
-        D:{text:'Gluttonous and self-indulgent', explain:'Abstemious means sparing or moderate in eating and drinking, so gluttonous is its opposite.'}
+        D:{text:'Gluttonous', explain:'Abstemious means sparing or moderate in eating and drinking, so gluttonous is its opposite.'}
       } },
     { id:'v268', skill:'Antonyms', prompt:'Choose the word most nearly opposite to JUDICIOUS.', correct:'A',
       choices:{
-        A:{text:'Rash and imprudent', explain:'Judicious means having or showing good judgment, so rash is its opposite.'},
+        A:{text:'Rash', explain:'Judicious means having or showing good judgment, so rash is its opposite.'},
         B:{text:'Sensible', explain:'Sensible is a synonym of judicious, not its opposite.'},
         C:{text:'Wise', explain:'Wise is a synonym of judicious, not opposite.'},
         D:{text:'Prudent', explain:'Prudent is a synonym of judicious, not opposite.'}
@@ -2072,7 +2072,7 @@ const QUESTIONS = {
     { id:'v281', skill:'Synonyms', prompt:'Choose the word that means the same as PERTINACIOUS.', correct:'B',
       choices:{
         A:{text:'Yielding', explain:'This is the opposite of pertinacious.'},
-        B:{text:'Stubbornly persistent, holding firmly to a purpose', explain:'Pertinacious means holding firmly to an opinion or course of action, stubbornly persistent.'},
+        B:{text:'Persistent', explain:'Pertinacious means holding firmly to an opinion or course of action, stubbornly persistent.'},
         C:{text:'Confused', explain:'Confusion isn\'t what pertinacious describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what pertinacious describes.'}
       } },
@@ -2081,11 +2081,11 @@ const QUESTIONS = {
         A:{text:'Useless', explain:'This is the opposite of efficacious.'},
         B:{text:'Confused', explain:'Confusion isn\'t what efficacious describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what efficacious describes.'},
-        D:{text:'Effective in producing a desired result', explain:'Efficacious means capable of producing the intended or desired result.'}
+        D:{text:'Effective', explain:'Efficacious means capable of producing the intended or desired result.'}
       } },
     { id:'v283', skill:'Synonyms', prompt:'Choose the word that means the same as NEBULOUS.', correct:'A',
       choices:{
-        A:{text:'Unclear, vague, hazy', explain:'Nebulous means unclear, vague, or ill-defined.'},
+        A:{text:'Vague', explain:'Nebulous means unclear, vague, or ill-defined.'},
         B:{text:'Precise', explain:'This is the opposite of nebulous.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what nebulous describes.'},
         D:{text:'Confident', explain:'Confidence isn\'t what nebulous describes.'}
@@ -2094,7 +2094,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Mild', explain:'This is the opposite of trenchant.'},
         B:{text:'Confused', explain:'Confusion isn\'t what trenchant describes.'},
-        C:{text:'Sharp and incisive in expression', explain:'Trenchant means vigorous, sharp, and incisive in expression or thought.'},
+        C:{text:'Incisive', explain:'Trenchant means vigorous, sharp, and incisive in expression or thought.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what trenchant describes.'}
       } },
     { id:'v285', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROPITIOUS.', correct:'B',
@@ -2109,11 +2109,11 @@ const QUESTIONS = {
         A:{text:'Beneficial', explain:'Beneficial is a synonym of salutary, not its opposite.'},
         B:{text:'Healthful', explain:'Healthful is a synonym of salutary, not opposite.'},
         C:{text:'Wholesome', explain:'Wholesome is related to salutary, not opposite.'},
-        D:{text:'Harmful and detrimental', explain:'Salutary means health-giving or beneficial, so harmful is its opposite.'}
+        D:{text:'Harmful', explain:'Salutary means health-giving or beneficial, so harmful is its opposite.'}
       } },
     { id:'v287', skill:'Antonyms', prompt:'Choose the word most nearly opposite to CLEMENT.', correct:'A',
       choices:{
-        A:{text:'Harsh and severe', explain:'Clement means mild or merciful, especially of weather, so harsh is its opposite.'},
+        A:{text:'Harsh', explain:'Clement means mild or merciful, especially of weather, so harsh is its opposite.'},
         B:{text:'Mild', explain:'Mild is a synonym of clement, not its opposite.'},
         C:{text:'Gentle', explain:'Gentle is a synonym of clement, not opposite.'},
         D:{text:'Merciful', explain:'Merciful is a synonym of clement, not opposite.'}
@@ -2122,7 +2122,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Dignified', explain:'Dignified is a synonym of august, not its opposite.'},
         B:{text:'Respected', explain:'Respected is a synonym of august, not opposite.'},
-        C:{text:'Lowly and undignified', explain:'August means respected and impressive, so lowly is its opposite.'},
+        C:{text:'Lowly', explain:'August means respected and impressive, so lowly is its opposite.'},
         D:{text:'Venerable', explain:'Venerable is related to august, not opposite.'}
       } },
     { id:'v289', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
@@ -2212,35 +2212,35 @@ const QUESTIONS = {
     { id:'v301', skill:'Synonyms', prompt:'Choose the word that means the same as PUSILLANIMOUS.', correct:'B',
       choices:{
         A:{text:'Brave', explain:'This is the opposite of pusillanimous.'},
-        B:{text:'Cowardly, timid', explain:'Pusillanimous means showing a lack of courage, cowardly.'},
+        B:{text:'Cowardly', explain:'Pusillanimous means showing a lack of courage, cowardly.'},
         C:{text:'Confused', explain:'Confusion isn\'t what pusillanimous describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what pusillanimous describes.'}
       } },
     { id:'v302', skill:'Synonyms', prompt:'Choose the word that means the same as INDEFATIGABLE.', correct:'D',
       choices:{
-        A:{text:'Easily exhausted', explain:'This is the opposite of indefatigable.'},
+        A:{text:'Weary', explain:'This is the opposite of indefatigable.'},
         B:{text:'Confused', explain:'Confusion isn\'t what indefatigable describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what indefatigable describes.'},
-        D:{text:'Tireless, persistent', explain:'Indefatigable means incapable of being tired out, persistent.'}
+        D:{text:'Tireless', explain:'Indefatigable means incapable of being tired out, persistent.'}
       } },
-    { id:'v303', skill:'Synonyms', prompt:'Choose the word that means the same as IMPETUOUS.', correct:'A',
+    { id:'v303', skill:'Synonyms', prompt:'Choose the word that means the same as RECALCITRANT.', correct:'A',
       choices:{
-        A:{text:'Acting quickly without thought, rash', explain:'Impetuous means acting or done quickly and without thought or care.'},
-        B:{text:'Cautious and deliberate', explain:'This is the opposite of impetuous.'},
-        C:{text:'Confused', explain:'Confusion isn\'t what impetuous describes.'},
-        D:{text:'Careful', explain:'Carefulness isn\'t what impetuous describes.'}
+        A:{text:'Defiant', explain:'Recalcitrant means stubbornly resistant to authority or control.'},
+        B:{text:'Obedient', explain:'This is the opposite of recalcitrant.'},
+        C:{text:'Confused', explain:'Confusion is not what recalcitrant describes.'},
+        D:{text:'Careful', explain:'Carefulness is not what recalcitrant describes.'}
       } },
     { id:'v304', skill:'Synonyms', prompt:'Choose the word that means the same as PHLEGMATIC.', correct:'C',
       choices:{
         A:{text:'Excitable', explain:'This is the opposite of phlegmatic.'},
         B:{text:'Confused', explain:'Confusion isn\'t what phlegmatic describes.'},
-        C:{text:'Calm, unemotional, not easily excited', explain:'Phlegmatic means having a calm, unemotional temperament, not easily excited.'},
+        C:{text:'Unflappable', explain:'Phlegmatic means having a calm, unemotional temperament, not easily excited.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what phlegmatic describes.'}
       } },
     { id:'v305', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROSAIC.', correct:'B',
       choices:{
         A:{text:'Dull', explain:'Dull is a synonym of prosaic, not its opposite.'},
-        B:{text:'Extraordinary and exciting', explain:'Prosaic means dull or ordinary, lacking imagination, so extraordinary is its opposite.'},
+        B:{text:'Extraordinary', explain:'Prosaic means dull or ordinary, lacking imagination, so extraordinary is its opposite.'},
         C:{text:'Ordinary', explain:'Ordinary is a synonym of prosaic, not opposite.'},
         D:{text:'Mundane', explain:'Mundane is a synonym of prosaic, not opposite.'}
       } },
@@ -2248,12 +2248,12 @@ const QUESTIONS = {
       choices:{
         A:{text:'Tongue-tied', explain:'Tongue-tied is related to inarticulate, not its opposite.'},
         B:{text:'Mumbling', explain:'Mumbling is related to inarticulate, not opposite.'},
-        C:{text:'Confused in speech', explain:'This is related to inarticulate, not opposite.'},
-        D:{text:'Eloquent, able to express oneself clearly', explain:'Inarticulate means unable to express oneself clearly, so eloquent is its opposite.'}
+        C:{text:'Muddled', explain:'This is related to inarticulate, not opposite.'},
+        D:{text:'Eloquent', explain:'Inarticulate means unable to express oneself clearly, so eloquent is its opposite.'}
       } },
     { id:'v307', skill:'Antonyms', prompt:'Choose the word most nearly opposite to EFFUSIVE.', correct:'A',
       choices:{
-        A:{text:'Reserved and restrained', explain:'Effusive means expressing feelings in an unrestrained way, so reserved is its opposite.'},
+        A:{text:'Reserved', explain:'Effusive means expressing feelings in an unrestrained way, so reserved is its opposite.'},
         B:{text:'Gushing', explain:'Gushing is a synonym of effusive, not its opposite.'},
         C:{text:'Enthusiastic', explain:'Enthusiastic is related to effusive, not opposite.'},
         D:{text:'Expressive', explain:'Expressive is related to effusive, not opposite.'}
@@ -2262,7 +2262,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Hasty', explain:'Hasty is a synonym of precipitate, not its opposite.'},
         B:{text:'Sudden', explain:'Sudden is a synonym of precipitate, not opposite.'},
-        C:{text:'Cautious and deliberate', explain:'Precipitate means acting suddenly and without careful thought, so cautious is its opposite.'},
+        C:{text:'Deliberate', explain:'Precipitate means acting suddenly and without careful thought, so cautious is its opposite.'},
         D:{text:'Rash', explain:'Rash is a synonym of precipitate, not opposite.'}
       } },
     { id:'v309', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
@@ -2353,13 +2353,13 @@ const QUESTIONS = {
       choices:{
         A:{text:'Peaceful', explain:'This is the opposite of pugnacious.'},
         B:{text:'Confused', explain:'Confusion isn\'t what pugnacious describes.'},
-        C:{text:'Eager to fight or argue, combative', explain:'Pugnacious means eager or quick to fight or argue.'},
+        C:{text:'Combative', explain:'Pugnacious means eager or quick to fight or argue.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what pugnacious describes.'}
       } },
     { id:'v322', skill:'Synonyms', prompt:'Choose the word that means the same as SANCTIMONIOUS.', correct:'A',
       choices:{
-        A:{text:'Making a show of being morally superior', explain:'Sanctimonious means making a hypocritical show of moral or religious superiority.'},
-        B:{text:'Genuinely humble', explain:'This is the opposite of sanctimonious.'},
+        A:{text:'Preachy', explain:'Sanctimonious means making a hypocritical show of moral or religious superiority.'},
+        B:{text:'Humble', explain:'This is the opposite of sanctimonious.'},
         C:{text:'Confused', explain:'Confusion isn\'t what sanctimonious describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what sanctimonious describes.'}
       } },
@@ -2368,12 +2368,12 @@ const QUESTIONS = {
         A:{text:'Prompt', explain:'This is the opposite of dilatory.'},
         B:{text:'Confused', explain:'Confusion isn\'t what dilatory describes.'},
         C:{text:'Careful', explain:'Carefulness isn\'t what dilatory describes.'},
-        D:{text:'Slow to act, causing delay', explain:'Dilatory means slow to act, tending to delay.'}
+        D:{text:'Tardy', explain:'Dilatory means slow to act, tending to delay.'}
       } },
     { id:'v324', skill:'Synonyms', prompt:'Choose the word that means the same as IMPLACABLE.', correct:'B',
       choices:{
-        A:{text:'Easily appeased', explain:'This is the opposite of implacable.'},
-        B:{text:'Unable to be appeased, relentless', explain:'Implacable means unable to be placated or satisfied, relentless.'},
+        A:{text:'Appeasable', explain:'This is the opposite of implacable.'},
+        B:{text:'Unappeasable', explain:'Implacable means unable to be placated or satisfied, relentless.'},
         C:{text:'Confused', explain:'Confusion isn\'t what implacable describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what implacable describes.'}
       } },
@@ -2381,7 +2381,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Careless', explain:'Careless is a synonym of heedless, not its opposite.'},
         B:{text:'Reckless', explain:'Reckless is related to heedless, not opposite.'},
-        C:{text:'Vigilant and attentive', explain:'Heedless means not paying attention, careless, so vigilant is its opposite.'},
+        C:{text:'Vigilant', explain:'Heedless means not paying attention, careless, so vigilant is its opposite.'},
         D:{text:'Thoughtless', explain:'Thoughtless is a synonym of heedless, not opposite.'}
       } },
     { id:'v326', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMPERVIOUS.', correct:'D',
@@ -2389,11 +2389,11 @@ const QUESTIONS = {
         A:{text:'Unaffected', explain:'Unaffected is a synonym of impervious, not its opposite.'},
         B:{text:'Resistant', explain:'Resistant is related to impervious, not opposite.'},
         C:{text:'Immune', explain:'Immune is related to impervious, not opposite.'},
-        D:{text:'Susceptible and vulnerable', explain:'Impervious means not affected or influenced by something, so susceptible is its opposite.'}
+        D:{text:'Vulnerable', explain:'Impervious means not affected or influenced by something, so susceptible is its opposite.'}
       } },
     { id:'v327', skill:'Antonyms', prompt:'Choose the word most nearly opposite to STAID.', correct:'A',
       choices:{
-        A:{text:'Wild and adventurous', explain:'Staid means sedate, serious, and unadventurous, so wild is its opposite.'},
+        A:{text:'Adventurous', explain:'Staid means sedate, serious, and unadventurous, so wild is its opposite.'},
         B:{text:'Sedate', explain:'Sedate is a synonym of staid, not its opposite.'},
         C:{text:'Serious', explain:'Serious is a synonym of staid, not opposite.'},
         D:{text:'Composed', explain:'Composed is related to staid, not opposite.'}
@@ -2402,7 +2402,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Loyal', explain:'Loyal is a synonym of stalwart, not its opposite.'},
         B:{text:'Reliable', explain:'Reliable is a synonym of stalwart, not opposite.'},
-        C:{text:'Unreliable and weak', explain:'Stalwart means loyal, reliable, and strong, so unreliable and weak is its opposite.'},
+        C:{text:'Unreliable', explain:'Stalwart means loyal, reliable, and strong, so unreliable and weak is its opposite.'},
         D:{text:'Strong', explain:'Strong is a synonym of stalwart, not opposite.'}
       } },
     { id:'v329', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
@@ -2447,12 +2447,12 @@ const QUESTIONS = {
         C:{text:'Farm', explain:'A farm is a location, not the group term.'},
         D:{text:'Shepherd', explain:'A shepherd is a person, not the group term.'}
       } },
-    { id:'v335', skill:'Analogies', prompt:'Umbrella is to rain as sunscreen is to ___.', correct:'D',
+    { id:'v335', skill:'Analogies', prompt:'Lock is to door as lid is to ___.', correct:'B',
       choices:{
-        A:{text:'Skin', explain:'Skin is what sunscreen protects, not what it protects against.'},
-        B:{text:'Lotion', explain:'Lotion is a category sunscreen might belong to, not what it protects against.'},
-        C:{text:'Beach', explain:'A beach is a location, not what sunscreen protects against.'},
-        D:{text:'Sun', explain:'An umbrella protects against rain; sunscreen protects against the sun, following the same pattern.'}
+        A:{text:'Kitchen', explain:'A kitchen is where a jar might be kept, not what a lid closes.'},
+        B:{text:'Jar', explain:'A lock closes a door; a lid closes a jar, following the same pattern.'},
+        C:{text:'Metal', explain:'Metal is a material a lid might be made from, not what it closes.'},
+        D:{text:'Handle', explain:'A handle is another part, not the thing a lid closes.'}
       } },
     { id:'v336', skill:'Analogies', prompt:'Director is to film as conductor is to ___.', correct:'C',
       choices:{
@@ -2492,7 +2492,7 @@ const QUESTIONS = {
     { id:'v341', skill:'Synonyms', prompt:'Choose the word that means the same as PIQUANT.', correct:'B',
       choices:{
         A:{text:'Bland', explain:'This is the opposite of piquant.'},
-        B:{text:'Pleasantly sharp or stimulating', explain:'Piquant means having a pleasantly sharp taste or agreeably stimulating quality.'},
+        B:{text:'Zesty', explain:'Piquant means having a pleasantly sharp taste or agreeably stimulating quality.'},
         C:{text:'Confused', explain:'Confusion isn\'t what piquant describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what piquant describes.'}
       } },
@@ -2500,27 +2500,27 @@ const QUESTIONS = {
       choices:{
         A:{text:'Composed', explain:'This is the opposite of maudlin.'},
         B:{text:'Confused', explain:'Confusion isn\'t what maudlin describes.'},
-        C:{text:'Excessively sentimental, self-pitying', explain:'Maudlin means self-pityingly or tearfully sentimental, often excessively so.'},
+        C:{text:'Sentimental', explain:'Maudlin means self-pityingly or tearfully sentimental, often excessively so.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what maudlin describes.'}
       } },
     { id:'v343', skill:'Synonyms', prompt:'Choose the word that means the same as VITUPERATIVE.', correct:'A',
       choices:{
-        A:{text:'Bitterly abusive or scolding in language', explain:'Vituperative means using or containing harsh, bitter criticism or abuse.'},
-        B:{text:'Gentle and kind in language', explain:'This is the opposite of vituperative.'},
+        A:{text:'Abusive', explain:'Vituperative means using or containing harsh, bitter criticism or abuse.'},
+        B:{text:'Gentle', explain:'This is the opposite of vituperative.'},
         C:{text:'Confused', explain:'Confusion isn\'t what vituperative describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what vituperative describes.'}
       } },
-    { id:'v344', skill:'Synonyms', prompt:'Choose the word that means the same as EBULLIENT.', correct:'D',
+    { id:'v344', skill:'Synonyms', prompt:'Choose the word that means the same as ZEALOUS.', correct:'D',
       choices:{
-        A:{text:'Gloomy', explain:'This is the opposite of ebullient.'},
-        B:{text:'Confused', explain:'Confusion isn\'t what ebullient describes.'},
-        C:{text:'Careless', explain:'Carelessness isn\'t what ebullient describes.'},
-        D:{text:'Cheerful and overflowing with enthusiasm', explain:'Ebullient means cheerful and full of energy, overflowing with enthusiasm.'}
+        A:{text:'Indifferent', explain:'This is the opposite of zealous.'},
+        B:{text:'Confused', explain:'Confusion is not what zealous describes.'},
+        C:{text:'Careless', explain:'Carelessness is not what zealous describes.'},
+        D:{text:'Fervent', explain:'Zealous means showing great energy and enthusiasm for a cause.'}
       } },
     { id:'v345', skill:'Antonyms', prompt:'Choose the word most nearly opposite to VORACIOUS.', correct:'B',
       choices:{
         A:{text:'Insatiable', explain:'Insatiable is a synonym of voracious, not its opposite.'},
-        B:{text:'Moderate in appetite', explain:'Voracious means having a huge appetite, so moderate in appetite is its opposite.'},
+        B:{text:'Moderate', explain:'Voracious means having a huge appetite, so moderate in appetite is its opposite.'},
         C:{text:'Ravenous', explain:'Ravenous is a synonym of voracious, not opposite.'},
         D:{text:'Greedy', explain:'Greedy is related to voracious, not opposite.'}
       } },
@@ -2529,11 +2529,11 @@ const QUESTIONS = {
         A:{text:'Filthy', explain:'Filthy is a synonym of squalid, not its opposite.'},
         B:{text:'Unpleasant', explain:'Unpleasant is related to squalid, not opposite.'},
         C:{text:'Dirty', explain:'Dirty is a synonym of squalid, not opposite.'},
-        D:{text:'Pristine and clean', explain:'Squalid means extremely dirty and unpleasant, so pristine is its opposite.'}
+        D:{text:'Pristine', explain:'Squalid means extremely dirty and unpleasant, so pristine is its opposite.'}
       } },
     { id:'v347', skill:'Antonyms', prompt:'Choose the word most nearly opposite to DIAPHANOUS.', correct:'A',
       choices:{
-        A:{text:'Opaque and thick', explain:'Diaphanous means light, delicate, and translucent, so opaque is its opposite.'},
+        A:{text:'Opaque', explain:'Diaphanous means light, delicate, and translucent, so opaque is its opposite.'},
         B:{text:'Sheer', explain:'Sheer is a synonym of diaphanous, not its opposite.'},
         C:{text:'Delicate', explain:'Delicate is a synonym of diaphanous, not opposite.'},
         D:{text:'Translucent', explain:'Translucent is a synonym of diaphanous, not opposite.'}
@@ -2542,7 +2542,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Healthy', explain:'Healthy is a synonym of hale, not its opposite.'},
         B:{text:'Strong', explain:'Strong is a synonym of hale, not opposite.'},
-        C:{text:'Frail and sickly', explain:'Hale means healthy and strong, especially of an elderly person, so frail is its opposite.'},
+        C:{text:'Frail', explain:'Hale means healthy and strong, especially of an elderly person, so frail is its opposite.'},
         D:{text:'Robust', explain:'Robust is a synonym of hale, not opposite.'}
       } },
     { id:'v349', skill:'Verbal classification', prompt:'Which word does NOT belong with the others?', correct:'D',
@@ -2631,8 +2631,8 @@ const QUESTIONS = {
       } },
     { id:'v361', skill:'Synonyms', prompt:'Choose the word that means the same as PERSPICUOUS.', correct:'A',
       choices:{
-        A:{text:'Clearly expressed, easy to understand', explain:'Perspicuous means clearly expressed and easily understood.'},
-        B:{text:'Confusing and vague', explain:'This is the opposite of perspicuous.'},
+        A:{text:'Lucid', explain:'Perspicuous means clearly expressed and easily understood.'},
+        B:{text:'Confusing', explain:'This is the opposite of perspicuous.'},
         C:{text:'Confused', explain:'Confusion isn\'t what perspicuous describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what perspicuous describes.'}
       } },
@@ -2640,7 +2640,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Well-known', explain:'This is the opposite of recondite.'},
         B:{text:'Simple', explain:'This is the opposite of recondite.'},
-        C:{text:'Little known, difficult to understand', explain:'Recondite means little known, abstruse, or difficult to understand.'},
+        C:{text:'Abstruse', explain:'Recondite means little known, abstruse, or difficult to understand.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what recondite describes.'}
       } },
     { id:'v363', skill:'Synonyms', prompt:'Choose the word that means the same as GARISH.', correct:'D',
@@ -2648,25 +2648,25 @@ const QUESTIONS = {
         A:{text:'Understated', explain:'This is the opposite of garish.'},
         B:{text:'Confused', explain:'Confusion isn\'t what garish describes.'},
         C:{text:'Careful', explain:'Carefulness isn\'t what garish describes.'},
-        D:{text:'Obtrusively bright or showy, tasteless', explain:'Garish means obtrusively bright, showy, or gaudy, often in a tasteless way.'}
+        D:{text:'Gaudy', explain:'Garish means obtrusively bright, showy, or gaudy, often in a tasteless way.'}
       } },
     { id:'v364', skill:'Synonyms', prompt:'Choose the word that means the same as INSOUCIANT.', correct:'B',
       choices:{
         A:{text:'Anxious', explain:'This is the opposite of insouciant.'},
-        B:{text:'Carefree, nonchalant, unconcerned', explain:'Insouciant means showing a casual lack of concern, carefree.'},
+        B:{text:'Carefree', explain:'Insouciant means showing a casual lack of concern, carefree.'},
         C:{text:'Confused', explain:'Confusion isn\'t what insouciant describes.'},
-        D:{text:'Careless in a harmful way', explain:'This overstates insouciant, which describes ease rather than harm.'}
+        D:{text:'Reckless', explain:'This overstates insouciant, which describes ease rather than harm.'}
       } },
     { id:'v365', skill:'Antonyms', prompt:'Choose the word most nearly opposite to OPULENT.', correct:'C',
       choices:{
         A:{text:'Lavish', explain:'Lavish is a synonym of opulent, not its opposite.'},
         B:{text:'Luxurious', explain:'Luxurious is a synonym of opulent, not opposite.'},
-        C:{text:'Austere and spartan', explain:'Opulent means rich and luxurious, so austere is its opposite.'},
+        C:{text:'Austere', explain:'Opulent means rich and luxurious, so austere is its opposite.'},
         D:{text:'Rich', explain:'Rich is a synonym of opulent, not opposite.'}
       } },
     { id:'v366', skill:'Antonyms', prompt:'Choose the word most nearly opposite to EXPLICIT.', correct:'A',
       choices:{
-        A:{text:'Implicit and vague', explain:'Explicit means stated clearly and in detail, so implicit is its opposite.'},
+        A:{text:'Implicit', explain:'Explicit means stated clearly and in detail, so implicit is its opposite.'},
         B:{text:'Clear', explain:'Clear is a synonym of explicit, not its opposite.'},
         C:{text:'Detailed', explain:'Detailed is a synonym of explicit, not opposite.'},
         D:{text:'Direct', explain:'Direct is a synonym of explicit, not opposite.'}
@@ -2676,12 +2676,12 @@ const QUESTIONS = {
         A:{text:'Recurring', explain:'Recurring is a synonym of perennial, not its opposite.'},
         B:{text:'Lasting', explain:'Lasting is a synonym of perennial, not opposite.'},
         C:{text:'Enduring', explain:'Enduring is a synonym of perennial, not opposite.'},
-        D:{text:'Fleeting and momentary', explain:'Perennial means lasting for a long time or recurring, so fleeting is its opposite.'}
+        D:{text:'Fleeting', explain:'Perennial means lasting for a long time or recurring, so fleeting is its opposite.'}
       } },
     { id:'v368', skill:'Antonyms', prompt:'Choose the word most nearly opposite to TENUOUS.', correct:'B',
       choices:{
         A:{text:'Flimsy', explain:'Flimsy is a synonym of tenuous, not its opposite.'},
-        B:{text:'Strong and substantial', explain:'Tenuous means thin, weak, or flimsy, so strong is its opposite.'},
+        B:{text:'Strong', explain:'Tenuous means thin, weak, or flimsy, so strong is its opposite.'},
         C:{text:'Weak', explain:'Weak is a synonym of tenuous, not opposite.'},
         D:{text:'Fragile', explain:'Fragile is related to tenuous, not opposite.'}
       } },
@@ -2772,7 +2772,7 @@ const QUESTIONS = {
     { id:'v381', skill:'Synonyms', prompt:'Choose the word that means the same as PELLUCID.', correct:'B',
       choices:{
         A:{text:'Muddled', explain:'This is the opposite of pellucid.'},
-        B:{text:'Transparently clear, easy to understand', explain:'Pellucid means translucently clear in style or meaning, easy to understand.'},
+        B:{text:'Clear', explain:'Pellucid means translucently clear in style or meaning, easy to understand.'},
         C:{text:'Confused', explain:'Confusion isn\'t what pellucid describes.'},
         D:{text:'Careless', explain:'Carelessness isn\'t what pellucid describes.'}
       } },
@@ -2781,12 +2781,12 @@ const QUESTIONS = {
         A:{text:'Honest', explain:'This is the opposite of mendacious.'},
         B:{text:'Confused', explain:'Confusion isn\'t what mendacious describes.'},
         C:{text:'Careless', explain:'Carelessness isn\'t what mendacious describes.'},
-        D:{text:'Lying, untruthful, dishonest', explain:'Mendacious means not telling the truth, lying.'}
+        D:{text:'Untruthful', explain:'Mendacious means not telling the truth, lying.'}
       } },
     { id:'v383', skill:'Synonyms', prompt:'Choose the word that means the same as SCRUPULOUS.', correct:'A',
       choices:{
-        A:{text:'Extremely thorough and morally careful', explain:'Scrupulous means extremely thorough and careful, having strong moral principles.'},
-        B:{text:'Careless and sloppy', explain:'This is the opposite of scrupulous.'},
+        A:{text:'Thorough', explain:'Scrupulous means extremely thorough and careful, having strong moral principles.'},
+        B:{text:'Sloppy', explain:'This is the opposite of scrupulous.'},
         C:{text:'Confused', explain:'Confusion isn\'t what scrupulous describes.'},
         D:{text:'Dishonest', explain:'This is nearly the opposite of scrupulous.'}
       } },
@@ -2794,13 +2794,13 @@ const QUESTIONS = {
       choices:{
         A:{text:'Quiet', explain:'This is the opposite of raucous.'},
         B:{text:'Orderly', explain:'This is the opposite of raucous.'},
-        C:{text:'Loud and disorderly', explain:'Raucous means making or constituting a disturbingly harsh and loud noise, disorderly.'},
+        C:{text:'Rowdy', explain:'Raucous means making or constituting a disturbingly harsh and loud noise, disorderly.'},
         D:{text:'Careful', explain:'Carefulness isn\'t what raucous describes.'}
       } },
     { id:'v385', skill:'Antonyms', prompt:'Choose the word most nearly opposite to FORLORN.', correct:'B',
       choices:{
         A:{text:'Abandoned', explain:'Abandoned is related to forlorn, not its opposite.'},
-        B:{text:'Hopeful and cheerful', explain:'Forlorn means sad and abandoned, so hopeful is its opposite.'},
+        B:{text:'Cheerful', explain:'Forlorn means sad and abandoned, so hopeful is its opposite.'},
         C:{text:'Sad', explain:'Sad is a synonym of forlorn, not opposite.'},
         D:{text:'Lonely', explain:'Lonely is related to forlorn, not opposite.'}
       } },
@@ -2808,7 +2808,7 @@ const QUESTIONS = {
       choices:{
         A:{text:'Weaken', explain:'Weaken is a synonym of enervate, not its opposite.'},
         B:{text:'Drain', explain:'Drain is related to enervate, not opposite.'},
-        C:{text:'Invigorate and energize', explain:'Enervate means to weaken or drain of energy, so invigorate is its opposite.'},
+        C:{text:'Invigorate', explain:'Enervate means to weaken or drain of energy, so invigorate is its opposite.'},
         D:{text:'Exhaust', explain:'Exhaust is a synonym of enervate, not opposite.'}
       } },
     { id:'v387', skill:'Antonyms', prompt:'Choose the word most nearly opposite to PROFLIGATE.', correct:'D',
@@ -2816,11 +2816,11 @@ const QUESTIONS = {
         A:{text:'Wasteful', explain:'Wasteful is a synonym of profligate, not its opposite.'},
         B:{text:'Extravagant', explain:'Extravagant is a synonym of profligate, not opposite.'},
         C:{text:'Reckless', explain:'Reckless is related to profligate, not opposite.'},
-        D:{text:'Frugal and thrifty', explain:'Profligate means recklessly extravagant and wasteful, so frugal is its opposite.'}
+        D:{text:'Thrifty', explain:'Profligate means recklessly extravagant and wasteful, so frugal is its opposite.'}
       } },
     { id:'v388', skill:'Antonyms', prompt:'Choose the word most nearly opposite to IMMUTABLE.', correct:'A',
       choices:{
-        A:{text:'Changeable and mutable', explain:'Immutable means unchanging over time, unable to be changed, so changeable is its opposite.'},
+        A:{text:'Changeable', explain:'Immutable means unchanging over time, unable to be changed, so changeable is its opposite.'},
         B:{text:'Permanent', explain:'Permanent is a synonym of immutable, not its opposite.'},
         C:{text:'Fixed', explain:'Fixed is a synonym of immutable, not opposite.'},
         D:{text:'Stable', explain:'Stable is related to immutable, not opposite.'}
@@ -2853,12 +2853,12 @@ const QUESTIONS = {
         C:{text:'Encomium', explain:'An encomium is also a written expression of praise.'},
         D:{text:'Etching', explain:'Unlike the others, an etching is a visual art form, not a written expression of praise.'}
       } },
-    { id:'v393', skill:'Analogies', prompt:'Author is to manuscript as sculptor is to ___.', correct:'C',
+    { id:'v393', skill:'Analogies', prompt:'Baker is to bread as potter is to ___.', correct:'C',
       choices:{
-        A:{text:'Chisel', explain:'A chisel is a tool a sculptor uses, not the finished work.'},
-        B:{text:'Marble', explain:'Marble is a raw material, not necessarily the finished work.'},
-        C:{text:'Statue', explain:'An author creates a manuscript; a sculptor creates a statue, following the same pattern.'},
-        D:{text:'Museum', explain:'A museum is where a finished statue might be displayed, not the work itself.'}
+        A:{text:'Kiln', explain:'A kiln is equipment a potter uses, not the finished work.'},
+        B:{text:'Clay', explain:'Clay is the raw material, not the finished work.'},
+        C:{text:'Vase', explain:'A baker creates bread; a potter creates a vase, following the same pattern.'},
+        D:{text:'Shelf', explain:'A shelf is where a finished vase might sit, not the work itself.'}
       } },
     { id:'v394', skill:'Analogies', prompt:'Colony is to ants as pod is to ___.', correct:'A',
       choices:{
@@ -3969,11 +3969,11 @@ const QUESTIONS = {
         C:{text:'The two columns are equal', explain:'0.474 and 0.48 are close but not equal.'},
         D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
       } },
-    { id:'q152', skill:'Quantitative comparison', prompt:'Compare: Column A = 9 squared   Column B = 3 to the 4th power', correct:'C',
+    { id:'q152', skill:'Quantitative comparison', prompt:'Compare: Column A = 6 cubed   Column B = 14 squared', correct:'A',
       choices:{
-        A:{text:'Column A is greater', explain:'9 squared is 81, not greater than Column B.'},
-        B:{text:'Column B is greater', explain:'3 to the 4th power is also 81, not greater than Column A.'},
-        C:{text:'The two columns are equal', explain:'9 squared = 81 and 3 to the 4th power = 81, so they are equal.'},
+        A:{text:'Column A is greater', explain:'6 cubed is 216, which is greater than 14 squared (196).'},
+        B:{text:'Column B is greater', explain:'14 squared is 196, which is less than 6 cubed (216).'},
+        C:{text:'The two columns are equal', explain:'216 and 196 are not equal.'},
         D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
       } },
     { id:'q153', skill:'Quantitative comparison', prompt:'Compare: Column A = 62% of 50   Column B = 50% of 62', correct:'D',
@@ -5677,11 +5677,11 @@ const QUESTIONS = {
         C:{text:'The two columns are equal', explain:'2 to the 42nd power = 4398046511104 and 4 to the 21st power = 4398046511104, so they are equal.'},
         D:{text:'Cannot be determined', explain:'Both evaluate to fixed numbers, so a comparison is possible.'}
       } },
-    { id:'q396', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.68   Column B = 17/25', correct:'C',
+    { id:'q396', skill:'Quantitative comparison', prompt:'Compare: Column A = 0.62   Column B = 5/8', correct:'B',
       choices:{
-        A:{text:'Column A is greater', explain:'0.68 equals 17/25, so it isn\'t greater.'},
-        B:{text:'Column B is greater', explain:'17/25 equals 0.68, so it isn\'t greater.'},
-        C:{text:'The two columns are equal', explain:'17/25 equals exactly 0.68, so the columns are equal.'},
+        A:{text:'Column A is greater', explain:'0.62 is less than 5/8 (0.625).'},
+        B:{text:'Column B is greater', explain:'5/8 equals 0.625, which is greater than 0.62.'},
+        C:{text:'The two columns are equal', explain:'0.62 and 0.625 are close but not equal.'},
         D:{text:'Cannot be determined', explain:'Both are fixed values, so a comparison is possible.'}
       } },
     { id:'q397', skill:'Quantitative comparison', prompt:'Compare: Column A = 96% of 375   Column B = 360% of 100', correct:'B',
@@ -10844,9 +10844,9 @@ const QUESTIONS = {
       } },
     { id:'l333', skill:'Contractions vs. possessives', prompt:'Which sentence contains an error?', correct:'A',
       choices:{
-        A:{text:"The airline changed it's boarding policy.", explain:'This should be the possessive "its" (no apostrophe), not the contraction "it\'s" (it is).'},
-        B:{text:'The airline changed its boarding policy.', explain:'This correctly uses the possessive "its."'},
-        C:{text:'The policy belongs to the airline.', explain:'This sentence has no possessive or contraction error.'},
+        A:{text:"You're car is parked outside.", explain:'This should be the possessive "your," not the contraction "you\'re" (you are).'},
+        B:{text:'Your car is parked outside.', explain:'This correctly uses the possessive "your."'},
+        C:{text:'The car belongs to you.', explain:'This sentence has no possessive or contraction error.'},
         D:{text:'No mistake', explain:'Choice A contains an error, so this option is incorrect.'}
       } },
     { id:'l334', skill:'Contractions', prompt:'Which sentence contains an error?', correct:'A',
